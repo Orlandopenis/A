@@ -3560,6 +3560,17 @@ case 'wiki':
                    denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
                    await limitAdd(sender) 				
                    break 
+                   case 'checkip':
+                   if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+								
+				if (isLimit(sender)) return reply(limitend(pushname2))
+				reply(mess.wait)
+				paste = `${body.slice(9)}`
+                   anu = await fetchJson(`http://api.lolhuman.xyz/api/ipaddress/${paste}?apikey=RiuApikey`, {method: 'get'})
+                   denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
+                   await limitAdd(sender) 				
+                   break 
 		case 'bpfont':
 			if (isBanned) return reply(mess.only.benned)
 			if (isLimit(sender)) return reply(limitend(pushname2))
