@@ -2017,10 +2017,8 @@ break
 denz.updatePresence(from, Presence.composing)
 tels = body.slice(7)
 reply(mess.wait)
-try {
   anu = await fetchJson(`http://scrap.terhambar.com/lirik?word=${tels}`, {method: 'get'})
   reply(anu.result.lirik) 
-  }
   break
   
                 case 'report':
