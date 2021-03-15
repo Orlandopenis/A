@@ -2837,12 +2837,13 @@ break
 				await limitAdd(sender) 
 				break 
 		    case 'map':
-		txt = body.slice(5)
-                   data = awat fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${txt}`)
-                   hasil = awat getbufferer(data.gambar)
-                   denz.sendMessage(from, hasil, image, {quoted: mek, caption: `Resultados`)
-                   awat limitAdd(sender)
-                   break
+		if (!isUser) return reply(mess.only.userB)
+				if (isLimit(sender)) return reply(limitend(pushname2))
+anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slice(5)}`, {method: 'get'})
+					buffer = await getBuffer(anu.gambar)
+					denz.sendMessage(from, buffer, image, {quoted: mek, caption: `${body.slice(5)}`})
+					await limitAdd(sender)
+					break
 				case 'url2img':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
