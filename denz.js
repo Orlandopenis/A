@@ -3565,7 +3565,7 @@ case 'wiki':
 				reply(mess.wait)
 				hasil = `✅ | *_ɪɴғᴏ sᴏʙʀᴇ ᴏ ᴘᴇᴅɪᴅᴏ :_*\n━⊱ *_ᴛɪᴛᴜʟᴏ :_* ${data.result.title_romaji}\n━⊱ *_ᴅᴏᴜᴊɪɴsʜɪ ʙᴀsᴇᴀᴅᴏ ᴇᴍ :_* ${data.result.info.parodies}\n━⊱ *_ᴘᴀɢɪɴᴀs ᴛᴏᴛᴀɪs :_* ${data.result.info.pages}`
 				reply(hasil)
-				denz.sendMessage(from, ${data.result.image}, image, {quoted: mek})
+				denz.sendMessage(from, `${data.result.image}`, image, {quoted: mek})
 				await limitAdd(sender)
 				break
 		case 'bpfont':
