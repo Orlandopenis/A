@@ -522,9 +522,8 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ┣⊱${prefix}ᴀɴᴛɪʟɪɴᴋ *(OFF)*
 ┣⊱${prefix}ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ *(OFF)*
 ┣⊱${prefix}ʙᴡʟɪꜱᴛ *(OFF)*
-┣⊱${prefix}ʙᴏᴀsᴠɪɴᴅᴀs
+┣⊱${prefix}ʙᴏᴀsᴠɪɴᴅᴀs *[ON/OFF]*
 ┣⊱${prefix}ɢʀᴜᴘᴏ *[ABRIR/FECHAR]*
-┣⊱${prefix}ᴅᴏɴᴏᴅᴏɢʀᴜᴘᴏ
 ┣⊱${prefix}ꜱᴇᴛғᴏᴛᴏ
 ┣⊱${prefix}ɪɴғᴏɢʀᴜᴘᴏ
 ┣⊱${prefix}ᴀᴅᴅ *[NUMERO COMPLETO]*
@@ -1900,17 +1899,6 @@ break
 					const tik = can[Math.floor(Math.random() * can.length)]
 					denz.sendMessage(from, 'Pertanyaan : Cantik Cek Kakak *'+cantik+'*\n\nPersen Kecantikan : '+ tik +'', text, { quoted: mek })
 					break
-				  case 'ownergrup':
-				  case 'ownergroup':
-				case 'donodogrupo':
-				case 'donog'
-               denz.updatePresence(from, Presence.composing) 
-              options = {
-          text: `✅ | *_ᴏ ᴄʀɪᴀᴅᴏʀ ᴅᴏ ɢʀᴜᴘᴏ ᴇ ᴏ :_* wa.me/${from.split("-")[0]}`,
-          contextInfo: { mentionedJid: [from] }
-           }
-           denz.sendMessage(from, options, text, { quoted: mek } )
-				break
 				case 'sair': 
 				    if (!isGroup) return reply(mess.only.group)
 					if (!isOwner) return reply(mess.only.ownerB)
