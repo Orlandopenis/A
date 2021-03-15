@@ -519,35 +519,31 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ║❏ ${prefix}ᴀɴɪᴍᴇ
 ╙───々
 ┏━━━⊱「 *_ɢʀᴏᴜᴘ ᴍᴇɴᴜ_* 」
-┣⊱${prefix}ᴄᴀsᴀʟ
-┣⊱${prefix}ᴄʜᴀɴᴄᴇ ( do/de + pergunta )
-┣⊱${prefix}ᴍᴀɪsᴛᴏᴘ
-║❏ ${prefix}ᴍᴏᴅᴇᴀɴɪᴍᴇ 
 ┣⊱${prefix}ᴀɴᴛɪʟɪɴᴋ *(OFF)*
 ┣⊱${prefix}ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ *(OFF)*
 ┣⊱${prefix}ʙᴡʟɪꜱᴛ *(OFF)*
 ┣⊱${prefix}ʙᴏᴀsᴠɪɴᴅᴀs
-┣⊱${prefix}ɢʀᴜᴘᴏ *[abrir/fechar]*
-║❏ ${prefix}ᴏᴡɴᴇʀɢʀᴜᴘ
-║❏ ${prefix}ꜱᴇᴛᴘᴘ
-║❏ ${prefix}ɪɴғᴏɢᴄ
-┣⊱${prefix}ᴀᴅᴅ
-┣⊱${prefix}ᴋɪᴄᴋ 
-║❏ ${prefix}ᴋɪᴄᴋᴛɪᴍᴇ 
-║❏ ${prefix}ᴘʀᴏᴍᴏᴛᴇ 
-║❏ ${prefix}ᴅᴇᴍᴏᴛᴇ
-║❏ ${prefix}ꜱᴇᴛɴᴀᴍᴇ
-║❏ ${prefix}ꜱᴇᴛᴅᴇꜱᴄ
-║❏ ${prefix}ɢʀᴜᴘ
-║❏ ${prefix}ᴛᴀɢᴍᴇ
-┣⊱${prefix}ɴᴏᴛɪғɪᴄᴀʀ
-┣⊱${prefix}ᴛᴀɢᴀʟʟ *(Com wa.me)*
-┣⊱${prefix}ᴇᴠᴇʀʏᴏɴᴇ *(Sem wa.me)*
+┣⊱${prefix}ɢʀᴜᴘᴏ *[ABRIR/FECHAR]*
+┣⊱${prefix}ᴅᴏɴᴏᴅᴏɢʀᴜᴘᴏ
+┣⊱${prefix}ꜱᴇᴛғᴏᴛᴏ
+┣⊱${prefix}ɪɴғᴏɢʀᴜᴘᴏ
+┣⊱${prefix}ᴀᴅᴅ *[NUMERO COMPLETO]*
+┣⊱${prefix}ᴋɪᴄᴋ *[MENÇÃO]*
+┣⊱${prefix}ᴘʀᴏᴍᴏᴛᴇ 
+┣⊱${prefix}ᴅᴇᴍᴏᴛᴇ
+┣⊱${prefix}ꜱᴇᴛɴᴀᴍᴇ
+┣⊱${prefix}ꜱᴇᴛᴅᴇꜱᴄ
+┣⊱${prefix}ɪɴғᴏɢᴄ
+┣⊱${prefix}ᴛᴀɢᴍᴇ
+┣⊱${prefix}ɴᴏᴛɪғɪᴄᴀʀ *[MENSAGEM]*
+┣⊱${prefix}ᴛᴀɢᴀʟʟ *(COM WA.ME)*
+┣⊱${prefix}ᴇᴠᴇʀʏᴏɴᴇ *(SEM WA.ME)*
 ┣⊱${prefix}ᴍᴇɴsғᴀᴋᴇ *[Menção/Mensagem]*
 ║❏ ${prefix}ʟɪꜱᴛᴀᴅᴍɪɴ
-║❏ ${prefix}ɴꜱғᴡ
-║❏ ${prefix}ꜱɪᴍɪʜ
-╙───々
+┣⊱${prefix}ᴍᴏᴅᴏᴀɴɪᴍᴇ *[ON/OFF]*
+┣⊱${prefix}ɴꜱғᴡ *[ON/OFF]*
+┣⊱${prefix}ꜱɪᴍɪʜ *[ON/OFF]*
+┗━⊱ *_Developer ©_* : *ɴʏx*
 ┏━━━⊱「 *_ᴍᴀᴋᴇʀ ᴍᴇɴᴜ_* 」
 ┣⊱${prefix}ʙᴜʀɴᴘᴀᴘᴇʀ
 ┣⊱${prefix}8ʙɪᴛ
@@ -574,8 +570,10 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ┣⊱${prefix}ɪᴄᴇ
 ┗━⊱ *_Developer ©_* : *ɴʏx*
 ╓───「 *_ғᴜɴ ᴍᴇɴᴜ_* 」
-┣⊱${prefix}ᴄᴀᴅᴇʀɴᴏ
-║❏ ${prefix}ᴛᴇꜱᴛɪᴍᴇ
+┣⊱${prefix}ᴄᴀᴅᴇʀɴᴏ *[TXT]*
+┣⊱${prefix}ᴄᴀsᴀʟ
+┣⊱${prefix}ᴄʜᴀɴᴄᴇ *(DO/DE + PERGUNTA)*
+┣⊱${prefix}ᴍᴀɪsᴛᴏᴘ 
 ║❏ ${prefix}ᴢᴏᴅɪᴀᴋ
 ║❏ ${prefix}ʜɪʟɪʜ
 ║❏ ${prefix}ᴄᴇᴄᴀɴ
@@ -617,15 +615,6 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ║❏ ${prefix}xᴠɪᴅᴇᴏꜱ
 ╙───々
 ╓───「 *_ᴏᴛʜᴇʀ ᴍᴇɴᴜ_* 」
-║❏ ${prefix}ʙᴇᴄʀʏᴘᴛ 
-║❏ ${prefix}ᴇɴᴄᴏᴅᴇ64
-║❏ ${prefix}ᴅᴇᴄᴏᴅᴇ64
-║❏ ${prefix}ᴇɴᴄᴏᴅᴇ32
-║❏ ${prefix}ᴅᴇᴄᴏᴅᴇ32
-║❏ ${prefix}ᴇɴᴄʙɪɴᴀʀʏ 
-║❏ ${prefix}ᴅᴇᴄʙɪɴᴀʀʏ 
-║❏ ${prefix}ᴇɴᴄᴏᴄᴛᴀʟ 
-║❏ ${prefix}ᴅᴇᴄᴏᴄᴛᴀʟ 
 ║❏ ${prefix}ʜᴀꜱʜɪᴅᴇɴᴛɪғɪᴇʀ 
 ║❏ ${prefix}ᴅᴏʀᴋɪɴɢ 
 ║❏ ${prefix}ᴘᴀꜱᴛᴇʙɪɴ 
@@ -648,7 +637,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ║❏ ${prefix}ʀᴇꜱᴇᴛʟɪᴍɪᴛ
 ║❏ ${prefix}ꜱᴇᴛʟɪᴍɪᴛ
 ║❏ ${prefix}ꜱᴇᴛᴘʀᴇғɪx
-║❏ ${prefix}ғᴏᴛᴏʙᴏᴛ
+┣⊱${prefix}ғᴏᴛᴏʙᴏᴛ
 ║❏ ${prefix}ʙᴄ
 ║❏ ${prefix}ʙᴄɢᴄ
 ║❏ ${prefix}ʙᴀɴ
@@ -1318,17 +1307,6 @@ quoted: mek, caption: `Wah ganteng kek gua`
 				attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(5)}`)
 				denz.sendMessage(from, attp2, sticker, {quoted: mek})
 				break
-				case 'nhentai':
-                if (isBanned) return reply(mess.only.benned)    
-                if (!isUser) return reply(mess.only.userB)
-                if (isLimit(sender)) return reply(limitend(pushname2))
-			    if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
-				if (args.length < 1) return reply(`🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ 218816_*`)
-				res = await fetchJson(`http://api.lolhuman.xyz/api/nhentai/${body.slice(9)}?apikey=RiuApikey`, {method: 'get'})
-						buffer = await getBuffer(res.url)
-						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
-					await limitAdd(sender) 
-					break 
                     case 'phlogo':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
@@ -1800,10 +1778,11 @@ break
 					denz.sendMessage(from, `${bot}`, text, {quoted: { key: { fromMe: false, participant: `${mentioned}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target}` }}})
 					break
 
-				case 'infogc':
+				case 'infogroup':
 				case 'groupinfo':
-				case 'infogrup':
-				case 'grupinfo':
+				case 'infogrupo':
+				case 'grupoinfo':
+				case 'infogc':
 				if (isBanned) return reply(mess.only.benned)  
 				 				
 				if (!isUser) return reply(mess.only.userB)
@@ -1816,7 +1795,7 @@ break
 					}
                 reply(mess.wait) // leave empty to get your own
 			    buffer = await getBuffer(ppUrl)
-		        denz.sendMessage(from, buffer, image, {quoted: mek, caption: `*NAME* : ${groupName}\n*MEMBER* : ${groupMembers.length}\n*ADMIN* : ${groupAdmins.length}\n*DESK* : ${groupDesc}`})
+		        denz.sendMessage(from, buffer, image, {quoted: mek, caption: `┏━━━━⊱ *_Group Info_*\n┣⊱ *Nome* : ${groupName}\n┣⊱ *Membros Totais* : ${groupMembers.length}\n┣⊱ *Admin Totais* : ${groupAdmins.length}\n┗━⊱ *_Developer ©_* : *ɴʏx*`})
                 break
 				case 'trendtwit':
 					denz.updatePresence(from, Presence.composing) 
@@ -1831,17 +1810,6 @@ break
 					}
 					reply(teks.trim())
 					await limitAdd(sender) 
-					break 
-				case 'testime':
-					setTimeout( () => {
-					denz.sendMessage(from, 'Waktu habis:v', text, {quoted: mek}) // ur cods
-					}, 10000) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, '5 Detik lagi', text, {quoted: mek}) // ur cods
-					}, 5000) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, '10 Detik lagi', text, {quoted: mek}) // ur cods
-					}, 0) // 1000 = 1s,
 					break 
 					case 'neonime':
 					denz.updatePresence(from, Presence.composing) 
@@ -1934,9 +1902,11 @@ break
 					break
 				  case 'ownergrup':
 				  case 'ownergroup':
+				case 'donodogrupo':
+				case 'donog'
                denz.updatePresence(from, Presence.composing) 
               options = {
-          text: `Owner Group ini adalah : wa.me/${from.split("-")[0]}`,
+          text: `✅ | *_ᴏ ᴄʀɪᴀᴅᴏʀ ᴅᴏ ɢʀᴜᴘᴏ ᴇ ᴏ :_* wa.me/${from.split("-")[0]}`,
           contextInfo: { mentionedJid: [from] }
            }
            denz.sendMessage(from, options, text, { quoted: mek } )
@@ -1954,7 +1924,7 @@ break
 			    if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
                 denz.groupUpdateSubject(from, `${body.slice(9)}`)
-                denz.sendMessage(from, `\`\`\`âœ“Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, {quoted: mek})
+                denz.sendMessage(from, `✅ | *_ᴏ ɴᴏᴍᴇ ᴅᴏ ɢʀᴜᴘᴏ ғᴏɪ ᴀʟᴛᴇʀᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ ᴘᴀʀᴀ :_* _${body.slice(9)}_`, text, {quoted: mek})
                 break
                 case 'setdesc':
                 if (isBanned) return reply(mess.only.benned)    
@@ -1964,7 +1934,7 @@ break
 			    if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
                 denz.groupUpdateDescription(from, `${body.slice(9)}`)
-                denz.sendMessage(from, `\`\`\`âœ“Sukses Mengganti Deskripsi Group\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, {quoted: mek})
+                denz.sendMessage(from, `✅ | *_ᴀ ᴅᴇsᴄʀɪᴄᴀᴏ ᴅᴏ ɢʀᴜᴘᴏ ғᴏɪ ᴀʟᴛᴇʀᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ ᴘᴀʀᴀ :_* _${body.slice(9)}_`, text, {quoted: mek})
                 break
 				case 'tts':
 				if (isBanned) return reply(mess.only.benned)    
@@ -2024,7 +1994,7 @@ break
 				    denz.sendMessage(from, ts, text, {quoted: mek})
 				   await limitAdd(sender)
 				   break 
-				case 'setpp':
+				case 'setfoto':
 	            if (isBanned) return reply(mess.only.benned)    
 	            if (!isUser) return reply(mess.only.userB)
 	      				
@@ -2034,7 +2004,7 @@ break
                     media = await denz.downloadAndSaveMediaMessage(mek)
                     await denz.updateProfilePicture (from, media)
                     reply(mess.wait)
-                    reply(`\`\`\`âœ“Sukses Mengganti Profil Group\`\`\` *${groupMetadata.subject}*`)
+                    reply(`✅ | *_ᴀ ғᴏᴛᴏ ᴅᴏ ɢʀᴜᴘᴏ ғᴏɪ ᴀʟᴛᴇʀᴀᴅᴀ ᴄᴏᴍ sᴜᴄᴇssᴏ_*`)
                     break
 				case 'chance':
 				if (isBanned) return reply(mess.only.benned)    
@@ -3057,7 +3027,7 @@ quoted: mek, caption: `Hasil Dari *${daerah}*`
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('🚨 | *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ᴘʀᴏᴍᴏᴠᴇʀ ᴀ ᴀᴅᴍɪɴ._*')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
 						teks = '✅ | *_ᴄᴏᴍᴀɴᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ, ᴏ ᴀʟᴠᴏ sᴇʀᴀ ʀᴇᴍᴏᴠɪᴅᴏ ᴇᴍ ɪɴsᴛᴀɴᴛᴇs_* :\n'
@@ -3071,34 +3041,6 @@ quoted: mek, caption: `Hasil Dari *${daerah}*`
 						denz.groupRemove(from, mentioned)
 					}
 					break 
-				case 'kicktime':
-					if (isBanned) return reply(mess.only.benned)
-					if (!isUser) return reply(mess.only.userB)
-									
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag target yang ingin di tendang!')
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-					setTimeout( () => {
-					denz.sendMessage(from, 'Yok Sama" Al-fatihah', text)
-					}, 8000)
-					setTimeout( () => {
-					reply('sukses min:D')
-					}, 7000)
-					setTimeout( () => {
-					denz.groupRemove(from, mentioned)
-					}, 6000)
-					setTimeout( () => {
-					denz.sendMessage(from, `Bismilah Kick @${mentioned[0].split('@')[0]}`, text) // ur cods
-					}, 5000)
-					setTimeout( () => {
-					denz.sendMessage(from, 'Asikkk Dapet Makanan nihh:D', text)
-					}, 2500)
-					setTimeout( () => {
-					reply('Perintah Diterima min:D')
-					}, 0)
-					break
 				case 'promote':
 				case 'pm':
 				if (isBanned) return reply(mess.only.benned)    
@@ -3171,18 +3113,18 @@ quoted: mek, caption: `Hasil Dari *${daerah}*`
 								
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('Hmmmm')
+					if (args.length < 1) return reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
 					if ((args[0]) === 'on') {
-						if (isSimi) return reply('Mode simi sudah aktif')
+						if (isSimi) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴊᴀ ᴇsᴛᴀ ᴀᴛɪᴠᴀᴅᴏ_*')
 						samih.push(from)
 						fs.writeFileSync('./database/json/simi.json', JSON.stringify(samih))
-						reply(`\`\`\`Sukses mengaktifkan mode simi di group\`\`\` *${groupMetadata.subject}*`)
+						reply(`✅ | *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else if ((args[0]) === 'off') {
 						samih.splice(from, 1)
 						fs.writeFileSync('./database/json/simi.json', JSON.stringify(samih))
-						reply(`\`\`\`âœ“Sukes menonaktifkan mode simi di group\`\`\` *${groupMetadata.subject}*`)
+						reply(`✅ | *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else {
-						reply('On untuk mengaktifkan, Off untuk menonaktifkan')
+						reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
 					}
 					break
 			    case 'nsfw':
@@ -3191,38 +3133,38 @@ quoted: mek, caption: `Hasil Dari *${daerah}*`
 			    				
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('Hmmmm')
+					if (args.length < 1) return reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
 					if ((args[0]) === 'on') {
-						if (isNsfw) return reply('Mode nsfw sudah aktif')
+						if (isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴊᴀ ᴇsᴛᴀ ᴀᴛɪᴠᴀᴅᴏ_*')
 						nsfw.push(from)
 						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-						reply(`\`\`\`✓“Sukses mengaktifkan mode nsfw di group\`\`\` *${groupMetadata.subject}*`)
+						reply(`✅ | *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else if ((args[0]) === 'off') {
 						nsfw.splice(from, 1)
 						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-						reply(`\`\`\`✓“Sukes menonaktifkan mode nsfw di group\`\`\` *${groupMetadata.subject}*`)
+						reply(`✅ | *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else {
-						reply('On untuk mengaktifkan, Off untuk menonaktifkan')
+						reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
 					}
 					break
-				case 'modeanime':
+				case 'modoanime':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 								
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('Hmmmm')
+					if (args.length < 1) return reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
 					if ((args[0]) === 'on') {
-						if (isAnime) return reply('Mode anime sudah aktif')
+						if (isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴊᴀ ᴇsᴛᴀ ᴀᴛɪᴠᴀᴅᴏ_*')
 						anime.push(from)
 						fs.writeFileSync('./database/json/anime.json', JSON.stringify(anime))
-						reply(`\`\`\`✓“Sukses mengaktifkan mode anime di group\`\`\` *${groupMetadata.subject}*`)
+						reply(`✅ | *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else if ((args[0]) === 'off') {
 						anime.splice(from, 1)
 						fs.writeFileSync('./database/json/anime.json', JSON.stringify(anime))
-						reply(`\`\`\`✓“Sukes menonaktifkan mode anime di group\`\`\` *${groupMetadata.subject}*`)
+						reply(`✅ | *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else {
-						reply('On untuk mengaktifkan, Off untuk menonaktifkan')
+						reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
 					}
 					break
 				case 'boasvindas':
@@ -3749,96 +3691,6 @@ case 'wiki':
 					denz.sendMessage(from, hasil, text, {quoted: mek})
 					await limitAdd(sender) 
 					break  
-				case 'encode64':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				encode64 = `${body.slice(10)}`
-				anu = await fetchJson(`https://api.i-tech.id/hash/bs64?key=${TechApi}&type=encode&string=${encode64}`, {method: 'get'})
-				denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
-					await limitAdd(sender) 
-					break 
-				case 'decode64':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				decode64 = `${body.slice(10)}`
-					anu = await fetchJson(`https://api.i-tech.id/hash/bs64?key=${TechApi}&type=decode&string=${decode64}`, {method: 'get'})
-					denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
-					await limitAdd(sender) 
-					break  
-				case 'decode32':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				decode32 = `${body.slice(10)}`
-					anu = await fetchJson(`https://api.i-tech.id/hash/bs32?key=${TechApi}&type=decode&string=${decode32}`, {method: 'get'})
-					denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
-					await limitAdd(sender) 
-					break  
-				case 'encode32':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				encode32 = `${body.slice(10)}`
-					anu = await fetchJson(`https://api.i-tech.id/hash/bs32?key=${TechApi}&type=encode&string=${encode32}`, {method: 'get'})
-					denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
-					await limitAdd(sender) 
-					break  
-				case 'encbinary':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				encbinary = `${body.slice(11)}`
-					anu = await fetchJson(`https://api.anoncybfakeplayer.com/api/binary/?encode=${encbinary}`, {method: 'get'})
-					denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
-					await limitAdd(sender) 
-					break  
-				case 'decbinary':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				decbin = `${body.slice(11)}`
-					anu = await fetchJson(`https://api.anoncybfakeplayer.com/api/binary/?decode=${decbin}`, {method: 'get'})
-					denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
-					await limitAdd(sender) 
-					break  
-				case 'encoctal':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				encoc = `${body.slice(10)}`
-					anu = await fetchJson(`https://api.anoncybfakeplayer.com/api/octal/?encode=${encoc}`, {method: 'get'})
-					denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
-					await limitAdd(sender)
-					break  
-				case 'decoctal':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				decoc = `${body.slice(10)}`
-					anu = await fetchJson(`https://api.anoncybfakeplayer.com/api/octal/?decode=${decoc}`, {method: 'get'})
-					denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
-					await limitAdd(sender) 
-					break  
-				case 'becrypt':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				becry = `${body.slice(10)}`
-				anu = await fetchJson(`https://api.i-tech.id/hash/bcrypt?key=${TechApi}&string=${becry}`, {method: 'get'})
-				denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
-				await limitAdd(sender) 
-				break 
 					case 'hashidentifier':
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
