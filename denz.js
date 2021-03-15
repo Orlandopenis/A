@@ -1902,8 +1902,14 @@ break
 				case 'sair': 
 				    if (!isGroup) return reply(mess.only.group)
 					if (!isOwner) return reply(mess.only.ownerB)
-			    	anu = await denz.groupLeave(from, `🚨 | *_ᴇsᴛᴀʀᴇɪ ᴍᴇ ʀᴇᴛɪʀᴀɴᴅᴏ ᴅᴏ ɢʀᴜᴘᴏ, ${groupMetadata.subject}, ʙᴏᴀ ɴᴏɪᴛᴇ ᴀ ᴛᴏᴅᴏs_*`, groupId)
-	                break
+					setTimeout( () => {
+					client.groupLeave (from) 
+					}, 2000)
+					setTimeout( () => {
+					denz.updatePresence(from, Presence.composing) 
+					denz.sendMessage(from, '🚨 | *_ᴇsᴛᴀʀᴇɪ ᴍᴇ ʀᴇᴛɪʀᴀɴᴅᴏ ᴅᴏ ɢʀᴜᴘᴏ, ${groupMetadata.subject}, ᴀᴅᴇᴜs ᴀ ᴛᴏᴅᴏs_*', text) // ur cods
+					}, 0)
+					break
 				case 'setname':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
