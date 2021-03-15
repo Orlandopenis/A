@@ -1315,7 +1315,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
 				if (args.length < 1) return reply(`🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
-				attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(6)}`)
+				attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(5)}`)
 				denz.sendMessage(from, attp2, sticker, {quoted: mek})
 				break
 				case 'nhentai':
@@ -1325,7 +1325,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 			    if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
 				if (args.length < 1) return reply(`🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ 218816_*`)
 				res = await fetchJson(`http://api.lolhuman.xyz/api/nhentai/${body.slice(9)}?apikey=RiuApikey`, {method: 'get'})
-						buffer = await getBuffer(res.result)
+						buffer = await getBuffer(res.url)
 						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
 					await limitAdd(sender) 
 					break 
