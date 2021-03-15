@@ -3557,16 +3557,14 @@ case 'wiki':
 				reply(hasil)
 				await limitAdd(sender)
 				break
-				case 'nhentai':
+				case 'nhentaipdf':
          if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 				denz.updatePresence(from, Presence.composing) 
-				data = await fetchJson(`http://api.lolhuman.xyz/api/nhentai/${args[0]}?apikey=30bb33d323c9e1eb2bba2ee4`)
+				data = await fetchJson(`http://api.lolhuman.xyz/api/nhentaipdf/${args[0]}?apikey=30bb33d323c9e1eb2bba2ee4)
 				reply(mess.wait)
-				hasil = `✅ | *_ɪɴғᴏ sᴏʙʀᴇ ᴏ ᴘᴇᴅɪᴅᴏ :_*\n━⊱ *_ᴛɪᴛᴜʟᴏ :_* ${data.result.title_romaji}\n━⊱ *_ᴅᴏᴜᴊɪɴsʜɪ ʙᴀsᴇᴀᴅᴏ ᴇᴍ :_* ${data.result.info.parodies}\n━⊱ *_ᴘᴀɢɪɴᴀs ᴛᴏᴛᴀɪs :_* ${data.result.info.pages}`
-				reply(hasil)
-				hento = `${data.result.image}`
-				denz.sendMessage(from, hento, image, {quoted: mek})
+				hasil = `✅ | *_ᴘᴅғ ᴅᴏ ʜᴇɴᴛᴀɪ ᴘᴇᴅɪᴅᴏ :_*\n━⊱ ${data.result.}`
+				denz.sendMessage(from, hasil, text, {quoted: mek})
 				await limitAdd(sender)
 				break
 		case 'bpfont':
