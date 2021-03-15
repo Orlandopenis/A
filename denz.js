@@ -3556,7 +3556,7 @@ case 'wiki':
 			if (!isUser) return reply(mess.only.userB)
 				denz.updatePresence(from, Presence.composing) 
 				data = await fetchJson(`http://api.lolhuman.xyz/api/ipaddress/${args[0]}?apikey=RiuApikey`)
-				hasil = `✅ | *_ᴅᴀᴅᴏs ᴅᴏ ɪᴘ ${args[0]} :_* ${data.result.text}`
+				hasil = `✅ | *_ᴅᴀᴅᴏs ᴅᴏ ɪᴘ ${args[0]} :_* ${data.results}`
 				reply(hasil)
 				await limitAdd(sender)
 				break
