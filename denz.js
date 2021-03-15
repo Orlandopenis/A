@@ -3573,17 +3573,16 @@ case 'wiki':
 			reply (anu.text)
 			await limitAdd(sender) 
 			break  
-		case 'bitly':
-			if (isBanned) return reply(mess.only.benned)
+			case 'bitly':
+				// Fix Case By Yogi/Hans⛔
+                 if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-							
-			if (isLimit(sender)) return reply(limitend(pushname2))
-			link = `${body.slice(7)}`
-			anu = await fetchJson(`https://tobz-api.herokuapp.com/api/bitly?url=${link}&apikey=${TobzApi}`, {method: 'get'})
-			bitly = `${anu.result}`
-			denz.sendMessage(from, `${bitly}`, text, {quoted: mek})
-			await limitAdd(sender) 
-			break  
+				denz.updatePresence(from, Presence.composing) 
+				data = await fetchJson(`https://tobz-api.herokuapp.com/api/bitly?url=${args[0]}&apikey=BotWeA`)
+				hasil = `link : ${args[0]}\n\nOutput : ${data.result}`
+				reply(hasil)
+				await limitAdd(sender)
+				break
 			case 'textstyle':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
