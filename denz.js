@@ -3552,17 +3552,14 @@ case 'wiki':
                    await limitAdd(sender) 				
                    break 
                    case 'checkip':
-                   if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				reply(mess.wait)
-				chekip = `${body.slice(9)}`
-                   anu = await fetchJson(`http://api.lolhuman.xyz/api/ipaddress/${chekip}?apikey=RiuApikey`, {method: 'get'})
-                   checkip = `${anu.result}`
-                   denz.sendMessage(from, `${checkip}`, text, {quoted: mek})
-                   await limitAdd(sender) 				
-                   break 
+         if (isBanned) return reply(mess.only.benned)
+			if (!isUser) return reply(mess.only.userB)
+				denz.updatePresence(from, Presence.composing) 
+				data = await fetchJson(`http://api.lolhuman.xyz/api/ipaddress/${args[0]}?apikey=RiuApikey`)
+				hasil = `✅ | *_ᴅᴀᴅᴏs ᴅᴏ ɪᴘ ${args[0]} :_* ${data.result}`
+				reply(hasil)
+				await limitAdd(sender)
+				break
 		case 'bpfont':
 			if (isBanned) return reply(mess.only.benned)
 			if (isLimit(sender)) return reply(limitend(pushname2))
@@ -3579,7 +3576,7 @@ case 'wiki':
 			if (!isUser) return reply(mess.only.userB)
 				denz.updatePresence(from, Presence.composing) 
 				data = await fetchJson(`https://tobz-api.herokuapp.com/api/bitly?url=${args[0]}&apikey=BotWeA`)
-				hasil = `link : ${args[0]}\n\nOutput : ${data.result}`
+				hasil = `✅ | *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${data.result}\n✅ | *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${args[0]}`
 				reply(hasil)
 				await limitAdd(sender)
 				break
