@@ -2020,7 +2020,9 @@ reply(mess.wait)
 try {
   anu = await fetchJson(`http://scrap.terhambar.com/lirik?word=${tels}`, {method: 'get'})
   reply(anu.result.lirik) 
+  }
   break
+  
                 case 'report':
                 if (isBanned) return reply(mess.only.benned)    
                 if (!isUser) return reply(mess.only.userB)
