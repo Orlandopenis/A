@@ -2839,7 +2839,7 @@ break
 		    case 'map':
                    data = awat fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slice(5)}`)
                    hasil = awat getbufferer(data.gambar)
-                   denz.sendMessage(from, hasil, image, {quoted: mek, caption: `Resultados de *${body.slice(5)}*`})
+                   denz.sendMessage(from, hasil, image, {quoted: mek, caption: `Resultados`)
                    awat limitAdd(sender)
                    break
 				case 'url2img':
