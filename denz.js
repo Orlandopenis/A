@@ -3566,9 +3566,10 @@ case 'wiki':
 								
 				if (isLimit(sender)) return reply(limitend(pushname2))
 				reply(mess.wait)
-				paste = `${body.slice(9)}`
-                   anu = await fetchJson(`http://api.lolhuman.xyz/api/ipaddress/${paste}?apikey=RiuApikey`, {method: 'get'})
-                   denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
+				chekip = `${body.slice(9)}`
+                   anu = await fetchJson(`http://api.lolhuman.xyz/api/ipaddress/${chekip}?apikey=RiuApikey`, {method: 'get'})
+                   checkip = `${anu.result}`
+                   denz.sendMessage(from, `${checkip}`, text, {quoted: mek})
                    await limitAdd(sender) 				
                    break 
 		case 'bpfont':
@@ -3581,26 +3582,6 @@ case 'wiki':
 			reply (anu.text)
 			await limitAdd(sender) 
 			break  
-		case 'spamcall':
-			if (isBanned) return reply(mess.only.benned)
-			if (isLimit(sender)) return reply(limitend(pushname2))
-			if (!isUser) return reply(mess.only.userB)
-							
-			call = `${body.slice(11)}`
-			anu = await fetchJson(`https://videfikri.com/api/call/?nohp=${call}`, {method: 'get'})
-			denz.sendMessage(from, `${anu.result.logs}`, text, {quoted: mek})
-			await limitAdd(sender) 
-			break  
-			case 'spamgmail':
-			if (isBanned) return reply(mess.only.benned)
-			if (!isUser) return reply(mess.only.userB)
-							
-			if (isLimit(sender)) return reply(limitend(pushname2))
-			spam = `${body.slice(10)}`
-			anu = await fetchJson(`https://videfikri.com/api/spamemail/?email=${spam}&subjek=PT.PLN&pesan=Silahkan%20bayar%20tagihan%20listrik%20Anda`, {method: 'get'})
-			denz.sendMessage(from, `${anu.result.log_lengkap}`, text, {quoted: mek})
-			await limitAdd(sender) 
-			break
 		case 'bitly':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
@@ -3609,7 +3590,7 @@ case 'wiki':
 			link = `${body.slice(7)}`
 			anu = await fetchJson(`https://tobz-api.herokuapp.com/api/bitly?url=${link}&apikey=${TobzApi}`, {method: 'get'})
 			bitly = `${anu.result}`
-			denz.sendMessage(from, anu, text, {quoted: mek})
+			denz.sendMessage(from, `${bitly}`, text, {quoted: mek})
 			await limitAdd(sender) 
 			break  
 			case 'textstyle':
