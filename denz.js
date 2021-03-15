@@ -2837,7 +2837,8 @@ break
 				await limitAdd(sender) 
 				break 
 		    case 'map':
-                   data = awat fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slice(5)}`)
+		txt = body.slice(5)
+                   data = awat fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${txt}`)
                    hasil = awat getbufferer(data.gambar)
                    denz.sendMessage(from, hasil, image, {quoted: mek, caption: `Resultados`)
                    awat limitAdd(sender)
