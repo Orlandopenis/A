@@ -2837,22 +2837,11 @@ break
 				await limitAdd(sender) 
 				break 
 		    case 'map':
-  if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-  if (args.length < 1) return reply('Masukan nama daerah')
-  daerah = body.slice(5)
-  try {
-  data = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${daerah}`)
-  reply(mess.wait)
-  hasil = await getBuffer(data.gambar)
-  denz.sendMessage(from, hasil, image, {
-quoted: mek, caption: `Hasil Dari *${daerah}*`
-  })
-  await limitAdd(sender)
-  } catch {
-    reply(mess.wait)
-  }
-  break
+                   data = awat fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slice(5)}`)
+                   hasil = awat getbufferer(data.gambar)
+                   denz.sendMessage(from, hasil, image, {quoted: mek, caption: `Resultados de *${body.slice(5)}*`})
+                   awat limitAdd(sender)
+                   break
 				case 'url2img':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
