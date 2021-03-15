@@ -1907,7 +1907,7 @@ break
 					}, 2000)
 					setTimeout( () => {
 					denz.updatePresence(from, Presence.composing) 
-					denz.sendMessage(from, '🚨 | *_ᴇsᴛᴀʀᴇɪ ᴍᴇ ʀᴇᴛɪʀᴀɴᴅᴏ ᴅᴏ ɢʀᴜᴘᴏ, ${groupMetadata}, ᴀᴅᴇᴜs ᴀ ᴛᴏᴅᴏs_*', text) // ur cods
+					denz.sendMessage(from, '🚨 | *_ᴇsᴛᴀʀᴇɪ ᴍᴇ ʀᴇᴛɪʀᴀɴᴅᴏ ᴅᴏ ɢʀᴜᴘᴏ, ${groupName}, ᴀᴅᴇᴜs ᴀ ᴛᴏᴅᴏs_*', text) // ur cods
 					}, 0)
 					break
 				case 'setname':
