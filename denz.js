@@ -3552,7 +3552,7 @@ case 'wiki':
 			if (!isUser) return reply(mess.only.userB)
 				denz.updatePresence(from, Presence.composing) 
 				data = await fetchJson(`http://api.lolhuman.xyz/api/ipaddress/${args[0]}?apikey=30bb33d323c9e1eb2bba2ee4`)
-				replu(mess.wait)
+				reply(mess.wait)
 				hasil = `┏━━━━⊱ *_Check IP_*\n┣⊱ *_País:_* ${data.result.country}\n┣⊱ *_Sigla do País:_* ${data.result.countryCode}\n┣⊱ *_Estado:_* ${data.result.regionName}\n┣⊱ *_City:_* ${data.result.city}\n┣⊱ *_Lat.:_* ${data.result.lat}\n┣⊱ *_Long.:_* ${data.result.lon}\n┣⊱ *_Timezone:_* ${data.result.timezone}\n┣⊱ *_IP:_* ${data.result.query}\n┗━⊱ *_Developer ©_* : *ɴʏx*`
 				reply(hasil)
 				await limitAdd(sender)
