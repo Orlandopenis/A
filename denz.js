@@ -3563,7 +3563,7 @@ case 'wiki':
 				denz.updatePresence(from, Presence.composing) 
 				data = await fetchJson(`http://api.lolhuman.xyz/api/nhentaipdf/${args[0]}?apikey=30bb33d323c9e1eb2bba2ee4`)
 				reply(mess.wait)
-				hasil = `✅ | *_ᴘᴅғ ᴅᴏ ʜᴇɴᴛᴀɪ ᴘᴇᴅɪᴅᴏ :_*\n━⊱ ${data.result.}`
+				hasil = `✅ | *_ᴘᴅғ ᴅᴏ ʜᴇɴᴛᴀɪ ᴘᴇᴅɪᴅᴏ :_*\n━⊱ ${data.result}`
 				denz.sendMessage(from, hasil, text, {quoted: mek})
 				await limitAdd(sender)
 				break
