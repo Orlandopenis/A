@@ -422,7 +422,6 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ┣⊱${prefix}ᴀɴɪᴍᴇᴄʀʏ
 ┣⊱${prefix}ᴀɴɪᴍᴇᴋɪss
 ┣⊱${prefix}ᴀɴɪᴍᴇʜᴜɢ
-┣⊱${prefix}ʜᴇɴᴛᴀɪғɪɢ 🔞
 ┗━⊱ *_Developer ©_* : *ɴʏx*
 ┏━━━⊱「 *_ɪᴍᴀɢᴇ ᴍᴇɴᴜ_* 」
 ┣⊱${prefix}ᴘʜᴄᴏᴍᴍᴇɴᴛ
@@ -465,10 +464,6 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ║❏ ${prefix}ғᴏᴛᴏᴛɪᴋᴛᴏᴋ
 ║❏ ${prefix}ᴋʙʙɪ
 ║❏ ${prefix}ᴡᴀɪᴛ
-║❏ ${prefix}ᴊᴀᴅᴡᴀʟᴛᴠ 
-║❏ ${prefix}ᴊᴀᴅᴡᴀʟᴛᴠɴᴏᴡ
-║❏ ${prefix}ᴊᴀᴅᴡᴀʟʙᴏʟᴀ
-║❏ ${prefix}ʟɪʀɪᴋ 
 ║❏ ${prefix}ᴄʜᴏʀᴅ 
 ║❏ ${prefix}ᴡɪᴋɪ 
 ║❏ ${prefix}ʙʀᴀɪɴʟʏ 
@@ -604,18 +599,29 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ║❏ ${prefix}ғᴀᴍɪʟʏ100
 ║❏ ${prefix}ᴍᴇᴍᴇɪɴᴅᴏ
 ╙───々
-╓───「 *_ɴsғᴡ ᴍᴇɴᴜ_* 」
-║❏ ${prefix}ʜᴇɴᴛᴀɪ
-║❏ ${prefix}ɴꜱғᴡʙʟᴏᴡᴊᴏʙ
-║❏ ${prefix}ɴꜱғᴡɴᴇᴋᴏ
-║❏ ${prefix}ɴꜱғᴡᴛʀᴀᴘ
-║❏ ${prefix}ᴀᴛʀɪᴢʀᴀɴᴅᴏᴍ
-║❏ ${prefix}ᴘᴏʀɴʜᴜʙ
-║❏ ${prefix}xᴠɪᴅᴇᴏꜱ
-╙───々
+┏━━━⊱「 *_ɴsғᴡ ᴍᴇɴᴜ_* 」🔞
+┣⊱${prefix}ʜᴇɴᴛᴀɪ
+┣⊱${prefix}ʜᴇɴᴛᴀɪ2
+┣⊱${prefix}ᴀss
+┣⊱${prefix}ᴘᴀᴛʀᴏᴀs
+┣⊱${prefix}ᴄᴏxᴀs
+┣⊱${prefix}ᴏᴘᴘᴀɪ
+┣⊱${prefix}sɪᴅᴇᴏᴘᴘᴀɪ
+┣⊱${prefix}ʏᴀᴏɪ
+┣⊱${prefix}ᴇᴄᴄʜɪ
+┣⊱${prefix}ᴀʜᴇɢᴀᴏ
+┣⊱${prefix}ʟᴇᴡᴅ
+┣⊱${prefix}ʏᴜʀɪ
+┣⊱${prefix}ɴsғᴡʟᴏʟɪ
+┣⊱${prefix}ɴꜱғᴡʙʟᴏᴡᴊᴏʙ
+┣⊱${prefix}ɴꜱғᴡɴᴇᴋᴏ
+┣⊱${prefix}ɴꜱғᴡᴛʀᴀᴘ
+┣⊱${prefix}ʜᴇɴᴛᴀɪɢɪғ
+┣⊱${prefix}ɴsғᴡɴᴇᴋᴏɢɪғ
+┣⊱${prefix}ʙʟᴏᴡᴊᴏʙғɪɢ
+┣⊱${prefix}ᴀɴᴀʟғɪɢ
+┗━⊱ *_Developer ©_* : *ɴʏx*
 ╓───「 *_ᴏᴛʜᴇʀ ᴍᴇɴᴜ_* 」
-║❏ ${prefix}ʜᴀꜱʜɪᴅᴇɴᴛɪғɪᴇʀ 
-║❏ ${prefix}ᴅᴏʀᴋɪɴɢ 
 ║❏ ${prefix}ᴘᴀꜱᴛᴇʙɪɴ 
 ║❏ ${prefix}ᴛɪɴʏᴜʀʟ 
 ║❏ ${prefix}ʙɪᴛʟʏ 
@@ -750,17 +756,6 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
                     denz.sendMessage(from, buffer, image, {quoted: mek, caption: hasilbg3})
                     await limitAdd(sender)
                     break
-                    case 'jadwalbola':
-                    if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-				data = await fetchJson(`https://api.vhtear.com/jadwalbola&apikey=c1d162b46e634f389efa1ac715f03d03`, {method: 'get'})
-				teks = '=================\n'
-				for (let i of data.result.data) {
-					teks += `❏ *Kick Off* : ${i.kickoff}\n❏ *Pertandingan* : ${i.pertandingan}\n❏ *Stasiuntv* : ${i.stasiuntv}\n\n=================\n\n`
-					}
-				reply(teks.trim())
-				await limitAdd(sender)
-				break
 // newmenu
 		case 'ocean': 				
 				case 'water':
@@ -2024,7 +2019,7 @@ reply(mess.wait)
                 case 'report':
                 if (isBanned) return reply(mess.only.benned)    
                 if (!isUser) return reply(mess.only.userB)
-                if (args.length < 1) return reply(`Yang mau direport apaan? Contoh: #report fitur #hentai error`)
+                if (args.length < 1) return reply(`🚨 | *_ᴇsᴄʀᴇᴠᴀ ᴏ ᴇʀʀᴏ, ᴘᴏʀ ᴇxᴇᴍᴘʟᴏ "#ʀᴇᴘᴏʀᴛ ᴏ ᴄᴏᴍᴀɴᴅᴏ sᴛɪᴄᴋᴇʀ ɴᴀᴏ ᴇsᴛᴀ ғᴜɴᴄɪᴏɴᴀɴᴅᴏ"_*`)
           				
                      const pesan = body.slice(8)
                       if (pesan.length > 300) return denz.sendMessage(from, '[❗] ᴅᴇsᴄᴜʟᴘᴇ, ᴏ sᴇᴜ ʀᴇʟᴀᴛᴏʀɪᴏ ᴇ ᴍᴜɪᴛᴏ ʟᴏɴɢᴏ, ᴍᴀxɪᴍᴏ ᴅᴇ 300 ᴄᴀʀᴀᴄᴛᴇʀᴇs', text, {quoted: mek})
@@ -2125,7 +2120,7 @@ break
 				    try {
 				    if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
-				    				
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwblowjob?apikey=${TobzApi}`, {method: 'get'})
@@ -2141,7 +2136,7 @@ break
 				    try {
 				    if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
-				    				
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko?apikey=${TobzApi}`, {method: 'get'})
@@ -2157,7 +2152,7 @@ break
 				    try {
 				    if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
-				    				
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwtrap?apikey=${TobzApi}`, {method: 'get'})
@@ -2173,7 +2168,7 @@ break
 				    try {
 				    if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
-				    				
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/hentai?apikey=${TobzApi}`, {method: 'get'})
@@ -2185,6 +2180,270 @@ break
 					}
 					await limitAdd(sender) 
 					break 
+					case 'ass':
+				    try {
+				    if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/animebooty?apikey=RiuApikey`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
+					}
+					await limitAdd(sender) 
+					break 
+					case 'coxas':
+				    try {
+				    if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/animethighss?apikey=RiuApikey`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
+					}
+					await limitAdd(sender) 
+					break 
+					case 'patroas':
+				    try {
+				    if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/hentaiparadise?apikey=RiuApikey`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
+					}
+					await limitAdd(sender) 
+					break 
+					case 'hentai2':
+				    try {
+				    if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/hentai4everyone?apikey=RiuApikey`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
+					}
+					await limitAdd(sender) 
+					break 
+					case 'oppai':
+				    try {
+				    if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/biganimetiddies?apikey=RiuApikey`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
+					}
+					await limitAdd(sender) 
+					break 
+					case 'sideoppai':
+				    try {
+				    if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/sideoppai?apikey=RiuApikey`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
+					}
+					await limitAdd(sender) 
+					break 
+					case 'yaoi':
+				    try {
+				    if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/yaoi?apikey=RiuApikey`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
+					}
+					case 'ecchi':
+				    try {
+				    if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/ecchi?apikey=RiuApikey`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
+					}
+					await limitAdd(sender) 
+					break 
+					case 'ahegao':
+				    try {
+				    if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/ahegao?apikey=RiuApikey`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
+					}
+					await limitAdd(sender) 
+					break 
+					case 'lewd':
+				    try {
+				    if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/hololewd?apikey=RiuApikey`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
+					}
+					case 'yuri':
+				    try {
+				    if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						res = await fetchJson(`http://api.lolhuman.xyz/api/random2/yuri?apikey=RiuApikey`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
+					}
+					await limitAdd(sender) 
+					break 
+					case 'nsfwloli':
+				    try {
+				    if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/loli?apikey=RiuApikey`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '👨‍✈️ | *_ᴄᴀʀᴀ ᴠᴏᴄᴇ ᴅᴇᴠᴇʀɪᴀ sᴇʀ ᴘʀᴇsᴏ, ᴍᴀs ᴇɴǫᴜᴀɴᴛᴏ ɴᴀᴏ ғᴏʀ, ғɪǫᴜᴇ ᴄᴏᴍ ᴇssᴀ ʟᴏʟɪ._*'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
+					}
+					await limitAdd(sender) 
+					break 
+					case 'blowjobfig':
+				if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+				ranp = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson('https://tobz-api.herokuapp.com/api/nsfwblowjob?apikey=BotWeA', {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(ranp)
+						if (err) return reply(mess.error.stick)
+						buffer = fs.readFileSync(rano)
+						denz.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender)
+					break
+					case 'analfig':
+				if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+				ranp = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson('http://api.lolhuman.xyz/api/random2/anal?apikey=RiuApikey', {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(ranp)
+						if (err) return reply(mess.error.stick)
+						buffer = fs.readFileSync(rano)
+						denz.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender)
+					break
+					case 'nsfwnekogif':
+				if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+				ranp = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson('http://api.lolhuman.xyz/api/random2/nsfw_neko_gif?apikey=RiuApikey', {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(ranp)
+						if (err) return reply(mess.error.stick)
+						buffer = fs.readFileSync(rano)
+						denz.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender)
+					break
+					case 'hentaigif':
+				if (isBanned) return reply(mess.only.benned)    
+				    if (!isUser) return reply(mess.only.userB)
+				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+				ranp = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson('http://api.lolhuman.xyz/api/random2/random_hentai_gif?apikey=RiuApikey', {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(ranp)
+						if (err) return reply(mess.error.stick)
+						buffer = fs.readFileSync(rano)
+						denz.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender)
+					break
 				case 'hilih':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -3299,24 +3558,6 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					}, 0) // 1000 = 1s,
 					await limitAdd(sender) 
 					break 
-				case 'atrizrandom':
-				denz.updatePresence(from, Presence.composing) 
-				 if (isBanned) return reply(mess.only.benned)    
-				 if (isLimit(sender)) return reply(limitend(pushname2))
-				if (!isNsfw) return reply(' *NSFW OF* ')
-				if (!isUser) return reply(mess.only.userB)
-								
-				 data = fs.readFileSync('./Fxc7/18.js');
-                 jsonData = JSON.parse(data);
-                 randIndex = Math.floor(Math.random() * jsonData.length);
-                 randKey = jsonData[randIndex];
-                 randBokep = await getBuffer(randKey.image)
-                 reply(mess.wait)
-                 randTeks = randKey.teks
-                 denz.sendMessage(from, randBokep, image, {quoted: mek, caption: randTeks})
-				await limitAdd(sender) 
-				break
-
 				case 'clonar':
 				if (!isOwner) return reply(mess.only.ownerB)
 					if (!isGroup) return reply(mess.only.group)
@@ -3551,20 +3792,10 @@ case 'wiki':
          if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 				denz.updatePresence(from, Presence.composing) 
-				data = await fetchJson(`http://api.lolhuman.xyz/api/ipaddress/${args[0]}?apikey=30bb33d323c9e1eb2bba2ee4`)
+				data = await fetchJson(`http://api.lolhuman.xyz/api/ipaddress/${args[0]}?apikey=RiuApikey`)
 				reply(mess.wait)
 				hasil = `┏━━━━⊱ *_Check IP_*\n┣⊱ *_País:_* ${data.result.country}\n┣⊱ *_Sigla do País:_* ${data.result.countryCode}\n┣⊱ *_Estado:_* ${data.result.regionName}\n┣⊱ *_City:_* ${data.result.city}\n┣⊱ *_Lat.:_* ${data.result.lat}\n┣⊱ *_Long.:_* ${data.result.lon}\n┣⊱ *_Timezone:_* ${data.result.timezone}\n┣⊱ *_IP:_* ${data.result.query}\n┗━⊱ *_Developer ©_* : *ɴʏx*`
 				reply(hasil)
-				await limitAdd(sender)
-				break
-				case 'nhentaipdf':
-         if (isBanned) return reply(mess.only.benned)
-			if (!isUser) return reply(mess.only.userB)
-				denz.updatePresence(from, Presence.composing) 
-				data = await fetchJson(`http://api.lolhuman.xyz/api/nhentaipdf/${args[0]}?apikey=30bb33d323c9e1eb2bba2ee4`)
-				reply(mess.wait)
-				hasil = `✅ | *_ᴘᴅғ ᴅᴏ ʜᴇɴᴛᴀɪ ᴘᴇᴅɪᴅᴏ :_*\n━⊱ ${data.result}`
-				denz.sendMessage(from, hasil, text, {quoted: mek})
 				await limitAdd(sender)
 				break
 		case 'bpfont':
@@ -3649,32 +3880,6 @@ case 'wiki':
 					await denz.updateProfilePicture(botNumber, media)
 					reply('✅ | *_ᴀ ғᴏᴛᴏ ᴅᴏ ʙᴏᴛ ғᴏɪ ᴀᴛᴜᴀʟɪᴢᴀᴅᴀ ᴄᴏᴍ sᴜᴄᴇssᴏ_*')
 					break
-
-// Fitur Defacer
-
-				case 'dorking':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				reply(mess.wait)
-				dork = `${body.slice(9)}`
-					anu = await fetchJson(`https://api-anoncybfakeplayer.herokuapp.com/dorking?dork=${dork}`, {method: 'get'})
-					hasil = `${anu.result}`
-					denz.sendMessage(from, hasil, text, {quoted: mek})
-					await limitAdd(sender) 
-					break  
-					case 'hashidentifier':
-					if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					  hash = `${body.slice(16)}`
-					  anu = await fetchJson(`https://freerestapi.herokuapp.com/api/v1/hash-identifier?hash=${hash}`)
-					  hasilhash = `Tipe: *${anu.hash_type}*\nChar Tipe: *${anu.char_type}*`
-					  denz.sendMessage(from, hasilhash, text, {quoted: mek})
-					  await limitAdd(sender)
-					  break 
 // akhir encrypt & decrypt Fitur
 
 			case 'google':
@@ -3739,22 +3944,6 @@ case 'husbu':
 				ranp = getRandom('.gif')
 					rano = getRandom('.webp')
 					anu = await fetchJson('https://tobz-api.herokuapp.com/api/cry?apikey=BotWeA', {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-						fs.unlinkSync(ranp)
-						if (err) return reply(mess.error.stick)
-						buffer = fs.readFileSync(rano)
-						denz.sendMessage(from, buffer, sticker, {quoted: mek})
-						fs.unlinkSync(rano)
-					})
-					await limitAdd(sender)
-					break
-                case 'hentaifig':
-				if (!isUser) return reply(mess.only.userB)
-				if (!isNsfw) return reply('🚨 | *ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !*')
-				ranp = getRandom('.gif')
-					rano = getRandom('.webp')
-					anu = await fetchJson('https://tobz-api.herokuapp.com/api/nsfwblowjob?apikey=BotWeA', {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
