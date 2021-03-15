@@ -573,7 +573,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ┣⊱${prefix}ᴄᴀsᴀʟ
 ┣⊱${prefix}ᴄʜᴀɴᴄᴇ *(DO/DE + PERGUNTA)*
 ┣⊱${prefix}ᴍᴀɪsᴛᴏᴘ 
-║❏ ${prefix}ᴢᴏᴅɪᴀᴋ
+┣⊱${prefix}ʟᴇᴛʀᴀ *[NOME DA MSC]*
 ║❏ ${prefix}ʜɪʟɪʜ
 ║❏ ${prefix}ᴄᴇᴄᴀɴ
 ║❏ ${prefix}ᴄᴏɢᴀɴ
@@ -852,20 +852,6 @@ break
 				reply(teks.trim())
 				await limitAdd(sender)
 				break
-            case 'zodiak':
-if (args.length < 1) return reply('Masukkan nama zodiak')
-denz.updatePresence(from, Presence.composing)
-if (!isUser) return reply(mess.only.userB)
-teks = body.slice(8)
-try {
-data = await fetchJson(`https://api.vhtear.com/zodiak?query=${teks}&apikey=${VthearApi}`)
-hasil = `Zodiak : *${data.result.zodiak}*\nRamalan hari ini : *${data.result.ramalan}*\n${data.result.inspirasi}`
-reply(hasil)
-await limitAdd(sender)
-} catch {
-  reply(mess.wait)
-}
-break
 case 'cyberpunk':
 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -2025,12 +2011,16 @@ break
 					}
 					denz.sendMessage(from, tag, text, {quoted: mek})
 					break
-         case 'lirik':
-				anu = await fetchJson(`https://tobz-api.herokuapp.com/api/lirik?q=${body.slice(7)}&apikey=BotWeA`)
-				thum = await getBuffer(anu.result.thumb)
-				teks = `*LAGU DI TEMUKAN *\n\n*Judul* : ${anu.result.judul}\n*Album* : ${anu.result.album}\n*Public in* : ${anu.result.dipublikasi}\n*Lyrics* : ${anu.result.lirik}`
-				denz.sendMessage(from, thum, image, { quoted : mek, caption: teks })
-				break
+         case 'letra':
+         if (isBanned) return reply(mess.only.benned)   				
+                if (!isUser) return reply(mess.only.userB)
+denz.updatePresence(from, Presence.composing)
+tels = body.slice(7)
+reply(mess.wait)
+try {
+  anu = await fetchJson(`http://scrap.terhambar.com/lirik?word=${tels}`, {method: 'get'})
+  reply(anu.result.lirik) 
+  break
                 case 'report':
                 if (isBanned) return reply(mess.only.benned)    
                 if (!isUser) return reply(mess.only.userB)
