@@ -569,6 +569,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ┣⊱${prefix}ᴄʜᴀɴᴄᴇ *(DO/DE + PERGUNTA)*
 ┣⊱${prefix}ᴍᴀɪsᴛᴏᴘ 
 ┣⊱${prefix}ʟᴇᴛʀᴀ *[NOME DA MSC]*
+┣⊱${prefix}ᴄʜᴇᴄᴋɪᴘ *[IP]*
 ║❏ ${prefix}ʜɪʟɪʜ
 ║❏ ${prefix}ᴄᴇᴄᴀɴ
 ║❏ ${prefix}ᴄᴏɢᴀɴ
@@ -1263,7 +1264,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 				case 'ttp2':
 				if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
-				                    if (args.length == 0) return reply(`Usage: ${prefix + command} query\nExample: ${prefix + command} LoL Human`)
+				                    if (args.length == 0) return reply(`🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ttp3?apikey=RiuApikey&text=${txt}`)
                     denz.sendMessage(from, buffer, sticker, { quoted: mek })
@@ -1287,15 +1288,6 @@ quoted: mek, caption: `Wah ganteng kek gua`
 				txt = args.join(" ")
                     buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${txt}`)
                     denz.sendMessage(from, buffer, sticker, { quoted: mek })
-                    break
-                    case 'ttp3':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-				if (args.length < 1) return reply(`🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
-				txt = args.join(" ")
-                    buffer = await imageToBase64(`https://tobz-api.herokuapp.com/api/ttp?text=${txt}&apikey=BotWeA`)
-                    ttpt = `${buffer.base64}`
-                    denz.sendMessage(from, ttpt, sticker, { quoted: mek })
                     break
                     case 'phlogo':
                     if (isBanned) return reply(mess.only.benned)    
@@ -1855,7 +1847,7 @@ break
 								
 					if (!isGroup) return reply(mess.only.group)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					var value = body.slice(10)
+					var value = body.slice(11)
 					var group = await denz.groupMetadata(from)
 					var member = group['participants']
 					var mem = []
