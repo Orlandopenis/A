@@ -2349,7 +2349,7 @@ break
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
 					anu = await getBuffer('http://api.lolhuman.xyz/api/random2/anal?apikey=RiuApikey', {method: 'get'})
 					reply(mess.wait)
-						denz.sendMessage(from, anu, image, {quoted: mek})
+						denz.sendMessage(from, anu, sticker, {quoted: mek})
 					await limitAdd(sender)
 					break
 					case 'nsfwnekogif':
