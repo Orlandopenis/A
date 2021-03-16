@@ -1284,9 +1284,10 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
 				if (args.length < 1) return reply(`🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
-				attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${args}`)
-				denz.sendMessage(from, attp2, sticker, {quoted: mek})
-				break
+				txt = args.join(" ")
+                    buffer = await getBuffer(`https://lolhuman.herokuapp.com/api/ttp3?apikey=RiuApikey&text=${txt}`)
+                    denz.sendMessage(from, buffer, sticker, { quoted: mek })
+                    break
                     case 'phlogo':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
