@@ -1269,14 +1269,6 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ttp3?apikey=RiuApikey&text=${txt}`)
                     denz.sendMessage(from, buffer, sticker, { quoted: mek })
                     break
-                    case 'ttp3':
-				if (isBanned) return reply(mess.only.benned)
-				if (!isUser) return reply(mess.only.userB)
-				                    if (args.length == 0) return reply(`🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
-                    anu = await fetchJson(`https://tobz-api.herokuapp.com/api/ttp?text=${body.slice(5)}&apikey=BotWeA`)
-				res = await getBase64(anu.base64)
-				client.sendMessage(from, res, sticker, {quoted:mek})
-				break
                     case 'phcomment':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
@@ -1297,6 +1289,16 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${txt}`)
                     denz.sendMessage(from, buffer, sticker, { quoted: mek })
                     break
+                    case 'emoji2img': 
+                                  if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+				if (args.length < 1) return reply('emoji nya mana sayang ?')
+				gatauda = body.slice(11)
+				reply(mess.wait)
+				buffer = await getBuffer(`https://api.zeks.xyz/api/emoji-image?apikey=apivinz&emoji=${gatauda}`, {method: 'get'})
+				denz.sendMessage(from, buffer, image, {quoted: mek})
+				await limitAdd(sender)
+				break
                     case 'phlogo':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
