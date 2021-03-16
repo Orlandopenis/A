@@ -2237,19 +2237,14 @@ break
 					await limitAdd(sender) 
 					break 
 					case 'sideoppai':
-				    try {
 				    if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
 				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
-						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/sideoppai?apikey=RiuApikey`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
-					}
+						res = await getBuffer(`http://api.lolhuman.xyz/api/random/nsfw/sideoppai?apikey=RiuApikey`, {method: 'get'})
+						reply(mess.wait)
+						denz.sendMessage(from, res, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
 					await limitAdd(sender) 
 					break 
 					case 'yaoi':
@@ -2259,89 +2254,64 @@ break
 				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
-						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/yaoi?apikey=RiuApikey`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
-					}
+						res = await getBuffer(`http://api.lolhuman.xyz/api/random/nsfw/yaoi?apikey=RiuApikey`, {method: 'get'})
+						reply(mess.wait)
+						denz.sendMessage(from, res, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
+					await limitAdd(sender) 
+					break 
 					case 'ecchi':
-				    try {
 				    if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
 				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
-						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/ecchi?apikey=RiuApikey`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
-					}
+						res = await getBuffer(`http://api.lolhuman.xyz/api/random/nsfw/ecchi?apikey=RiuApikey`, {method: 'get'})
+						reply(mess.wait)
+						denz.sendMessage(from, res, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
 					await limitAdd(sender) 
 					break 
 					case 'ahegao':
-				    try {
 				    if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
 				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
-						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/ahegao?apikey=RiuApikey`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
-					}
+						res = await getBuffer(`http://api.lolhuman.xyz/api/random/nsfw/ahegao?apikey=RiuApikey`, {method: 'get'})
+						reply(mess.wait)
+						denz.sendMessage(from, res, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
 					await limitAdd(sender) 
 					break 
 					case 'lewd':
-				    try {
 				    if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
 				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
-						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/hololewd?apikey=RiuApikey`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
-					}
+						res = await getBuffer(`http://api.lolhuman.xyz/api/random/nsfw/hololewd?apikey=RiuApikey`, {method: 'get'})
+						reply(mess.wait)
+						denz.sendMessage(from, res, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
+					await limitAdd(sender) 
+					break 
 					case 'yuri':
-				    try {
 				    if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
 				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
-						res = await fetchJson(`http://api.lolhuman.xyz/api/random2/yuri?apikey=RiuApikey`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
-					}
+						res = await getBuffer(`http://api.lolhuman.xyz/api/random2/yuri?apikey=RiuApikey`, {method: 'get'})
+						reply(mess.wait)
+						denz.sendMessage(from, res, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
 					await limitAdd(sender) 
 					break 
 					case 'nsfwloli':
-				    try {
 				    if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
 				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
-						res = await fetchJson(`http://api.lolhuman.xyz/api/random/nsfw/loli?apikey=RiuApikey`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '👨‍✈️ | *_ᴄᴀʀᴀ ᴠᴏᴄᴇ ᴅᴇᴠᴇʀɪᴀ sᴇʀ ᴘʀᴇsᴏ, ᴍᴀs ᴇɴǫᴜᴀɴᴛᴏ ɴᴀᴏ ғᴏʀ, ғɪǫᴜᴇ ᴄᴏᴍ ᴇssᴀ ʟᴏʟɪ._*'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('🚨 | *_ᴜᴍ ᴇʀʀᴏ ғᴏɪ ᴅᴇᴛᴇᴄᴛᴀᴅᴏ, ᴘᴏʀᴛᴀɴᴛᴏ ᴏ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ ᴘᴏᴅᴇʀᴀ sᴇʀ ᴄᴏɴᴄʟᴜɪᴅᴏ, ʀᴇᴘɪᴛᴀ ɴᴏᴠᴀᴍᴇɴᴛᴇ!_*')
-					}
+						res = await getBuffer(`http://api.lolhuman.xyz/api/random/nsfw/loli?apikey=RiuApikey`, {method: 'get'})
+						reply(mess.wait)
+						denz.sendMessage(from, res, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
 					await limitAdd(sender) 
 					break 
 					case 'blowjobfig':
