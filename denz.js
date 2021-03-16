@@ -2340,9 +2340,9 @@ break
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
 				ranp = getRandom('.gif')
 					rano = getRandom('.webp')
-					anu = await fetchJson('http://api.lolhuman.xyz/api/random2/anal?apikey=RiuApikey', {method: 'get'})
+					anu = await getBuffer('http://api.lolhuman.xyz/api/random2/anal?apikey=RiuApikey', {method: 'get'})
 					if (anu.error) return reply(anu.error)
-					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+					exec(`wget ${anu} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
 						if (err) return reply(mess.error.stick)
 						buffer = fs.readFileSync(rano)
