@@ -1293,7 +1293,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     if (!isUser) return reply(mess.only.userB)
 				if (args.length < 1) return reply(`🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
 				txt = args.join(" ")
-                    buffer = await base64(`https://tobz-api.herokuapp.com/api/ttp?text=${txt}&apikey=BotWeA`)
+                    buffer = await imageToBase64(`https://tobz-api.herokuapp.com/api/ttp?text=${txt}&apikey=BotWeA`)
                     ttpt = `${buffer.base64}`
                     denz.sendMessage(from, ttpt, sticker, { quoted: mek })
                     break
