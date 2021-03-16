@@ -1284,7 +1284,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
 				if (args.length < 1) return reply(`🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
-				attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(5)}`)
+				attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${args[0]}`)
 				denz.sendMessage(from, attp2, sticker, {quoted: mek})
 				break
                     case 'phlogo':
