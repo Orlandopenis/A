@@ -612,15 +612,12 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ┣⊱${prefix}ᴇᴄᴄʜɪ
 ┣⊱${prefix}ᴀʜᴇɢᴀᴏ
 ┣⊱${prefix}ʟᴇᴡᴅ
+┣⊱${prefix}ᴀɴᴀʟ
 ┣⊱${prefix}ʏᴜʀɪ
+┣⊱${prefix}ʙʟᴏᴡᴊᴏʙ
 ┣⊱${prefix}ɴsғᴡʟᴏʟɪ
-┣⊱${prefix}ɴꜱғᴡʙʟᴏᴡᴊᴏʙ
 ┣⊱${prefix}ɴꜱғᴡɴᴇᴋᴏ
 ┣⊱${prefix}ɴꜱғᴡᴛʀᴀᴘ
-┣⊱${prefix}ʜᴇɴᴛᴀɪɢɪғ
-┣⊱${prefix}ɴsғᴡɴᴇᴋᴏɢɪғ
-┣⊱${prefix}ʙʟᴏᴡᴊᴏʙғɪɢ
-┣⊱${prefix}ᴀɴᴀʟғɪɢ
 ┗━⊱ *_Developer ©_* : *ɴʏx*
 ╓───「 *_ᴏᴛʜᴇʀ ᴍᴇɴᴜ_* 」
 ║❏ ${prefix}ᴘᴀꜱᴛᴇʙɪɴ 
@@ -2128,7 +2125,7 @@ break
 						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '>_<'})
 					await limitAdd(sender)
 					break
-			    case 'nsfwblowjob':
+			    case 'blowjob':
 				    try {
 				    if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
@@ -2324,26 +2321,20 @@ break
 						denz.sendMessage(from, res, image, {quoted: mek, caption: '♥️ | *_ᴏʟᴀ ᴏᴛᴀᴋᴜ ғᴇᴅɪᴅᴏ, ᴀǫᴜɪ ᴇsᴛᴀ ᴀ ʀᴇʟɪǫᴜɪᴀ ǫᴜᴇ ᴠᴏᴄᴇ ʀᴇǫᴜɪsɪᴛᴏᴜ!_*'})
 					await limitAdd(sender) 
 					break 
-					case 'blowjobfig':
-				if (isBanned) return reply(mess.only.benned)    
+					case 'nhentai':
+					if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
 				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
-				ranp = getRandom('.gif')
-					rano = getRandom('.webp')
-					anu = await fetchJson('https://tobz-api.herokuapp.com/api/nsfwblowjob?apikey=BotWeA', {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-						fs.unlinkSync(ranp)
-						if (err) return reply(mess.error.stick)
-						buffer = fs.readFileSync(rano)
-						denz.sendMessage(from, buffer, sticker, {quoted: mek})
-						fs.unlinkSync(rano)
-					})
-					await limitAdd(sender)
-					break
-					case 'analfig':
+					henid = args[0]
+                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=${apikey}`)
+                    get_result = get_result.result
+                    buffer = await getBuffer(get_result)
+                    lolhuman.sendMessage(from, buffer, document, { quoted: lol, mimetype: Mimetype.pdf, filename: `${henid}.pdf` })
+                    await limitAdd(sender)
+                    break
+					case 'anal':
 				if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
 				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
@@ -2352,44 +2343,6 @@ break
 					anu = await getBuffer('http://api.lolhuman.xyz/api/random2/anal?apikey=RiuApikey', {method: 'get'})
 					reply(mess.wait)
 						denz.sendMessage(from, anu, sticker, {quoted: mek})
-					await limitAdd(sender)
-					break
-					case 'nsfwnekogif':
-				if (isBanned) return reply(mess.only.benned)    
-				    if (!isUser) return reply(mess.only.userB)
-				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
-				    if (isLimit(sender)) return reply(limitend(pushname2))
-						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
-				ranp = getRandom('.gif')
-					rano = getRandom('.webp')
-					anu = await fetchJson('http://api.lolhuman.xyz/api/random2/nsfw_neko_gif?apikey=RiuApikey', {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-						fs.unlinkSync(ranp)
-						if (err) return reply(mess.error.stick)
-						buffer = fs.readFileSync(rano)
-						denz.sendMessage(from, buffer, sticker, {quoted: mek})
-						fs.unlinkSync(rano)
-					})
-					await limitAdd(sender)
-					break
-					case 'hentaigif':
-				if (isBanned) return reply(mess.only.benned)    
-				    if (!isUser) return reply(mess.only.userB)
-				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
-				    if (isLimit(sender)) return reply(limitend(pushname2))
-						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
-				ranp = getRandom('.gif')
-					rano = getRandom('.webp')
-					anu = await fetchJson('http://api.lolhuman.xyz/api/random2/random_hentai_gif?apikey=RiuApikey', {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-						fs.unlinkSync(ranp)
-						if (err) return reply(mess.error.stick)
-						buffer = fs.readFileSync(rano)
-						denz.sendMessage(from, buffer, sticker, {quoted: mek})
-						fs.unlinkSync(rano)
-					})
 					await limitAdd(sender)
 					break
 				case 'hilih':
