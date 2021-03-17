@@ -425,7 +425,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ┗━⊱ *_Developer ©_* : *ɴʏx*
 ┏━━━⊱「 *_ɪᴍᴀɢᴇ ᴍᴇɴᴜ_* 」
 ┣⊱${prefix}ᴘʜᴄᴏᴍᴍᴇɴᴛ
-┣⊱${prefix}ᴘʜʟᴏɢᴏ
+┣⊱${prefix}ᴘʜʟᴏɢᴏ pq
 ┣⊱${prefix}ᴏᴄᴇᴀɴ
 ┣⊱${prefix}sᴘᴀᴄᴇ
 ┣⊱${prefix}ɢᴛᴀᴠ
@@ -3578,7 +3578,18 @@ case 'wiki':
 					reply(anu.result.pantun)
 					await limitAdd(sender)
 					break
-			
+			case 'emoji':
+                    if (args.length == 0) return reply(`Usage: ${prefix + command} query\nExample: ${prefix + command} 😭`)
+                    emoji = args[0]
+                    try {
+                        emoji = encodeURI(emoji[0])
+                    } catch {
+                        emoji = encodeURI(emoji)
+                    }
+                    buffer = await getBuffer(`http://api.lolhuman.xyz/api/smoji/${emoji}?apikey=RiuApikey`)
+                    reply(mess.wait)
+                    denz.sendMessage(from, buffer, sticker, { quoted: mek})
+                    break
 		case 'jamdunia':
 		if (isLimit(sender)) return reply(limitend(pushname2))
 			if (isBanned) return reply(mess.only.benned)
