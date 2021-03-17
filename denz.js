@@ -2331,7 +2331,7 @@ break
                     get_result = await fetchJson(`http://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=RiuApikey`)
                     get_result = get_result.result
                     buffer = await getBuffer(get_result)
-                    denz.sendMessage(from, buffer, document, { quoted: lol, mimetype: Mimetype.pdf, filename: `${henid}.pdf` })
+                    denz.sendMessage(from, buffer, document, { quoted: mek, mimetype: Mimetype.pdf, filename: `${henid}.pdf` })
                     await limitAdd(sender)
                     break
 					case 'anal':
