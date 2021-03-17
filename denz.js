@@ -209,7 +209,7 @@ async function starts() {
 			
 
 			mess = {
-				wait: '*⏳ ᴡᴀɪᴛ ꜱᴇᴅᴀɴɢ ᴅɪ ᴩʀᴏꜱᴇꜱ...*',
+				wait: '*『 ♡ 』* *_sᴇᴜ ᴘᴇᴅɪᴅᴏ ᴇsᴛᴀ sᴇɴᴅᴏ ᴘʀᴏᴄᴇssᴀᴅᴏ, ᴇᴠɪᴛᴇ ғʟᴏᴏᴅ, ᴄᴀsᴏ ᴏᴄᴏʀʀᴀ... ~ᴠᴏᴄᴇ sᴇʀᴀ ʙʟᴏǫᴜᴇᴀᴅᴏ~ !!_*',
 				success: '*ꜱᴜᴋꜱᴇꜱ...*',
 				error: {
 					stick: '*ɢᴀɢᴀʟ, ᴛᴇʀᴊᴀᴅɪ ᴋᴇꜱᴀʟᴀʜᴀɴ ꜱᴀᴀᴛ ᴍᴇɴɢᴋᴏɴᴠᴇʀꜱɪ ɢᴀᴍʙᴀʀ ᴋᴇ ꜱᴛɪᴄᴋᴇʀ*',
@@ -2132,6 +2132,9 @@ break
 						denz.sendMessage(from, buffer, image, {quoted: mek, caption: '>_<'})
 					await limitAdd(sender)
 					break
+					
+					//NSFW MENU
+					
 					case 'nhentai':
 					if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
@@ -2168,9 +2171,13 @@ break
 				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						reply(mess.wait)
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=RiuApikey`)
-                    denz.sendMessage(from, buffer, image, { quoted: mek })
+                    denz.sendMessage(from, buffer, image, { quoted: mek})
                     break
+                    
+                    //NÃO SEI
+                    
 				case 'hilih':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -2208,8 +2215,8 @@ break
                    await limitAdd(sender) 
                    break 
 
+//ANIME MENU
 
-// only grup fitur anime
               case 'anime':
                 if (isBanned) return reply(mess.only.benned)    
                 if (!isUser) return reply(mess.only.userB)
@@ -2646,17 +2653,45 @@ break
 			        denz.sendMessage(from, `${anu.result.data}`, text, {quoted: mek})
 			        await limitAdd(sender) 
 			        break 
+			
+			//ENCURTADOR MENU
+			
+			case 'pastebin':
+                   if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+								
+				if (isLimit(sender)) return reply(limitend(pushname2))
+				reply(mess.wait)
+				paste = `${body.slice(10)}`
+                   anu = await fetchJson(`https://api-anoncybfakeplayer.herokuapp.com/pastebin?text=${paste}`, {method: 'get'})
+                   reply(mess.wait)
+                   pasteb = `✅ | *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${anu.result}\n✅ | *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${body.slice(9)}`
+                   denz.sendMessage(from, pasteb, text, {quoted: mek})
+                   await limitAdd(sender) 				
+                   break 
 			    case 'tinyurl':
 			    if (isBanned) return reply(mess.only.benned)    
 			    if (!isUser) return reply(mess.only.userB)
 			    				
 			    if (isLimit(sender)) return reply(limitend(pushname2))
 			    reply(mess.wait)
-                    anu = await fetchJson(`https://tobz-api.herokuapp.com/api/tinyurl?url=${body.slice(9)}&apikey=${TobzApi}`)
-			        tinyurl = `${anu.result}`
+                    anu = await getBuffer(`http://api.lolhuman.xyz/api/shortlink?apikey=RiuApikey&url=${body.slice(9)}`)
+			        tinyurl = `✅ | *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${anu.result}\n✅ | *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${body.slice(9)}`
 			        reply(tinyurl)
 			        await limitAdd(sender) 
 			        break 
+			case 'bitly':
+                 if (isBanned) return reply(mess.only.benned)
+			if (!isUser) return reply(mess.only.userB)
+				denz.updatePresence(from, Presence.composing) 
+				data = await fetchJson(`https://tobz-api.herokuapp.com/api/bitly?url=${args[0]}&apikey=BotWeA`)
+				hasil = `✅ | *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${data.result}\n✅ | *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${args[0]}`
+				reply(hasil)
+				await limitAdd(sender)
+				break
+				
+				//NÃO SEI
+				
 			    case 'infonomor':
 			    if (isBanned) return reply(mess.only.benned)    
 			    if (!isUser) return reply(mess.only.userB)
@@ -3504,17 +3539,6 @@ case 'wiki':
                    await limitAdd(sender) 
                    break  
                    
-               case 'pastebin':
-                   if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				reply(mess.wait)
-				paste = `${body.slice(10)}`
-                   anu = await fetchJson(`https://api-anoncybfakeplayer.herokuapp.com/pastebin?text=${paste}`, {method: 'get'})
-                   denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
-                   await limitAdd(sender) 				
-                   break 
                    case 'checkip':
          if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
@@ -3535,15 +3559,6 @@ case 'wiki':
 			reply (anu.text)
 			await limitAdd(sender) 
 			break  
-			case 'bitly':
-                 if (isBanned) return reply(mess.only.benned)
-			if (!isUser) return reply(mess.only.userB)
-				denz.updatePresence(from, Presence.composing) 
-				data = await fetchJson(`https://tobz-api.herokuapp.com/api/bitly?url=${args[0]}&apikey=BotWeA`)
-				hasil = `✅ | *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${data.result}\n✅ | *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${args[0]}`
-				reply(hasil)
-				await limitAdd(sender)
-				break
 			case 'textstyle':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
