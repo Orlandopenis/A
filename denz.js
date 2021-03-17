@@ -1282,8 +1282,13 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
 				if (args.length < 1) return reply(`🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
-				txt = args.join(" ")
-                    buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${txt}`)
+				emoji = body.slice(5)
+                    try {
+                        emoji = encodeURI(emoji[0])
+                    } catch {
+                        emoji = encodeURI(emoji)
+                    }
+                    buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${emoji}`)
                     denz.sendMessage(from, buffer, sticker, { quoted: mek })
                     break
                     case 'emoji2img': 
