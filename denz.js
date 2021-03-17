@@ -1284,7 +1284,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 				if (args.length < 1) return reply(`🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
 				emoji = body.slice(5)
                     try {
-                        emoji = encodeURI(emoji[0])
+                        emoji = encodeURI(emoji)
                     } catch {
                         emoji = encodeURI(emoji)
                     }
