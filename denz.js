@@ -396,12 +396,12 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠≽️ᴘʀᴇғɪx: ${prefix}
 ╠≽️ᴜsᴜᴀʀɪᴏs ᴛᴏᴛᴀʟ: ${user.length}
 ╚═≽️ *_Developer ©_* : *ɴʏx*
-╔═━──━▒ *_USER INFO's_* ▒━──━
+╔═━──━▒ *_USER INFO's_*
 ╠≽️ɴᴀᴍᴇ: ${pushname2}
 ╠≽️ʟɪᴍɪᴛ: ${limitt}
 ╠≽️ʀᴇɢɪꜱᴛᴇʀᴇᴅ: √
-╚═━──━▒ *_USER INFO's_* ▒━──━
-╔═━──━▒ *_ALBEDO BOT INFO_* ▒━──━
+╚═━──━▒ *_USER INFO's_*
+╔═━──━▒ *_ALBEDO BOT INFO_*
 ║
 ╠⟖ *_#report_* [TXT]
 ╠⟖ *_${prefix}info_*
@@ -412,8 +412,8 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠⟖ *_${prefix}ᴛᴏᴛᴀʟᴜꜱᴇʀ_*
 ╠⟖ *_${prefix}banlist_*
 ║
-╚═━──━▒ *_ALBEDO BOT INFO_* ▒━──━
-╔═━──━▒ *_MENU's_* ▒━──━
+╚═━──━▒ *_ALBEDO BOT INFO_*
+╔═━──━▒ *_MENU's_*
 ║
 ╠⟖ *_#STICKERMENU_*
 ╠⟖ *_#FUNMENU_*
@@ -426,7 +426,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠⟖ *_#NSFWMENU_*
 ╠⟖ *_#OWNERMENU_*
 ║
-╚═━──━▒ *_MENU's_* ▒━──━`
+╚═━──━▒ *_MENU's_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'stickermenu':
@@ -693,7 +693,7 @@ case 'nsfwmenu':
 ╠≽️${prefix}ᴀɴɪᴍᴇʙᴇʟʟʏʙᴜᴛᴛᴏɴ
 ╠≽️${prefix}ʜᴇɴᴛᴀɪ4ᴇᴠᴇʀʏᴏɴᴇ
 ╚═≽️ *_Developer ©_* : *ɴʏx*`
-denz.sendMessage(from, daca, image, {quoted: mek, caption: dmenu})
+denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'othermenu':
 			if (isBanned) return reply(mess.only.benned)
