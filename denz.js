@@ -388,43 +388,41 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
-				dmenu = `╔═══≽️「 *_ᴀʟʙᴇᴅᴏ ʙᴏᴛ_* 」
-╠≽️N°: wa.me/5519998707564
-╚═≽️ *_Developer ©_* : *ɴʏx*
-╔═══≽️「 *_ʙᴏᴛ ɪɴғᴏ_* 」
-╠≽️ᴄʀᴇᴀᴛᴏʀ: 𝐍𝐘𝐗
-╠≽️ᴘʀᴇғɪx: ${prefix}
-╠≽️ᴜsᴜᴀʀɪᴏs ᴛᴏᴛᴀʟ: ${user.length}
-╚═≽️ *_Developer ©_* : *ɴʏx*
+				dmenu = `╔═━──━▒ *_ALBEDO BOT_*
+╠≽️ *_N°:_* wa.me/5519998707564
+╠≽️ *_Owner:_* 𝐍𝐘𝐗
+╠≽️ *_Prefix_* ${prefix}
+╠≽️ *_Usuários:_* ${user.length}
+╚═━──━▒ *_ALBEDO BOT_*
 ╔═━──━▒ *_USER INFO's_*
-╠≽️ɴᴀᴍᴇ: ${pushname2}
-╠≽️ʟɪᴍɪᴛ: ${limitt}
-╠≽️ʀᴇɢɪꜱᴛᴇʀᴇᴅ: √
+╠≽️ *_Name:_* ${pushname2}
+╠≽️ *_Limite:_* ${limitCounts}
+╠≽️ *_Situação:_* Registrado √
 ╚═━──━▒ *_USER INFO's_*
 ╔═━──━▒ *_ALBEDO BOT INFO_*
 ║
-╠⟖ *_#report_* [TXT]
-╠⟖ *_${prefix}info_*
-╠⟖ *_${prefix}owner_*
-╠⟖ *_${prefix}ᴘɪɴɢ_*
-╠⟖ *_${prefix}ᴅᴀғᴛᴀʀ_* [NOME]
-╠⟖ *_${prefix}ʟɪᴍɪᴛ_*
-╠⟖ *_${prefix}ᴛᴏᴛᴀʟᴜꜱᴇʀ_*
-╠⟖ *_${prefix}banlist_*
+╠≽️ *_#report_* [TXT]
+╠≽️ *_${prefix}info_*
+╠≽️ *_${prefix}owner_*
+╠≽️ *_${prefix}ping_*
+╠≽️ *_${prefix}registrar_* [NOME]
+╠≽️ *_${prefix}limite_*
+╠≽️ *_${prefix}usertotal_*
+╠≽️ *_${prefix}banlist_*
 ║
 ╚═━──━▒ *_ALBEDO BOT INFO_*
 ╔═━──━▒ *_MENU's_*
 ║
-╠⟖ *_#STICKERMENU_*
-╠⟖ *_#FUNMENU_*
-╠⟖ *_#IMAGEMENU_*
-╠⟖ *_#ANIMEMENU_*
-╠⟖ *_#MEDIAMENU_*
-╠⟖ *_#OTHERMENU_*
-╠⟖ *_#SOUNDMENU_*
-╠⟖ *_#GROUPMENU_*
-╠⟖ *_#NSFWMENU_*
-╠⟖ *_#OWNERMENU_*
+╠≽️ *_#STICKERMENU_*
+╠≽️ *_#FUNMENU_*
+╠≽️ *_#IMAGEMENU_*
+╠≽️ *_#ANIMEMENU_*
+╠≽️ *_#MEDIAMENU_*
+╠≽️ *_#OTHERMENU_*
+╠≽️ *_#SOUNDMENU_*
+╠≽️ *_#GROUPMENU_*
+╠≽️ *_#NSFWMENU_*
+╠≽️ *_#OWNERMENU_*
 ║
 ╚═━──━▒ *_MENU's_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
@@ -1303,7 +1301,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     })
                 await limitAdd(sender)
 				break 
-				case 'daftar':
+				case 'registrar':
 					denz.updatePresence(from, Presence.composing)
 					if (isUser) return reply('*🚨 | ᴠᴏᴄᴇ ᴊᴀ ᴇsᴛᴀ ʀᴇɢɪsᴛʀᴀᴅᴏ!*')
 					if (isBanned) return reply(mess.only.benned)
@@ -1437,7 +1435,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 				    denz.sendMessage(from, daca, image, {quoted: mek, caption: teks})
 				    brando = await getBuffer(`https://pencarikode.xyz/api/cita-cita?apikey=pais`, {method: 'get'})               
 					break 
-				case 'totaluser':
+				case 'usertotal':
 					denz.updatePresence(from, Presence.composing) 
 									
 					if (!isUser) return reply(mess.only.userB)
@@ -1744,7 +1742,7 @@ break
 				   fs.writeFileSync('./database/json/limit.json', JSON.stringify(obj))
 				  await reply(`LIMIT BERHASIL DI RESET`)
 				break
-					case 'limit':
+					case 'limite':
 				var found = false
                     const limidat = JSON.parse(fs.readFileSync('./database/json/limit.json'))
                     for (let lmt of limidat) {
