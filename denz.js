@@ -387,7 +387,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 				case 'menu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			const limidat = JSON.parse(fs.readFileSync('./database/json/limit.json'))
+			woow = JSON.parse(fs.readFileSync('./database/json/limit.json'))
                     for (let lmt of limidat) {
                         if (lmt.id === sender) {
                             let limitCounts = limitt - lmt.limit
