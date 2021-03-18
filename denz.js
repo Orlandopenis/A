@@ -682,7 +682,7 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
                try {
                    exec(`cwebp -q 50 dlstikerwm.jpeg -o ${webpName}`, (e, stderr, stdout) => {
                        if (e) return denz.sendMessage(from, String(stderr), text)
-                           stickerWm(webpName, packageName, packageAuthor)
+                           denz(webpName, packageName, packageAuthor)
                    })
                } catch (e) {
                    throw e
