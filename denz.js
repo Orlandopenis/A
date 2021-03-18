@@ -387,7 +387,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 				case 'menu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			daca = fs.readFileSync('dnsnew.jpg')
+			const daca = fs.readFileSync('dnsnew.jpg')
 				dmenu = `╔═══≽️「 *_ᴀʟʙᴇᴅᴏ ʙᴏᴛ_* 」
 ╠≽️N°: wa.me/5519998707564
 ╚═≽️ *_Developer ©_* : *ɴʏx*
@@ -433,7 +433,7 @@ case 'stickermenu':
 case 'stikermenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			daca = fs.readFileSync('dnsnew.jpg')
+			const daca = fs.readFileSync('dnsnew.jpg')
 			dmenu = `╔═══≽️「 *_ꜱᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ_* 」
 ╠≽️${prefix}ᴛᴛᴘ
 ╠≽️${prefix}ᴛᴛᴘ2
