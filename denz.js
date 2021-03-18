@@ -720,9 +720,7 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 							.toFormat('webp')
 							.save(ran)
 						}
-		} catch (e) {
-			console.log('Error : %s', color(e, 'red'))
-		}
+		} 
 		break
 						case 'snobg':
 						case 'stickernobg':
