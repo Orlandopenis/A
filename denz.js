@@ -720,11 +720,7 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 							.toFormat('webp')
 							.save(ran)
 						}
-		} 
-						case 'snobg':
-						case 'stickernobg':
-						case 'stikernobg':
-				        if ((isMedia || isQuotedImage) && args[0] == 'nobg') {
+		} else if ((isMedia || isQuotedImage) && args[0] == 'nobg') {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await denz.downloadAndSaveMediaMessage(encmedia)
 						ranw = getRandom('.webp')
