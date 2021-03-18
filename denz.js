@@ -661,43 +661,39 @@ denz.sendMessage(from, dmenu, text, {quoted: { key: { fromMe: false, participant
 brando = await getBuffer(`https://pencarikode.xyz/api/cita-cita?apikey=pais`, {method: 'get'})                
 denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "「 ᴀʟʙᴇᴅᴏ ʙᴏᴛ 」                       ⊱ ᴄʀᴇᴀᴛᴏʀ : ɴʏx", 'jpegThumbnail': fs.readFileSync('./sticker/dnsnew.webp')}}}})
     	    break
+            case 'gifstiker':
 				case 'stiker':
 				case 'sticker':
-				case 'stik':
+		
+				case 'stickergif':
+				case 'stikergif':
+				case 'sgif':
+				case 'sticker':
 				case 's':
-				case 'f':
-				case 'figurinha':
-				case 'figu':
                         if ((isMedia && !mek.message.videoMessage || isQuotedImage)) {
                var mediaEncrypt = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-               var mediaFinalys = await denz.downloadAndSaveMediaMessage(mediaEncrypt, 'dlstikerwm')
-			   var has = 'lindow' // Author Name
-			   var kas = '@lindoww.6' // Pack Name
+               var mediaFinalys = await lindow.downloadAndSaveMediaMessage(mediaEncrypt, 'dlstikerwm')
+			   var has = 'testando' // Author Name
+			   var kas = '@TESTE' // Pack Name
                var packageName = `${has}`
                var packageAuthor = `${kas}`
                var exifName = 'stikerwm.exif',
                    webpName = `${from.split(/@/)[0]}.webp`
                try {
                    exec(`cwebp -q 50 dlstikerwm.jpeg -o ${webpName}`, (e, stderr, stdout) => {
-                       if (e) return denz.sendMessage(from, String(stderr), text)
+                       if (e) return lindow.sendMessage(from, String(stderr), text)
                            stickerWm(webpName, packageName, packageAuthor)
                    })
                } catch (e) {
                    throw e
                }
            }
-           break
-           case 'gifsticker':
-           case 'gif':
-           case 'sgif':
-           case 'stickergif':
-           case 'gifstiker':
-           case 'stikergif':
-					    if ((isMedia & !mek.message.imageMessage || isQuotedVideo)) {
+					case 'gifsticker':
+   if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
 						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await denz.downloadAndSaveMediaMessage(encmedia)
+						const ran= getRandom('.webp')
 						reply(mess.wait)
-						ran = getRandom('.webp')
 						await ffmpeg(`./${media}`)
 							.inputFormat(media.split('.')[1])
 							.on('start', function (cmd) {
@@ -707,20 +703,19 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 								console.log(`Error : ${err}`)
 								fs.unlinkSync(media)
 								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-								denz.sendMessage(from, 'error', text)
+								reply(`\`\`\`Gagal, pada saat mengkonversi ${tipe} ke stiker\`\`\``)
 							})
 							.on('end', function () {
 								console.log('Finish')
 								buff = fs.readFileSync(ran)
-								denz.sendMessage(from, buff, sticker)
+								denz.sendMessage(from, buff, sticker, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "「 ᴀʟʙᴇᴅᴏ ʙᴏᴛ 」                       ⊱ ᴄʀᴇᴀᴛᴏʀ : ɴʏx", 'jpegThumbnail': fs.readFileSync('./sticker/dnsnew.webp')}}}})
 								fs.unlinkSync(media)
 								fs.unlinkSync(ran)
 							})
 							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
 							.toFormat('webp')
 							.save(ran)
-						}
-		} else if ((isMedia || isQuotedImage) && args[0] == 'nobg') {
+					} else if ((isMedia || isQuotedImage) && args[0] == 'nobg') {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await denz.downloadAndSaveMediaMessage(encmedia)
 						ranw = getRandom('.webp')
