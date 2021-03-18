@@ -686,6 +686,7 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
                    throw e
                }
            }
+           break
            case 'gifsticker':
            case 'gif':
            case 'sgif':
