@@ -433,7 +433,7 @@ case 'stickermenu':
 case 'stikermenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			const daca = fs.readFileSync('dnsnew.jpg')
+			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `╔═══≽️「 *_ꜱᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ_* 」
 ╠≽️${prefix}ᴛᴛᴘ
 ╠≽️${prefix}ᴛᴛᴘ2
@@ -446,12 +446,12 @@ case 'stikermenu':
 ╠≽️${prefix}ᴀɴɪᴍᴇᴋɪss
 ╠≽️${prefix}ᴀɴɪᴍᴇʜᴜɢ
 ╚═≽️ *_Developer ©_* : *ɴʏx*`
-denz.sendMessage(from, daca, image, {quoted: mek, caption: dmenu})
+denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'imagemenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			daca = fs.readFileSync('dnsnew.jpg')
+			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `╔═══≽️「 *_ɪᴍᴀɢᴇ ᴍᴇɴᴜ_* 」
 ╠≽️${prefix}ᴘʜᴄᴏᴍᴍᴇɴᴛ
 ╠≽️${prefix}ᴘʜʟᴏɢᴏ pq
@@ -467,12 +467,12 @@ case 'imagemenu':
 ╠≽️${prefix}ᴄʀᴏꜱꜱɢᴜɴ
 ╠≽️${prefix}ᴄʏʙᴇʀᴘᴜɴᴋ *(Image Random)*
 ╚═≽️ *_Developer ©_* : *ɴʏx*`
-denz.sendMessage(from, daca, image, {quoted: mek, caption: dmenu})
+denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'mediamenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			daca = fs.readFileSync('dnsnew.jpg')
+			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╓───「 *_ᴍᴇᴅɪᴀ ᴍᴇɴᴜ_* 」
 ║❏ ${prefix}ᴛɪᴋᴛᴏᴋꜱᴛᴀʟᴋ
 ║❏ ${prefix}ᴏᴄʀ
@@ -520,12 +520,12 @@ case 'mediamenu':
 ║❏ ${prefix}ᴛʀᴇɴᴅᴛᴡɪᴛ
 ║❏ ${prefix}ɢᴏᴏɢʟᴇ
 ╙───々`
-denz.sendMessage(from, daca, image, {quoted: mek, caption: dmenu})
+denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'soundmenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			daca = fs.readFileSync('dnsnew.jpg')
+			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `╔═══≽️「 *_ᴀᴜᴅɪᴏ ᴍᴇɴᴜ_* 」
 ║❏ ${prefix}ᴇɴɢʀᴏssᴀʀ
 ║❏ ${prefix}ᴛᴜᴘᴀɪ
@@ -534,12 +534,12 @@ case 'soundmenu':
 ║❏ ${prefix}ғᴀꜱᴛ
 ╠≽️${prefix}ᴛᴛꜱ
 ╚═≽️ *_Developer ©_* : *ɴʏx*`
-denz.sendMessage(from, daca, image, {quoted: mek, caption: dmenu})
+denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'animemenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			daca = fs.readFileSync('dnsnew.jpg')
+			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `╓───「 *_ᴀɴɪᴍᴇ ᴍᴇɴᴜ_* 」
 ║❏ ${prefix}ɴᴇᴋᴏ
 ║❏ ${prefix}ʟᴏʟɪ
@@ -560,12 +560,12 @@ case 'animemenu':
 ║❏ ${prefix}ᴍɪᴋᴜ
 ║❏ ${prefix}ᴀɴɪᴍᴇ
 ╙───々`
-denz.sendMessage(from, daca, image, {quoted: mek, caption: dmenu})
+denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'groupmenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			daca = fs.readFileSync('dnsnew.jpg')
+			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═══≽️「 *_ɢʀᴏᴜᴘ ᴍᴇɴᴜ_* 」
 ╠≽️${prefix}ᴀɴᴛɪʟɪɴᴋ *(OFF)*
 ╠≽️${prefix}ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ *(OFF)*
@@ -591,12 +591,12 @@ case 'groupmenu':
 ╠≽️${prefix}ɴꜱғᴡ *[ON/OFF]*
 ╠≽️${prefix}ꜱɪᴍɪʜ *[ON/OFF]*
 ╚═≽️ *_Developer ©_* : *ɴʏx*`
-denz.sendMessage(from, daca, image, {quoted: mek, caption: dmenu})
+denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'makermenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			daca = fs.readFileSync('dnsnew.jpg')
+			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═══≽️「 *_ᴍᴀᴋᴇʀ ᴍᴇɴᴜ_* 」
 ╠≽️${prefix}ʙᴜʀɴᴘᴀᴘᴇʀ
 ╠≽️${prefix}8ʙɪᴛ
@@ -622,12 +622,12 @@ case 'makermenu':
 ╠≽️${prefix}ᴍᴇᴛᴀʟʟᴏɢᴏ
 ╠≽️${prefix}ɪᴄᴇ
 ╚═≽️ *_Developer ©_* : *ɴʏx*`
-denz.sendMessage(from, daca, image, {quoted: mek, caption: dmenu})
+denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'funmenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			daca = fs.readFileSync('dnsnew.jpg')
+			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏
 ╓───「 *_ғᴜɴ ᴍᴇɴᴜ_* 」
 ╠≽️${prefix}ᴄᴀᴅᴇʀɴᴏ *[TXT]*
@@ -666,12 +666,12 @@ case 'funmenu':
 ║❏ ${prefix}ғᴀᴍɪʟʏ100
 ║❏ ${prefix}ᴍᴇᴍᴇɪɴᴅᴏ
 ╙───々`
-denz.sendMessage(from, daca, image, {quoted: mek, caption: dmenu})
+denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'nsfwmenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			daca = fs.readFileSync('dnsnew.jpg')
+			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═══≽️「 *_ɴsғᴡ ᴍᴇɴᴜ_* 」🔞
 ╠≽️${prefix}ɴʜᴇɴᴛᴀɪ *[CODE]*
 ╠≽️${prefix}ᴛʀᴀᴘ
@@ -698,7 +698,7 @@ break
 case 'othermenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			daca = fs.readFileSync('dnsnew.jpg')
+			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═══≽️「 *_ᴇɴᴄᴜʀᴛᴀᴅᴏʀ_* 」
 ╠≽️${prefix}ᴘᴀꜱᴛᴇʙɪɴ 
 ╠≽️${prefix}ᴛɪɴʏᴜʀʟ 
@@ -708,12 +708,12 @@ case 'othermenu':
 ║❏ ${prefix}ꜱᴘᴀᴍᴄᴀʟʟ 
 ║❏ ${prefix}ꜱᴘᴀᴍɢᴍᴀɪʟ 
 ╙───々`
-denz.sendMessage(from, daca, image, {quoted: mek, caption: dmenu})
+denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'ownermenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			daca = fs.readFileSync('dnsnew.jpg')
+			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╓───「 *_ᴏᴡɴᴇʀ ᴍᴇɴᴜ_* 」
 ║❏ ${prefix}ᴀᴅᴅᴘʀᴇᴍ
 ║❏ ${prefix}ʀᴇᴍᴏᴠᴇᴘʀᴇᴍ
@@ -736,7 +736,7 @@ case 'ownermenu':
 ╠≽️${prefix}ᴄʟᴏɴᴀʀ
 ╠≽️${prefix}sᴀɪʀ
 ╙───々`
-denz.sendMessage(from, daca, image, {quoted: mek, caption: dmenu})
+denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
             case 'help':
 brando = await getBuffer(`https://pencarikode.xyz/api/cita-cita?apikey=pais`, {method: 'get'})                
