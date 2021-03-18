@@ -661,20 +661,18 @@ denz.sendMessage(from, dmenu, text, {quoted: { key: { fromMe: false, participant
 brando = await getBuffer(`https://pencarikode.xyz/api/cita-cita?apikey=pais`, {method: 'get'})                
 denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "「 ᴀʟʙᴇᴅᴏ ʙᴏᴛ 」                       ⊱ ᴄʀᴇᴀᴛᴏʀ : ɴʏx", 'jpegThumbnail': fs.readFileSync('./sticker/dnsnew.webp')}}}})
     	    break
-            case 'gifstiker':
 				case 'stiker':
 				case 'sticker':
-				case 'gifsticker':
-				case 'stickergif':
-				case 'stikergif':
-				case 'sgif':
-				case 'sticker':
+				case 'stik':
 				case 's':
-				if ((isMedia && !lin.message.videoMessage || isQuotedImage)) {
-               var mediaEncrypt = isQuotedImage ? JSON.parse(JSON.stringify(lin).replace('quotedM','m')).message.extendedTextMessage.contextInfo : lin
-               var mediaFinalys = await lindow.downloadAndSaveMediaMessage(mediaEncrypt, 'dlstikerwm')
-			   var has = 'teste' // Author Name
-			   var kas = '@Test' // Pack Name
+				case 'f':
+				case 'figurinha':
+				case 'figu':
+                        if ((isMedia && !mek.message.videoMessage || isQuotedImage)) {
+               var mediaEncrypt = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+               var mediaFinalys = await denz.downloadAndSaveMediaMessage(mediaEncrypt, 'dlstikerwm')
+			   var has = 'lindow' // Author Name
+			   var kas = '@lindoww.6' // Pack Name
                var packageName = `${has}`
                var packageAuthor = `${kas}`
                var exifName = 'stikerwm.exif',
@@ -688,8 +686,14 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
                    throw e
                }
            }
-                        if ((isMedia & !mek.message.imageMessage || isQuotedVideo)) {
-						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(lin).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+           case 'gifsticker':
+           case 'gif':
+           case 'sgif':
+           case 'stickergif':
+           case 'gifstiker':
+           case 'stikergif':
+					    if ((isMedia & !mek.message.imageMessage || isQuotedVideo)) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await denz.downloadAndSaveMediaMessage(encmedia)
 						reply(mess.wait)
 						ran = getRandom('.webp')
@@ -715,10 +719,36 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 							.toFormat('webp')
 							.save(ran)
 						}
-		}catch (e) {
-                   throw e
-               }
-})
+		} catch (e) {
+			console.log('Error : %s', color(e, 'red'))
+		}
+		break
+						case 'snobg':
+						case 'stickernobg':
+						case 'stikernobg':
+				        if ((isMedia || isQuotedImage) && args[0] == 'nobg') {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+						const media = await denz.downloadAndSaveMediaMessage(encmedia)
+						ranw = getRandom('.webp')
+						ranp = getRandom('.png')
+						reply(mess.wait)
+						keyrmbg = 'bcAvZyjYAjKkp1cmK8ZgQvWH'
+						await removeBackgroundFromImageFile({path: media, apiKey: keyrmbg.result, size: 'auto', type: 'auto', ranp}).then(res => {
+							fs.unlinkSync(media)
+							let buffer = Buffer.from(res.base64img, 'base64')
+							fs.writeFileSync(ranp, buffer, (err) => {
+								if (err) return reply('Gagal, Terjadi kesalahan, silahkan coba beberapa saat lagi.')
+							})
+							exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
+								fs.unlinkSync(ranp)
+								if (err) return reply(mess.error.stick)
+								buff = fs.readFileSync(ranw)
+								denz.sendMessage(from, buff, sticker, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "「 ᴀʟʙᴇᴅᴏ ʙᴏᴛ 」                       ⊱ ᴄʀᴇᴀᴛᴏʀ : ɴʏx", 'jpegThumbnail': fs.readFileSync('./sticker/dnsnew.webp')}}}})
+							})
+						})
+					} else {
+						reply(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim`)
+					}
 					await limitAdd(sender) 
 					break 
 					case 'shopee':
