@@ -672,7 +672,7 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 				case 's':
                         if ((isMedia && !mek.message.videoMessage || isQuotedImage)) {
                var mediaEncrypt = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-               var mediaFinalys = await lindow.downloadAndSaveMediaMessage(mediaEncrypt, 'dlstikerwm')
+               var mediaFinalys = await denz.downloadAndSaveMediaMessage(mediaEncrypt, 'dlstikerwm')
 			   var has = 'testando' // Author Name
 			   var kas = '@TESTE' // Pack Name
                var packageName = `${has}`
@@ -681,7 +681,7 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
                    webpName = `${from.split(/@/)[0]}.webp`
                try {
                    exec(`cwebp -q 50 dlstikerwm.jpeg -o ${webpName}`, (e, stderr, stdout) => {
-                       if (e) return lindow.sendMessage(from, String(stderr), text)
+                       if (e) return denz.sendMessage(from, String(stderr), text)
                            stickerWm(webpName, packageName, packageAuthor)
                    })
                } catch (e) {
