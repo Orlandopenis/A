@@ -387,10 +387,6 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 				case 'menu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
-			woow = JSON.parse(fs.readFileSync('./database/json/limit.json'))
-                    for (let lmt of limidat) {
-                        if (lmt.id === sender) {
-                            let limitCounts = limitt - lmt.limit
 			wew = fs.readFileSync('dnsnew.jpg')
 				dmenu = `╔═━──━▒ *_ALBEDO BOT_*
 ╠≽️ *_N°:_* wa.me/5519998707564
@@ -400,7 +396,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╚═━──━▒ *_ALBEDO BOT_*
 ╔═━──━▒ *_USER INFO's_*
 ╠≽️ *_Name:_* ${pushname2}
-╠≽️ *_Limite:_* ${limitCounts}
+╠≽️ *_Limite:_* ${limitt}
 ╠≽️ *_Situação:_* Registrado √
 ╚═━──━▒ *_USER INFO's_*
 ╔═━──━▒ *_ALBEDO BOT INFO_*
@@ -430,8 +426,6 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ║
 ╚═━──━▒ *_MENU's_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
-}
-}
 break
 case 'stickermenu':
 case 'stikermenu':
