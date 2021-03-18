@@ -721,7 +721,8 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 							.save(ran)
 						}
 		} 
-		break
+       await limitAdd(sender)
+       break
 						case 'snobg':
 						case 'stickernobg':
 						case 'stikernobg':
