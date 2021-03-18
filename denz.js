@@ -715,7 +715,7 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 							.toFormat('webp')
 							.save(ran)
 						}
-		}  catch (e) {
+		}catch (e) {
                    throw e
                }
 })
