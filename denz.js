@@ -715,7 +715,9 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 							.toFormat('webp')
 							.save(ran)
 						}
-		} 
+		}  catch (e) {
+                   throw e
+               }
 })
 					await limitAdd(sender) 
 					break 
