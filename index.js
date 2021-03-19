@@ -9,11 +9,6 @@ CFonts.say('ALBEDO BOT', {
   align: 'center',
   gradient: ['red', 'magenta']
 })
-CFonts.say(`${package.name}`, {
-  font: 'console',
-  align: 'center',
-  gradient: ['red', 'magenta']
-})
 function start(file) {
   let args = [path.join(file), ...process.argv.slice(2)]
   CFonts.say([process.argv[0], ...args].join(' '), {
