@@ -173,30 +173,15 @@ async function starts() {
 	    }
 	})
 
-	denz.on('message-new', async (mek) => {
+	denz.on('chat-update', async (mek) => {
 		try {
+			if (!mek.hasNewMessage) return 
+			mek = JSON.parse(JSON.stringify(mek)).messages[0]
 			if (!mek.message) return
 			if (mek.key && mek.key.remoteJid == 'status@broadcast') return
-			const content = JSON.stringify(mek.message)
-			const from = mek.key.remoteJid
-			const type = Object.keys(mek.message)[0]
-			const { text, extendedText, contact, image, video, sticker, document, audio, product } = MessageType
-            const isMedia = (type === 'imageMessage' || type === 'videoMessage')
-			const isQuotedImage = type === content.includes('imageMessage')
-			const isQuotedVideo = type === content.includes('videoMessage')
-			const isQuotedSticker = type === content.includes('stickerMessage')
 			if (mek.key.fromMe) return
-		   var Exif = require(process.cwd() + '/exif.js')
-            var exif = new Exif()
-            var stickerWm = (media, packname, author) => {
-            ran = getRandom('.webp')
-            exif.create(packname, author, from.split("@")[0])
-            exec(`webpmux -set exif ./temp/${from.split("@")[0]}.exif ./${media} -o ./${ran}`, (err, stderr, stdout) => {
-            if (err) return denz.sendMessage(from, String(err), text, { quoted: mek})
-            denz.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
-                    })
-    }
-			denz.on('chat-update', async (mek) => {
+			global.prefix
+			global.blocked
 			const content = JSON.stringify(mek.message)
 			const from = mek.key.remoteJid
 			const type = Object.keys(mek.message)[0]
@@ -205,10 +190,13 @@ async function starts() {
 			const insom = from.endsWith('@g.us')
 			const nameReq = insom ? mek.participant : mek.key.remoteJid
 			pushname2 = denz.contacts[nameReq] != undefined ? denz.contacts[nameReq].vname || denz.contacts[nameReq].notify : undefined
+
 			const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
+
 			const date = new Date().toLocaleDateString()
 			const time = moment.tz('Asia/Jakarta').format('HH:mm:ss')
 			const jam = moment.tz('Asia/Jakarta').format('HH:mm')
+
             body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : ''
 			budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : '' 
 			var Link = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''
@@ -218,8 +206,7 @@ async function starts() {
 			const Far = args.join(' ')
 			const isCmd = body.startsWith(prefix)
 			denz.chatRead(from)
-			})
-				
+			
 
 			mess = {
 				wait: '*『 ♥️ 』* *_sᴇᴜ ᴘᴇᴅɪᴅᴏ ᴇsᴛᴀ sᴇɴᴅᴏ ᴘʀᴏᴄᴇssᴀᴅᴏ, ᴇᴠɪᴛᴇ ғʟᴏᴏᴅ, ᴄᴀsᴏ ᴏᴄᴏʀʀᴀ... ~ᴠᴏᴄᴇ sᴇʀᴀ ʙʟᴏǫᴜᴇᴀᴅᴏ~ !!_*',
@@ -245,6 +232,7 @@ async function starts() {
 			const ownerNumber = ["5519998707564@s.whatsapp.net"] // owner number ubah aja
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
+			const groupMetadata = isGroup ? await denz.groupMetadata(from) : ''
 			const groupName = isGroup ? groupMetadata.subject : ''
 			const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
@@ -283,6 +271,13 @@ async function starts() {
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? denz.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : denz.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
+
+			colors = ['red','white','black','blue','yellow','green', 'aqua']
+			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
+			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
+			const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
+			const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
+			const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
 			
 			const checkLimit = (sender) => {
                 let found = false
@@ -401,7 +396,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╚═━──━▒ *_ALBEDO BOT_*
 ╔═━──━▒ *_USER INFO's_*
 ╠≽️ *_Name:_* ${pushname2}
-╠≽️ *_Limite:_* ${limitt}
+╠≽️ *_Limite:_* ${limitCounts}
 ╠≽️ *_Situação:_* Registrado √
 ╚═━──━▒ *_USER INFO's_*
 ╔═━──━▒ *_ALBEDO BOT INFO_*
@@ -477,7 +472,6 @@ case 'mediamenu':
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╓───「 *_ᴍᴇᴅɪᴀ ᴍᴇɴᴜ_* 」
-║❏ ${prefix}Mediafire
 ║❏ ${prefix}ᴛɪᴋᴛᴏᴋꜱᴛᴀʟᴋ
 ║❏ ${prefix}ᴏᴄʀ
 ║❏ ${prefix}ɪᴍɢ2ᴜʀʟ
@@ -752,28 +746,36 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 				case 'gifsticker':
 				case 'stickergif':
 				case 'stikergif':
+				case 'sgif':
 				case 'sticker':
 				case 's':
-               if ((isMedia && !mek.message.videoMessage || isQuotedImage)) {
-               var mediaEncrypt = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-               var mediaFinalys = await denz.downloadAndSaveMediaMessage(mediaEncrypt, 'dlstikerwm')
-			   var has = 'Piroca de Teste' // Author Name
-			   var kas = 'Doce' // Pack Name
-               var packageName = `${has}`
-               var packageAuthor = `${kas}`
-               var exifName = 'stikerwm.exif',
-                   webpName = `${from.split(/@/)[0]}.webp`
-               try {
-                   exec(`cwebp -q 50 dlstikerwm.jpeg -o ${webpName}`, (e, stderr, stdout) => {
-                       if (e) return denz.sendMessage(from, String(stderr), text)
-                           stickerWm(webpName, packageName, packageAuthor)
-                   })
-               } catch (e) {
-                   throw e
-               }
-           }
-					case 'sgif':
-                        if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
+                        if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+						const media = await denz.downloadAndSaveMediaMessage(encmedia)
+						if (isLimit(sender)) return reply(limitend(pushname2))
+						reply(mess.wait)
+						const ran= getRandom('.webp')
+						await ffmpeg(`./${media}`)
+							.input(media)
+							.on('start', function (cmd) {
+								console.log(`Started : ${cmd}`)
+							})
+							.on('error', function (err) {
+								console.log(`Error : ${err}`)
+								fs.unlinkSync(media)
+								reply(mess.error.stick)
+							})
+							.on('end', function () {
+								console.log('Finish')
+								buff = fs.readFileSync(ran)
+								denz.sendMessage(from, buff, sticker, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "「 ᴀʟʙᴇᴅᴏ ʙᴏᴛ 」                       ⊱ ᴄʀᴇᴀᴛᴏʀ : ɴʏx", 'jpegThumbnail': fs.readFileSync('./sticker/dnsnew.webp')}}}})
+								fs.unlinkSync(media)
+								fs.unlinkSync(ran)
+							})
+							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+							.toFormat('webp')
+							.save(ran)
+					} else if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
 						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await denz.downloadAndSaveMediaMessage(encmedia)
 						const ran= getRandom('.webp')
@@ -2761,20 +2763,12 @@ break
                  if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 				denz.updatePresence(from, Presence.composing) 
-				data = await fetchJson(`https://tobz-api.herokuapp.com/api/bitly?url=http://www.mediafire.com/file/js0gr2nozcmk9yg/example.txt/file&apikey=BotWeA`)
+				data = await fetchJson(`https://tobz-api.herokuapp.com/api/bitly?url=${args[0]}&apikey=BotWeA`)
 				hasil = `✅ | *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${data.result}\n✅ | *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${args[0]}`
 				reply(hasil)
 				await limitAdd(sender)
 				break
-				case 'mediafire':
-                 if (isBanned) return reply(mess.only.benned)
-			if (!isUser) return reply(mess.only.userB)
-			denz.updatePresence(from, Presence.composing) 
-			data = await fetchJson(`https://api.zeks.xyz/api/mediafire?apikey=apivinz&url=${body.slice(11)}`)
-			apenaspau = `Nome : ${data.name_file}\nTamanho : ${data.file_size}\nData de Upload : ${data.upload_date}\nTipo : ${data.file_type}\nDownload : ${data.download}`
-			reply(apenaspau)
-			await limitAdd(sender)
-			break
+				
 				//NÃO SEI
 				
 			    case 'infonomor':
