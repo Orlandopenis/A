@@ -173,7 +173,7 @@ async function starts() {
 	    }
 	})
 
-	denz.on('chat-update', async (mek) => {
+	denz.on('message-new', async (mek) => {
 		try {
 			if (!mek.message) return
 			if (mek.key && mek.key.remoteJid == 'status@broadcast') return
@@ -194,8 +194,10 @@ async function starts() {
             exec(`webpmux -set exif ./temp/${from.split("@")[0]}.exif ./${media} -o ./${ran}`, (err, stderr, stdout) => {
             if (err) return denz.sendMessage(from, String(err), text, { quoted: mek})
             denz.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
-			global.prefix
-			global.blocked
+                    })
+    }
+			denz.on('chat-update', async (mek) => {
+				try {
 			const content = JSON.stringify(mek.message)
 			const from = mek.key.remoteJid
 			const type = Object.keys(mek.message)[0]
