@@ -5,9 +5,9 @@ let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
 CFonts.say('ALBEDO BOT', {
-  font: 'chrome',
+  font: 'console',
   align: 'center',
-  gradient: ['#00ffff', 'white']
+  gradient: ['#00ffff']
 })
   .on('message', data => {
     console.log('[RECEIVED]', data)
