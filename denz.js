@@ -757,8 +757,8 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 				case 'sticker':
 				case 's':
                if ((isMedia && !mek.message.videoMessage || isQuotedImage)) {
-               var mediaEncrypt = isQuotedImage ? JSON.parse(JSON.stringify(lin).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-               var mediaFinalys = await mek.downloadAndSaveMediaMessage(mediaEncrypt, 'dlstikerwm')
+               var mediaEncrypt = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+               var mediaFinalys = await denz.downloadAndSaveMediaMessage(mediaEncrypt, 'dlstikerwm')
 			   var has = 'Piroca de Teste' // Author Name
 			   var kas = 'Doce' // Pack Name
                var packageName = `${has}`
