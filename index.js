@@ -7,7 +7,7 @@ const CFonts  = require('cfonts')
 CFonts.say('ALBEDO BOT', {
   font: 'chrome',
   align: 'center',
-  gradient: ['cyanBright', 'white']
+  gradient: ['#00ffff', 'white']
 })
 CFonts.say(`${package.name}`, {
   font: 'console',
