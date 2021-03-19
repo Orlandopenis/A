@@ -5,7 +5,7 @@ let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
 CFonts.say('ALBEDO BOT', {
-  font: 'pallet',
+  font: 'block',
   align: 'center',
   gradient: ['red', 'magenta']
 })
