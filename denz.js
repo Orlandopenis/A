@@ -177,7 +177,7 @@ async function starts() {
 		try {
 			if (!mek.message) return
 			if (mek.key && mek.key.remoteJid == 'status@broadcast') return
-			const content = JSON.stringify(lin.message)
+			const content = JSON.stringify(mek.message)
 			const from = mek.key.remoteJid
 			const type = Object.keys(mek.message)[0]
 			const { text, extendedText, contact, image, video, sticker, document, audio, product } = MessageType
