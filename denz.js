@@ -236,10 +236,6 @@ denz.on('message-new', async (lin) => {
 			const from = lin.key.remoteJid
 			const type = Object.keys(lin.message)[0]
 			const { text, extendedText, contact, image, video, sticker, document, audio, product } = MessageType
-            const isMedia = (type === 'imageMessage' || type === 'videoMessage')
-			const isQuotedImage = type === content.includes('imageMessage')
-			const isQuotedVideo = type === content.includes('videoMessage')
-			const isQuotedSticker = type === content.includes('stickerMessage')
 		   // AUTO STICKER
            if (lin.key.fromMe) return
 		   var Exif = require(process.cwd() + '/index.js')
