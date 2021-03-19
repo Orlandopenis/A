@@ -92,15 +92,15 @@ async function starts() {
 	denz.logger.level = 'warn'
 	console.log(banner.string)
 	denz.on('qr', () => {
-		console.log(color('[','red'), color('!','yellow'), color(']','red'), color(' Scan the qr code above', 'green'))
+		console.log(color('[','red'), color('!','yellow'), color(']','red'), color('Escaneie o QR Code abaixo para se conectar com a Albedo.', 'green'))
 	})
 
 	fs.existsSync('./Fxc7.json') && denz.loadAuthInfo('./Fxc7.json')
 	denz.on('connecting', () => {
-		start('2', 'Connecting...')
+		start('2', 'A Albedo esta aguardando a conexão...')
 	})
 	denz.on('open', () => {
-		success('2', 'Connected')
+		success('2', 'A Albedo foi summonada com Succeso.')
 	})
 	await denz.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./Fxc7.json', JSON.stringify(denz.base64EncodedAuthInfo(), null, '\t'))
