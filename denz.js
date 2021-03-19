@@ -197,7 +197,6 @@ async function starts() {
                     })
     }
 			denz.on('chat-update', async (mek) => {
-				try {
 			const content = JSON.stringify(mek.message)
 			const from = mek.key.remoteJid
 			const type = Object.keys(mek.message)[0]
@@ -222,7 +221,7 @@ async function starts() {
 			const Far = args.join(' ')
 			const isCmd = body.startsWith(prefix)
 			denz.chatRead(from)
-			)} catch (err) { console.error(err)  }
+			}
 				
 
 			mess = {
