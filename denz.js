@@ -222,7 +222,8 @@ async function starts() {
 			const Far = args.join(' ')
 			const isCmd = body.startsWith(prefix)
 			denz.chatRead(from)
-			}
+			} catch (err) { console.error(err)  }
+				
 
 			mess = {
 				wait: '*『 ♥️ 』* *_sᴇᴜ ᴘᴇᴅɪᴅᴏ ᴇsᴛᴀ sᴇɴᴅᴏ ᴘʀᴏᴄᴇssᴀᴅᴏ, ᴇᴠɪᴛᴇ ғʟᴏᴏᴅ, ᴄᴀsᴏ ᴏᴄᴏʀʀᴀ... ~ᴠᴏᴄᴇ sᴇʀᴀ ʙʟᴏǫᴜᴇᴀᴅᴏ~ !!_*',
