@@ -1,26 +1,14 @@
-console.log('Starting Bot...')
+console.log('Summonando o Bot Lendario...')
 let { spawn } = require('child_process')
 let path = require('path')
 let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
-CFonts.say('DNS BOT', {
-  font: 'chrome',
-  align: 'center',
-  gradient: ['red', 'magenta']
-})
-CFonts.say(`${package.name}`, {
+CFonts.say('ALBEDO BOT', {
   font: 'console',
   align: 'center',
-  gradient: ['red', 'magenta']
+  gradient: ['#00ffff', 'green']
 })
-function start(file) {
-  let args = [path.join(file), ...process.argv.slice(2)]
-  CFonts.say([process.argv[0], ...args].join(' '), {
-    font: 'console',
-    align: 'center',
-    gradient: ['red', 'magenta']
-  })
   let p = spawn(process.argv[0], args, {
     stdio: ['inherit', 'inherit', 'inherit', 'ipc']
   })
