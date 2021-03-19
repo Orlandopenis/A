@@ -29,5 +29,4 @@ CFonts.say('ALBEDO BOT', {
     })
   })
   // console.log(p)
-}
 start('denz.js')
