@@ -246,7 +246,6 @@ async function starts() {
 			const ownerNumber = ["5519998707564@s.whatsapp.net"] // owner number ubah aja
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
-			const groupMetadata = isGroup ? await denz.groupMetadata(from) : ''
 			const groupName = isGroup ? groupMetadata.subject : ''
 			const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
