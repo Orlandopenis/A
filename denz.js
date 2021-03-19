@@ -209,7 +209,7 @@ async function starts() {
 			
 
 			mess = {
-				wait: '*『 ♥️ 』* *_sᴇᴜ ᴘᴇᴅɪᴅᴏ ᴇsᴛᴀ sᴇɴᴅᴏ ᴘʀᴏᴄᴇssᴀᴅᴏ, ᴇᴠɪᴛᴇ ғʟᴏᴏᴅ, ᴄᴀsᴏ ᴏᴄᴏʀʀᴀ... ~ᴠᴏᴄᴇ sᴇʀᴀ ʙʟᴏǫᴜᴇᴀᴅᴏ~ !!_*',
+				wait: '*『 ♥️ 』* *_Seu pedido está sendo processado, evite flood, caso ocorra... ~você será bloqueado~ !!_*',
 				success: '*ꜱᴜᴋꜱᴇꜱ...*',
 				error: {
 					stick: '*ɢᴀɢᴀʟ, ᴛᴇʀᴊᴀᴅɪ ᴋᴇꜱᴀʟᴀʜᴀɴ ꜱᴀᴀᴛ ᴍᴇɴɢᴋᴏɴᴠᴇʀꜱɪ ɢᴀᴍʙᴀʀ ᴋᴇ ꜱᴛɪᴄᴋᴇʀ*',
@@ -217,7 +217,7 @@ async function starts() {
 				},
 				only: {
 					group: '*ᴍᴀᴀꜰ ᴩᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴyᴀ ʙɪꜱᴀ ᴅɪ ɢᴜɴᴀᴋᴀɴ ᴅᴀʟᴀᴍ ɢʀᴏᴜᴩ!*',
-					benned: '*『 ❌ 』* *_ᴠᴏᴄᴇ ᴇsᴛᴀ ɴᴀ ʟɪsᴛᴀ ᴅᴇ ᴍᴇɴɪɴᴏs ᴍᴀʟ, ʜᴇʜᴇʜᴇ sᴇᴜ ᴄᴏᴍᴀɴᴅᴏ ɴᴀᴏ sᴇʀᴀ ᴇxᴇᴄᴜᴛᴀᴅᴏ!_*',
+					benned: '*『 ❌ 』* *_Você está banido, portanto seus comandos não serão respondidos._*',
 					ownerG: '*ᴍᴀᴀꜰ ᴩᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴyᴀ ʙɪꜱᴀ ᴅɪ ɢᴜɴᴀᴋᴀɴ ᴏʟᴇʜ ᴏᴡɴᴇʀ ɢʀᴏᴜᴩ!*',
 					ownerB: '*ᴍᴀᴀꜰ ᴩᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴyᴀ ʙɪꜱᴀ ᴅɪ ɢᴜɴᴀᴋᴀɴ ᴏʟᴇʜ ᴏᴡɴᴇʀ ʙᴏᴛ!* ',
 					premium: '*ᴍᴀᴀꜰ ꜰɪᴛᴜʀ ɪɴɪ ᴋʜᴜꜱᴜꜱ ᴜꜱᴇʀ ᴩʀᴇᴍɪᴜᴍ!*',
@@ -396,7 +396,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╚═━──━▒ *_ALBEDO BOT_*
 ╔═━──━▒ *_USER INFO's_*
 ╠≽️ *_Name:_* ${pushname2}
-╠≽️ *_Limite:_* ${limitCounts}
+╠≽️ *_Limite:_* ${limitt}
 ╠≽️ *_Situação:_* Registrado √
 ╚═━──━▒ *_USER INFO's_*
 ╔═━──━▒ *_ALBEDO BOT INFO_*
