@@ -175,11 +175,25 @@ async function starts() {
 
 	denz.on('chat-update', async (mek) => {
 		try {
-			if (!mek.hasNewMessage) return 
-			mek = JSON.parse(JSON.stringify(mek)).messages[0]
 			if (!mek.message) return
 			if (mek.key && mek.key.remoteJid == 'status@broadcast') return
+			const content = JSON.stringify(lin.message)
+			const from = mek.key.remoteJid
+			const type = Object.keys(mek.message)[0]
+			const { text, extendedText, contact, image, video, sticker, document, audio, product } = MessageType
+            const isMedia = (type === 'imageMessage' || type === 'videoMessage')
+			const isQuotedImage = type === content.includes('imageMessage')
+			const isQuotedVideo = type === content.includes('videoMessage')
+			const isQuotedSticker = type === content.includes('stickerMessage')
 			if (mek.key.fromMe) return
+		   var Exif = require(process.cwd() + '/exif.js')
+            var exif = new Exif()
+            var stickerWm = (media, packname, author) => {
+            ran = getRandom('.webp')
+            exif.create(packname, author, from.split("@")[0])
+            exec(`webpmux -set exif ./temp/${from.split("@")[0]}.exif ./${media} -o ./${ran}`, (err, stderr, stdout) => {
+            if (err) return denz.sendMessage(from, String(err), text, { quoted: mek})
+            denz.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 			global.prefix
 			global.blocked
 			const content = JSON.stringify(mek.message)
@@ -228,26 +242,6 @@ async function starts() {
 				}
 			}
 
-denz.on('message-new', async (lin) => {
-		try {
-			if (!lin.message) return
-			if (lin.key && lin.key.remoteJid == 'status@broadcast') return
-			const content = JSON.stringify(lin.message)
-			const from = lin.key.remoteJid
-			const type = Object.keys(lin.message)[0]
-			const { text, extendedText, contact, image, video, sticker, document, audio, product } = MessageType
-		   // AUTO STICKER
-           if (lin.key.fromMe) return
-		   var Exif = require(process.cwd() + '/index.js')
-            var exif = new Exif()
-            var stickerWm = (media, packname, author) => {
-            ran = getRandom('.webp')
-            exif.create(packname, author, from.split("@")[0])
-            exec(`webpmux -set exif ./temp/${from.split("@")[0]}.exif ./${media} -o ./${ran}`, (err, stderr, stdout) => {
-            if (err) return denz.sendMessage(from, String(err), text, { quoted: lin })
-            denz.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: lin})
-        })
-    }
 			const botNumber = denz.user.jid
 			const ownerNumber = ["5519998707564@s.whatsapp.net"] // owner number ubah aja
 			const isGroup = from.endsWith('@g.us')
@@ -291,13 +285,6 @@ denz.on('message-new', async (lin) => {
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? denz.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : denz.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
-
-			colors = ['red','white','black','blue','yellow','green', 'aqua']
-			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
-			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
-			const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
-			const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
-			const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
 			
 			const checkLimit = (sender) => {
                 let found = false
