@@ -4,10 +4,10 @@ let path = require('path')
 let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
-CFonts.say('DNS BOT', {
+CFonts.say('ALBEDO BOT', {
   font: 'chrome',
   align: 'center',
-  gradient: ['red', 'magenta']
+  gradient: ['cyanBright', 'white']
 })
 CFonts.say(`${package.name}`, {
   font: 'console',
