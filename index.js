@@ -7,7 +7,7 @@ const CFonts  = require('cfonts')
 CFonts.say('ALBEDO BOT', {
   font: 'console',
   align: 'center',
-  gradient: ['#00ffff']
+  gradient: ['#00ffff','green']
 })
   .on('message', data => {
     console.log('[RECEIVED]', data)
