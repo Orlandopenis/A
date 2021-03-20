@@ -78,15 +78,16 @@ namo = 'Nyx'
 ban = []
 premium = ["558388440499@s.whatsapp.net","558196404969@s.whatsapp.net"]
 
-function addMetadata(packname, author) {	
-	if (!packname) packname = 'WABot'; if (!author) author = 'Bot';	
-	author = author.replace(/[^a-zA-Z0-9]/g, '');	
-	let name = `${author}_${packname}`
-	if (fs.existsSync(`./${name}.exif`)) return `./${name}.exif`
-	const json = {	
-		"sticker-pack-name": packname,
-		"sticker-pack-publisher": author,
-	}
+function kyun(seconds){
+  function pad(s){
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+
+  return `${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik`
+}
 
 async function starts() {
 	const denz = new WAConnection()
@@ -173,7 +174,15 @@ async function starts() {
 	    	blocked.push(i.replace('c.us','s.whatsapp.net'))
 	    }
 	})
-
+function addMetadata(packname, author) {	
+	if (!packname) packname = 'WABot'; if (!author) author = 'Bot';	
+	author = author.replace(/[^a-zA-Z0-9]/g, '');	
+	let name = `${author}_${packname}`
+	if (fs.existsSync(`./${name}.exif`)) return `./${name}.exif`
+	const json = {	
+		"sticker-pack-name": packname,
+		"sticker-pack-publisher": author,
+	}
 	denz.on('chat-update', async (mek) => {
 		try {
 			if (!mek.hasNewMessage) return 
