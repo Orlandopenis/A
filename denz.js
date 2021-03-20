@@ -417,7 +417,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠≽️ *_${prefix}ping_*
 ╠≽️ *_${prefix}registrar_* [NOME]
 ╠≽️ *_${prefix}limite_*
-╠≽️ *_${prefix}usertotal_*
+╠≽️ *_${prefix}users_*
 ╠≽️ *_${prefix}banlist_*
 ╚═━──━▒ *_ALBEDO BOT INFO_*
 ╔═━──━▒ *_MENU's_*
@@ -1311,7 +1311,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 				break 
 				case 'registrar':
 					denz.updatePresence(from, Presence.composing)
-					if (isUser) return reply('*✘ ᴠᴏᴄᴇ ᴊᴀ ᴇsᴛᴀ ʀᴇɢɪsᴛʀᴀᴅᴏ!*')
+					if (isUser) return reply('*✘ *_Você já está registrado!_*')
 					if (isBanned) return reply(mess.only.benned)
 					user.push(sender)
 					fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
@@ -1320,12 +1320,12 @@ quoted: mek, caption: `Wah ganteng kek gua`
 					} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 					}
-					captionnya = `╔═══≽️ *_Registro_*\n╠≽️ *Nome :* ${pushname2}\n╠≽️ *Núm. :* ${sender.split("@")[0]}\n╠≽️ *Data :* ${date}\n╠≽️ *Horário :* ${time}\n╠≽️ *Registro bem sucedido √*\n╠≽️ *Usuários Totais: ${user.length}*\n╚═≽️ *_Developer ©_* : *ɴʏx*`
+					captionnya = `╔═━──━▒ *_REGISTRO_*\n╠≽️ *_Nome:_* ${pushname2}\n╠≽️ *_Núm:_* ${sender.split("@")[0]}\n╠≽️ *_Data:_* ${date}\n╠≽️ *_Horário:_* ${time}\n╠≽️ *_Registro bem sucedido √_*\n╠≽️ *_Usuários Totais:_* ${user.length}\n╚═━──━▒ *_BOT INFO's_*`
 					brando = await getBuffer(`https://pencarikode.xyz/api/cita-cita?apikey=pais`, {method: 'get'})                
                     daftarimg = await getBuffer(ppimg)
 					denz.sendMessage(from, daftarimg, image, {quoted: mek, caption: captionnya})
 					break 
-                    case 'profile':
+                    case 'perfil':
     				denz.updatePresence(from, Presence.composing)
 					if (!isUser) return reply(mess.only.userB)
 					if (isBanned) return reply(mess.only.benned)
@@ -1337,8 +1337,6 @@ quoted: mek, caption: `Wah ganteng kek gua`
 					 profile = `╔═══≽️ *_Perfil_*\n╠≽️ *Nome:* ${pushname2}\n╠≽️ *Usuário Registrado*\n╠≽️ *Núm. :* ${sender.split("@")[0]}\n╚═≽️ *_Developer ©_* : *ɴʏx*`
 					buff = await getBuffer(profil)
 					denz.sendMessage(from, buff, image, {quoted: mek, caption: profile})
-					brando = await getBuffer(`https://pencarikode.xyz/api/cita-cita?apikey=pais`, {method: 'get'})                
-                    denz.sendMessage(from, brando, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 					break
 				case 'bahasa':
 				if (isBanned) return reply(mess.only.benned)    
@@ -1438,28 +1436,23 @@ quoted: mek, caption: `Wah ganteng kek gua`
 					me = denz.user
 					user.push(sender)
 					uptime = process.uptime()
-					teks = `╔═══≽️「 *_ʙᴏᴛ ɪɴғᴏ_* 」\n╠≽️ *_Bot Name_* : ${me.name}\n╠≽️ *_Owner Bot_* : NYX\n╠≽️ *_Prefix_* : ${prefix} \n╠≽️ *_Banidos_* : ${ban.length}\n╚═≽️ *_Developer ©_* : ɴʏx`
+					teks = `╔═━──━▒ *_BOT INFO's_*\n╠≽️ *_Bot Name:_* ${me.name}\n╠≽️ *_Owner:_*  NYX\n╠≽️ *_Prefix:_* ${prefix} \n╠≽️ *_Totais de Banidos:_* ${ban.length}\n╚═━──━▒ *_BOT INFO's_*`
 					const daca = fs.readFileSync('dnsnew.jpg');
 				    denz.sendMessage(from, daca, image, {quoted: mek, caption: teks})
 				    brando = await getBuffer(`https://pencarikode.xyz/api/cita-cita?apikey=pais`, {method: 'get'})               
 					break 
-				case 'usertotal':
+				case 'users':
 					denz.updatePresence(from, Presence.composing) 
 									
 					if (!isUser) return reply(mess.only.userB)
 					if (!isOwner) return reply(mess.only.ownerB)    
-					teks = `╭────「 *TOTAL USER ${name}* 」\n`
-					no = 0
-					for (let hehehe of user) {
-						no += 1
-						teks += `[${no.toString()}] @${hehehe.split('@')[0]}\n`
-					}
-					teks += `│+ Total Pengguna : ${user.length}\n╰──────⎿ *${name}* ⏋────`
+					teks = `╔═━──━▒ *_USER's_*\n`
+					teks += `╠≽️ *_Usuários Totais:_* ${user.length}\n╚═━──━▒ *_USER's_*`
 					denz.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": user}})
 					break
 				case 'banlist':
 				ben = '╔═━──━▒ *_BAN LIST_*\n'
-				ben += `╠≽️ *_Banidos Total:_* ${ban.length}\n`
+				ben += `╠≽️ *_Banidos Totais:_* ${ban.length}\n`
 				ben += `╚═━──━▒ *_BAN LIST_*`
 					denz.sendMessage(from, ben.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": ban}})
 					break
