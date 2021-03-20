@@ -3531,7 +3531,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
                 bufferddd = await getBuffer(data.result.info.thumbnail)
                 lagu = await getBuffer(data.result.video.link)
                 denz.sendMessage(from, bufferddd, image, {quoted: mek, caption: infomp3})
-                denz.sendMessage(from, lagu, video, {mimetype: 'video/mp4', filename: `${data.result..info.title}.mp4`, quoted: mek})
+                denz.sendMessage(from, lagu, video, {mimetype: 'video/mp4', filename: `${data.result.info.title}.mp4`, quoted: mek})
                 break
                 
                 case 'mimetypedeaudiooooo':
