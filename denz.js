@@ -273,6 +273,15 @@ async function starts() {
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? denz.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : denz.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
+			function addMetadata(packname, author) {	
+	if (!packname) packname = 'WABot'; if (!author) author = 'Bot';	
+	author = author.replace(/[^a-zA-Z0-9]/g, '');	
+	let name = `${author}_${packname}`
+	if (fs.existsSync(`./${name}.exif`)) return `./${name}.exif`
+	const json = {	
+		"sticker-pack-name": packname,
+		"sticker-pack-publisher": author,
+	}
 
 			colors = ['red','white','black','blue','yellow','green', 'aqua']
 			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
