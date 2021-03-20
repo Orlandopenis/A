@@ -402,12 +402,12 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 				dmenu = `╔═━──━▒ *_ALBEDO BOT_*
 ╠≽️ *_N°:_* wa.me/5519998707564
 ╠≽️ *_Owner:_* 𝐍𝐘𝐗
-╠≽️ *_Prefix_* ${prefix}
+╠≽️ *_Prefix:_* ${prefix}
 ╠≽️ *_Usuários:_* ${user.length}
 ╚═━──━▒ *_ALBEDO BOT_*
 ╔═━──━▒ *_USER INFO's_*
 ╠≽️ *_Name:_* ${pushname2}
-╠≽️ *_Limite:_* ${limitt}
+╠≽️ *_Limite Total:_* ${limitt}
 ╠≽️ *_Situação:_* Registrado √
 ╚═━──━▒ *_USER INFO's_*
 ╔═━──━▒ *_ALBEDO BOT INFO_*
@@ -1461,20 +1461,9 @@ quoted: mek, caption: `Wah ganteng kek gua`
 					teks += `│+ Total Pengguna : ${user.length}\n╰──────⎿ *${name}* ⏋────`
 					denz.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": user}})
 					break
-				case 'blocklist':
-					teks = 'List Block :\n'
-					for (let block of blocked) {
-						teks += `~> @${block.split('@')[0]}\n`
-					}
-					teks += `Total : ${blocked.length}`
-					denz.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": blocked}})
-					break 
 				case 'banlist':
-				ben = '```List Banned``` :\n'
-					for (let banned of ban) {
-						ben += `~> @${banned.split('@')[0]}\n`
-					}
-					ben += `Total : ${ban.length}`
+				ben = '*_「 BAN LIST 」_*\n\n'
+				ben += `*_「 TOTAL 」_* ${ban.length}`
 					denz.sendMessage(from, ben.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": ban}})
 					break
 				case 'ban':
@@ -1483,7 +1472,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 					if (!isOwner) return reply(mess.only.ownerB)
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 			        ban = mentioned
-					reply(`berhasil banned : ${ban}`)
+					reply(`✅ | *_O Usuário: ${ban}, foi banido com sucesso seus comandos não serão mais atendidos_*`)
 					break
 case 'burnpaper':
 if (isBanned) return reply(mess.only.benned)    
@@ -1720,24 +1709,8 @@ break
 					if (!isOwner)return reply(mess.only.ownerB)
 					bnnd = body.slice(8)
 					ban.splice(`${bnnd}@s.whatsapp.net`, 1)
-					reply(`Nomor wa.me/${bnnd} telah di unban!`)
+					reply(`✅ | *_O Usuário: ${bnnd}, foi desbanido, agora atenderei a seus comandos_*`)
 					break
-				case 'block':
-				 denz.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isOwner) return reply(mess.only.ownerB)
-					denz.blockUser (`${body.slice(7)}@c.us`, "add")
-					denz.sendMessage(from, `perintah Diterima, memblokir ${body.slice(7)}@c.us`, text)
-					break
-				case 'unblock':
-                    if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-					if (!isGroup) return reply(mess.only.group)
-					if (!isOwner) return reply(mess.only.ownerB)
-				    denz.blockUser (`${body.slice(9)}@c.us`, "remove")
-					denz.sendMessage(from, `perintah Diterima, membuka blokir ${body.slice(9)}@c.us`, text)
-				    break 
 				case 'readmore':
 					if (isBanned) return reply(mess.only.benned)    
 					if (!isUser) return reply(mess.only.userB)
@@ -1761,7 +1734,7 @@ break
                         if (lmt.id === sender) {
                             let limitCounts = limitt - lmt.limit
                             if (limitCounts <= 0) return reply(from,`Limit anda habis`, id)
-                            await reply(`*LIMIT ANDA TINGGAL: ${limitCounts}*`)
+                            await reply(`*_「 LIMITE 」_*\n\n*_「Restantes 」_*${limitCounts}*`)
                             found = true
                         }
                     }
@@ -2126,19 +2099,19 @@ reply(mess.wait)
                 case 'report':
                 if (isBanned) return reply(mess.only.benned)    
                 if (!isUser) return reply(mess.only.userB)
-                if (args.length < 1) return reply(`🚨 | *_ᴇsᴄʀᴇᴠᴀ ᴏ ᴇʀʀᴏ, ᴘᴏʀ ᴇxᴇᴍᴘʟᴏ "#ʀᴇᴘᴏʀᴛ ᴏ ᴄᴏᴍᴀɴᴅᴏ sᴛɪᴄᴋᴇʀ ɴᴀᴏ ᴇsᴛᴀ ғᴜɴᴄɪᴏɴᴀɴᴅᴏ"_*`)
+                if (args.length < 1) return reply(`🚨 | *_Descreva o erro, por exemplo: "#report o comando sticker não está funcionando!"_*`)
           				
                      const pesan = body.slice(8)
-                      if (pesan.length > 300) return denz.sendMessage(from, '[❗] ᴅᴇsᴄᴜʟᴘᴇ, ᴏ sᴇᴜ ʀᴇʟᴀᴛᴏʀɪᴏ ᴇ ᴍᴜɪᴛᴏ ʟᴏɴɢᴏ, ᴍᴀxɪᴍᴏ ᴅᴇ 300 ᴄᴀʀᴀᴄᴛᴇʀᴇs', text, {quoted: mek})
+                      if (pesan.length > 300) return denz.sendMessage(from, '🚨 | *_Desculpe, seu relatório é muito grande, máximo de 300 caracteres._*', text, {quoted: mek})
                         var nomor = mek.participant
-                       const tekst1 = `╔═══≽️ 「 *_ᴀʟʙᴇᴅᴏ ʙᴏᴛ_* 」\n╠≽️ *ᴛᴇᴍᴀ : ʀᴇᴘᴏʀᴛ*\n╠≽️ *ᴀᴜᴛᴏʀ :* @${nomor.split("@s.whatsapp.net")[0]}\n┗⊱ *ᴍᴏᴛɪᴠᴏ :* ${pesan}`
+                       const tekst1 = `*_「 ALBEDO BOT 」_*\n*_「 Assunto 」_* Report\n*_「 Autor 」_* @${nomor.split("@s.whatsapp.net")[0]}\n*_「 Descrição 」_* ${pesan}`
 
                       var options = {
                          text: tekst1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
                     denz.sendMessage('5519998707564@s.whatsapp.net', options, text, {quoted: mek})
-                    reply('[❗] *ᴏs ʙᴜɢs ғᴏʀᴀᴍ ʀᴇʟᴀᴛᴀᴅᴏs ᴀᴏ ᴘʀᴏᴘʀɪᴇᴛᴀʀɪᴏ ᴅᴏ ʙᴏᴛ, ʀᴇʟᴀᴛᴏʀɪᴏs ғᴀʟsᴏs ɴᴀᴏ sᴇʀᴀᴏ ʀᴇsᴘᴏɴᴅɪᴅᴏs ᴇ ᴏᴄᴀsɪᴏɴᴀʀᴀ ᴀ sᴜᴀ sᴜsᴘᴇɴsᴀᴏ !*')
+                    reply('✅ | *_Seu relatório foi enviado ao proprietário, relatórios falsos não serão respondidos e ocasionará no seu ban!_*')
                     break
                 case 'request':
                 if (isBanned) return reply(mess.only.benned)    
@@ -3090,21 +3063,21 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (args.length < 1) return reply('🚨 | *_ғᴏʀɴᴇᴄᴀ ᴜᴍ ɴᴜᴍᴇʀᴏ, ᴛᴀ ᴛᴇɴᴛᴀɴᴅᴏ ᴀᴅɪᴄɪᴏɴᴀʀ sᴜᴀ ɴᴀᴍᴏʀᴀᴅᴀ? ʙʀɪɴᴄᴀᴅᴇɪʀɪɴʜᴀ ʜᴇʜᴇ..._*')
-					if (args[0].startsWith('1')) return reply('🚨 | *_ғᴏʀɴᴇᴄᴀ ᴏ ᴅᴅɪ ᴛᴀᴍʙᴇᴍ, ᴇxᴇᴍᴘʟᴏ 5519998707564._*')
-					if (args[0].startsWith('2')) return reply('🚨 | *_ғᴏʀɴᴇᴄᴀ ᴏ ᴅᴅɪ ᴛᴀᴍʙᴇᴍ, ᴇxᴇᴍᴘʟᴏ 5519998707564._*')
-					if (args[0].startsWith('3')) return reply('🚨 | *_ғᴏʀɴᴇᴄᴀ ᴏ ᴅᴅɪ ᴛᴀᴍʙᴇᴍ, ᴇxᴇᴍᴘʟᴏ 5519998707564._*')
-					if (args[0].startsWith('4')) return reply('🚨 | *_ғᴏʀɴᴇᴄᴀ ᴏ ᴅᴅɪ ᴛᴀᴍʙᴇᴍ, ᴇxᴇᴍᴘʟᴏ 5519998707564._*')
-					if (args[0].startsWith('6')) return reply('🚨 | *_ғᴏʀɴᴇᴄᴀ ᴏ ᴅᴅɪ ᴛᴀᴍʙᴇᴍ, ᴇxᴇᴍᴘʟᴏ 5519998707564._*')
-					if (args[0].startsWith('7')) return reply('🚨 | *_ғᴏʀɴᴇᴄᴀ ᴏ ᴅᴅɪ ᴛᴀᴍʙᴇᴍ, ᴇxᴇᴍᴘʟᴏ 5519998707564._*')
-					if (args[0].startsWith('8')) return reply('🚨 | *_ғᴏʀɴᴇᴄᴀ ᴏ ᴅᴅɪ ᴛᴀᴍʙᴇᴍ, ᴇxᴇᴍᴘʟᴏ 5519998707564._*')
-					if (args[0].startsWith('9')) return reply('🚨 | *_ғᴏʀɴᴇᴄᴀ ᴏ ᴅᴅɪ ᴛᴀᴍʙᴇᴍ, ᴇxᴇᴍᴘʟᴏ 5519998707564._*')
+					if (args.length < 1) return reply('🚨 | *_Forneca um número, ta tentando adicionar sua namorada? brincadeirinha hehehe..._*')
+					if (args[0].startsWith('1')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('2')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('3')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('4')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('6')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('7')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('8')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('9')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
 					try {
 						num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
 						denz.groupAdd(from, [num])
 					} catch (e) {
 						console.log('Error :', e)
-						reply('🚨 | *_ʜᴏᴜᴠᴇ ᴜᴍ ᴇʀʀᴏ ᴀᴏ ᴀᴅɪᴄɪᴏɴᴀʀ ᴏ ᴀʟᴠᴏ, ᴛᴀʟᴠᴇᴢ ᴏ ɴᴜᴍᴇʀᴏ ᴇsᴛᴇᴊᴀ ᴇʀʀᴀᴅᴏ ᴏᴜ ᴏ ᴀʟᴠᴏ ᴛᴇɴʜᴀ ᴘʀɪᴠᴀᴅᴏ ᴘᴀʀᴀ ǫᴜᴇ ᴀᴘᴇɴᴀs ᴄᴏɴᴛᴀᴛᴏs ᴏ ᴀᴅɪᴄɪᴏɴᴇᴍ ᴇᴍ ɢʀᴜᴘᴏs._*')
+						reply('🚨 | *_Houve um erro ao adicionar o alvo, talvez o número esteja errado ou o alvo tenha privado para que apenas contatos o adicionem em grupos._*')
 					}
 					break
 			    case 'kick':
