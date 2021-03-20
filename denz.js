@@ -781,11 +781,11 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 							.on('end', function () {
 								console.log('Finish')
 								exec(`webpmux -set exif ${addMetadata(namo, ator)} ${ran} -o ${ran}`, async (error) => {
-									//if (error) {
-											// reply(ind.stikga())
-											// fs.unlinkSync(media)	
-											// fs.unlinkSync(ran)
-											// }
+									if (error) {
+											 reply(ind.stikga())
+											fs.unlinkSync(media)	
+										 fs.unlinkSync(ran)
+											 }
 									denz.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 									fs.unlinkSync(media)	
 									fs.unlinkSync(ran)	
@@ -813,11 +813,11 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 							.on('end', function () {
 								console.log('Finish')
 								exec(`webpmux -set exif ${addMetadata(namo, ator)} ${ran} -o ${ran}`, async (error) => {
-									//if (error) {
-											// reply(ind.stikga())
-											// fs.unlinkSync(media)	
-											// fs.unlinkSync(ran)
-											// }
+									if (error) {
+											 reply(ind.stikga())
+											 fs.unlinkSync(media)	
+											 fs.unlinkSync(ran)
+											 }
 									denz.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 									fs.unlinkSync(media)
 									fs.unlinkSync(ran)
