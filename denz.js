@@ -3522,17 +3522,16 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
                 break  
                 
        case 'play':
-case 'playmp3':
                   if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-				if (args.length < 1) return reply(`Yang mau dicari apaan? Titit kah?`)
-                data = await fetchJson(`https://onlydevcity.herokuapp.com/api/ytmp3?url=${body.slice(6)}&apikey=onlyonedeveloper`, {method: 'get'})
+				if (args.length < 1) return reply(`🚨 | *_Cade o texto filhote de cruz credo? brincadeirinha hehehe, mas forneça um texto..._*`)
+                data = await fetchJson(`http://api.lolhuman.xyz/api/ytplay?apikey=RiuApikey&query=${body.slice(6)}`, {method: 'get'})
                  reply(mess.wait)
-                 infomp3 = `「 *PLAY* 」\n*Judul* : ${data.result.title}\n*Duration* : ${data.result.duration}\n*Filesize* : ${data.result.size}\n\n*[ WAIT ] Audionya Sedang Dikirim....*`
-                bufferddd = await getBuffer(data.result.image)
-                lagu = await getBuffer(data.result.mp3)
+                 infomp3 = `*_「 *PLAY* 」_*\n\n*_「 Título 」_* : ${data.result.info.title}\n*_「 Duração 」_* : ${data.result.info.duration}\n*_「 Uploader 」_* : ${data.result.info.uploader}\n*_「 Views 」_* : ${data.result.info.view}\n*_「 Likes 」_* : ${data.result.info.like}\n*_「 Dislikes 」_* : ${data.result.info.dislike}\n*_「 Link 」_* : youtube.com/${data.result.info.id}`
+                bufferddd = await getBuffer(data.result.info.thumbnail)
+                lagu = await getBuffer(data.result.video.link)
                 denz.sendMessage(from, bufferddd, image, {quoted: mek, caption: infomp3})
-                denz.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${data.result.title}.mp3`, quoted: mek})
+                denz.sendMessage(from, lagu, video, {mimetype: 'video/mp4', filename: `${anu.result.title}.mp4`, quoted: mek})
                 break
                 
                 case 'ytmp3':
@@ -3559,31 +3558,6 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
   }
   break
 
-case 'ytmp4':
-  if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-				if (args.length < 1) return reply(`Urlnya mana kak?`)
-  reply(mess.wait)
-  play = body.slice(7)
-  try {
-  anu = await fetchJson(`https://api.zeks.xyz/api/ytmp4?url=${play}&apikey=apivinz`)
-  if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Format link salah, gunakan link youtube')
-  if (anu.error) return reply(anu.error)
-  infomp3 = `*Video Ditemukan*\n‣ *Judul* : ${anu.result.title}\n‣ *Source* : ${anu.result.source}\n‣ *Ukuran* : ${anu.result.size}\n\n_Mengirim file silakan tunggu_\n\n_Jika video tidak muncul download sendiri menggunakan link dibawah_\n‣ *link* : ${anu.result.url_video}`
-  buffer = await getBuffer(anu.result.thumbnail)
-  lagu = await getBuffer(anu.result.url_video)
-  denz.sendMessage(from, buffer, image, {
-quoted: mek, caption: infomp3
-  })
-  denz.sendMessage(from, lagu, video, {
-mimetype: 'video/mp4', filename: `${anu.result.title}.mp4`, quoted: mek
-  })
-  await limitAdd(sender)
-  } catch {
-    reply(mess.ferr)
-  }
-  break
- 
             case 'smule':
 	       if (isBanned) return reply(mess.only.benned)
 	       
