@@ -411,7 +411,6 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠≽️ *_Situação:_* Registrado √
 ╚═━──━▒ *_USER INFO's_*
 ╔═━──━▒ *_ALBEDO BOT INFO_*
-║
 ╠≽️ *_#report_* [TXT]
 ╠≽️ *_${prefix}info_*
 ╠≽️ *_${prefix}owner_*
@@ -420,10 +419,8 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠≽️ *_${prefix}limite_*
 ╠≽️ *_${prefix}usertotal_*
 ╠≽️ *_${prefix}banlist_*
-║
 ╚═━──━▒ *_ALBEDO BOT INFO_*
 ╔═━──━▒ *_MENU's_*
-║
 ╠≽️ *_#STICKERMENU_*
 ╠≽️ *_#FUNMENU_*
 ╠≽️ *_#IMAGEMENU_*
@@ -434,7 +431,6 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠≽️ *_#GROUPMENU_*
 ╠≽️ *_#NSFWMENU_*
 ╠≽️ *_#OWNERMENU_*
-║
 ╚═━──━▒ *_MENU's_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
@@ -1293,7 +1289,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 					const msl = groupMembers
 					const siapss = nus[Math.floor(Math.random() * nus.length)]
 					const sipss = pushname2[Math.floor(Math.random() * msl.length)]
-					teks = `✅ | *_ᴏ ᴄᴀʀᴀ ᴍᴀɪs ᴛᴏᴘ ᴅᴏ ɢʀᴜᴘᴏ ᴇ ᴏ_* @${siapss.jid.split('@')[0]}`
+					teks = `✓ *_ᴏ ᴄᴀʀᴀ ᴍᴀɪs ᴛᴏᴘ ᴅᴏ ɢʀᴜᴘᴏ ᴇ ᴏ_* @${siapss.jid.split('@')[0]}`
 					membr.push(siapss.jid)
 					mentions(teks, membr, true)
 					break
@@ -1315,7 +1311,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 				break 
 				case 'registrar':
 					denz.updatePresence(from, Presence.composing)
-					if (isUser) return reply('*🚨 | ᴠᴏᴄᴇ ᴊᴀ ᴇsᴛᴀ ʀᴇɢɪsᴛʀᴀᴅᴏ!*')
+					if (isUser) return reply('*✘ ᴠᴏᴄᴇ ᴊᴀ ᴇsᴛᴀ ʀᴇɢɪsᴛʀᴀᴅᴏ!*')
 					if (isBanned) return reply(mess.only.benned)
 					user.push(sender)
 					fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
@@ -1354,7 +1350,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 				case 'ttp2':
 				if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
-				                    if (args.length == 0) return reply(`🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
+				                    if (args.length == 0) return reply(`✘ *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ttp3?apikey=RiuApikey&text=${txt}`)
                     denz.sendMessage(from, buffer, sticker, { quoted: mek })
@@ -1374,7 +1370,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     case 'ttp':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
-				if (args.length < 1) return reply(`🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
+				if (args.length < 1) return reply(`✘ *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
 				emoji = body.slice(5)
                     try {
                         emoji = encodeURI(emoji)
@@ -1462,8 +1458,9 @@ quoted: mek, caption: `Wah ganteng kek gua`
 					denz.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": user}})
 					break
 				case 'banlist':
-				ben = '*_「 BAN LIST 」_*\n\n'
-				ben += `*_「 TOTAL 」_* ${ban.length}`
+				ben = '╔═━──━▒ *_BAN LIST_*\n'
+				ben += `╠≽️ *_Banidos Total:_* ${ban.length}\n`
+				ben += `╚═━──━▒ *_BAN LIST_*`
 					denz.sendMessage(from, ben.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": ban}})
 					break
 				case 'ban':
@@ -1472,7 +1469,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 					if (!isOwner) return reply(mess.only.ownerB)
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 			        ban = mentioned
-					reply(`✅ | *_O Usuário: ${ban}, foi banido com sucesso seus comandos não serão mais atendidos_*`)
+					reply(`✓ *_O Usuário: ${ban}, foi banido com sucesso seus comandos não serão mais atendidos_*`)
 					break
 case 'burnpaper':
 if (isBanned) return reply(mess.only.benned)    
@@ -1709,7 +1706,7 @@ break
 					if (!isOwner)return reply(mess.only.ownerB)
 					bnnd = body.slice(8)
 					ban.splice(`${bnnd}@s.whatsapp.net`, 1)
-					reply(`✅ | *_O Usuário: ${bnnd}, foi desbanido, agora atenderei a seus comandos_*`)
+					reply(`✓ *_O Usuário: ${bnnd}, foi desbanido, agora atenderei a seus comandos_*`)
 					break
 				case 'readmore':
 					if (isBanned) return reply(mess.only.benned)    
@@ -1968,7 +1965,7 @@ break
 					}, 2000)
 					setTimeout( () => {
 					denz.updatePresence(from, Presence.composing) 
-					denz.sendMessage(from, '🚨 | *_ᴇsᴛᴀʀᴇɪ ᴍᴇ ʀᴇᴛɪʀᴀɴᴅᴏ ᴅᴏ ɢʀᴜᴘᴏ, ᴀᴅᴇᴜs ᴀ ᴛᴏᴅᴏs_*', text) // ur cods
+					denz.sendMessage(from, '✘ *_ᴇsᴛᴀʀᴇɪ ᴍᴇ ʀᴇᴛɪʀᴀɴᴅᴏ ᴅᴏ ɢʀᴜᴘᴏ, ᴀᴅᴇᴜs ᴀ ᴛᴏᴅᴏs_*', text) // ur cods
 					}, 0)
 					break
 				case 'setname':
@@ -1979,7 +1976,7 @@ break
 			    if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
                 denz.groupUpdateSubject(from, `${body.slice(9)}`)
-                denz.sendMessage(from, `✅ | *_ᴏ ɴᴏᴍᴇ ᴅᴏ ɢʀᴜᴘᴏ ғᴏɪ ᴀʟᴛᴇʀᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ ᴘᴀʀᴀ :_* _${body.slice(9)}_`, text, {quoted: mek})
+                denz.sendMessage(from, `✓ *_ᴏ ɴᴏᴍᴇ ᴅᴏ ɢʀᴜᴘᴏ ғᴏɪ ᴀʟᴛᴇʀᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ ᴘᴀʀᴀ :_* _${body.slice(9)}_`, text, {quoted: mek})
                 break
                 case 'setdesc':
                 if (isBanned) return reply(mess.only.benned)    
@@ -1989,7 +1986,7 @@ break
 			    if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
                 denz.groupUpdateDescription(from, `${body.slice(9)}`)
-                denz.sendMessage(from, `✅ | *_ᴀ ᴅᴇsᴄʀɪᴄᴀᴏ ᴅᴏ ɢʀᴜᴘᴏ ғᴏɪ ᴀʟᴛᴇʀᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ ᴘᴀʀᴀ :_* _${body.slice(9)}_`, text, {quoted: mek})
+                denz.sendMessage(from, `✓ *_ᴀ ᴅᴇsᴄʀɪᴄᴀᴏ ᴅᴏ ɢʀᴜᴘᴏ ғᴏɪ ᴀʟᴛᴇʀᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ ᴘᴀʀᴀ :_* _${body.slice(9)}_`, text, {quoted: mek})
                 break
 				case 'tts':
 				if (isBanned) return reply(mess.only.benned)    
@@ -2059,7 +2056,7 @@ break
                     media = await denz.downloadAndSaveMediaMessage(mek)
                     await denz.updateProfilePicture (from, media)
                     reply(mess.wait)
-                    reply(`✅ | *_ᴀ ғᴏᴛᴏ ᴅᴏ ɢʀᴜᴘᴏ ғᴏɪ ᴀʟᴛᴇʀᴀᴅᴀ ᴄᴏᴍ sᴜᴄᴇssᴏ_*`)
+                    reply(`✓ *_ᴀ ғᴏᴛᴏ ᴅᴏ ɢʀᴜᴘᴏ ғᴏɪ ᴀʟᴛᴇʀᴀᴅᴀ ᴄᴏᴍ sᴜᴄᴇssᴏ_*`)
                     break
 				case 'chance':
 				if (isBanned) return reply(mess.only.benned)    
@@ -2099,19 +2096,19 @@ reply(mess.wait)
                 case 'report':
                 if (isBanned) return reply(mess.only.benned)    
                 if (!isUser) return reply(mess.only.userB)
-                if (args.length < 1) return reply(`🚨 | *_Descreva o erro, por exemplo: "#report o comando sticker não está funcionando!"_*`)
+                if (args.length < 1) return reply(`✘ *_Descreva o erro, por exemplo: "#report o comando sticker não está funcionando!"_*`)
           				
                      const pesan = body.slice(8)
-                      if (pesan.length > 300) return denz.sendMessage(from, '🚨 | *_Desculpe, seu relatório é muito grande, máximo de 300 caracteres._*', text, {quoted: mek})
+                      if (pesan.length > 300) return denz.sendMessage(from, '✘ *_Desculpe, seu relatório é muito grande, máximo de 300 caracteres._*', text, {quoted: mek})
                         var nomor = mek.participant
-                       const tekst1 = `*_「 ALBEDO BOT 」_*\n*_「 Assunto 」_* Report\n*_「 Autor 」_* @${nomor.split("@s.whatsapp.net")[0]}\n*_「 Descrição 」_* ${pesan}`
+                       const tekst1 = `*_「 ALBEDO BOT 」_*\n\n*_「 Assunto 」_* Report\n*_「 Autor 」_* @${nomor.split("@s.whatsapp.net")[0]}\n*_「 Descrição 」_* ${pesan}`
 
                       var options = {
                          text: tekst1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
                     denz.sendMessage('5519998707564@s.whatsapp.net', options, text, {quoted: mek})
-                    reply('✅ | *_Seu relatório foi enviado ao proprietário, relatórios falsos não serão respondidos e ocasionará no seu ban!_*')
+                    reply('✓ *_Seu relatório foi enviado ao proprietário, relatórios falsos não serão respondidos e ocasionará no seu ban!_*')
                     break
                 case 'request':
                 if (isBanned) return reply(mess.only.benned)    
@@ -2202,9 +2199,9 @@ break
 					case 'nhentai':
 					if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
-				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (!isAnime) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
-						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						if (!isNsfw) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
 					henid = args[0]
                     get_result = await fetchJson(`http://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=RiuApikey`)
                     get_result = get_result.result
@@ -2232,9 +2229,9 @@ break
                 case 'hentai4everyone':
                 if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
-				    if (!isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
+				    if (!isAnime) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 				    if (isLimit(sender)) return reply(limitend(pushname2))
-						if (!isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						if (!isNsfw) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
 						reply(mess.wait)
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=RiuApikey`)
                     denz.sendMessage(from, buffer, image, { quoted: mek})
@@ -2691,7 +2688,7 @@ break
 				ct = body.slice(8)
 				reply(mess.wait)
 				ct = await getBuffer(`http://lolhuman.herokuapp.com/api/nulis?apikey=RiuApikey&text=${ct}`)
-				denz.sendMessage(from, ct, image, {caption: '✅ | *_ᴀǫᴜɪ ᴇsᴛᴀ ᴏ sᴇᴜ ᴘᴇᴅɪᴅᴏ ت._*', quoted: mek})
+				denz.sendMessage(from, ct, image, {caption: '✓ *_ᴀǫᴜɪ ᴇsᴛᴀ ᴏ sᴇᴜ ᴘᴇᴅɪᴅᴏ ت._*', quoted: mek})
 				await limitAdd(sender)
 				break
 //akhir kreator
@@ -2729,7 +2726,7 @@ break
 				paste = `${body.slice(10)}`
                    anu = await fetchJson(`https://api-anoncybfakeplayer.herokuapp.com/pastebin?text=${paste}`, {method: 'get'})
                    reply(mess.wait)
-                   pasteb = `✅ | *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${anu.result}\n✅ | *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${body.slice(9)}`
+                   pasteb = `✓ *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${anu.result}\n✓ *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${body.slice(9)}`
                    denz.sendMessage(from, pasteb, text, {quoted: mek})
                    await limitAdd(sender) 				
                    break 
@@ -2740,7 +2737,7 @@ break
 			    if (isLimit(sender)) return reply(limitend(pushname2))
 			    reply(mess.wait)
                     anu = await getBuffer(`http://api.lolhuman.xyz/api/shortlink?apikey=RiuApikey&url=${body.slice(9)}`)
-			        tinyurl = `✅ | *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${anu.result}\n✅ | *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${body.slice(9)}`
+			        tinyurl = `✓ *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${anu.result}\n✓ *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${body.slice(9)}`
 			        reply(tinyurl)
 			        await limitAdd(sender) 
 			        break 
@@ -2749,7 +2746,7 @@ break
 			if (!isUser) return reply(mess.only.userB)
 				denz.updatePresence(from, Presence.composing) 
 				data = await fetchJson(`https://tobz-api.herokuapp.com/api/bitly?url=${args[0]}&apikey=BotWeA`)
-				hasil = `✅ | *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${data.result}\n✅ | *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${args[0]}`
+				hasil = `✓ *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${data.result}\n✓ *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${args[0]}`
 				reply(hasil)
 				await limitAdd(sender)
 				break
@@ -2993,10 +2990,10 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (args[0] === 'abrir') {
-					    reply(`🚨 | *_ɢʀᴜᴘᴏ ᴀʙᴇʀᴛᴏ ᴘᴇʟᴏ ᴀᴅᴍɪɴ_*\n🚨 | *_ᴛᴏᴅᴏs ᴏs ᴘᴀʀᴛɪᴄɪᴘᴀɴᴛᴇs ᴘᴏᴅᴇᴍ ᴇɴᴠɪᴀʀ ᴍᴇɴsᴀɢᴇɴs ᴀɢᴏʀᴀ_*`)
+					    reply(`✘ *_ɢʀᴜᴘᴏ ᴀʙᴇʀᴛᴏ ᴘᴇʟᴏ ᴀᴅᴍɪɴ_*\n✘ *_ᴛᴏᴅᴏs ᴏs ᴘᴀʀᴛɪᴄɪᴘᴀɴᴛᴇs ᴘᴏᴅᴇᴍ ᴇɴᴠɪᴀʀ ᴍᴇɴsᴀɢᴇɴs ᴀɢᴏʀᴀ_*`)
 						denz.groupSettingChange(from, GroupSettingChange.messageSend, false)
 					} else if (args[0] === 'fechar') {
-						reply(`🚨 | *_ᴏ ɢʀᴜᴘᴏ ғᴏɪ ғᴇᴄʜᴀᴅᴏ ᴘᴇʟᴏ ᴀᴅᴍɪɴ_*\n🚨 | *_ᴀᴘᴀʀᴛɪʀ ᴅᴇ ᴀɢᴏʀᴀ ᴀᴘᴇɴᴀs ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs ᴘᴏᴅᴇʀᴀᴏ ᴇɴᴠɪᴀʀ ᴍᴇɴsᴀɢᴇɴs_*`)
+						reply(`✘ *_ᴏ ɢʀᴜᴘᴏ ғᴏɪ ғᴇᴄʜᴀᴅᴏ ᴘᴇʟᴏ ᴀᴅᴍɪɴ_*\n✘ *_ᴀᴘᴀʀᴛɪʀ ᴅᴇ ᴀɢᴏʀᴀ ᴀᴘᴇɴᴀs ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs ᴘᴏᴅᴇʀᴀᴏ ᴇɴᴠɪᴀʀ ᴍᴇɴsᴀɢᴇɴs_*`)
 						denz.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					}
 					break
@@ -3011,13 +3008,13 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					await limitAdd(sender) 
 					break 
 				case 'limpar':
-					if (!isOwner) return reply('🚨 | *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ᴇ ᴇsᴘᴇᴄɪғɪᴄᴏ ᴘᴀʀᴀ ᴏ ᴅᴏɴᴏ ᴅᴏ ʙᴏᴛ, ɴʏx_*')
+					if (!isOwner) return reply('✘ *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ᴇ ᴇsᴘᴇᴄɪғɪᴄᴏ ᴘᴀʀᴀ ᴏ ᴅᴏɴᴏ ᴅᴏ ʙᴏᴛ, ɴʏx_*')
 					anu = await denz.chats.all()
 					denz.setMaxListeners(25)
 					for (let _ of anu) {
 						denz.deleteChat(_.jid)
 					}
-					reply(`✅ | *_ᴛᴏᴅᴏs ᴏs ᴄʜᴀᴛs ғᴏʀᴀᴍ ᴅᴇʟᴇᴛᴀᴅᴏs ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+					reply(`✓ *_ᴛᴏᴅᴏs ᴏs ᴄʜᴀᴛs ғᴏʀᴀᴍ ᴅᴇʟᴇᴛᴀᴅᴏs ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					break
                                 case 'bcgc':
 					denz.updatePresence(from, Presence.composing) 
@@ -3063,21 +3060,21 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (args.length < 1) return reply('🚨 | *_Forneca um número, ta tentando adicionar sua namorada? brincadeirinha hehehe..._*')
-					if (args[0].startsWith('1')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
-					if (args[0].startsWith('2')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
-					if (args[0].startsWith('3')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
-					if (args[0].startsWith('4')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
-					if (args[0].startsWith('6')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
-					if (args[0].startsWith('7')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
-					if (args[0].startsWith('8')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
-					if (args[0].startsWith('9')) return reply('🚨 | *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args.length < 1) return reply('✘ *_Forneca um número, ta tentando adicionar sua namorada? brincadeirinha hehehe..._*')
+					if (args[0].startsWith('1')) return reply('✘ *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('2')) return reply('✘ *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('3')) return reply('✘ *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('4')) return reply('✘ *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('6')) return reply('✘ *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('7')) return reply('✘ *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('8')) return reply('✘ *_Forneça o DDI também, exemplo 5519998707564._*')
+					if (args[0].startsWith('9')) return reply('✘ *_Forneça o DDI também, exemplo 5519998707564._*')
 					try {
 						num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
 						denz.groupAdd(from, [num])
 					} catch (e) {
 						console.log('Error :', e)
-						reply('🚨 | *_Houve um erro ao adicionar o alvo, talvez o número esteja errado ou o alvo tenha privado para que apenas contatos o adicionem em grupos._*')
+						reply('✘ *_Houve um erro ao adicionar o alvo, talvez o número esteja errado ou o alvo tenha privado para que apenas contatos o adicionem em grupos._*')
 					}
 					break
 			    case 'kick':
@@ -3087,17 +3084,17 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('🚨 | *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ᴘʀᴏᴍᴏᴠᴇʀ ᴀ ᴀᴅᴍɪɴ._*')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('✘ *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ᴘʀᴏᴍᴏᴠᴇʀ ᴀ ᴀᴅᴍɪɴ._*')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = '✅ | *_ᴄᴏᴍᴀɴᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ, ᴏ ᴀʟᴠᴏ sᴇʀᴀ ʀᴇᴍᴏᴠɪᴅᴏ ᴇᴍ ɪɴsᴛᴀɴᴛᴇs_* :\n'
+						teks = '✓ *_ᴄᴏᴍᴀɴᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ, ᴏ ᴀʟᴠᴏ sᴇʀᴀ ʀᴇᴍᴏᴠɪᴅᴏ ᴇᴍ ɪɴsᴛᴀɴᴛᴇs_* :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
 						denz.groupRemove(from, mentioned)
 					} else {
-						mentions(`✅ | *_ᴄᴏᴍᴀɴᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ, ᴏ ᴀʟᴠᴏ, @${mentioned[0].split('@')[0]}, sᴇʀᴀ ʀᴇᴍᴏᴠɪᴅᴏ ᴇᴍ ɪɴsᴛᴀɴᴛᴇs_*`, mentioned, true)
+						mentions(`✓ *_ᴄᴏᴍᴀɴᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ, ᴏ ᴀʟᴠᴏ, @${mentioned[0].split('@')[0]}, sᴇʀᴀ ʀᴇᴍᴏᴠɪᴅᴏ ᴇᴍ ɪɴsᴛᴀɴᴛᴇs_*`, mentioned, true)
 						denz.groupRemove(from, mentioned)
 					}
 					break 
@@ -3109,17 +3106,17 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('🚨 | *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ᴘʀᴏᴍᴏᴠᴇʀ ᴀ ᴀᴅᴍɪɴ._*')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('✘ *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ᴘʀᴏᴍᴏᴠᴇʀ ᴀ ᴀᴅᴍɪɴ._*')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = '✅ | ᴄᴏᴍᴀɴᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴏ ᴀʟᴠᴏ sᴇʀᴀ ᴘʀᴏᴍᴏᴠɪᴅᴏ ᴀ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ_* :\n'
+						teks = '✓ ᴄᴏᴍᴀɴᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴏ ᴀʟᴠᴏ sᴇʀᴀ ᴘʀᴏᴍᴏᴠɪᴅᴏ ᴀ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ_* :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
 						denz.groupMakeAdmin(from, mentioned)
 					} else {
-						mentions(`🚨 |  *_@${mentioned[0].split('@')[0]} ᴀᴄᴀʙᴏᴜ ᴅᴇ sᴇ ᴛᴏʀɴᴀʀ ᴜᴍ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ ᴅᴏ ɢʀᴜᴘᴏ:_*`, mentioned, true)
+						mentions(`✘  *_@${mentioned[0].split('@')[0]} ᴀᴄᴀʙᴏᴜ ᴅᴇ sᴇ ᴛᴏʀɴᴀʀ ᴜᴍ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ ᴅᴏ ɢʀᴜᴘᴏ:_*`, mentioned, true)
 						denz.groupMakeAdmin(from, mentioned)
 					}
 					break
@@ -3137,17 +3134,17 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('🚨 | *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ᴅᴇᴍᴏᴛᴀʀ._*')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('✘ *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ᴅᴇᴍᴏᴛᴀʀ._*')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = '✅ | *_ᴄᴏᴍᴀɴᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ, ᴏ ᴀʟᴠᴏ ʟᴇᴠᴀʀᴀ ᴅᴇᴍᴏᴛᴇ ᴅᴏ sᴇᴜ ᴄᴀʀɢᴏ ᴀᴛᴜᴀʟ_* :\n'
+						teks = '✓ *_ᴄᴏᴍᴀɴᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ, ᴏ ᴀʟᴠᴏ ʟᴇᴠᴀʀᴀ ᴅᴇᴍᴏᴛᴇ ᴅᴏ sᴇᴜ ᴄᴀʀɢᴏ ᴀᴛᴜᴀʟ_* :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
 						denz.groupDemoteAdmin(from, mentioned)
 					} else {
-						mentions(`🚨 |  *_@${mentioned[0].split('@')[0]} sᴇ ᴛᴏʀɴᴏᴜ ᴍᴇᴍʙʀᴏ ᴄᴏᴍᴜᴍ ᴀɢᴏʀᴀ._*`, mentioned, true)
+						mentions(`✘  *_@${mentioned[0].split('@')[0]} sᴇ ᴛᴏʀɴᴏᴜ ᴍᴇᴍʙʀᴏ ᴄᴏᴍᴜᴍ ᴀɢᴏʀᴀ._*`, mentioned, true)
 						denz.groupDemoteAdmin(from, mentioned)
 					}
 					break
@@ -3173,18 +3170,18 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 								
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
+					if (args.length < 1) return reply('✘ *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
 					if ((args[0]) === 'on') {
-						if (isSimi) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴊᴀ ᴇsᴛᴀ ᴀᴛɪᴠᴀᴅᴏ_*')
+						if (isSimi) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ᴊᴀ ᴇsᴛᴀ ᴀᴛɪᴠᴀᴅᴏ_*')
 						samih.push(from)
 						fs.writeFileSync('./database/json/simi.json', JSON.stringify(samih))
-						reply(`✅ | *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else if ((args[0]) === 'off') {
 						samih.splice(from, 1)
 						fs.writeFileSync('./database/json/simi.json', JSON.stringify(samih))
-						reply(`✅ | *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else {
-						reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
+						reply('✘ *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
 					}
 					break
 			    case 'nsfw':
@@ -3193,18 +3190,18 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 			    				
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
+					if (args.length < 1) return reply('✘ *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
 					if ((args[0]) === 'on') {
-						if (isNsfw) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴊᴀ ᴇsᴛᴀ ᴀᴛɪᴠᴀᴅᴏ_*')
+						if (isNsfw) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ᴊᴀ ᴇsᴛᴀ ᴀᴛɪᴠᴀᴅᴏ_*')
 						nsfw.push(from)
 						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-						reply(`✅ | *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else if ((args[0]) === 'off') {
 						nsfw.splice(from, 1)
 						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-						reply(`✅ | *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else {
-						reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
+						reply('✘ *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
 					}
 					break
 				case 'modoanime':
@@ -3213,18 +3210,18 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 								
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
+					if (args.length < 1) return reply('✘ *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
 					if ((args[0]) === 'on') {
-						if (isAnime) return reply('🚨 | *_ᴏ ᴍᴏᴅᴏ ᴊᴀ ᴇsᴛᴀ ᴀᴛɪᴠᴀᴅᴏ_*')
+						if (isAnime) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ᴊᴀ ᴇsᴛᴀ ᴀᴛɪᴠᴀᴅᴏ_*')
 						anime.push(from)
 						fs.writeFileSync('./database/json/anime.json', JSON.stringify(anime))
-						reply(`✅ | *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else if ((args[0]) === 'off') {
 						anime.splice(from, 1)
 						fs.writeFileSync('./database/json/anime.json', JSON.stringify(anime))
-						reply(`✅ | *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else {
-						reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
+						reply('✘ *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
 					}
 					break
 				case 'boasvindas':
@@ -3233,54 +3230,54 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 								
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('🚨 | *_ᴅɪɢɪᴛᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
+					if (args.length < 1) return reply('✘ *_ᴅɪɢɪᴛᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
 					if ((args[0]) === 'on') {
-						if (isWelkom) return reply('🚨 | *_ᴀs ᴍᴇɴsᴀɢᴇs ᴅᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ᴊᴀ ᴇsᴛᴀᴏ ᴀᴛɪᴠᴀᴅᴀs_*')
+						if (isWelkom) return reply('✘ *_ᴀs ᴍᴇɴsᴀɢᴇs ᴅᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ᴊᴀ ᴇsᴛᴀᴏ ᴀᴛɪᴠᴀᴅᴀs_*')
 						welkom.push(from)
 						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-						reply(`✅ | *_ᴀs ᴍᴇɴsᴀɢᴇɴs ᴅᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ғᴏʀᴀᴍ ᴀᴛɪᴠᴀᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_ᴀs ᴍᴇɴsᴀɢᴇɴs ᴅᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ғᴏʀᴀᴍ ᴀᴛɪᴠᴀᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else if ((args[0]) === 'off') {
-						if (isWelkom) return reply('🚨 | *_ᴀs ᴍᴇɴsᴀɢᴇs ᴅᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ᴊᴀ ᴇsᴛᴀᴏ ᴅᴇsᴀᴛɪᴠᴀᴅᴀs_*')
+						if (isWelkom) return reply('✘ *_ᴀs ᴍᴇɴsᴀɢᴇs ᴅᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ᴊᴀ ᴇsᴛᴀᴏ ᴅᴇsᴀᴛɪᴠᴀᴅᴀs_*')
 						welkom.splice(from, 1)
 						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-						reply(`✅ | *_ᴀs ᴍᴇɴsᴀɢᴇɴs ᴅᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ғᴏʀᴀᴍ ᴅᴇsᴀᴛɪᴠᴀᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_ᴀs ᴍᴇɴsᴀɢᴇɴs ᴅᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ғᴏʀᴀᴍ ᴅᴇsᴀᴛɪᴠᴀᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
 					} else {
-						reply('🚨 | *_ᴅɪɢɪᴛᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
+						reply('✘ *_ᴅɪɢɪᴛᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
 					}
 					break 
 				case 'antilink':
 				if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (args.length < 1) return reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴀɴᴛɪʟɪɴᴋ ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
+					if (args.length < 1) return reply('✘ *_ᴅɪɢɪᴛᴇ ᴀɴᴛɪʟɪɴᴋ ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
 					if ((args[0]) === 'on') {
-						if (isAntiLink) return reply('🚨 | *_ᴏ ᴀɴᴛɪʟɪɴᴋ ᴊᴀ ᴇsᴛᴀ ᴏɴ!_*')
+						if (isAntiLink) return reply('✘ *_ᴏ ᴀɴᴛɪʟɪɴᴋ ᴊᴀ ᴇsᴛᴀ ᴏɴ!_*')
 						antilink.push(from)
 						fs.writeFileSync('./database/json/antilink.json', JSON.stringify(antilink))
-						reply(`✅ | *_ᴏ ᴀɴᴛɪʟɪɴᴋ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ_*`)
+						reply(`✓ *_ᴏ ᴀɴᴛɪʟɪɴᴋ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ_*`)
 					} else if ((args[0]) === 'off') {
-						if (!isAntiLink) return reply('🚨 | *_ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴊᴀ ᴇsᴛᴀ ᴏғғ!_*')
+						if (!isAntiLink) return reply('✘ *_ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴊᴀ ᴇsᴛᴀ ᴏғғ!_*')
 						antilink.splice(from, 1)
 						fs.writeFileSync('./database/json/antilink.json', JSON.stringify(antilink))
-						reply(`✅ | *_ᴏ ᴀɴᴛɪʟɪɴᴋ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ_*`)
+						reply(`✓ *_ᴏ ᴀɴᴛɪʟɪɴᴋ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ_*`)
 					} else {
-						reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴀɴᴛɪʟɪɴᴋ ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
+						reply('✘ *_ᴅɪɢɪᴛᴇ ᴀɴᴛɪʟɪɴᴋ ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
 					}
 					break
 				case 'antibadword':
                     if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-                if (args.length < 1) return reply('🚨 | *_ᴅɪɢɪᴛᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
+                if (args.length < 1) return reply('✘ *_ᴅɪɢɪᴛᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
                 if (args[0] === 'on') {
-                if (isBadWord) return reply('🚨 | *_ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴊᴀ ᴇsᴛᴀ ᴏɴ!_*')
+                if (isBadWord) return reply('✘ *_ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴊᴀ ᴇsᴛᴀ ᴏɴ!_*')
                  	   badword.push(from)
                  	   fs.writeFileSync('./database/json/badword.json', JSON.stringify(badword))
-                  	   reply(`✅ | *_ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ, ᴄᴏɴsᴜʟᴛᴇ ᴏ ʙᴡʟɪsᴛ ᴘᴀʀᴀ ᴇᴠɪᴛᴀʀ sᴇʀ ʙᴀɴɪᴅᴏ!_*`)
+                  	   reply(`✓ *_ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ, ᴄᴏɴsᴜʟᴛᴇ ᴏ ʙᴡʟɪsᴛ ᴘᴀʀᴀ ᴇᴠɪᴛᴀʀ sᴇʀ ʙᴀɴɪᴅᴏ!_*`)
               	  } else if (args[0] === 'off') {
-                    	if (!isBadWord) return reply('🚨 | *_ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴊᴀ ᴇsᴛᴀ ᴏғғ!_*')
+                    	if (!isBadWord) return reply('✘ *_ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴊᴀ ᴇsᴛᴀ ᴏғғ!_*')
                   	  badword.splice(from, 1)
                  	   fs.writeFileSync('./database/json/badword.json', JSON.stringify(badword))
-                 	    reply(`✅ | _*ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+                 	    reply(`✓ _*ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
              	   } else {
                  	   reply(ind.satukos())
                 	}
@@ -3295,7 +3292,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
                     const bw = args.join(" ")
                     bad.push(bw)
                     fs.writeFileSync('./database/json/bad.json', JSON.stringify(bad))
-                    reply('✅ | *_ᴀ ᴘᴀʟᴀᴠʀᴀ ᴅᴇsᴇᴊᴀᴅᴀ ғᴏɪ ᴄᴏʟᴏᴄᴀᴅᴀ ɴᴀ ʟɪsᴛᴀ ᴅᴇ ᴘᴀʟᴀᴠʀᴀs ᴘʀᴏʙɪᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ_*')
+                    reply('✓ *_ᴀ ᴘᴀʟᴀᴠʀᴀ ᴅᴇsᴇᴊᴀᴅᴀ ғᴏɪ ᴄᴏʟᴏᴄᴀᴅᴀ ɴᴀ ʟɪsᴛᴀ ᴅᴇ ᴘᴀʟᴀᴠʀᴀs ᴘʀᴏʙɪᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ_*')
                     break
                 case 'deletebw':
                     if (!isOwner) return reply(mess.only.ownerB)
@@ -3303,7 +3300,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
                     let dbw = args.join(" ")
                     bad.splice(dbw)
                     fs.writeFileSync('./database/json/bad.json', JSON.stringify(bad))
-                    reply('✅ | *_ᴀ ᴘᴀʟᴀᴠʀᴀ ᴅᴇsᴇᴊᴀᴅᴀ ғᴏɪ ʀᴇᴛɪʀᴀᴅᴀ ᴅᴀ ʟɪsᴛᴀ ᴅᴇ ᴘᴀʟᴀᴠʀᴀs ᴘʀᴏʙɪᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ_*')
+                    reply('✓ *_ᴀ ᴘᴀʟᴀᴠʀᴀ ᴅᴇsᴇᴊᴀᴅᴀ ғᴏɪ ʀᴇᴛɪʀᴀᴅᴀ ᴅᴀ ʟɪsᴛᴀ ᴅᴇ ᴘᴀʟᴀᴠʀᴀs ᴘʀᴏʙɪᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ_*')
                     break 
                 case 'bwlist':
                     let lbw = `Ini adalah list BAD WORD\nTotal : ${bad.length}\n`
@@ -3388,7 +3385,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 				if (!isOwner) return reply(mess.only.ownerB)
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('🚨 | *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ʀᴏᴜʙᴀʀ ᴏ ᴘᴇʀғɪʟ_*')
+					if (args.length < 1) return reply('✘ *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ʀᴏᴜʙᴀʀ ᴏ ᴘᴇʀғɪʟ_*')
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag gan')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
@@ -3396,9 +3393,9 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 						pp = await denz.getProfilePicture(id)
 						buffer = await getBuffer(pp)
 						denz.updateProfilePicture(botNumber, buffer)
-						mentions(`✅ | *_ᴀ ғᴏᴛᴏ ᴅᴀ ᴘᴇssᴏᴀ > @${id.split('@')[0]} ғᴏɪ ʀᴏᴜʙᴀᴅᴀ ᴇ sᴇᴛᴀᴅᴀ ᴅᴇ ᴘᴇʀғɪʟ ɴᴏ ʙᴏᴛ_*`, [jid], true)
+						mentions(`✓ *_ᴀ ғᴏᴛᴏ ᴅᴀ ᴘᴇssᴏᴀ > @${id.split('@')[0]} ғᴏɪ ʀᴏᴜʙᴀᴅᴀ ᴇ sᴇᴛᴀᴅᴀ ᴅᴇ ᴘᴇʀғɪʟ ɴᴏ ʙᴏᴛ_*`, [jid], true)
 					} catch (e) {
-						reply('🚨 | *_ᴀʟɢᴏ ᴅᴇᴜ ᴇʀʀᴀᴅᴏ !_*')
+						reply('✘ *_ᴀʟɢᴏ ᴅᴇᴜ ᴇʀʀᴀᴅᴏ !_*')
 					}
 					break
 //setting bot
@@ -3509,7 +3506,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
        case 'play':
                   if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-				if (args.length < 1) return reply(`🚨 | *_Cade o texto filhote de cruz credo? brincadeirinha hehehe, mas forneça um texto..._*`)
+				if (args.length < 1) return reply(`✘ *_Cade o texto filhote de cruz credo? brincadeirinha hehehe, mas forneça um texto..._*`)
 				try {
                 data = await fetchJson(`http://api.lolhuman.xyz/api/ytplay?apikey=RiuApikey&query=${body.slice(6)}`, {method: 'get'})
                  reply(mess.wait)
@@ -3670,11 +3667,11 @@ case 'wiki':
 				case 'fotobot':
 					if (!isOwner) return reply(mess.only.owner)
 				    denz.updatePresence(from, Presence.composing) 
-					if (!isQuotedImage) return reply(`🚨 | *_ʀᴇsᴘᴏɴᴅᴀ ᴀ ɪᴍᴀɢᴇᴍ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ᴄᴏʟᴏᴄᴀʀ ᴄᴏᴍᴏ ғᴏᴛᴏ ᴅᴇ ᴘᴇʀғɪʟ ᴅᴏ ʙᴏᴛ!_*`)
+					if (!isQuotedImage) return reply(`✘ *_Mencione a imagem que você deseja colocar como foto de perfil do bot_*`)
 					enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await denz.downloadAndSaveMediaMessage(enmedia)
 					await denz.updateProfilePicture(botNumber, media)
-					reply('✅ | *_ᴀ ғᴏᴛᴏ ᴅᴏ ʙᴏᴛ ғᴏɪ ᴀᴛᴜᴀʟɪᴢᴀᴅᴀ ᴄᴏᴍ sᴜᴄᴇssᴏ_*')
+					reply('✓ *_A foto do bot foi atualizada com sucesso._*')
 					break
 // akhir encrypt & decrypt Fitur
 
