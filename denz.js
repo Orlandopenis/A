@@ -3327,7 +3327,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
                 case 'deletebw':
                     if (!isOwner) return reply(mess.only.ownerB)
                     if (args.length < 1) return reply( `Kirim perintah ${prefix}delbadword [kata kasar]. contoh ${prefix}delbadword bego`)
-                    let dbw = body.slice(10)
+                    let dbw = args.join(" ")
                     bad.splice(dbw)
                     fs.writeFileSync('./database/json/bad.json', JSON.stringify(bad))
                     reply('✅ | *_ᴀ ᴘᴀʟᴀᴠʀᴀ ᴅᴇsᴇᴊᴀᴅᴀ ғᴏɪ ʀᴇᴛɪʀᴀᴅᴀ ᴅᴀ ʟɪsᴛᴀ ᴅᴇ ᴘᴀʟᴀᴠʀᴀs ᴘʀᴏʙɪᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ_*')
