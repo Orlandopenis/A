@@ -3530,9 +3530,9 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
                  reply(mess.wait)
                  infomp3 = `*_「 PLAY 」_*\n\n*_「 Título 」_* : ${data.result.info.title}\n*_「 Duração 」_* : ${data.result.info.duration}\n*_「 Uploader 」_* : ${data.result.info.uploader}\n*_「 Views 」_* : ${data.result.info.view}\n*_「 Likes 」_* : ${data.result.info.like}\n*_「 Dislikes 」_* : ${data.result.info.dislike}\n*_「 Link 」_* : youtube.com/watch?v=${data.result.info.id}`
                 bufferddd = await getBuffer(data.result.info.thumbnail)
-                lagu = await getBuffer(data.result.video.link)
+                lagu = await getBuffer(data.result.audio.link)
                 denz.sendMessage(from, bufferddd, image, {quoted: mek, caption: infomp3})
-                denz.sendMessage(from, lagu, video, {mimetype: 'video/mp4', filename: `${data.result.info.title}.mp4`, quoted: mek})
+                denz.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${data.result.info.title}.mp3`, quoted: mek })
                 await limitAdd(sender)
                 } catch {
                 	reply(mess.ferr)
