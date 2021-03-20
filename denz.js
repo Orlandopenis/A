@@ -1469,7 +1469,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 					if (!isOwner) return reply(mess.only.ownerB)
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 			        ban = mentioned
-					reply(`✓ *_O Usuário: ${ban}, foi banido com sucesso seus comandos não serão mais atendidos_*`)
+					reply(`╔═━──━▒ *_BANIMENTO_*\n╠≽️ *_User:_* ${ban}\n╚═━──━▒ *_BANIMENTO_*`)
 					break
 case 'burnpaper':
 if (isBanned) return reply(mess.only.benned)    
@@ -1706,7 +1706,7 @@ break
 					if (!isOwner)return reply(mess.only.ownerB)
 					bnnd = body.slice(8)
 					ban.splice(`${bnnd}@s.whatsapp.net`, 1)
-					reply(`✓ *_O Usuário: ${bnnd}, foi desbanido, agora atenderei a seus comandos_*`)
+					reply(`╔═━──━▒ *_DESBANIMENTO_*\n╠≽️ *_User:_* ${bnnd}\n╚═━──━▒ *_DESBANIMENTO_*`)
 					break
 				case 'readmore':
 					if (isBanned) return reply(mess.only.benned)    
@@ -1730,8 +1730,8 @@ break
                     for (let lmt of limidat) {
                         if (lmt.id === sender) {
                             let limitCounts = limitt - lmt.limit
-                            if (limitCounts <= 0) return reply(from,`Limit anda habis`, id)
-                            await reply(`*_「 LIMITE 」_*\n\n*_「Restantes 」_*${limitCounts}*`)
+                            if (limitCounts <= 0) return reply(from,`✘ *_O seu limite chegou ao fim, espere o reset diário para usar os comandos novamente_*`, id)
+                            await reply(`╔═━──━▒ *_LIMITE_*\n╠≽️ *_Restantes:_* ${limitCounts}\n╚═━──━▒ *_LIMITE_*`)
                             found = true
                         }
                     }
