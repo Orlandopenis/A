@@ -1289,7 +1289,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 					const msl = groupMembers
 					const siapss = nus[Math.floor(Math.random() * nus.length)]
 					const sipss = pushname2[Math.floor(Math.random() * msl.length)]
-					teks = `✓ *_ᴏ ᴄᴀʀᴀ ᴍᴀɪs ᴛᴏᴘ ᴅᴏ ɢʀᴜᴘᴏ ᴇ ᴏ_* @${siapss.jid.split('@')[0]}`
+					teks = `✓ *_O Cara mais top do grupo é o:_* @${siapss.jid.split('@')[0]}`
 					membr.push(siapss.jid)
 					mentions(teks, membr, true)
 					break
@@ -1335,7 +1335,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 				case 'ttp2':
 				if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
-				                    if (args.length == 0) return reply(`✘ *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
+				                    if (args.length == 0) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
                     txt = args.join(" ")
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/ttp3?apikey=RiuApikey&text=${txt}`)
                     denz.sendMessage(from, buffer, sticker, { quoted: mek })
@@ -1343,7 +1343,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     case 'phcomment':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
-                    if (args.length < 1) return reply(`Contoh: ${prefix}glitch dns/bot`)
+                    if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} o criador desse bot é lindo/Nyx_*`)
                     ds = `${body.slice(11)}`
                     tex1 = ds.split("/")[0];
                     tex2 = ds.split("/")[1];
@@ -1368,7 +1368,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     case 'emoji2img': 
                                   if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
-				if (args.length < 1) return reply('emoji nya mana sayang ?')
+				if (args.length < 1) return reply('Cade o emoji')
 				gatauda = body.slice(11)
 				reply(mess.wait)
 				buffer = await getBuffer(`https://api.zeks.xyz/api/emoji-image?apikey=apivinz&emoji=${gatauda}`, {method: 'get'})
@@ -1945,7 +1945,7 @@ break
 					}, 2000)
 					setTimeout( () => {
 					denz.updatePresence(from, Presence.composing) 
-					denz.sendMessage(from, '✘ *_ᴇsᴛᴀʀᴇɪ ᴍᴇ ʀᴇᴛɪʀᴀɴᴅᴏ ᴅᴏ ɢʀᴜᴘᴏ, ᴀᴅᴇᴜs ᴀ ᴛᴏᴅᴏs_*', text) // ur cods
+					denz.sendMessage(from, '✘ *_Estarei me retirando do grupo, Adeus a todos!_*', text) // ur cods
 					}, 0)
 					break
 				case 'setname':
@@ -1956,7 +1956,7 @@ break
 			    if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
                 denz.groupUpdateSubject(from, `${body.slice(9)}`)
-                denz.sendMessage(from, `✓ *_ᴏ ɴᴏᴍᴇ ᴅᴏ ɢʀᴜᴘᴏ ғᴏɪ ᴀʟᴛᴇʀᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ ᴘᴀʀᴀ :_* _${body.slice(9)}_`, text, {quoted: mek})
+                denz.sendMessage(from, `✓ *_O nome do grupo foi alterado com sucesso para:_* ${body.slice(9)}`, text, {quoted: mek})
                 break
                 case 'setdesc':
                 if (isBanned) return reply(mess.only.benned)    
@@ -1966,7 +1966,7 @@ break
 			    if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
                 denz.groupUpdateDescription(from, `${body.slice(9)}`)
-                denz.sendMessage(from, `✓ *_ᴀ ᴅᴇsᴄʀɪᴄᴀᴏ ᴅᴏ ɢʀᴜᴘᴏ ғᴏɪ ᴀʟᴛᴇʀᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ ᴘᴀʀᴀ :_* _${body.slice(9)}_`, text, {quoted: mek})
+                denz.sendMessage(from, `✓ *_A descrição do grupo foi alterada com sucesso para:_* ${body.slice(9)}`, text, {quoted: mek})
                 break
 				case 'tts':
 				if (isBanned) return reply(mess.only.benned)    
