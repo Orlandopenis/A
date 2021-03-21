@@ -2045,7 +2045,7 @@ break
 					rate = body.slice(8)
 					ratee = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
 					const te = ratee[Math.floor(Math.random() * ratee.length)]
-					denz.sendMessage(from, '✓ *_As chances_* '+rate+' são de '+ te+'', text, { quoted: mek })
+					denz.sendMessage(from, '✓ *_As chances '+rate+' são de '+ te+'_*', text, { quoted: mek })
 					break 
                 case 'ping':
                 const timestamp = speed();
