@@ -3144,7 +3144,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					for (let admon of groupAdmins) {
 						no += 1
 						teks += `╠≽️ @${admon.split('@')[0]}\n`
-						teks += `╚═━──━▒ *_ADMIN LIST_*`
+						teks = `╚═━──━▒ *_ADMIN LIST_*`
 					}
 					mentions(teks, groupAdmins, true)
 					break
