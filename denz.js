@@ -424,6 +424,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠≽️ *_#STICKERMENU_* ✓
 ╠≽️ *_#FUNMENU_*  
 ╠≽️ *_#IMAGEMENU_* ✓✓
+╠≽️ *_#MAKERMENU_* ✓✓
 ╠≽️ *_#ANIMEMENU_*
 ╠≽️ *_#MEDIAMENU_*
 ╠≽️ *_#OTHERMENU_*
@@ -597,32 +598,32 @@ case 'makermenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
-			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═══≽️「 *_ᴍᴀᴋᴇʀ ᴍᴇɴᴜ_* 」
-╠≽️${prefix}burnpaper
-╠≽️${prefix}matrix
-╠≽️${prefix}8bit
-╠≽️${prefix}3d
-╠≽️${prefix}glowneon
-╠≽️${prefix}gsuggest
-╠≽️${prefix}candlemug
-╠≽️${prefix}lovemss
-╠≽️${prefix}paperglass
-╠≽️${prefix}romance
-╠≽️${prefix}shadow
-╠≽️${prefix}glitch
-╠≽️${prefix}coffe
-╠≽️${prefix}candy
-╠≽️${prefix}hpotter
-╠≽️${prefix}woodblock
-╠≽️${prefix}galaxtext
-╠≽️${prefix}galaxstyle
-╠≽️${prefix}bpink
-╠≽️${prefix}pupycute
-╠≽️${prefix}hologram
-╠≽️${prefix}metallogo
-╠≽️${prefix}ice
-╠≽️${prefix}space
-╚═≽️ *_Developer ©_* : *ɴʏx*`
+			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═━──━▒ *_MAKER MENU_*
+╠≽️ *_${prefix}burnpaper_*
+╠≽️ *_${prefix}matrix_*
+╠≽️ *_${prefix}8bit_*
+╠≽️ *_${prefix}3d_*
+╠≽️ *_${prefix}glowneon_*
+╠≽️ *_${prefix}gsuggest_*
+╠≽️ *_${prefix}candlemug_*
+╠≽️ *_${prefix}lovemss_*
+╠≽️ *_${prefix}paperglass_*
+╠≽️ *_${prefix}romance_*
+╠≽️ *_${prefix}shadow_*
+╠≽️ *_${prefix}glitch_*
+╠≽️ *_${prefix}coffe_*
+╠≽️ *_${prefix}candy_*
+╠≽️ *_${prefix}hpotter_*
+╠≽️ *_${prefix}woodblock_*
+╠≽️ *_${prefix}galaxtext_*
+╠≽️ *_${prefix}galaxstyle_*
+╠≽️ *_${prefix}bpink_*
+╠≽️ *_${prefix}pupycute_*
+╠≽️ *_${prefix}hologram_*
+╠≽️ *_${prefix}metallogo_*
+╠≽️ *_${prefix}ice_*
+╠≽️ *_${prefix}space_*
+╚═━──━▒ *_MAKER MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'funmenu':
