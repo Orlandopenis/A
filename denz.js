@@ -3059,23 +3059,24 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					}
 					break
 			    case 'kick':
+			case 'banir':
 			    if (isBanned) return reply(mess.only.benned)    
 			    if (!isUser) return reply(mess.only.userB)
 			    				
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('✘ *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ᴘʀᴏᴍᴏᴠᴇʀ ᴀ ᴀᴅᴍɪɴ._*')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('✘ *_Mencione a pessoa aue você deseja banir._*')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = '✓ *_ᴄᴏᴍᴀɴᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ, ᴏ ᴀʟᴠᴏ sᴇʀᴀ ʀᴇᴍᴏᴠɪᴅᴏ ᴇᴍ ɪɴsᴛᴀɴᴛᴇs_* :\n'
+						teks = '✓ *_Ok..._*\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
 						denz.groupRemove(from, mentioned)
 					} else {
-						mentions(`✓ *_ᴄᴏᴍᴀɴᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ, ᴏ ᴀʟᴠᴏ, @${mentioned[0].split('@')[0]}, sᴇʀᴀ ʀᴇᴍᴏᴠɪᴅᴏ ᴇᴍ ɪɴsᴛᴀɴᴛᴇs_*`, mentioned, true)
+						mentions(`✓ *_Comando recebido, o alvo, @${mentioned[0].split('@')[0]}, será removido em instantes._*`, mentioned, true)
 						denz.groupRemove(from, mentioned)
 					}
 					break 
@@ -3087,17 +3088,17 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('✘ *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ᴘʀᴏᴍᴏᴠᴇʀ ᴀ ᴀᴅᴍɪɴ._*')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('✘ *_Mencione a pessoa aue você deseja promover._*')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = '✓ ᴄᴏᴍᴀɴᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ ᴏ ᴀʟᴠᴏ sᴇʀᴀ ᴘʀᴏᴍᴏᴠɪᴅᴏ ᴀ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ_* :\n'
+						teks = '✓ Ok... :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
 						denz.groupMakeAdmin(from, mentioned)
 					} else {
-						mentions(`✘  *_@${mentioned[0].split('@')[0]} ᴀᴄᴀʙᴏᴜ ᴅᴇ sᴇ ᴛᴏʀɴᴀʀ ᴜᴍ ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀ ᴅᴏ ɢʀᴜᴘᴏ:_*`, mentioned, true)
+						mentions(`✘  *_@${mentioned[0].split('@')[0]} acabou de se tornar um administrador do grupo._*`, mentioned, true)
 						denz.groupMakeAdmin(from, mentioned)
 					}
 					break
@@ -3109,23 +3110,24 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					denz.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
 			    case 'demote':
+			case 'dm':
 			    if (isBanned) return reply(mess.only.benned)    
 			    if (!isUser) return reply(mess.only.userB)
 			    				
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('✘ *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ᴅᴇᴍᴏᴛᴀʀ._*')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('✘ *_Mencione a pessoa aue você deseja demotar._*')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = '✓ *_ᴄᴏᴍᴀɴᴅᴏ ʀᴇᴄᴇʙɪᴅᴏ, ᴏ ᴀʟᴠᴏ ʟᴇᴠᴀʀᴀ ᴅᴇᴍᴏᴛᴇ ᴅᴏ sᴇᴜ ᴄᴀʀɢᴏ ᴀᴛᴜᴀʟ_* :\n'
+						teks = '✓ *_Ok..._* :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
 						denz.groupDemoteAdmin(from, mentioned)
 					} else {
-						mentions(`✘  *_@${mentioned[0].split('@')[0]} sᴇ ᴛᴏʀɴᴏᴜ ᴍᴇᴍʙʀᴏ ᴄᴏᴍᴜᴍ ᴀɢᴏʀᴀ._*`, mentioned, true)
+						mentions(`✘  *_@${mentioned[0].split('@')[0]} se tornou membro comum agora._*`, mentioned, true)
 						denz.groupDemoteAdmin(from, mentioned)
 					}
 					break
@@ -3137,11 +3139,11 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 				if (!isUser) return reply(mess.only.userB)
 								
 					if (!isGroup) return reply(mess.only.group)
-					teks = `List admin of group *${groupMetadata.subject}*\nTotal : ${groupAdmins.length}\n\n`
+					teks = `╔═━──━▒ *_ADMIN LIST_*\n╠≽️ *_Total:_* ${groupAdmins.length}\n╠≽️ @${admon.split('@')[0]}\n`
 					no = 0
 					for (let admon of groupAdmins) {
 						no += 1
-						teks += `[${no.toString()}] @${admon.split('@')[0]}\n`
+						teks += `Cu`
 					}
 					mentions(teks, groupAdmins, true)
 					break
