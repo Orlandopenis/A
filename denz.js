@@ -1411,7 +1411,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx/albedo bot._*`)
-gl = `${body.slice(8)}`
+gl = `${body.slice(7)}`
 gel1 = gl.split("/")[0];
 gel2 = gl.split("/")[1];
 reply(mess.wait)
