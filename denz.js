@@ -209,21 +209,21 @@ async function starts() {
 			
 
 			mess = {
-				wait: '*『 ♥️ 』* *_Seu pedido está sendo processado, evite flood, caso ocorra... ~você será bloqueado~ !!_*',
-				success: '*ꜱᴜᴋꜱᴇꜱ...*',
+				wait: '✓ *_Seu pedido está sendo processado, evite flood, caso ocorra... ~você será bloqueado~ !!_*',
+				success: '✓ *_Tudo ocorreu bem, seu pedido foi enviado_**',
 				error: {
 					stick: '*ɢᴀɢᴀʟ, ᴛᴇʀᴊᴀᴅɪ ᴋᴇꜱᴀʟᴀʜᴀɴ ꜱᴀᴀᴛ ᴍᴇɴɢᴋᴏɴᴠᴇʀꜱɪ ɢᴀᴍʙᴀʀ ᴋᴇ ꜱᴛɪᴄᴋᴇʀ*',
 					Iv: '*ᴍᴀᴀꜰ ʟɪɴᴋ ᴛɪᴅᴀᴋ ᴠᴀʟɪᴅ!*'
 				},
 				only: {
-					group: '*ᴍᴀᴀꜰ ᴩᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴyᴀ ʙɪꜱᴀ ᴅɪ ɢᴜɴᴀᴋᴀɴ ᴅᴀʟᴀᴍ ɢʀᴏᴜᴩ!*',
-					benned: '*『 ❌ 』* *_Você está banido, portanto seus comandos não serão respondidos._*',
-					ownerG: '*ᴍᴀᴀꜰ ᴩᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴyᴀ ʙɪꜱᴀ ᴅɪ ɢᴜɴᴀᴋᴀɴ ᴏʟᴇʜ ᴏᴡɴᴇʀ ɢʀᴏᴜᴩ!*',
-					ownerB: '*ᴍᴀᴀꜰ ᴩᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴyᴀ ʙɪꜱᴀ ᴅɪ ɢᴜɴᴀᴋᴀɴ ᴏʟᴇʜ ᴏᴡɴᴇʀ ʙᴏᴛ!* ',
+					group: '✘ *_Este comando só poderá ser realizado em grupos!_*',
+					benned: '✘ *_Você está banido, portanto seus comandos não serão respondidos._*',
+					ownerG: '✘ *_Opa! este comando é apenas para o dono do grupo portanto você não poderá usar!_*',
+					ownerB: '✘ *_Opa! este comando é apenas para o dono do bot, nyx, portanto você não poderá usar!_*',
 					premium: '*ᴍᴀᴀꜰ ꜰɪᴛᴜʀ ɪɴɪ ᴋʜᴜꜱᴜꜱ ᴜꜱᴇʀ ᴩʀᴇᴍɪᴜᴍ!*',
-					userB: `ʜᴀʟʟᴏ ᴋᴀᴋ *${pushname2}*, ᴋᴀᴍᴜ ʙᴇʟᴜᴍ ᴛᴇʀᴅᴀғᴛᴀʀ ꜱɪʟᴀʜᴋᴀɴ ᴋᴇᴛɪᴋ \n*${prefix}daftar*`,
-					admin: '*ᴍᴀᴀꜰ ᴩᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴyᴀ ʙɪꜱᴀ ᴅɪ ɢᴜɴᴀᴋᴀɴ ᴏʟᴇʜ ᴀᴅᴍɪɴ ɢʀᴏᴜᴩ!*',
-					Badmin: '*ᴍᴀᴀꜰ ᴩᴇʀɪɴᴛᴀʜ ɪɴɪ ʜᴀɴyᴀ ʙɪꜱᴀ ᴅɪ ɢᴜɴᴀᴋᴀɴ ᴋᴇᴛɪᴋᴀ ʙᴏᴛ ᴍᴇɴᴊᴀᴅɪ ᴀᴅᴍɪɴ!*',
+					userB: `✘ *_Olá! Aqui é a Albedo, estou passando para avisar que você não está registrado no meu banco de dados, utilize #registrar seunome para poder utilizar meus comandos!_*`,
+					admin: '✘ *_Opa! este comando é apenas para os administradores do grupo portanto você não poderá usar!_*',
+					Badmin: '✘ *_Este comando só poderá ser realizado caso eu tenha admin!',
 					publikG: `ᴍᴀᴀꜰ ʙᴏᴛ ꜱᴇᴋᴀʀᴀɴɢ ꜱᴜᴅᴀʜ ᴅɪᴩʀɪᴠᴀᴛᴇ ᴏʟᴇʜ ᴏᴡɴᴇʀ\nᴜɴᴛᴜᴋ ʟᴇʙɪʜ ᴊᴇʟᴀꜱɴʏᴀ ᴋᴇᴛɪᴋ \n*${prefix}infobot*`
 				}
 			}
@@ -1378,7 +1378,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     case 'phlogo':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
-                    if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
+                    if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx/albedo bot._*`)
                     ds = `${body.slice(8)}`
                     tex1 = ds.split("/")[0];
                     tex2 = ds.split("/")[1];
@@ -1410,7 +1410,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     case 'space':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
-                    if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
+                    if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx/albedo bot._*`)
                     ds = `${body.slice(7)}`
                     tex1 = ds.split("/")[0];
                     tex2 = ds.split("/")[1];
