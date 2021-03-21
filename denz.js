@@ -3145,6 +3145,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 						no += 1
 						teks += `╠≽️ @${admon.split('@')[0]}\n`
 					}
+					teks += `╚═━──━▒ *_ADMIN LIST_*`
 					mentions(teks, groupAdmins, true)
 					break
 				case 'simih':
