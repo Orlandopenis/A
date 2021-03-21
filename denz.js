@@ -1320,24 +1320,11 @@ quoted: mek, caption: `Wah ganteng kek gua`
 					} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 					}
-					captionnya = `╔═━──━▒ *_REGISTRO_*\n╠≽️ *_Nome:_* ${pushname2}\n╠≽️ *_Núm:_* ${sender.split("@")[0]}\n╠≽️ *_Data:_* ${date}\n╠≽️ *_Horário:_* ${time}\n╠≽️ *_Registro bem sucedido √_*\n╠≽️ *_Usuários Totais:_* ${user.length}\n╚═━──━▒ *_BOT INFO's_*`
+					captionnya = `╔═━──━▒ *_REGISTRO_*\n╠≽️ *_Nome:_* ${pushname2}\n╠≽️ *_Núm:_* ${sender.split("@")[0]}\n╠≽️ *_Data:_* ${date}\n╠≽️ *_Horário:_* ${time}\n╠≽️ *_Registro bem sucedido √_*\n╠≽️ *_Usuários Totais:_* ${user.length}\n╚═━──━▒ *_REGISTRO_*`
 					brando = await getBuffer(`https://pencarikode.xyz/api/cita-cita?apikey=pais`, {method: 'get'})                
                     daftarimg = await getBuffer(ppimg)
 					denz.sendMessage(from, daftarimg, image, {quoted: mek, caption: captionnya})
 					break 
-                    case 'perfil':
-    				denz.updatePresence(from, Presence.composing)
-					if (!isUser) return reply(mess.only.userB)
-					if (isBanned) return reply(mess.only.benned)
-    				try {
-					profil = await denz.getProfilePicture(`${sender.split('@')[0]}@s.whatsapp.net`)
-					} catch {
-					profil = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-					}
-					 profile = `╔═══≽️ *_Perfil_*\n╠≽️ *Nome:* ${pushname2}\n╠≽️ *Usuário Registrado*\n╠≽️ *Núm. :* ${sender.split("@")[0]}\n╚═≽️ *_Developer ©_* : *ɴʏx*`
-					buff = await getBuffer(profil)
-					denz.sendMessage(from, buff, image, {quoted: mek, caption: profile})
-					break
 				case 'bahasa':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -1368,7 +1355,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     case 'ttp':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
-				if (args.length < 1) return reply(`✘ *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ɴᴇᴄᴇssɪᴛᴀ ᴅᴇ ᴜᴍ ᴛᴇxᴛᴏ, ᴇxᴇᴍᴘʟᴏ ${prefix}ᴄᴏᴍᴀɴᴅᴏ ɴʏx_*`)
+				if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 				emoji = body.slice(5)
                     try {
                         emoji = encodeURI(emoji)
@@ -1391,7 +1378,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     case 'phlogo':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
-                    if (args.length < 1) return reply(`Contoh: ${prefix}glitch dns/bot`)
+                    if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
                     ds = `${body.slice(8)}`
                     tex1 = ds.split("/")[0];
                     tex2 = ds.split("/")[1];
@@ -1403,7 +1390,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     case '3d':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
-                    if (args.length < 1) return reply(`Contoh: ${prefix}glitch dns/bot`)
+                    if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
                     todi = body.slice(4)
                     reply(mess.wait)
                     litsh = await getBuffer(`http://api.lolhuman.xyz/api/textprome/box3d?apikey=RiuApikey&text=${todi}`, {method: 'get'})
@@ -1413,7 +1400,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     case 'ice':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
-                    if (args.length < 1) return reply(`Contoh: ${prefix}glitch dns/bot`)
+                    if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
                     todi = body.slice(5)
                     reply(mess.wait)
                     litsh = await getBuffer(`http://api.lolhuman.xyz/api/textprome/icecold?apikey=RiuApikey&text=${todi}`, {method: 'get'})
@@ -1423,7 +1410,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     case 'space':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
-                    if (args.length < 1) return reply(`Contoh: ${prefix}glitch dns/bot`)
+                    if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
                     ds = `${body.slice(7)}`
                     tex1 = ds.split("/")[0];
                     tex2 = ds.split("/")[1];
@@ -1467,7 +1454,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 case 'burnpaper':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}burnpaper dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 todi = body.slice(11)
 reply(mess.wait)
 pper = await getBuffer(`https://videfikri.com/api/textmaker/burnpaper/?text=${todi}`)
@@ -1477,7 +1464,7 @@ break
 case '8bit':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}8bit dns/bot`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 ds = `${body.slice(6)}`
 tex1 = ds.split("/")[0];
 tex2 = ds.split("/")[1];
@@ -1489,7 +1476,7 @@ break
 case 'glowneon':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}glowneon dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 tekas = body.slice(10)
 reply(mess.wait)
 glown = await getBuffer(`https://videfikri.com/api/textmaker/glowingneon/?text=${tekas}`)
@@ -1499,7 +1486,7 @@ break
 case 'gsuggest':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}gsuggest dns/bot/wea`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx/albedo/bot._*`)
 du = `${body.slice(10)}`
 ted1 = du.split("/")[0];
 ted2 = du.split("/")[1];
@@ -1512,7 +1499,7 @@ break
 case 'candlemug':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}candlemug dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 ddu = body.slice(11)
 reply(mess.wait)
 clmug = await getBuffer(`https://videfikri.com/api/textmaker/candlemug/?text=${ddu}`)
@@ -1522,7 +1509,7 @@ break
 case 'lovemss':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}lovemss dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 lop = body.slice(9)
 reply(mess.wait)
 lepms = await getBuffer(`https://videfikri.com/api/textmaker/lovemsg/?text=${lop}`)
@@ -1532,7 +1519,7 @@ break
 case 'mugflower':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}mugflower dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 mug = body.slice(11)
 reply(mess.wait)
 mflowg = await getBuffer(`https://videfikri.com/api/textmaker/mugflower/?text=${mug}`)
@@ -1542,7 +1529,7 @@ break
 case 'paperglass':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}paperglass dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 papg = body.slice(12)
 reply(mess.wait)
 gelas = await getBuffer(`https://videfikri.com/api/textmaker/paperonglass/?text=${papg}`)
@@ -1552,7 +1539,7 @@ break
 case 'romance':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}romance dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 roce = body.slice(9)
 reply(mess.wait)
 roma = await getBuffer(`https://videfikri.com/api/textmaker/romancetext/?text=${roce}`)
@@ -1562,7 +1549,7 @@ break
 case 'shadow':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}shadow dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 sdow = body.slice(8)
 reply(mess.wait)
 shan = await getBuffer(`https://videfikri.com/api/textmaker/shadowtext/?text=${sdow}`)
@@ -1572,7 +1559,7 @@ break
 case 'glitch':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}glitch dns/bot`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx/albedo._*`)
 gl = `${body.slice(8)}`
 gel1 = gl.split("/")[0];
 gel2 = gl.split("/")[1];
@@ -1584,7 +1571,7 @@ break
 case 'coffe':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}coffe dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 kop = body.slice(7)
 reply(mess.wait)
 ppi = await getBuffer(`https://videfikri.com/api/textmaker/coffeecup/?text=${kop}`)
@@ -1594,7 +1581,7 @@ break
 case 'candy':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}candy dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 cndy = body.slice(7)
 reply(mess.wait)
 prmen = await getBuffer(`https://videfikri.com/api/textmaker/sweetcandy/?text=${cndy}`)
@@ -1604,7 +1591,7 @@ break
 case 'hpotter':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}hpotter dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 hpter = body.slice(9)
 reply(mess.wait)
 helpter = await getBuffer(`https://videfikri.com/api/textmaker/hpotter/?text=${hpter}`)
@@ -1614,7 +1601,7 @@ break
 case 'woodblock':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}woodblock dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 woblk = body.slice(11)
 reply(mess.wait)
 gblok = await getBuffer(`https://videfikri.com/api/textmaker/woodblock/?text=${woblk}`)
@@ -1624,7 +1611,7 @@ break
 case 'galaxtext':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}galaxtext dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 glaktx = body.slice(11)
 reply(mess.wait)
 galax = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/galaxywallpaper?apikey=RiuApikey&text=${glaktx}`)
@@ -1634,7 +1621,7 @@ break
 case 'pupycute':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}pupycute dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 puki = body.slice(10)
 reply(mess.wait)
 cute = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/puppycute?apikey=RiuApikey&text=${puki}`)
@@ -1644,7 +1631,7 @@ break
 case 'galaxstyle':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}galaxstyle dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 gelay = body.slice(12)
 reply(mess.wait)
 style = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/galaxystyle?apikey=RiuApikey&text=${gelay}`)
@@ -1654,7 +1641,7 @@ break
 case 'hologram':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}hologram dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 gram = body.slice(10)
 reply(mess.wait)
 holo = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/hologram3d?apikey=RiuApikey&text=${gram}`)
@@ -1664,7 +1651,7 @@ break
 case 'metallogo':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}metallogo dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 metal = body.slice(11)
 reply(mess.wait)
 metlog = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/metallogo?apikey=RiuApikey&text=${metal}`)
@@ -1674,7 +1661,7 @@ break
 case 'bpink':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`Contoh: ${prefix}bpink dns`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 black = body.slice(7)
 reply(mess.wait)
 pink = await getBuffer(`http://lolhuman.herokuapp.com/api/textprome/blackpink?apikey=RiuApikey&text=${black}`)
@@ -1813,13 +1800,13 @@ break
 				    break 
 				case 'owner':
                  denz.sendMessage(from, {displayname: "jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-                 denz.sendMessage(from, '[❗] *ᴇsᴛᴇ ᴇ ᴏ ᴄᴏɴᴛᴀᴛᴏ ᴅᴏ ᴍᴇᴜ ᴅᴏɴᴏ! ᴛᴇɴʜᴀ ʙᴏᴍ sᴇɴsᴏ ᴇ ɴᴀᴏ ғᴀᴄᴀ ɴᴀᴅᴀ ᴅᴇsɴᴇᴄᴇssᴀʀɪᴏ ɴᴏ ᴘᴠ.*',text, { quoted: mek} )
+                 denz.sendMessage(from, '✘ *_Esté é o contato do meu dono! Não faça nada desnecessário no pv._*',text, { quoted: mek} )
                  break
                 case 'mensfake':
                  if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
            				
-				if (args.length < 1) return reply(`Usage :\n${prefix}fitnah [@tag/pesan/balasanbot]]\n\nEx : \n${prefix}fitnah @tagmember/hai/hai juga`)
+				if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} @pessoa/mensagemfake/resposta_*`)
 				var gh = body.slice(8)
 				mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					var replace = gh.split("/")[0];
@@ -2063,7 +2050,8 @@ break
                 case 'ping':
                 const timestamp = speed();
                 const latensi = speed() - timestamp 
-                denz.sendMessage(from, `Speed: ${latensi.toFixed(4)} _Second_`, text, { quoted: mek})
+                hasil = `╔═━──━▒ *_VELOCIDADE_*\n╠≽️ *_Speed:_* ${latensi.toFixed(4)} segundos\n╚═━──━▒ *_VELOCIDADE_*`
+                denz.sendMessage(from, hasil, text, { quoted: mek})
                     break
                 case 'tagme':
                 if (isBanned) return reply(mess.only.benned)
