@@ -572,30 +572,27 @@ case 'groupmenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
-			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═══≽️「 *_ɢʀᴏᴜᴘ ᴍᴇɴᴜ_* 」
-╠≽️${prefix}ᴀɴᴛɪʟɪɴᴋ *(OFF)*
-╠≽️${prefix}ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ *(OFF)*
-╠≽️${prefix}ʙᴡʟɪꜱᴛ *(OFF)*
-╠≽️${prefix}ʙᴏᴀsᴠɪɴᴅᴀs *[ON/OFF]*
-╠≽️${prefix}ɢʀᴜᴘᴏ *[ABRIR/FECHAR]*
-╠≽️${prefix}ꜱᴇᴛғᴏᴛᴏ
-╠≽️${prefix}ɪɴғᴏɢʀᴜᴘᴏ
-╠≽️${prefix}ᴀᴅᴅ *[NUMERO COMPLETO]*
-╠≽️${prefix}ᴋɪᴄᴋ *[MENÇÃO]*
-╠≽️${prefix}ᴘʀᴏᴍᴏᴛᴇ 
-╠≽️${prefix}ᴅᴇᴍᴏᴛᴇ
-╠≽️${prefix}ꜱᴇᴛɴᴀᴍᴇ
-╠≽️${prefix}ꜱᴇᴛᴅᴇꜱᴄ
-╠≽️${prefix}ɪɴғᴏɢᴄ
-╠≽️${prefix}ᴛᴀɢᴍᴇ
-╠≽️${prefix}ɴᴏᴛɪғɪᴄᴀʀ *[MENSAGEM]*
-╠≽️${prefix}ᴛᴀɢᴀʟʟ *(COM WA.ME)*
-╠≽️${prefix}ᴇᴠᴇʀʏᴏɴᴇ *(SEM WA.ME)*
-╠≽️${prefix}ᴍᴇɴsғᴀᴋᴇ *[Menção/Mensagem]*
-╠≽️${prefix}ʟɪꜱᴛᴀᴅᴍɪɴ   NÃO ArRUMADO
-╠≽️${prefix}ᴍᴏᴅᴏᴀɴɪᴍᴇ *[ON/OFF]*
-╠≽️${prefix}ɴꜱғᴡ *[ON/OFF]*
-╠≽️${prefix}ꜱɪᴍɪʜ *[ON/OFF]*
+			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═━──━▒ *_GROUP MENU_*
+╠≽️ *_${prefix}antilink_*
+╠≽️ *_${prefix}antibadword_*
+╠≽️ *_${prefix}bwlist_*
+╠≽️ *_${prefix}boasvindas_*
+╠≽️ *_${prefix}grupo_* 
+╠≽️ *_${prefix}setfoto_*
+╠≽️ *_${prefix}infogrupo_*
+╠≽️ *_${prefix}add_*
+╠≽️ *_${prefix}kick_*
+╠≽️ *_${prefix}promote_*
+╠≽️ *_${prefix}demote_*
+╠≽️ *_${prefix}setname_*
+╠≽️ *_${prefix}setdesc_*
+╠≽️ *_${prefix}tagme_*
+╠≽️ *_${prefix}notificar_*
+╠≽️ *_${prefix}everyone_*
+╠≽️ *_${prefix}adminlist_*
+╠≽️ *_${prefix}modoanime_*
+╠≽️ *_${prefix}modonsfw_*
+╠≽️ *_${prefix}simih_*
 ╚═≽️ *_Developer ©_* : *ɴʏx*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
@@ -642,6 +639,7 @@ case 'funmenu':
 ╠≽️${prefix}ᴍᴀɪsᴛᴏᴘ 
 ╠≽️${prefix}ʟᴇᴛʀᴀ *[NOME DA MSC]*
 ╠≽️${prefix}ᴄʜᴇᴄᴋɪᴘ *[IP]*
+╠≽️${prefix}mensfake
 ║❏ ${prefix}ʜɪʟɪʜ
 ║❏ ${prefix}ᴄᴇᴄᴀɴ
 ║❏ ${prefix}ᴄᴏɢᴀɴ
@@ -2919,21 +2917,6 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					url2img = await getBuffer(anu.result)
 					denz.sendMessage(from, url2img, image, {quoted: mek})
 					await limitAdd(sender)
-					break 
-			    case 'tagall':
-			    if (isBanned) return reply(mess.only.benned)    
-			    if (!isUser) return reply(mess.only.userB)
-			    				
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					members_id = []
-					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += '\n'
-					for (let mem of groupMembers) {
-						teks += `╠➥ @${mem.jid.split('@')[0]} wa.me/${mem.jid.split('@')[0]}\n`
-						members_id.push(mem.jid)
-					}
-					mentions(`╔═══✪ Tag By *${pushname2}* ✪══`+ teks +'╚═══〘 *DNS BOT* 〙═══', members_id, true)
 					break
 			    case 'everyone':
 			    if (isBanned) return reply(mess.only.benned)    
@@ -2944,10 +2927,10 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					members_id = []
 					teks = '\n'
 					for (let mem of groupMembers) {
-						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
+						teks += `╠≽️ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions(`╔══〘  *${body.slice(12)}*  〙✪══`+teks+'╚═〘 *DNS BOT* 〙', members_id, true)
+					mentions(`╔═━──━▒ *_EVERYONE_*`+teks+'╚═━──━▒ *_EVERYONE_*', members_id, true)
 					break
 			    case 'kbbi':
 			    if (isBanned) return reply(mess.only.benned)    
@@ -3154,38 +3137,38 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 								
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('✘ *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
+					if (args.length < 1) return reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					if ((args[0]) === 'on') {
-						if (isSimi) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ᴊᴀ ᴇsᴛᴀ ᴀᴛɪᴠᴀᴅᴏ_*')
+						if (isSimi) return reply('✘ *_${command} já está ativado!_*')
 						samih.push(from)
 						fs.writeFileSync('./database/json/simi.json', JSON.stringify(samih))
-						reply(`✓ *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_${command} foi ativado com sucesso!_*`)
 					} else if ((args[0]) === 'off') {
 						samih.splice(from, 1)
 						fs.writeFileSync('./database/json/simi.json', JSON.stringify(samih))
-						reply(`✓ *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_${command} foi desativado com sucesso!_*`)
 					} else {
-						reply('✘ *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
+						reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					}
 					break
-			    case 'nsfw':
+			    case 'modonsfw':
 			    if (isBanned) return reply(mess.only.benned)    
 			    if (!isUser) return reply(mess.only.userB)
 			    				
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('✘ *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
+					if (args.length < 1) return reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					if ((args[0]) === 'on') {
-						if (isNsfw) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ᴊᴀ ᴇsᴛᴀ ᴀᴛɪᴠᴀᴅᴏ_*')
+						if (isNsfw) return reply('✘ *_${command} já está ativado!_*')
 						nsfw.push(from)
 						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-						reply(`✓ *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_${command} foi ativado com sucesso!_*`)
 					} else if ((args[0]) === 'off') {
 						nsfw.splice(from, 1)
 						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-						reply(`✓ *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_${command} foi desativado com sucesso!_*`)
 					} else {
-						reply('✘ *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
+						reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					}
 					break
 				case 'modoanime':
@@ -3194,18 +3177,18 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 								
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('✘ *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
+					if (args.length < 1) return reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					if ((args[0]) === 'on') {
-						if (isAnime) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ᴊᴀ ᴇsᴛᴀ ᴀᴛɪᴠᴀᴅᴏ_*')
+						if (isAnime) return reply('✘ *_${command} já está ativado!_*')
 						anime.push(from)
 						fs.writeFileSync('./database/json/anime.json', JSON.stringify(anime))
-						reply(`✓ *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_${command} foi ativado com sucesso!_*`)
 					} else if ((args[0]) === 'off') {
 						anime.splice(from, 1)
 						fs.writeFileSync('./database/json/anime.json', JSON.stringify(anime))
-						reply(`✓ *_ᴏ ᴍᴏᴅᴏ ᴅᴇsᴇᴊᴀᴅᴏ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_${command} foi desativado com sucesso!_*`)
 					} else {
-						reply('✘ *_ᴅɪɢɪᴛᴇ ᴏ "ᴄᴏᴍᴀɴᴅᴏ" ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴏᴜ "ᴄᴏᴍᴀɴᴅᴏ" ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ_*')
+						reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					}
 					break
 				case 'boasvindas':
@@ -3214,54 +3197,54 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 								
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('✘ *_ᴅɪɢɪᴛᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
+					if (args.length < 1) return reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					if ((args[0]) === 'on') {
-						if (isWelkom) return reply('✘ *_ᴀs ᴍᴇɴsᴀɢᴇs ᴅᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ᴊᴀ ᴇsᴛᴀᴏ ᴀᴛɪᴠᴀᴅᴀs_*')
+						if (isWelkom) return reply('✘ *_${command} já está ativado!_*')
 						welkom.push(from)
 						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-						reply(`✓ *_ᴀs ᴍᴇɴsᴀɢᴇɴs ᴅᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ғᴏʀᴀᴍ ᴀᴛɪᴠᴀᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_${command} foi ativado com sucesso!_*`)
 					} else if ((args[0]) === 'off') {
-						if (isWelkom) return reply('✘ *_ᴀs ᴍᴇɴsᴀɢᴇs ᴅᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ᴊᴀ ᴇsᴛᴀᴏ ᴅᴇsᴀᴛɪᴠᴀᴅᴀs_*')
+						if (isWelkom) return reply('✘ *_${command} já está desativado!_*')
 						welkom.splice(from, 1)
 						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-						reply(`✓ *_ᴀs ᴍᴇɴsᴀɢᴇɴs ᴅᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ғᴏʀᴀᴍ ᴅᴇsᴀᴛɪᴠᴀᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+						reply(`✓ *_${command} foi desativado com sucesso!_*`)
 					} else {
-						reply('✘ *_ᴅɪɢɪᴛᴇ ʙᴏᴀs ᴠɪɴᴅᴀs ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
+						reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					}
 					break 
 				case 'antilink':
 				if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (args.length < 1) return reply('✘ *_ᴅɪɢɪᴛᴇ ᴀɴᴛɪʟɪɴᴋ ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
+					if (args.length < 1) return reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					if ((args[0]) === 'on') {
-						if (isAntiLink) return reply('✘ *_ᴏ ᴀɴᴛɪʟɪɴᴋ ᴊᴀ ᴇsᴛᴀ ᴏɴ!_*')
+						if (isAntiLink) return reply('✘ *_${command} já está ativado!_*')
 						antilink.push(from)
 						fs.writeFileSync('./database/json/antilink.json', JSON.stringify(antilink))
-						reply(`✓ *_ᴏ ᴀɴᴛɪʟɪɴᴋ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ_*`)
+						reply(`✓ *_${command} foi ativado com sucesso!_*`)
 					} else if ((args[0]) === 'off') {
-						if (!isAntiLink) return reply('✘ *_ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴊᴀ ᴇsᴛᴀ ᴏғғ!_*')
+						if (!isAntiLink) return reply('✘ *_${command} já está desativado!_*')
 						antilink.splice(from, 1)
 						fs.writeFileSync('./database/json/antilink.json', JSON.stringify(antilink))
-						reply(`✓ *_ᴏ ᴀɴᴛɪʟɪɴᴋ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ_*`)
+						reply(`✓ *_${command} foi desativado com sucesso!_*`)
 					} else {
-						reply('✘ *_ᴅɪɢɪᴛᴇ ᴀɴᴛɪʟɪɴᴋ ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
+						reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					}
 					break
 				case 'antibadword':
                     if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
-                if (args.length < 1) return reply('✘ *_ᴅɪɢɪᴛᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏɴ ᴘᴀʀᴀ ᴀᴛɪᴠᴀʀ ᴇ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴏғғ ᴘᴀʀᴀ ᴅᴇsᴀᴛɪᴠᴀʀ!_*')
+                if (args.length < 1) return reply('✘ *_Digite ${prefix + command} ON/OFF_*')
                 if (args[0] === 'on') {
-                if (isBadWord) return reply('✘ *_ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴊᴀ ᴇsᴛᴀ ᴏɴ!_*')
+                if (isBadWord) return reply('✘ *_${command} já está ativado!_*')
                  	   badword.push(from)
                  	   fs.writeFileSync('./database/json/badword.json', JSON.stringify(badword))
-                  	   reply(`✓ *_ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ғᴏɪ ᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ, ᴄᴏɴsᴜʟᴛᴇ ᴏ ʙᴡʟɪsᴛ ᴘᴀʀᴀ ᴇᴠɪᴛᴀʀ sᴇʀ ʙᴀɴɪᴅᴏ!_*`)
+                  	   reply(`✓ *_${command} foi ativado com sucesso!_*`)
               	  } else if (args[0] === 'off') {
-                    	if (!isBadWord) return reply('✘ *_ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ᴊᴀ ᴇsᴛᴀ ᴏғғ!_*')
+                    	if (!isBadWord) return reply('✘ *_${command} já está desativado!_**')
                   	  badword.splice(from, 1)
                  	   fs.writeFileSync('./database/json/badword.json', JSON.stringify(badword))
-                 	    reply(`✓ _*ᴏ ᴀɴᴛɪʙᴀᴅᴡᴏʀᴅ ғᴏɪ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ ᴄᴏᴍ sᴜᴄᴇssᴏ!_*`)
+                 	    reply(`✓ *_${command} foi desativado com sucesso!_*`)
              	   } else {
                  	   reply(ind.satukos())
                 	}
