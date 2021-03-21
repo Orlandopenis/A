@@ -1409,16 +1409,16 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     break
                     case 'space':
                     if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx/albedo bot._*`)
-                    ds = `${body.slice(7)}`
-                    tex1 = ds.split("/")[0];
-                    tex2 = ds.split("/")[1];
-                    reply(mess.wait)
-                    litsh = await getBuffer(`http://api.lolhuman.xyz/api/textprome2/space?apikey=RiuApikey&text1={tex1}&text2=${tex2}`, {method: 'get'})
-                    denz.sendMessage(from, litsh, image, {quoted: mek})
-                    await limitAdd(sender)
-                    break
+if (!isUser) return reply(mess.only.userB)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx/albedo bot._*`)
+gl = `${body.slice(8)}`
+gel1 = gl.split("/")[0];
+gel2 = gl.split("/")[1];
+reply(mess.wait)
+litsh = await getBuffer(`http://api.lolhuman.xyz/api/textprome2/space?apikey=RiuApikey&text1=${gel1}&text2=${gel2}`, {method: 'get'})
+denz.sendMessage(from, litsh, image, {quoted: mek})
+await limitAdd(sender)
+break
 				case 'info':
 					me = denz.user
 					user.push(sender)
@@ -1559,7 +1559,7 @@ break
 case 'glitch':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
-if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx/albedo._*`)
+if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx/albedo bot._*`)
 gl = `${body.slice(8)}`
 gel1 = gl.split("/")[0];
 gel2 = gl.split("/")[1];
