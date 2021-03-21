@@ -3140,7 +3140,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 				if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					if ((args[0]) === 'on') {
-						if (isSimi) return reply('✘ *_${command} já está ativado!_*')
+						if (isSimi) return reply('✘ *_simih já está ativado!_*')
 						samih.push(from)
 						fs.writeFileSync('./database/json/simi.json', JSON.stringify(samih))
 						reply(`✓ *_${command} foi ativado com sucesso!_*`)
@@ -3160,7 +3160,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					if ((args[0]) === 'on') {
-						if (isNsfw) return reply('✘ *_${command} já está ativado!_*')
+						if (isNsfw) return reply('✘ *_modonsfw já está ativado!_*')
 						nsfw.push(from)
 						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
 						reply(`✓ *_${command} foi ativado com sucesso!_*`)
@@ -3180,7 +3180,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					if ((args[0]) === 'on') {
-						if (isAnime) return reply('✘ *_${command} já está ativado!_*')
+						if (isAnime) return reply('✘ *_modoanime já está ativado!_*')
 						anime.push(from)
 						fs.writeFileSync('./database/json/anime.json', JSON.stringify(anime))
 						reply(`✓ *_${command} foi ativado com sucesso!_*`)
@@ -3200,12 +3200,12 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					if ((args[0]) === 'on') {
-						if (isWelkom) return reply('✘ *_${command} já está ativado!_*')
+						if (isWelkom) return reply('✘ *_boasvindas já está ativado!_*')
 						welkom.push(from)
 						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
 						reply(`✓ *_${command} foi ativado com sucesso!_*`)
 					} else if ((args[0]) === 'off') {
-						if (isWelkom) return reply('✘ *_${command} já está desativado!_*')
+						if (isWelkom) return reply('✘ *_boasvindas já está desativado!_*')
 						welkom.splice(from, 1)
 						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
 						reply(`✓ *_${command} foi desativado com sucesso!_*`)
@@ -3219,12 +3219,12 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (args.length < 1) return reply('✘ *_Digite ${prefix + command} ON/OFF_*')
 					if ((args[0]) === 'on') {
-						if (isAntiLink) return reply('✘ *_${command} já está ativado!_*')
+						if (isAntiLink) return reply('✘ *_antilink já está ativado!_*')
 						antilink.push(from)
 						fs.writeFileSync('./database/json/antilink.json', JSON.stringify(antilink))
 						reply(`✓ *_${command} foi ativado com sucesso!_*`)
 					} else if ((args[0]) === 'off') {
-						if (!isAntiLink) return reply('✘ *_${command} já está desativado!_*')
+						if (!isAntiLink) return reply('✘ *_antilink já está desativado!_*')
 						antilink.splice(from, 1)
 						fs.writeFileSync('./database/json/antilink.json', JSON.stringify(antilink))
 						reply(`✓ *_${command} foi desativado com sucesso!_*`)
@@ -3237,12 +3237,12 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (!isGroupAdmins) return reply(mess.only.admin)
                 if (args.length < 1) return reply('✘ *_Digite ${prefix + command} ON/OFF_*')
                 if (args[0] === 'on') {
-                if (isBadWord) return reply('✘ *_${command} já está ativado!_*')
+                if (isBadWord) return reply('✘ *_antibadword já está ativado!_*')
                  	   badword.push(from)
                  	   fs.writeFileSync('./database/json/badword.json', JSON.stringify(badword))
                   	   reply(`✓ *_${command} foi ativado com sucesso!_*`)
               	  } else if (args[0] === 'off') {
-                    	if (!isBadWord) return reply('✘ *_${command} já está desativado!_**')
+                    	if (!isBadWord) return reply('✘ *_antibadword já está desativado!_*')
                   	  badword.splice(from, 1)
                  	   fs.writeFileSync('./database/json/badword.json', JSON.stringify(badword))
                  	    reply(`✓ *_${command} foi desativado com sucesso!_*`)
