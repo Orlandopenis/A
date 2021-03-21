@@ -421,16 +421,16 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠≽️ *_${prefix}banlist_*
 ╚═━──━▒ *_ALBEDO BOT INFO_*
 ╔═━──━▒ *_MENU's_*
-╠≽️ *_#STICKERMENU_*
-╠≽️ *_#FUNMENU_*
-╠≽️ *_#IMAGEMENU_*
+╠≽️ *_#STICKERMENU_* ✓
+╠≽️ *_#FUNMENU_*  
+╠≽️ *_#IMAGEMENU_* ✓✓
 ╠≽️ *_#ANIMEMENU_*
 ╠≽️ *_#MEDIAMENU_*
 ╠≽️ *_#OTHERMENU_*
-╠≽️ *_#SOUNDMENU_*
-╠≽️ *_#GROUPMENU_*
-╠≽️ *_#NSFWMENU_*
-╠≽️ *_#OWNERMENU_*
+╠≽️ *_#SOUNDMENU_* ✓
+╠≽️ *_#GROUPMENU_* ✓✓
+╠≽️ *_#NSFWMENU_* ✓✓
+╠≽️ *_#OWNERMENU_* 
 ╚═━──━▒ *_MENU's_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
@@ -439,39 +439,36 @@ case 'stikermenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
-			dmenu = `╔═══≽️「 *_ꜱᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ_* 」
-╠≽️${prefix}ᴛᴛᴘ
-╠≽️${prefix}ᴛᴛᴘ2
-╠≽️${prefix}ᴛʀɪɢɢᴇʀ
-╠≽️${prefix}ᴡᴀsᴛᴇᴅ
-╠≽️${prefix}ɢᴀʏ
-╠≽️${prefix}ꜱᴛɪᴋᴇʀ
-╠≽️${prefix}ɢɪғꜱᴛɪᴋᴇʀ
-╠≽️${prefix}ᴀɴɪᴍᴇᴄʀʏ
-╠≽️${prefix}ᴀɴɪᴍᴇᴋɪss
-╠≽️${prefix}ᴀɴɪᴍᴇʜᴜɢ
-╚═≽️ *_Developer ©_* : *ɴʏx*`
+			dmenu = `╔═━──━▒ *_STICKER MENU_*
+╠≽️ *_${prefix}ttp_*
+╠≽️ *_${prefix}ttp2_*
+╠≽️ *_${prefix}trigger_*
+╠≽️ *_${prefix}wasted_*
+╠≽️ *_${prefix}gay_*
+╠≽️ *_${prefix}sticker_*
+╠≽️ *_${prefix}stickergif_*
+╚═━──━▒ *_STICKER MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'imagemenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
-			dmenu = `╔═══≽️「 *_ɪᴍᴀɢᴇ ᴍᴇɴᴜ_* 」
-╠≽️${prefix}ᴘʜᴄᴏᴍᴍᴇɴᴛ
-╠≽️${prefix}ᴘʜʟᴏɢᴏ pq
-╠≽️${prefix}ᴏᴄᴇᴀɴ
-╠≽️${prefix}sᴘᴀᴄᴇ
-╠≽️${prefix}ɢᴛᴀᴠ
-╠≽️${prefix}ᴅʀᴀᴡɪɴɢ
-╠≽️${prefix}ʀᴅʀᴏᴘ
-╠≽️${prefix}ɴɪɢʜᴛʙ
-╠≽️${prefix}ᴡᴀɴᴛᴇᴅ
-╠≽️${prefix}ʟᴀᴘᴛᴏᴘ
-╠≽️${prefix}ʙʟᴀᴄᴋᴡ
-╠≽️${prefix}ᴄʀᴏꜱꜱɢᴜɴ
-╠≽️${prefix}ᴄʏʙᴇʀᴘᴜɴᴋ *(Image Random)*
-╚═≽️ *_Developer ©_* : *ɴʏx*`
+			dmenu = `╔═━──━▒ *_IMAGE MENU_*
+╠≽️ *_${prefix}phcomment_*
+╠≽️ *_${prefix}phlogo_*
+╠≽️ *_${prefix}ocean_*
+╠≽️ *_${prefix}space_*
+╠≽️ *_${prefix}gtav_*
+╠≽️ *_${prefix}drawing_*
+╠≽️ *_${prefix}rdrop_*
+╠≽️ *_${prefix}nightb_*
+╠≽️ *_${prefix}wanted_*
+╠≽️ *_${prefix}laptop_*
+╠≽️ *_${prefix}blackw_*
+╠≽️ *_${prefix}crossgun_*
+╠≽️ *_${prefix}cyberpunk_*
+╚═━──━▒ *_IMAGE MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'mediamenu':
@@ -532,14 +529,14 @@ case 'soundmenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
-			dmenu = `╔═══≽️「 *_ᴀᴜᴅɪᴏ ᴍᴇɴᴜ_* 」
-║❏ ${prefix}ᴇɴɢʀᴏssᴀʀ
-║❏ ${prefix}ᴛᴜᴘᴀɪ
-║❏ ${prefix}ʙᴀꜱꜱ
-║❏ ${prefix}ꜱʟᴏᴡ
-║❏ ${prefix}ғᴀꜱᴛ
-╠≽️${prefix}ᴛᴛꜱ
-╚═≽️ *_Developer ©_* : *ɴʏx*`
+			dmenu = `╔═━──━▒ *_AÚDIO MENU_*
+╠≽️ *_${prefix}ᴇɴɢʀᴏssᴀʀ_*
+╠≽️ *_${prefix}ᴛᴜᴘᴀɪ_*
+╠≽️ *_${prefix}ʙᴀꜱꜱ_*
+╠≽️ *_${prefix}ꜱʟᴏᴡ_*
+╠≽️ *_${prefix}ғᴀꜱᴛ_*
+╠≽️ *_${prefix}tts pt_*
+╚═━──━▒ *_AÚDIO MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'animemenu':
@@ -601,29 +598,30 @@ case 'makermenu':
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═══≽️「 *_ᴍᴀᴋᴇʀ ᴍᴇɴᴜ_* 」
-╠≽️${prefix}ʙᴜʀɴᴘᴀᴘᴇʀ
-╠≽️${prefix}8ʙɪᴛ
-╠≽️${prefix}3ᴅ
-╠≽️${prefix}ɢʟᴏᴡɴᴇᴏɴ
-╠≽️${prefix}ɢꜱᴜɢɢᴇꜱᴛ
-╠≽️${prefix}ᴄᴀɴᴅʟᴇᴍᴜɢ
-╠≽️${prefix}ʟᴏᴠᴇᴍꜱꜱ
-╠≽️${prefix}ᴍᴜɢғʟᴏᴡᴇʀ
-╠≽️${prefix}ᴘᴀᴘᴇʀɢʟᴀꜱꜱ
-╠≽️${prefix}ʀᴏᴍᴀɴᴄᴇ
-╠≽️${prefix}ꜱʜᴀᴅᴏᴡ
-╠≽️${prefix}ɢʟɪᴛᴄʜ
-╠≽️${prefix}ᴄᴏғғᴇ
-╠≽️${prefix}ᴄᴀɴᴅʏ
-╠≽️${prefix}ʜᴘᴏᴛᴛᴇʀ
-╠≽️${prefix}ᴡᴏᴏᴅʙʟᴏᴄᴋ
-╠≽️${prefix}ɢᴀʟᴀxᴛᴇxᴛ
-╠≽️${prefix}ɢᴀʟᴀxsᴛʏʟᴇ
-╠≽️${prefix}ʙᴘɪɴᴋ
-╠≽️${prefix}ᴘᴜᴘʏᴄᴜᴛᴇ
-╠≽️${prefix}ʜᴏʟᴏɢʀᴀᴍ
-╠≽️${prefix}ᴍᴇᴛᴀʟʟᴏɢᴏ
-╠≽️${prefix}ɪᴄᴇ
+╠≽️${prefix}burnpaper
+╠≽️${prefix}matrix
+╠≽️${prefix}8bit
+╠≽️${prefix}3d
+╠≽️${prefix}glowneon
+╠≽️${prefix}gsuggest
+╠≽️${prefix}candlemug
+╠≽️${prefix}lovemss
+╠≽️${prefix}paperglass
+╠≽️${prefix}romance
+╠≽️${prefix}shadow
+╠≽️${prefix}glitch
+╠≽️${prefix}coffe
+╠≽️${prefix}candy
+╠≽️${prefix}hpotter
+╠≽️${prefix}woodblock
+╠≽️${prefix}galaxtext
+╠≽️${prefix}galaxstyle
+╠≽️${prefix}bpink
+╠≽️${prefix}pupycute
+╠≽️${prefix}hologram
+╠≽️${prefix}metallogo
+╠≽️${prefix}ice
+╠≽️${prefix}space
 ╚═≽️ *_Developer ©_* : *ɴʏx*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
@@ -1515,13 +1513,13 @@ lepms = await getBuffer(`https://videfikri.com/api/textmaker/lovemsg/?text=${lop
 denz.sendMessage(from, lepms, image, {quoted: mek})
 await limitAdd(sender)
 break
-case 'mugflower':
+case 'matrix':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
-mug = body.slice(11)
+mug = body.slice(8)
 reply(mess.wait)
-mflowg = await getBuffer(`https://videfikri.com/api/textmaker/mugflower/?text=${mug}`)
+mflowg = await getBuffer(`https://api.zeks.xyz/api/matrix?apikey=apivinz&text=${mug}`)
 denz.sendMessage(from, mflowg, image, {quoted: mek})
 await limitAdd(sender)
 break
