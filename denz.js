@@ -3139,7 +3139,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 				if (!isUser) return reply(mess.only.userB)
 								
 					if (!isGroup) return reply(mess.only.group)
-					teks = `╔═━──━▒ *_ALBEDO BOT_*\nTotal : ${groupAdmins.length}\n\n`
+					teks = `╔═━──━▒ *_ALBEDO BOT_*\n╠≽️ *_Total:_* ${groupAdmins.length}\n`
 					no = 0
 					for (let admon of groupAdmins) {
 						no += 1
