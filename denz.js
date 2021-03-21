@@ -828,7 +828,7 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 							})
 						})
 					} else {
-						reply(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim`)
+						reply(`✘ *_Coloque o comando na legenda da foto ou responda a imagem utilizando o comando._*`)
 					}
 					await limitAdd(sender) 
 					break 
@@ -984,7 +984,7 @@ fs.unlinkSync(rano)
   })
 
 } else {
-  reply('Gunakan foto!')
+  reply('✘ *_Coloque o comando na legenda da foto ou responda a imagem utilizando o comando._*')
 }
 break
 
@@ -1000,7 +1000,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
   hehqe = await getBuffer(`https://videfikri.com/api/textmaker/pencildrawing/?urlgbr=${anu.display_url}`)
  denz.sendMessage(from, hehqe, image, {quoted:mek})
 } else {
-  reply('reply imagenya kak!')
+  reply('✘ *_Coloque o comando na legenda da foto ou responda a imagem utilizando o comando._*')
 }
 break
 
@@ -1027,7 +1027,7 @@ fs.unlinkSync(rano)
   })
 
 } else {
-  reply('Gunakan foto!')
+  reply('✘ *_Coloque o comando na legenda da foto ou responda a imagem utilizando o comando._*')
 }
 break
 
@@ -1760,7 +1760,7 @@ break
                                         })
                                     
                                              } else {
-                                                 reply('Gunakan foto!')
+                                                 reply('✘ *_Coloque o comando na legenda da foto ou responda a imagem utilizando o comando._*')
                                           }
                                              break
 
