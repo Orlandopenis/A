@@ -573,10 +573,6 @@ case 'groupmenu':
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═━──━▒ *_GROUP MENU_*
-╠≽️ *_${prefix}antilink_*
-╠≽️ *_${prefix}antibadword_*
-╠≽️ *_${prefix}bwlist_*
-╠≽️ *_${prefix}boasvindas_*
 ╠≽️ *_${prefix}grupo_* 
 ╠≽️ *_${prefix}setfoto_*
 ╠≽️ *_${prefix}infogrupo_*
@@ -593,7 +589,11 @@ case 'groupmenu':
 ╠≽️ *_${prefix}modoanime_*
 ╠≽️ *_${prefix}modonsfw_*
 ╠≽️ *_${prefix}simih_*
-╚═≽️ *_Developer ©_* : *ɴʏx*`
+╠≽️ *_${prefix}antilink_*
+╠≽️ *_${prefix}antibadword_*
+╠≽️ *_${prefix}bwlist_*
+╠≽️ *_${prefix}boasvindas_*
+╚═━──━▒ *_GROUP MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'makermenu':
@@ -676,27 +676,27 @@ case 'nsfwmenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
-			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═══≽️「 *_ɴsғᴡ ᴍᴇɴᴜ_* 」🔞
-╠≽️${prefix}ɴʜᴇɴᴛᴀɪ *[CODE]*
-╠≽️${prefix}ᴛʀᴀᴘ
-╠≽️${prefix}ʙʟᴏᴡᴊᴏʙ
-╠≽️${prefix}ʏᴀᴏɪ
-╠≽️${prefix}ᴇᴄᴄʜɪ
-╠≽️${prefix}ʜᴇɴᴛᴀɪ
-╠≽️${prefix}ᴀʜᴇɢᴀᴏ
-╠≽️${prefix}ʜᴏʟᴏʟᴇᴡᴅ
-╠≽️${prefix}sɪᴅᴇᴏᴘᴘᴀɪ
-╠≽️${prefix}ᴀɴɪᴍᴇғᴇᴇᴛs
-╠≽️${prefix}ᴀɴɪᴍᴇʙᴏᴏᴛʏ
-╠≽️${prefix}ᴀɴɪᴍᴇᴛʜɪɢʜss
-╠≽️${prefix}ʜᴇɴᴛᴀɪᴘᴀʀᴀᴅɪsᴇ
-╠≽️${prefix}ᴀɴɪᴍᴇᴀʀᴍᴘɪᴛs     
-╠≽️${prefix}ʜᴇɴᴛᴀɪғᴇᴍᴅᴏᴍ      
-╠≽️${prefix}ʟᴇᴡᴅᴀɴɪᴍᴇɢɪʀʟs    
-╠≽️${prefix}ʙɪɢᴀɴɪᴍᴇᴛɪᴅᴅɪᴇs  
-╠≽️${prefix}ᴀɴɪᴍᴇʙᴇʟʟʏʙᴜᴛᴛᴏɴ
-╠≽️${prefix}ʜᴇɴᴛᴀɪ4ᴇᴠᴇʀʏᴏɴᴇ
-╚═≽️ *_Developer ©_* : *ɴʏx*`
+			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═━──━▒ *_NSFW MENU_*
+╠≽️ *_${prefix}nhentai_* [CODE]
+╠≽️ *_${prefix}trap_*
+╠≽️ *_${prefix}blowjob_*
+╠≽️ *_${prefix}yaoi_*
+╠≽️ *_${prefix}ecchi_*
+╠≽️ *_${prefix}hentai_*
+╠≽️ *_${prefix}ahegao_*
+╠≽️ *_${prefix}hololewd_*
+╠≽️ *_${prefix}sideoppai_*
+╠≽️ *_${prefix}animefeets_*
+╠≽️ *_${prefix}animebooty_*
+╠≽️ *_${prefix}animethighss_*
+╠≽️ *_${prefix}hentaiparadise_*
+╠≽️ *_${prefix}animearmpits_*
+╠≽️ *_${prefix}hentaifemdom_*
+╠≽️ *_${prefix}lewdanimegirls_*
+╠≽️ *_${prefix}biganimetiddies_*
+╠≽️ *_${prefix}animebellybutton_*
+╠≽️ *_${prefix}hentai4everyone_*
+╚═━──━▒ *_NSFWMENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'othermenu':
@@ -717,6 +717,7 @@ break
 case 'ownermenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
+			if (!isOwner) return reply(mess.only.ownerB)
 			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╓───「 *_ᴏᴡɴᴇʀ ᴍᴇɴᴜ_* 」
 ║❏ ${prefix}ᴀᴅᴅᴘʀᴇᴍ
