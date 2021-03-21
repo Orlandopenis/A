@@ -3139,11 +3139,11 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 				if (!isUser) return reply(mess.only.userB)
 								
 					if (!isGroup) return reply(mess.only.group)
-					teks = `╔═━──━▒ *_ADMIN LIST_*\n╠≽️ *_Total:_* ${groupAdmins.length}\n╠≽️ @${admon.split('@')[0]}\n`
+					teks = `╔═━──━▒ *_ALBEDO BOT_*\nTotal : ${groupAdmins.length}\n\n`
 					no = 0
 					for (let admon of groupAdmins) {
 						no += 1
-						teks += `Cu`
+						teks += `╠≽️ [${no.toString()}] @${admon.split('@')[0]}\n`
 					}
 					mentions(teks, groupAdmins, true)
 					break
