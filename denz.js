@@ -427,7 +427,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠≽️ *_#MAKERMENU_* ✓✓
 ╠≽️ *_#ANIMEMENU_*
 ╠≽️ *_#MEDIAMENU_*
-╠≽️ *_#OTHERMENU_*
+╠≽️ *_#ENCMENU_* ✓✓
 ╠≽️ *_#SOUNDMENU_* ✓
 ╠≽️ *_#GROUPMENU_* ✓✓
 ╠≽️ *_#NSFWMENU_* ✓✓
@@ -697,19 +697,15 @@ case 'nsfwmenu':
 ╚═━──━▒ *_NSFWMENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
-case 'othermenu':
+case 'encmenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
-			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═══≽️「 *_ᴇɴᴄᴜʀᴛᴀᴅᴏʀ_* 」
-╠≽️${prefix}ᴘᴀꜱᴛᴇʙɪɴ 
-╠≽️${prefix}ᴛɪɴʏᴜʀʟ 
-╠≽️${prefix}ʙɪᴛʟʏ 
-╚═≽️ *_Developer ©_* : *ɴʏx*
-╓───「 *_ꜱᴘᴀᴍ ᴍᴇɴᴜ_* 」
-║❏ ${prefix}ꜱᴘᴀᴍᴄᴀʟʟ 
-║❏ ${prefix}ꜱᴘᴀᴍɢᴍᴀɪʟ 
-╙───々`
+			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═━──━▒ *_ENCURTADORES_*
+╠≽️ *_${prefix}shrtco_*
+╠≽️ *_${prefix}tinyurl_*
+╠≽️ *_${prefix}bitly_*
+╚═━──━▒ *_ENCURTADORES_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'ownermenu':
@@ -2695,19 +2691,17 @@ break
 			
 			//ENCURTADOR MENU
 			
-			case 'pastebin':
-                   if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				reply(mess.wait)
-				paste = `${body.slice(10)}`
-                   anu = await fetchJson(`https://api-anoncybfakeplayer.herokuapp.com/pastebin?text=${paste}`, {method: 'get'})
-                   reply(mess.wait)
-                   pasteb = `✓ *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${anu.result}\n✓ *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${body.slice(9)}`
-                   denz.sendMessage(from, pasteb, text, {quoted: mek})
-                   await limitAdd(sender) 				
-                   break 
+			case 'shrtco':
+			    if (isBanned) return reply(mess.only.benned)    
+			    if (!isUser) return reply(mess.only.userB)
+			    				
+			    if (isLimit(sender)) return reply(limitend(pushname2))
+			    reply(mess.wait)
+                    anu = await fetchJson(`http://api.lolhuman.xyz/api/shortlink2?apikey=RiuApikey&url=${args[0]}`)
+			        tinyurl = `╔═━──━▒ *_ENCURTADOR_*\n╠≽️ *_Link Encurtado:_*\n╠≽️ ${anu.result}\n╠≽️ *_Link Original:_*\n╠≽️ ${args[0]}\n╚═━──━▒ *_ENCURTADOR_*`
+			        reply(tinyurl)
+			        await limitAdd(sender) 
+			        break 
 			    case 'tinyurl':
 			    if (isBanned) return reply(mess.only.benned)    
 			    if (!isUser) return reply(mess.only.userB)
