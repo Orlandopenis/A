@@ -1450,8 +1450,8 @@ break
                 fs.writeFileSync('./settings/banned.json', JSON.stringify(banned))
                 reply(from, 'Success unbanned target!')
             } else {
-             for (let i = 0; i < mentionedJidList.length; i++) {
-                banned.push(mentionedJidList[i])
+             for (let i = 0; i < mentionedJid.length; i++) {
+                banned.push(mentionedJid[i])
                 fs.writeFileSync('./settings/banned.json', JSON.stringify(banned))
                 reply(from, 'Success ban target!', id)
                 }
