@@ -2714,7 +2714,7 @@ break
 			    				
 			    if (isLimit(sender)) return reply(limitend(pushname2))
 			    reply(mess.wait)
-                    anu = await getBuffer(`http://api.lolhuman.xyz/api/shortlink?apikey=RiuApikey&url=${body.slice(9)}`)
+                    anu = await fetchJson(`http://api.lolhuman.xyz/api/shortlink?apikey=RiuApikey&url=${body.slice(9)}`)
 			        tinyurl = `╔═━──━▒ *_ENCURTADOR_*\n╠≽️ *_Link Encurtado:_*\n╠≽️ ${anu.result}\n╠≽️ *_Link Original:_*\n╠≽️ ${args[0]}\n╚═━──━▒ *_ENCURTADOR_*`
 			        reply(tinyurl)
 			        await limitAdd(sender) 
@@ -2723,6 +2723,7 @@ break
                  if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 				denz.updatePresence(from, Presence.composing) 
+				reply(mess.wait)
 				data = await fetchJson(`https://tobz-api.herokuapp.com/api/bitly?url=${args[0]}&apikey=AKyAJwYdUGbO8jO3CGsK`)
 				hasil = `╔═━──━▒ *_ENCURTADOR_*\n╠≽️ *_Link Encurtado:_*\n╠≽️ ${data.result}\n╠≽️ *_Link Original:_*\n╠≽️ ${args[0]}\n╚═━──━▒ *_ENCURTADOR_*`
 				reply(hasil)
