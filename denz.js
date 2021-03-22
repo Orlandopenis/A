@@ -3041,7 +3041,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (args[0].startsWith('8')) return reply('✘ *_Forneça o DDI também, exemplo 5519998707564._*')
 					if (args[0].startsWith('9')) return reply('✘ *_Forneça o DDI também, exemplo 5519998707564._*')
 					try {
-						num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
+						num = `${args[0]@c.us`
 						denz.groupAdd(from, [num])
 					} catch (e) {
 						console.log('Error :', e)
