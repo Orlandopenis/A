@@ -630,15 +630,14 @@ case 'funmenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
-			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏
-╓───「 *_ғᴜɴ ᴍᴇɴᴜ_* 」
-╠≽️${prefix}ᴄᴀᴅᴇʀɴᴏ *[TXT]*
-╠≽️${prefix}ᴄᴀsᴀʟ
-╠≽️${prefix}ᴄʜᴀɴᴄᴇ *(DO/DE + PERGUNTA)*
-╠≽️${prefix}ᴍᴀɪsᴛᴏᴘ 
-╠≽️${prefix}ʟᴇᴛʀᴀ *[NOME DA MSC]*
-╠≽️${prefix}ᴄʜᴇᴄᴋɪᴘ *[IP]*
-╠≽️${prefix}mensfake
+			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═━──━▒ *_FUN MENU_*
+╠≽️ *_${prefix}caderno_*
+╠≽️ *_${prefix}casal_*
+╠≽️ *_${prefix}chance_*
+╠≽️ *_${prefix}maistop_*
+╠≽️ *_${prefix}letra_*
+╠≽️ *_${prefix}checkip_*
+╠≽️ *_${prefix}mensfake_*
 ║❏ ${prefix}ʜɪʟɪʜ
 ║❏ ${prefix}ᴄᴇᴄᴀɴ
 ║❏ ${prefix}ᴄᴏɢᴀɴ
@@ -668,7 +667,7 @@ case 'funmenu':
 ║❏ ${prefix}ᴄᴀᴋʟᴏɴᴛᴏɴɢ
 ║❏ ${prefix}ғᴀᴍɪʟʏ100
 ║❏ ${prefix}ᴍᴇᴍᴇɪɴᴅᴏ
-╙───々`
+╚═━──━▒ *_FUN MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'nsfwmenu':
@@ -1865,7 +1864,7 @@ break
 				case 'animehug':
 					ranp = getRandom('.gif')
 					rano = getRandom('.webp')
-					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/hug?apikey=${TobzApi}`, {method: 'get'})
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/hug?apikey=AKyAJwYdUGbO8jO3CGsK`, {method: 'get'})
                    if (!isUser) return reply(mess.only.userB)
              				
                    if (isLimit(sender)) return reply(limitend(pushname2))
@@ -2246,7 +2245,7 @@ break
                if (!isUser) return reply(mess.only.userB)
          				
                if (isLimit(sender)) return reply(limitend(pushname2))
-                   anu = await fetchJson(`https://tobz-api.herokuapp.com/api/infogempa?apikey=${TobzApi}`, {method: 'get'})
+                   anu = await fetchJson(`https://tobz-api.herokuapp.com/api/infogempa?apikey=AKyAJwYdUGbO8jO3CGsK`, {method: 'get'})
                    if (anu.error) return reply(anu.error)
                    buff = await getBuffer(anu.map)
                    reply(mess.wait)
@@ -2263,7 +2262,7 @@ break
           				
                 if (isLimit(sender)) return reply(limitend(pushname2))
                 if (!isAnime) return reply(' *Harus Mengaktifkan Mode Anime* ')
-					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomanime?apikey=${TobzApi}`, {method: 'get'})
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomanime?apikey=AKyAJwYdUGbO8jO3CGsK`, {method: 'get'})
 					reply(mess.wait)
 					pok = await getBuffer(anu.result)
 					denz.sendMessage(from, pok, image, { quoted: mek , caption: 'nihhh'})
@@ -2472,7 +2471,7 @@ break
                 if (!isUser) return reply(mess.only.userB)
           				
                 if (isLimit(sender)) return reply(limitend(pushname2))
-                   anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomkpop?apikey=${TobzApi}`, {method: 'get'})
+                   anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomkpop?apikey=AKyAJwYdUGbO8jO3CGsK`, {method: 'get'})
                    buff = await getBuffer(anu.result)
                    denz.sendMessage(from, buff, image, {quoted: mek})
                    break 
@@ -2716,7 +2715,7 @@ break
 			    if (isLimit(sender)) return reply(limitend(pushname2))
 			    reply(mess.wait)
                     anu = await getBuffer(`http://api.lolhuman.xyz/api/shortlink?apikey=RiuApikey&url=${body.slice(9)}`)
-			        tinyurl = `✓ *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${anu.result}\n✓ *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${body.slice(9)}`
+			        tinyurl = `╔═━──━▒ *_ENCURTADOR_*\n╠≽️ *_Link Encurtado:_*\n╠≽️ ${anu.result}\n╠≽️ *_Link Original:_*\n╠≽️ ${args[0]}\n╚═━──━▒ *_ENCURTADOR_*`
 			        reply(tinyurl)
 			        await limitAdd(sender) 
 			        break 
@@ -2724,8 +2723,8 @@ break
                  if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 				denz.updatePresence(from, Presence.composing) 
-				data = await fetchJson(`https://tobz-api.herokuapp.com/api/bitly?url=${args[0]}&apikey=BotWeA`)
-				hasil = `✓ *_ʟɪɴᴋ ᴇɴᴄᴜʀᴛᴀᴅᴏ :_* ${data.result}\n✓ *_ʟɪɴᴋ ᴏʀɪɢɪɴᴀʟ :_* ${args[0]}`
+				data = await fetchJson(`https://tobz-api.herokuapp.com/api/bitly?url=${args[0]}&apikey=AKyAJwYdUGbO8jO3CGsK`)
+				hasil = `╔═━──━▒ *_ENCURTADOR_*\n╠≽️ *_Link Encurtado:_*\n╠≽️ ${data.result}\n╠≽️ *_Link Original:_*\n╠≽️ ${args[0]}\n╚═━──━▒ *_ENCURTADOR_*`
 				reply(hasil)
 				await limitAdd(sender)
 				break
@@ -3442,7 +3441,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 			if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 				
-                anu = await fetchJson(`https://tobz-api.herokuapp.com/api/joox?q=${body.slice(6)}&apikey=${TobzApi}`, {method: 'get'})
+                anu = await fetchJson(`https://tobz-api.herokuapp.com/api/joox?q=${body.slice(6)}&apikey=AKyAJwYdUGbO8jO3CGsK`, {method: 'get'})
                if (anu.error) return reply(anu.error)
                  infomp3 = `╭─「 *JOOX DOWNLOADER* 」\n│\n│ *• Judul* : ${anu.result.title}\n│ *• Album* : ${anu.result.album}\n│ *• Dipublikasi* : ${anu.result.dipublikasi}\n│\n│ *TUNGGU SEBENTAR LAGI DIKIRIM*\n│ *MOHON JANGAN SPAM*\n╰─────────────────────`
                 bufferddd = await getBuffer(anu.result.thumb)
@@ -3539,7 +3538,7 @@ case 'wiki':
                     if (args.length < 1) return reply('teks nya mana om?')
                     reply(mess.wait)
                    wiki = `${body.slice(6)}`
-                    anu = await fetchJson(`https://tobz-api.herokuapp.com/api/wiki?q=${wiki}&apikey=${TobzApi}`, {method: 'get'})
+                    anu = await fetchJson(`https://tobz-api.herokuapp.com/api/wiki?q=${wiki}&apikey=AKyAJwYdUGbO8jO3CGsK`, {method: 'get'})
                     if (anu.error) return reply(anu.error)
                     wikii = `${anu.result}`
                     denz.sendMessage(from, wikii, text, {quoted: mek})
@@ -3690,7 +3689,7 @@ case 'wiki':
 case 'husbu':
 				if (!isUser) return reply(mess.only.userB)
 				try {
-						res = await fetchJson(`https://tobz-api.herokuapp.com/api/husbu?apikey=BotWeA`)
+						res = await fetchJson(`https://tobz-api.herokuapp.com/api/husbu?apikey=AKyAJwYdUGbO8jO3CGsK`)
 						buffer = await getBuffer(res.image)
 						denz.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ingat! Cintai Husbumu'})
 					} catch (e) {
@@ -3703,7 +3702,7 @@ case 'husbu':
 				if (!isUser) return reply(mess.only.userB)
 				ranp = getRandom('.gif')
 					rano = getRandom('.webp')
-					anu = await fetchJson('https://tobz-api.herokuapp.com/api/cry?apikey=BotWeA', {method: 'get'})
+					anu = await fetchJson('https://tobz-api.herokuapp.com/api/cry?apikey=AKyAJwYdUGbO8jO3CGsK', {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
@@ -3718,7 +3717,7 @@ case 'husbu':
 				if (!isUser) return reply(mess.only.userB)
 				ranp = getRandom('.gif')
 					rano = getRandom('.webp')
-					anu = await fetchJson('https://tobz-api.herokuapp.com/api/kiss?apikey=BotWeA', {method: 'get'})
+					anu = await fetchJson('https://tobz-api.herokuapp.com/api/kiss?apikey=AKyAJwYdUGbO8jO3CGsK', {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
@@ -3733,7 +3732,7 @@ case 'husbu':
 				if (!isUser) return reply(mess.only.userB)
 				ranp = getRandom('.gif')
 					rano = getRandom('.webp')
-					anu = await fetchJson('https://tobz-api.herokuapp.com/api/hug?apikey=BotWeA', {method: 'get'})
+					anu = await fetchJson('https://tobz-api.herokuapp.com/api/hug?apikey=AKyAJwYdUGbO8jO3CGsK', {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
@@ -3746,7 +3745,7 @@ case 'husbu':
 					break		
 					case 'moddroid':
 				if (!isUser) return reply(mess.only.userB)
-				data = await fetchJson(`https://tobz-api.herokuapp.com/api/moddroid?q=${body.slice(10)}&apikey=BotWeA`)
+				data = await fetchJson(`https://tobz-api.herokuapp.com/api/moddroid?q=${body.slice(10)}&apikey=AKyAJwYdUGbO8jO3CGsK`)
 			hepi = data.result[0] 
 			teks = `*Nama*: ${data.result[0].title}\n*publisher*: ${hepi.publisher}\n*mod info:* ${hepi.mod_info}\n*size*: ${hepi.size}\n*latest version*: ${hepi.latest_version}\n*genre*: ${hepi.genre}\n*link:* ${hepi.link}\n*download*: ${hepi.download}`
 			buffer = await getBuffer(hepi.image)
@@ -3755,7 +3754,7 @@ case 'husbu':
 			break
 			case 'happymod':
 				if (!isUser) return reply(mess.only.userB)
-				data = await fetchJson(`https://tobz-api.herokuapp.com/api/happymod?q=${body.slice(10)}&apikey=BotWeA`)
+				data = await fetchJson(`https://tobz-api.herokuapp.com/api/happymod?q=${body.slice(10)}&apikey=AKyAJwYdUGbO8jO3CGsK`)
 			hupo = data.result[0] 
 			teks = `*Nama*: ${data.result[0].title}\n*version*: ${hupo.version}\n*size:* ${hupo.size}\n*root*: ${hupo.root}\n*purchase*: ${hupo.price}\n*link*: ${hupo.link}\n*download*: ${hupo.download}`
 			buffer = await getBuffer(hupo.image)
