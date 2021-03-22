@@ -38,6 +38,7 @@ const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const _limit = JSON.parse(fs.readFileSync('./database/json/limit.json'))
 const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
+const banned = JSON.parse(fs.readFileSync('./settings/banned.json'))
 const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const publik = JSON.parse(fs.readFileSync('./database/json/public.json'))
 const bucinrandom = JSON.parse(fs.readFileSync('./database/json/bucin.json'))
@@ -250,7 +251,7 @@ async function starts() {
 			const isBadWord = isGroup ? badword.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
 			const isUser = user.includes(sender)
-			const isBanned = ban.includes(sender)
+			const isBanned = banned.includes(sender)
 			const isPrem = premium.includes(sender)
 			
 			const isUrl = (url) => {
@@ -411,11 +412,10 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠≽️ *_Situação:_* Registrado √
 ╚═━──━▒ *_USER INFO's_*
 ╔═━──━▒ *_ALBEDO BOT INFO_*
-╠≽️ *_#report_* [TXT]
+╠≽️ *_#report_*
 ╠≽️ *_${prefix}info_*
 ╠≽️ *_${prefix}owner_*
 ╠≽️ *_${prefix}ping_*
-╠≽️ *_${prefix}registrar_* [NOME]
 ╠≽️ *_${prefix}limite_*
 ╠≽️ *_${prefix}users_*
 ╠≽️ *_${prefix}banlist_*
@@ -1438,12 +1438,25 @@ break
 					break
 				case 'ban':
 					denz.updatePresence(from, Presence.composing) 
-					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-			        ban = mentioned
-					reply(`╔═━──━▒ *_BANIMENTO_*\n╠≽️ *_User:_* ${ban}\n╚═━──━▒ *_BANIMENTO_*`)
-					break
+					if (args[0] == 'add') {
+                banned.push(args[1]+'@c.us')
+                fs.writeFileSync('./settings/banned.json', JSON.stringify(banned))
+                reply(from, 'Success banned target!')
+            } else
+            if (args[0] == 'del') {
+                let xnxx = banned.indexOf(args[1]+'@c.us')
+                banned.splice(xnxx,1)
+                fs.writeFileSync('./settings/banned.json', JSON.stringify(banned))
+                reply(from, 'Success unbanned target!')
+            } else {
+             for (let i = 0; i < mentionedJidList.length; i++) {
+                banned.push(mentionedJidList[i])
+                fs.writeFileSync('./settings/banned.json', JSON.stringify(banned))
+                reply(from, 'Success ban target!', id)
+                }
+            }
+            break
 case 'burnpaper':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
