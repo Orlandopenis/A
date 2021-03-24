@@ -38,7 +38,6 @@ const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const _limit = JSON.parse(fs.readFileSync('./database/json/limit.json'))
 const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
-const banned = JSON.parse(fs.readFileSync('./settings/banned.json'))
 const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const publik = JSON.parse(fs.readFileSync('./database/json/public.json'))
 const bucinrandom = JSON.parse(fs.readFileSync('./database/json/bucin.json'))
@@ -251,7 +250,7 @@ async function starts() {
 			const isBadWord = isGroup ? badword.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
 			const isUser = user.includes(sender)
-			const isBanned = banned.includes(sender)
+			const isBanned = ban.includes(sender)
 			const isPrem = premium.includes(sender)
 			
 			const isUrl = (url) => {
@@ -1438,19 +1437,19 @@ break
 					break
 				case 'ban':
 					denz.updatePresence(from, Presence.composing) 
+					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
-					if (args[0] == 'add') {
-                banned.push(args[1]+'@c.us')
-                fs.writeFileSync('./settings/banned.json', JSON.stringify(banned))
-                reply(from, 'Success banned target!')
-            } else
-            if (args[0] == 'del') {
-                let xnxx = banned.indexOf(args[1]+'@c.us')
-                banned.splice(xnxx,1)
-                fs.writeFileSync('./settings/banned.json', JSON.stringify(banned))
-                reply(from, 'Success unbanned target!')
-            } 
-            break
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+			        ban = mentioned
+					reply(`╔═━──━▒ *_BANIMENTO_*\n╠≽️ *_User:_* ${ban}\n╚═━──━▒ *_BANIMENTO_*`)
+					break
+					case 'block':
+				 denz.updatePresence(from, Presence.composing) 
+					if (!isGroup) return reply(mess.only.group)
+					if (!isOwner) return reply(mess.only.ownerB)
+					denz.blockUser (`${body.slice(7)}@c.us`, "add")
+					denz.sendMessage(from, `O Doentao foi bloqueado ${body.slice(7)}@c.us`, text)
+					break
 case 'burnpaper':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
@@ -3035,7 +3034,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (args[0].startsWith('8')) return reply('✘ *_Forneça o DDI também, exemplo 5519998707564._*')
 					if (args[0].startsWith('9')) return reply('✘ *_Forneça o DDI também, exemplo 5519998707564._*')
 					try {
-						num = `${args[0]}@c.us`
+						num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
 						denz.groupAdd(from, [num])
 					} catch (e) {
 						console.log('Error :', e)
