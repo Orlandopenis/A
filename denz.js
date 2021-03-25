@@ -118,17 +118,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `ʜᴀʟʟᴏ @${num.split('@')[0]}👋\nꜱᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ᴅɪ ɢʀᴏᴜᴘ *${mdata.subject}*\n\n ────────────────
-┏━━━━━━━━━━━━━━━
-┃────「 *_ɪɴᴛʀᴏ_* 」─────
-┃━━━━━━━━━━━━━━━
-┠⊷️ *ɴᴀᴍᴀ* :
-┠⊷️ *ᴜᴍᴜʀ* :
-┠⊷️ *ɢᴇɴᴅᴇʀ* :
-┠⊷️ *ᴀꜱᴀʟ ᴋᴏᴛᴀ* :
-┗━━━━━━━━━━━━━━━
-
-ᴋᴇᴛɪᴋ ${prefix}daftar ᴜɴᴛᴜᴋ ᴍᴇᴍᴜʟᴀɪ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ʙᴏᴛ`
+				teks = `╔═━──━▒ *_BOAS VINDAS_*\n╠≽️ *_Olá!_* @${num.split('@')[0]}\n╠≽️ *_Seja muito bem vindo_*\n╠≽️ *_Leia a descrição hehe!_*\n╠≽️ *_Mantenha uma conduta saúdavel!_*\n╠≽️ *_Prefix do Bot:_* #\n╚═━──━▒ *_BOAS VINDAS_*`
 				let buff = await getBuffer(ppimg)
 				denz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				} else if (anu.action == 'promote') {
@@ -158,7 +148,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `ꜱᴀʏᴏɴᴀʀᴀ @${num.split('@')[0]}👋\nꜱᴇᴍᴏɢᴀ ᴛᴇɴᴀɴɢ ᴅɪ ᴀʟᴀᴍ ꜱᴀɴᴀ`
+				teks = `╔═━──━▒ *_SAÍDA_*\n╠≽️ *_Adeus_* @${num.split('@')[0]}👋\n╠≽️ *_Espero vê-lo logo!_*\n╚═━──━▒ *_SAÍDA_*`
 				let buff = await getBuffer(ppimg)
 				denz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
