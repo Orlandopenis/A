@@ -394,15 +394,15 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠≽️ *_${prefix}banlist_*
 ╚═━──━▒ *_ALBEDO BOT INFO_*
 ╔═━──━▒ *_MENU's_*
-╠≽️ *_#STICKERMENU_* ✓
+╠≽️ *_#STICKERMENU_*
 ╠≽️ *_#FUNMENU_*  
-╠≽️ *_#IMAGEMENU_* ✓✓
-╠≽️ *_#MAKERMENU_* ✓✓
+╠≽️ *_#IMAGEMENU_*
+╠≽️ *_#MAKERMENU_*
 ╠≽️ *_#MEDIAMENU_*
-╠≽️ *_#ENCMENU_* ✓✓
-╠≽️ *_#SOUNDMENU_* ✓
-╠≽️ *_#GROUPMENU_* ✓✓
-╠≽️ *_#NSFWMENU_* ✓✓
+╠≽️ *_#ENCMENU_*
+╠≽️ *_#SOUNDMENU_* 
+╠≽️ *_#GROUPMENU_*
+╠≽️ *_#NSFWMENU_*
 ╠≽️ *_#OWNERMENU_* 
 ╚═━──━▒ *_MENU's_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
@@ -455,38 +455,7 @@ case 'mediamenu':
 ╠≽️ *_${prefix}facebook_*
 ╠≽️ *_${prefix}tiktok_*
 ╠≽️ *_${prefix}instagram_*
-║❏ ${prefix}ɪᴍɢ2ᴜʀʟ
-║❏ ${prefix}ᴛᴏᴍᴘ3
-║❏ ${prefix}ɪɢꜱᴛᴀʟᴋ
-║❏ ${prefix}ᴘʟᴀʏᴍᴘ3
-║❏ ${prefix}ꜱɴᴀᴄᴋ 
-║❏ ${prefix}ʏᴛᴍᴘ3
-║❏ ${prefix}ʏᴛᴍᴘ4
-║❏ ${prefix}ᴊᴏᴏx
-║❏ ${prefix}ɪɴғᴏᴀʟᴀᴍᴀᴛ 
-║❏ ${prefix}ꜱᴍᴜʟᴇ
-║❏ ${prefix}ꜱꜱᴡᴇʙ
-║❏ ${prefix}ᴋᴀʟᴋᴜʟᴀᴛᴏʀ
-║❏ ${prefix}ᴜʀʟ2ɪᴍɢ
-aaa❏ ${prefix}ᴛᴏɪᴍɢ
-║❏ ${prefix}ᴋʙʙɪ
-║❏ ${prefix}ʀᴇꜱᴇᴘᴍᴀꜱᴀᴋᴀɴ 
-║❏ ${prefix}ʙᴇʀɪᴛᴀʜᴏᴀx
-║❏ ${prefix}ᴍᴀᴘ 
-║❏ ${prefix}ғɪʟᴍ 
-║❏ ${prefix}ᴊᴀʀᴀᴋ
-║❏ ${prefix}ᴛʀᴀɴꜱʟᴀᴛᴇ
-║❏ ${prefix}sʜᴏᴘᴇᴇ
-║❏ ${prefix}ɪɴғᴏɢᴇᴍᴘᴀ
-║❏ ${prefix}ɪɴғᴏɴᴏᴍᴏʀ
-║❏ ${prefix}ᴀᴘᴋᴘᴜʀᴇ
-║❏ ${prefix}ᴍᴏᴅᴅʀᴏɪᴅ
-║❏ ${prefix}ʜᴀᴘᴘʏᴍᴏᴅ
-║❏ ${prefix}ɪɴғᴏᴄᴜᴀᴄᴀ 
-║❏ ${prefix}ᴊᴀᴍᴅᴜɴɪᴀ 
-║❏ ${prefix}ᴛʀᴇɴᴅᴛᴡɪᴛ
-║❏ ${prefix}ɢᴏᴏɢʟᴇ
-╙───々`
+╚═━──━▒ *_MEDIA MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'soundmenu':
@@ -576,34 +545,7 @@ case 'funmenu':
 ╠≽️ *_${prefix}checkip_*
 ╠≽️ *_${prefix}mensfake_*
 ╠≽️ *_${prefix}tierlist_*
-║❏ ${prefix}ʜɪʟɪʜ
-║❏ ${prefix}ᴄᴇᴄᴀɴ
-║❏ ${prefix}ᴄᴏɢᴀɴ
-║❏ ${prefix}ϙᴜᴏᴛᴇꜱ
-║❏ ${prefix}ᴋᴀᴛᴀʙɪᴊᴀᴋ
-║❏ ${prefix}ᴅᴀʀᴋᴊᴏᴋᴇꜱ
-║❏ ${prefix}ʙᴜᴄɪɴ
-║❏ ${prefix}ᴘᴀɴᴛᴜɴ
-║❏ ${prefix}ᴋᴀᴛᴀᴅɪʟᴀɴ
-║❏ ${prefix}ᴋᴀᴛᴀᴄɪɴᴛᴀ
-║❏ ${prefix}ʜᴇᴋᴇʀʙᴜᴄɪɴ
-║❏ ${prefix}ᴋᴀᴛᴀɪʟʜᴀᴍ
-║❏ ${prefix}ᴘᴀꜱᴀɴɢᴀɴ 
-║❏ ${prefix}ɢᴀɴᴛᴇɴɢᴄᴇᴋ 
-║❏ ${prefix}ᴄᴀɴᴛɪᴋᴄᴇᴋ
-║❏ ${prefix}ᴀʀᴛɪɴᴀᴍᴀ 
-║❏ ${prefix}ᴘᴇʀꜱᴇɴɢᴀʏ 
-║❏ ${prefix}ᴘʙᴜᴄɪɴ 
-║❏ ${prefix}ʙᴘғᴏɴᴛ 
-║❏ ${prefix}ᴛᴇxᴛꜱᴛʏʟᴇ 
-║❏ ${prefix}ᴍɪᴍᴘɪ
-║❏ ${prefix}ʀᴇᴀᴅᴍᴏʀᴇ
-║❏ ${prefix}ᴘᴜɪꜱɪɪᴍɢ
-║❏ ${prefix}ᴀꜱᴜᴘᴀɴ
-║❏ ${prefix}ᴛᴇʙᴀᴋɢᴀᴍʙᴀʀ
-║❏ ${prefix}ᴄᴀᴋʟᴏɴᴛᴏɴɢ
-║❏ ${prefix}ғᴀᴍɪʟʏ100
-║❏ ${prefix}ᴍᴇᴍᴇɪɴᴅᴏ
+╠≽️ *_${prefix}radargay_*
 ╚═━──━▒ *_FUN MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
@@ -2435,7 +2377,7 @@ reply(mess.wait)
 					const sipsss = rag[Math.floor(Math.random() * rag.length)]
 					radargay = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
 					const ab = radargay[Math.floor(Math.random() * radargay.length)]
-					teks = `✓ *_O radar detectou um gay nas proximidades,_* @${sipsss.jid.split('@')[0]}, *_a sua gayzisse é de_*${ab}`
+					teks = `✓ *_O radar detectou um gay nas proximidades,_* @${sipsss.jid.split('@')[0]}, *_a sua gayzisse é de ${ab}_*`
 					membr.push(sipsss.jid)
 					mentions(teks, membr, true)
 					break
