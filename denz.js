@@ -3403,14 +3403,13 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 				if (!isUser) return reply(mess.only.userB)
 								
 				if (isLimit(sender)) return reply(limitend(pushname2))
-					if (args.length < 1) return reply('Mau Nyari Foto Apa???')
+					if (args.length < 1) return reply('✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} albedo._*')
 					pinte = body.slice(11)
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=${pinte}&apikey=${VthearApi}`, {method: 'get'})
+					anu = await fetchJson(`http://lolhuman.herokuapp.com/api/pinterest?apikey=AnjayB&query=${body.slice(11)}`, {method: 'get'})
 					reply(mess.wait)
-					var pin = JSON.parse(JSON.stringify(anu.result));
-					var trest =  pin[Math.floor(Math.random() * pin.length)];
-					pinehg = await getBuffer(trest)
-					denz.sendMessage(from, pinehg, image, { caption: '*Pinterest*\n\n*Hasil Pencarian : '+pinte+'*', quoted: mek })
+					hasil = `anu.result`
+					pinehg = await getBuffer(hasil)
+					denz.sendMessage(from, pinehg, image, {quoted: mek })
 					await limitAdd(sender) 
 					break 
 					
