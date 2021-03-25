@@ -107,7 +107,7 @@ async function starts() {
         fs.writeFileSync('./Fxc7.json', JSON.stringify(denz.base64EncodedAuthInfo(), null, '\t'))
 
 	denz.on('group-participants-update', async (anu) => {
-		if (!isWelkom) return
+		if (!isWelkom.includes(anu.jid)) return
 		try {
 			const mdata = await denz.groupMetadata(anu.jid)
 			console.log(anu)
