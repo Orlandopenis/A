@@ -2214,7 +2214,7 @@ reply(mess.wait)
                     ini_type = image
                     if (ini_url.includes(".mp4")) ini_type = video
                     buffer = await getBuffer(ini_url)
-                    denz.sendMessage(from, buffer, ini_type, { quoted: lol })
+                    denz.sendMessage(from, buffer, ini_type, { quoted: mek })
                     break
                     case 'pinterest':
          if (isBanned) return reply(mess.only.benned)    
