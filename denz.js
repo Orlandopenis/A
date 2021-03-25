@@ -2207,14 +2207,28 @@ reply(mess.wait)
 				if (!isUser) return reply(mess.only.userB)
 				if (isLimit(sender)) return reply(limitend(pushname2))
 					if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
+					reply(mess.wait)
 				    ini_url = args[0]
-                    ini_url = await fetchJson(`http://api.lolhuman.xyz/api/instagram?apikey=${apikey}&url=${ini_url}`)
+                    ini_url = await fetchJson(`http://api.lolhuman.xyz/api/instagram?apikey=AnjayB&url=${ini_url}`)
                     ini_url = ini_url.result
                     ini_type = image
                     if (ini_url.includes(".mp4")) ini_type = video
                     buffer = await getBuffer(ini_url)
                     denz.sendMessage(from, buffer, ini_type, { quoted: lol })
                     break
+                    case 'pinterest':
+         if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+								
+				if (isLimit(sender)) return reply(limitend(pushname2))
+					if (args.length < 1) return reply('✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} albedo._*')
+					pinte = body.slice(11)
+					anu = await fetchJson(`http://lolhuman.herokuapp.com/api/pinterest?apikey=AnjayB&query=${body.slice(11)}`, {method: 'get'})
+					reply(mess.wait)
+					pinehg = await getBuffer(anu.result)
+					denz.sendMessage(from, pinehg, image, {quoted: mek })
+					await limitAdd(sender) 
+					break 
 //creator  
 					case 'caderno':
 					if (isBanned) return reply(mess.only.benned)    
@@ -2298,18 +2312,6 @@ reply(mess.wait)
 			        reply(infonomor)
 			        await limitAdd(sender) 
 			        break 
-			   case 'igstalk':
-                    if (isBanned) return reply(mess.only.benned)    
-   					if (!isUser) return reply(mess.only.userB)
-   									
-   					if (isLimit(sender)) return reply(limitend(pushname2))
-                        anu = await fetchJson(`https://api.vhtear.com/igprofile?query=${body.slice(9)}&apikey=${VthearApi}`, {method: 'get'})
-                     buffer = await getBuffer(anu.result.picture)
-                     reply(mess.wait)
-                     hasil = `╭─「 *INSTAGRAM STALKER* 」\n│\n│• Link: https://www.instagram.com/${anu.result.username}\n│• Fullname : ${anu.result.full_name}\n│• Followers : ${anu.result.follower}\n│• Following : ${anu.result.follow}\n│• Jumlah Postingan: ${anu.result.post_count}\n│• Bio : ${anu.result.biography}\n╰─────────────────────`
-                    denz.sendMessage(from, buffer, image, {quoted: mek, caption: hasil})
-                    await limitAdd(sender) 
-                    break 
 			    case 'mimpi':
 			    if (isBanned) return reply(mess.only.benned)
 			        if (isLimit(sender)) return reply(limitend(pushname2))
@@ -2955,19 +2957,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
             await limitAdd(sender)
             break 
 
-         case 'pinterest':
-         if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					if (args.length < 1) return reply('✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} albedo._*')
-					pinte = body.slice(11)
-					anu = await fetchJson(`http://lolhuman.herokuapp.com/api/pinterest?apikey=AnjayB&query=${body.slice(11)}`, {method: 'get'})
-					reply(mess.wait)
-					pinehg = await getBuffer(anu.result)
-					denz.sendMessage(from, pinehg, image, {quoted: mek })
-					await limitAdd(sender) 
-					break 
+         
 					
 // premium user
          case 'joox':
@@ -3103,7 +3093,7 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
 					await limitAdd(sender)
 					break
 			case 'semoji':
-                    if (args.length == 0) return reply(`Usage: ${prefix + command} query\nExample: ${prefix + command} 😭`)
+                    if (args.length == 0) return reply(`✘ *_Este comando necessita de um emoji._*`)
                     emoji = args[0]
                     try {
                         emoji = encodeURI(emoji[0])
