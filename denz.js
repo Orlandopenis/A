@@ -148,7 +148,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `╔═━──━▒ *_SAÍDA_*\n╠≽️ *_Adeus_* @${num.split('@')[0]}👋\n╠≽️ *_Espero vê-lo logo!_*\n╚═━──━▒ *_SAÍDA_*`
+				teks = `╔═━──━▒ *_SAÍDA_*\n╠≽️ *_Adeus_* @${num.split('@')[0]}\n╠≽️ *_Espero vê-lo logo!_*\n╚═━──━▒ *_SAÍDA_*`
 				let buff = await getBuffer(ppimg)
 				denz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
