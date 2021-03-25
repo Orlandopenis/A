@@ -3407,8 +3407,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					pinte = body.slice(11)
 					anu = await fetchJson(`http://lolhuman.herokuapp.com/api/pinterest?apikey=AnjayB&query=${body.slice(11)}`, {method: 'get'})
 					reply(mess.wait)
-					hasil = `anu.result`
-					pinehg = await getBuffer(hasil)
+					pinehg = await getBuffer(anu.result)
 					denz.sendMessage(from, pinehg, image, {quoted: mek })
 					await limitAdd(sender) 
 					break 
