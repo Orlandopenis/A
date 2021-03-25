@@ -3151,7 +3151,7 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 				if (args.length < 1) return reply(`✘ *_Cade o texto filhote de cruz credo? brincadeirinha hehehe, mas forneça um texto..._*`)
 				try {
                 data = await fetchJson(`http://api.lolhuman.xyz/api/ytplay?apikey=RiuApikey&query=${body.slice(6)}`, {method: 'get'})
-                if (Number(data.result.audio.size.split('MB')[3]) >= 10.00) return tobz.reply('Maaf durasi music sudah melebihi batas maksimal 10 MB!')
+                if (data.result.audio[3].size.split >= 10.00) return reply('Mais pesado q minha pica')
                  reply(mess.wait)
                  infomp3 = `*_「 PLAY 」_*\n\n*_「 Título 」_* : ${data.result.info.title}\n*_「 Duração 」_* : ${data.result.info.duration}\n*_「 Uploader 」_* : ${data.result.info.uploader}\n*_「 Views 」_* : ${data.result.info.view}\n*_「 Likes 」_* : ${data.result.info.like}\n*_「 Dislikes 」_* : ${data.result.info.dislike}\n*_「 Link 」_* : youtube.com/watch?v=${data.result.info.id}`
                 bufferddd = await getBuffer(data.result.info.thumbnail)
