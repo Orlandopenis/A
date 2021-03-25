@@ -2434,7 +2434,7 @@ reply(mess.wait)
 					const rag = groupMembers
 					const sipsss = rag[Math.floor(Math.random() * rag.length)]
 					radargay = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
-					const ab = radargay[Math.floor(Math.random() * ratee.length)]
+					const ab = radargay[Math.floor(Math.random() * radargay.length)]
 					teks = `✓ *_O radar detectou um gay nas proximidades,_* @${sipsss.jid.split('@')[0]}, *_a sua gayzisse é de_* '+ab+'`
 					membr.push(sipsss.jid)
 					mentions(teks, membr, true)
