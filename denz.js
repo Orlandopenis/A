@@ -3450,7 +3450,7 @@ case 'wiki':
 					denz.updatePresence(from, Presence.composing)
 					if (messagesLink.includes("#izinadmin")) return reply("#izinadmin *_「 ᴅɪᴛᴇʀɪᴍᴀ 」_*")
 					var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-						reply(`*_「 ʟɪɴᴋ ɢʀᴜᴘ ᴅᴇᴛᴇᴄᴛᴇᴅ 」_*\nᴍᴀᴀғ *${pushname2}* ᴀɴᴅᴀ ᴍᴇɴɢɪʀɪᴍ ʟɪɴᴋ ɢʀᴜᴘ!, ᴀɴᴅᴀ ꜱᴇɢᴇʀᴀ ᴅɪᴋɪᴄᴋ ᴅᴀʀɪ ɢʀᴜᴘ *${groupMetadata.subject}*`)
+						reply(`✓ *_Um link de grupo foi detectado, você será removido em instantes!_*`)
 						setTimeout( () => {
 						denz.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 					}, 100)
@@ -3458,11 +3458,10 @@ case 'wiki':
 		denz.groupRemove(from, [Kick]).catch((e) => {reply(`*ERROR:* ${e}`)}) 
 					}, 10)
 		setTimeout( () => {
-		reply(`*ᴛᴀᴋᴇ ᴏғ ᴏᴛᴡ ᴋɪᴄᴋ!*`)
 		}, 0)
 		}
                   if (body.startsWith(`${prefix}${command}`)) {
-comd = `╔═══≽️ *_Error 404_*\n╠≽️ Olá *${pushname2}* !\n╠≽️ O comando *${prefix}${command}* não existe!\n╠≽️ *Reveja os comandos novamente!*\n╠≽️ Consulte o *${prefix}menu!*\n╚═≽️ *_Developer ©_* : *ɴʏx*`
+comd = `╔═━──━▒ *_ERROR 404_*\n╠≽️ Olá *${pushname2}* !\n╠≽️ O comando *${prefix}${command}* não existe!\n╠≽️ *Reveja os comandos novamente!*\n╠≽️ Consulte o *${prefix}menu!*\n╚═━──━▒ *_ERROR 404_*`
 denz.sendMessage(from, comd, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "「 ᴀʟʙᴇᴅᴏ ʙᴏᴛ 」                       ⊱ ᴄʀᴇᴀᴛᴏʀ : ɴʏx", 'jpegThumbnail': fs.readFileSync('./sticker/dnsnew.webp')}}}})
 				  }
                   if (isGroup && isSimi && budy != undefined) {
@@ -3471,7 +3470,7 @@ denz.sendMessage(from, comd, text, {quoted: { key: { fromMe: false, participant:
 						console.log(muehe)
 						reply(muehe)
 					} else {
-						console.log(color('[db]','aqua'), 'Command Tidak Terdaftar', color(sender.split('@')[0]))
+						console.log(color('[AB]','aqua'), 'Comando solicitado do usuário registrado', color(sender.split('@')[0]))
 					}
                            }
 		} catch (e) {
