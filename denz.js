@@ -118,7 +118,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `╔═━──━▒ *_BOAS VINDAS_*\n╠≽️ *_Olá!_* @${num.split('@')[0]}\n╠≽️ *_Seja muito bem vindo_*\n╠≽️ *_Leia a descrição hehe!_*\n╠≽️ *_Tenha uma boa conduta!_*\n╠≽️ *_Prefix do Bot:_* #\n╚═━──━▒ *_BOAS VINDAS_*`
+				teks = `╔═━──━▒ *_BOAS VINDAS_*\n╠≽️ *_Olá @${num.split('@')[0]}!_*\n╠≽️ *_Seja muito bem vindo_*\n╠≽️ *_Leia a descrição hehe!_*\n╠≽️ *_Tenha uma boa conduta!_*\n╠≽️ *_Prefix do Bot:_* #\n╚═━──━▒ *_BOAS VINDAS_*`
 				let buff = await getBuffer(ppimg)
 				denz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				} else if (anu.action == 'promote') {
@@ -128,7 +128,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `*_「 ᴘʀᴏᴍᴏᴛᴇ ᴅᴇᴛᴇᴄᴛᴇᴅ 」_*\n@${num.split('@')[0]} ʏᴀɴɢ ᴀᴅᴅ ᴀᴅᴍɪɴ ꜱɪᴀᴘᴀ?, ᴅᴀʜ ɪᴢɪɴ ᴏᴡɴᴇʀ ɢʀᴜᴘ ʙᴇʟᴜᴍ!`
+				teks = `╔═━──━▒ *_PROMOTE_*\n╠≽️ *_Olá @${num.split('@')[0]}!_*\n╠≽️ *_Você foi promovido!_*\n╠≽️ *_Agora você é um ADM._*\n╠≽️ *_Parabéns hehe..._*\n╚═━──━▒ *_PROMOTE_*`
 				let buff = await getBuffer(ppimg)
 				denz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				} else if (anu.action == 'demote') {
@@ -138,7 +138,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `*_「 ᴅᴇᴍᴏᴛᴇ ᴅᴇᴛᴇᴄᴛᴇᴅ 」_*\n@${num.split('@')[0]} ʏᴀɴɢ ᴜɴ ᴀᴅᴍɪɴ ꜱɪᴀᴘᴀ?, ᴅᴀʜ ɪᴢɪɴ ᴏᴡɴᴇʀ ɢʀᴜᴘ ʙᴇʟᴜᴍ!`
+				teks = `╔═━──━▒ *_DEMOTE_*\n╠≽️ *_Olá @${num.split('@')[0]}!_*\n╠≽️ *_Você foi demotado!_*\n╠≽️ *_Você perdeu seu ADM..._*\n╠≽️ *_F..._*\n╚═━──━▒ *_DEMOTE_*`
 				let buff = await getBuffer(ppimg)
 				denz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
