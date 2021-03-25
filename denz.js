@@ -2431,12 +2431,12 @@ reply(mess.wait)
 					if (!isUser) return reply(mess.only.userB)
 					if (!isGroup) return reply(mess.only.group)
 					membr = []
-					const msl = groupMembers
-					const sipss = nus[Math.floor(Math.random() * msl.length)]
+					const rag = groupMembers
+					const sipsss = nus[Math.floor(Math.random() * rag.length)]
 					radargay = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
 					const kl = radargay[Math.floor(Math.random() * ratee.length)]
-					teks = `✓ *_O radar detectou um gay nas proximidades,_* @${siapss.jid.split('@')[0]}, *_a sua gayzisse é de_* '+kl+'`
-					membr.push(sipss.jid)
+					teks = `✓ *_O radar detectou um gay nas proximidades,_* @${sipsss.jid.split('@')[0]}, *_a sua gayzisse é de_* '+kl+'`
+					membr.push(sipsss.jid)
 					mentions(teks, membr, true)
 					break
 				rate = body.slice(10)
