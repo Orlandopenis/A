@@ -415,9 +415,10 @@ case 'stikermenu':
 			dmenu = `╔═━──━▒ *_STICKER MENU_*
 ╠≽️ *_${prefix}ttp_*
 ╠≽️ *_${prefix}ttp2_*
-╠≽️ *_${prefix}trigger_*
-╠≽️ *_${prefix}wasted_*
-╠≽️ *_${prefix}gay_*
+╠≽️ *_${prefix}semoji_*
+╠≽️ *_${prefix}trigger_* (OFF)
+╠≽️ *_${prefix}wasted_* (OFF)
+╠≽️ *_${prefix}gay_* (OFF)
 ╠≽️ *_${prefix}sticker_*
 ╠≽️ *_${prefix}stickergif_*
 ╚═━──━▒ *_STICKER MENU_*`
@@ -499,7 +500,7 @@ case 'soundmenu':
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `╔═━──━▒ *_AÚDIO MENU_*
-╠≽️ *_${prefix}ᴇɴɢʀᴏssᴀʀ_*
+╠≽️ *_${prefix}engrossar_*
 ╠≽️ *_${prefix}ᴛᴜᴘᴀɪ_*
 ╠≽️ *_${prefix}ʙᴀꜱꜱ_*
 ╠≽️ *_${prefix}ꜱʟᴏᴡ_*
@@ -1255,7 +1256,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                                         break
 				case 'registrar':
 					denz.updatePresence(from, Presence.composing)
-					if (isUser) return reply('*✘ *_Você já está registrado!_*')
+					if (isUser) return reply('✘ *_Você já está registrado!_*')
 					if (isBanned) return reply(mess.only.benned)
 					user.push(sender)
 					fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
@@ -2193,17 +2194,7 @@ reply(mess.wait)
 						fs.unlinkSync(ran)
 					})
 				break
-				case 'instavid':
-				if (isBanned) return reply(mess.only.benned)
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (!isUrl(args[0]) && !args[0].includes('www.instagram.com')) return reply(mess.error.lv)
-				    anu = await fetchJson(`https://alfians-api.herokuapp.com/api/ig?url=${args[0]}`, {method: 'get'})
-				    insta = getBuffer(anu.result)
-				    reply(mess.wait)
-				    denz.sendMessage(from, insta, video, {mimtype: 'video/mp4', filename: 'instagram'.mp3, quoted: mek})
-				    await limitAdd(sender) 
-				    break  
+				  
 			case 'instastory':
 				if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
@@ -2264,6 +2255,7 @@ reply(mess.wait)
 				if (!isUser) return reply(mess.only.userB)
 				if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
                      anu = await fetchJson(`http://lolhuman.herokuapp.com/api/tiktok?apikey=AnjayB&url=${args[0]}`, {method: 'get'})
+                     reply(mess.wait)
 					buffer = await getBuffer(anu.result.link)
                     denz.sendMessage(from, buffer, video, )
 				    break
@@ -2272,14 +2264,24 @@ reply(mess.wait)
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 				if (isLimit(sender)) return reply(limitend(pushname2))
-				reply(mess.wait)
 					if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
 					reply(mess.wait)
 					anu = await fetchJson(`http://lolhuman.herokuapp.com/api/facebook?apikey=AnjayB&url=${args[0]}`, {method: 'get'})
-					buffer = await getBuffer(anu.result.link[1])
+					buffer = await getBuffer(anu.result.link)
 					denz.sendMessage(from, buffer, video, {mimetype: 'video/mp4', quoted: mek})
 					await limitAdd(sender) 
 					break 
+					case 'instagram':
+				if (isBanned) return reply(mess.only.benned)
+				if (!isUser) return reply(mess.only.userB)
+				if (isLimit(sender)) return reply(limitend(pushname2))
+					if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
+				    anu = await fetchJson(`https://alfians-api.herokuapp.com/api/ig?url=${args[0]}`, {method: 'get'})
+				    insta = getBuffer(anu.result)
+				    reply(mess.wait)
+				    denz.sendMessage(from, insta, video, {mimtype: 'video/mp4', filename: 'instagram'.mp3, quoted: mek})
+				    await limitAdd(sender) 
+				    break
 //creator  
 					case 'caderno':
 					if (isBanned) return reply(mess.only.benned)    
@@ -3167,7 +3169,7 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
 					reply(anu.result.pantun)
 					await limitAdd(sender)
 					break
-			case 'emoji':
+			case 'semoji':
                     if (args.length == 0) return reply(`Usage: ${prefix + command} query\nExample: ${prefix + command} 😭`)
                     emoji = args[0]
                     try {
@@ -3175,7 +3177,7 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
                     } catch {
                         emoji = encodeURI(emoji)
                     }
-                    buffer = await getBuffer(`http://api.lolhuman.xyz/api/smoji/${emoji}?apikey=RiuApikey`)
+                    buffer = await getBuffer(`http://api.lolhuman.xyz/api/smoji/${emoji}?apikey=AnjayB`)
                     reply(mess.wait)
                     denz.sendMessage(from, buffer, sticker, { quoted: mek})
                     break
