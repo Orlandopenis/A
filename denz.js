@@ -2266,11 +2266,12 @@ reply(mess.wait)
 				if (isLimit(sender)) return reply(limitend(pushname2))
 					if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
 					reply(mess.wait)
-					anu = await fetchJson(`http://lolhuman.herokuapp.com/api/facebook?apikey=AnjayB&url=${args[0]}`, {method: 'get'})
-					buffer = await getBuffer(anu.result.link)
-					denz.sendMessage(from, buffer, video, {mimetype: 'video/mp4', quoted: mek})
-					await limitAdd(sender) 
-					break 
+					ini_url = args[0]
+                    ini_url = await fetchJson(`http://api.lolhuman.xyz/api/facebook?apikey=AnjayB&url=${ini_url}`)
+                    ini_url = ini_url.result[0].link
+                    buffer = await getBuffer(ini_url)
+                    denz.sendMessage(from, buffer, video, { quoted: mek })
+                    break
 					case 'instagram':
 				if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
