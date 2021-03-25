@@ -76,6 +76,8 @@ memberLimit = 1
 ban = []
 premium = ["558388440499@s.whatsapp.net","558196404969@s.whatsapp.net"]
 
+const ban = JSON.parse(fs.readFileSync('./database/json/banned.json'))
+
 function kyun(seconds){
   function pad(s){
     return (s < 10 ? '0' : '') + s;
@@ -1436,12 +1438,18 @@ break
 					denz.sendMessage(from, ben.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": ban}})
 					break
 				case 'ban':
-					denz.updatePresence(from, Presence.composing) 
-					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-			        ban = mentioned
-					reply(`╔═━──━▒ *_BANIMENTO_*\n╠≽️ *_User:_* ${ban}\n╚═━──━▒ *_BANIMENTO_*`)
+					bnnd = body.slice(6)
+					ban.push(`${bnnd}@s.whatsapp.net`)
+					fs.writeFileSync('./database/json/banned.json', JSON.stringify(ban))
+					reply(`╔═━──━▒ *_BANIMENTO_*\n╠≽️ *_User:_*\n╠≽️ ${bnnd}\n╚═━──━▒ *_BANIMENTO_*`)
+					break
+				case 'unban':
+					if (!isOwner) return reply(mess.only.ownerB)
+					bnnd = body.slice(8)
+					ban.splice(`${bnnd}@s.whatsapp.net`, 1)
+					fs.writeFileSync('./database/json/banned.json', JSON.stringify(ban))
+					reply(`╔═━──━▒ *_DESBANIMENTO_*\n╠≽️ *_User:_*\n╠≽️ ${bnnd}\n╚═━──━▒ *_DESBANIMENTO_*`)
 					break
 case 'burnpaper':
 if (isBanned) return reply(mess.only.benned)    
@@ -1673,12 +1681,6 @@ break
 					rprem = body.slice(13)
 					premium.splice(`${rprem}@s.whatsapp.net`, 1)
 					reply(`Berhasil Remove wa.me/${rprem} Dari User Premium`)
-					break
-					case 'unban':
-					if (!isOwner)return reply(mess.only.ownerB)
-					bnnd = body.slice(8)
-					ban.splice(`${bnnd}@s.whatsapp.net`, 1)
-					reply(`╔═━──━▒ *_DESBANIMENTO_*\n╠≽️ *_User:_* ${bnnd}\n╚═━──━▒ *_DESBANIMENTO_*`)
 					break
 				case 'readmore':
 					if (isBanned) return reply(mess.only.benned)    
