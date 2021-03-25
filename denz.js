@@ -1438,6 +1438,7 @@ break
 					break
 				case 'ban':
 					if (!isOwner) return reply(mess.only.ownerB)
+					if (args.length < 1) return reply(`✘ *_Mencione alguém que deseja banir_*`)
 					bnnd = body.slice(6)
 					ban.push(`${bnnd}@s.whatsapp.net`)
 					fs.writeFileSync('./database/json/banned.json', JSON.stringify(ban))
@@ -1445,6 +1446,7 @@ break
 					break
 				case 'unban':
 					if (!isOwner) return reply(mess.only.ownerB)
+					if (args.length < 1) return reply(`✘ *_Mencione alguém que deseja desbanir_*`)
 					bnnd = body.slice(8)
 					ban.splice(`${bnnd}@s.whatsapp.net`, 1)
 					fs.writeFileSync('./database/json/banned.json', JSON.stringify(ban))
