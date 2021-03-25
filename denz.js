@@ -454,27 +454,21 @@ case 'mediamenu':
 ╠≽️ *_${prefix}pinterest_*
 ╠≽️ *_${prefix}facebook_*
 ╠≽️ *_${prefix}tiktok_*
+╠≽️ *_${prefix}instagram_*
 ║❏ ${prefix}ɪᴍɢ2ᴜʀʟ
 ║❏ ${prefix}ᴛᴏᴍᴘ3
 ║❏ ${prefix}ɪɢꜱᴛᴀʟᴋ
-║❏ ${prefix}ɪɴꜱᴛᴀᴠɪᴅ
-║❏ ${prefix}ɪɴꜱᴛᴀɪᴍɢ
-║❏ ${prefix}ɪɴꜱᴛᴀꜱᴛᴏʀʏ 
 ║❏ ${prefix}ᴘʟᴀʏᴍᴘ3
-║❏ ${prefix}ғʙ 
 ║❏ ${prefix}ꜱɴᴀᴄᴋ 
 ║❏ ${prefix}ʏᴛᴍᴘ3
 ║❏ ${prefix}ʏᴛᴍᴘ4
 ║❏ ${prefix}ᴊᴏᴏx
 ║❏ ${prefix}ɪɴғᴏᴀʟᴀᴍᴀᴛ 
-║❏ ${prefix}ᴘʟᴀʏꜱᴛᴏʀᴇ
 ║❏ ${prefix}ꜱᴍᴜʟᴇ
 ║❏ ${prefix}ꜱꜱᴡᴇʙ
 ║❏ ${prefix}ᴋᴀʟᴋᴜʟᴀᴛᴏʀ
 ║❏ ${prefix}ᴜʀʟ2ɪᴍɢ
-║❏ ${prefix}ᴛᴏɪᴍɢ
-║❏ ${prefix}ᴛɪᴋᴛᴏᴋ
-║❏ ${prefix}ғᴏᴛᴏᴛɪᴋᴛᴏᴋ
+aaa❏ ${prefix}ᴛᴏɪᴍɢ
 ║❏ ${prefix}ᴋʙʙɪ
 ║❏ ${prefix}ʀᴇꜱᴇᴘᴍᴀꜱᴀᴋᴀɴ 
 ║❏ ${prefix}ʙᴇʀɪᴛᴀʜᴏᴀx
@@ -592,7 +586,6 @@ case 'funmenu':
 ║❏ ${prefix}ᴘᴀɴᴛᴜɴ
 ║❏ ${prefix}ᴋᴀᴛᴀᴅɪʟᴀɴ
 ║❏ ${prefix}ᴋᴀᴛᴀᴄɪɴᴛᴀ
-║❏ ${prefix}ʀᴀɴᴅᴏᴍᴋᴘᴏᴘ
 ║❏ ${prefix}ʜᴇᴋᴇʀʙᴜᴄɪɴ
 ║❏ ${prefix}ᴋᴀᴛᴀɪʟʜᴀᴍ
 ║❏ ${prefix}ᴘᴀꜱᴀɴɢᴀɴ 
@@ -1830,7 +1823,7 @@ break
 				case 'notificar':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-								
+								if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isGroup) return reply(mess.only.group)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					var value = body.slice(11)
@@ -2118,70 +2111,7 @@ reply(mess.wait)
                    reply(masak.trim())
                    await limitAdd(sender) 
                    break 
-              case 'randomkpop':
-                   if (isBanned) return reply(mess.only.benned)    
-                if (!isUser) return reply(mess.only.userB)
-          				
-                if (isLimit(sender)) return reply(limitend(pushname2))
-                   anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomkpop?apikey=AKyAJwYdUGbO8jO3CGsK`, {method: 'get'})
-                   buff = await getBuffer(anu.result)
-                   denz.sendMessage(from, buff, image, {quoted: mek})
-                   break 
-                  case 'playstore':
-                  if (isBanned) return reply(mess.only.benned)    
-                if (!isUser) return reply(mess.only.userB)
-          				
-                if (isLimit(sender)) return reply(limitend(pushname2)) 
-                ps = `${body.slice(11)}`
-                  anu = await fetchJson(`https://api.vhtear.com/playstore?query=${ps}&apikey=${VthearApi}`, {method: 'get'})
-                  store = '======================\n'
-                  for (let ply of anu.result){
-                  store += `• *Nama Apk:* ${ply.title}\n• *ID:* ${ply.app_id}\n• *Developer:* ${ply.developer}\n• *Deskripsi:* ${ply.description}\n• *Link Apk:* ${ply.url}\n=====================\n`
-                  }
-                  reply(store.trim())
-                  break
-               case 'pornhub':
-			   if (isBanned) return reply(mess.only.benned)    
-			   if (!isUser) return reply(mess.only.userB)
-			   				
-			   if (isLimit(sender)) return reply(limitend(pushname2))
-			   reply(mess.wait)
-              	    if (args.length < 1) return reply('teksnya mana gan?')
-                    teks = body.slice(9)
-                    anu = await fetchJson(`https://api.arugaz.my.id/api/media/pornhub/search?query=${teks}`, {method: 'get'})
-                    teks = `===============\n`
-                    for (let bokep of anu.result) {
-                    teks += `Title: ${bokep.title}\nAktor: ${bokep.author}\nViewers: *${bokep.views}*\nDurasi: ${bokep.duration}\nLink: ${bokep.link}\n===============\n`
-                    }
-                    reply(teks.trim())
-			     	await limitAdd(sender) 
-			     	break  
-			     case 'xvideos':
-			   if (isBanned) return reply(mess.only.benned)    
-			   if (!isUser) return reply(mess.only.userB)
-			   				
-			   if (isLimit(sender)) return reply(limitend(pushname2))
-			   reply(mess.wait)
-              	    if (args.length < 1) return reply('teksnya mana gan?')
-                    anu = await fetchJson(`https://api.arugaz.my.id/api/media/xvideo/search?query=${body.slice(9)}`, {method: 'get'})
-                    teks = `===============\n`
-                    for (let b of anu.result) {
-                    teks += `• Title: ${b.title}\n• Info: ${b.info}\n• Link: ${b.link}\n===============\n`
-                    }
-                    reply(teks.trim())
-			     	await limitAdd(sender) 
-			     	break
-			case 'instaimg':
-				if (isBanned) return reply(mess.only.benned)
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (!isUrl(args[0]) && !args[0].includes('www.instagram.com')) return reply(mess.error.lv)
-				    anu = await fetchJson(`https://alfians-api.herokuapp.com/api/ig?url=${args[0]}`, {method: 'get'})
-				    insta = getBuffer(anu.result)
-				    reply(mess.wait)
-				    denz.sendMessage(from, insta, image, {quoted: mek})
-				    await limitAdd(sender) 
-				    break  
+              
 				case 'bass':                 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await denz.downloadAndSaveMediaMessage(encmedia)
@@ -2277,12 +2207,14 @@ reply(mess.wait)
 				if (!isUser) return reply(mess.only.userB)
 				if (isLimit(sender)) return reply(limitend(pushname2))
 					if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
-				    anu = await fetchJson(`https://alfians-api.herokuapp.com/api/ig?url=${args[0]}`, {method: 'get'})
-				    insta = getBuffer(anu.result)
-				    reply(mess.wait)
-				    denz.sendMessage(from, insta, video, {mimtype: 'video/mp4', filename: 'instagram'.mp3, quoted: mek})
-				    await limitAdd(sender) 
-				    break
+				    ini_url = args[0]
+                    ini_url = await fetchJson(`http://api.lolhuman.xyz/api/instagram?apikey=${apikey}&url=${ini_url}`)
+                    ini_url = ini_url.result
+                    ini_type = image
+                    if (ini_url.includes(".mp4")) ini_type = video
+                    buffer = await getBuffer(ini_url)
+                    denz.sendMessage(from, buffer, ini_type, { quoted: lol })
+                    break
 //creator  
 					case 'caderno':
 					if (isBanned) return reply(mess.only.benned)    
