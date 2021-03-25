@@ -107,7 +107,7 @@ async function starts() {
         fs.writeFileSync('./Fxc7.json', JSON.stringify(denz.base64EncodedAuthInfo(), null, '\t'))
 
 	denz.on('group-participants-update', async (anu) => {
-		if (!welkom.includes(anu.jid)) return
+		if (!isWelkom) return
 		try {
 			const mdata = await denz.groupMetadata(anu.jid)
 			console.log(anu)
@@ -527,7 +527,6 @@ case 'groupmenu':
 ╠≽️ *_${prefix}demote_*
 ╠≽️ *_${prefix}setname_*
 ╠≽️ *_${prefix}setdesc_*
-╠≽️ *_${prefix}tagme_*
 ╠≽️ *_${prefix}notificar_*
 ╠≽️ *_${prefix}everyone_*
 ╠≽️ *_${prefix}admin_*
@@ -585,6 +584,7 @@ case 'funmenu':
 ╠≽️ *_${prefix}letra_*
 ╠≽️ *_${prefix}checkip_*
 ╠≽️ *_${prefix}mensfake_*
+╠≽️ *_${prefix}tierlist_*
 ║❏ ${prefix}ʜɪʟɪʜ
 ║❏ ${prefix}ᴄᴇᴄᴀɴ
 ║❏ ${prefix}ᴄᴏɢᴀɴ
