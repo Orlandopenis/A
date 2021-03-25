@@ -2432,7 +2432,7 @@ reply(mess.wait)
 					if (!isGroup) return reply(mess.only.group)
 					membr = []
 					const rag = groupMembers
-					const sipsss = nus[Math.floor(Math.random() * rag.length)]
+					const sipsss = rag[Math.floor(Math.random() * rag.length)]
 					radargay = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
 					const ab = radargay[Math.floor(Math.random() * ratee.length)]
 					teks = `✓ *_O radar detectou um gay nas proximidades,_* @${sipsss.jid.split('@')[0]}, *_a sua gayzisse é de_* '+ab+'`
