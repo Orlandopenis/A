@@ -72,8 +72,7 @@ rdaftar = "「 ᴀʟʙᴇᴅᴏ ʙᴏᴛ 」                       ⊱ᴄʀᴇ�
 rmenu = "「 ᴀʟʙᴇᴅᴏ ʙᴏᴛ 」                       ⊱ᴄʀᴇᴀᴛᴏʀ: ɴʏx"
 botinfo = "「 ᴀʟʙᴇᴅᴏ ʙᴏᴛ 」                       ⊱ᴄʀᴇᴀᴛᴏʀ: ɴʏx"
 limitt = 696969
-memberLimit = 1
-ban = []
+memberLimit = 0
 premium = ["558388440499@s.whatsapp.net","558196404969@s.whatsapp.net"]
 
 const ban = JSON.parse(fs.readFileSync('./database/json/banned.json'))
