@@ -451,8 +451,8 @@ case 'mediamenu':
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═━──━▒ *_MEDIA MENU_*
 ╠≽️ *_${prefix}play_* [TXT]
 ╠≽️ *_${prefix}pinterest_*
-║❏ ${prefix}ᴛɪᴋᴛᴏᴋꜱᴛᴀʟᴋ
-║❏ ${prefix}ᴏᴄʀ
+╠≽️ *_${prefix}facebook_*
+╠≽️ *_${prefix}tiktok_*
 ║❏ ${prefix}ɪᴍɢ2ᴜʀʟ
 ║❏ ${prefix}ᴛᴏᴍᴘ3
 ║❏ ${prefix}ɪɢꜱᴛᴀʟᴋ
@@ -475,10 +475,6 @@ case 'mediamenu':
 ║❏ ${prefix}ᴛɪᴋᴛᴏᴋ
 ║❏ ${prefix}ғᴏᴛᴏᴛɪᴋᴛᴏᴋ
 ║❏ ${prefix}ᴋʙʙɪ
-║❏ ${prefix}ᴡᴀɪᴛ
-║❏ ${prefix}ᴄʜᴏʀᴅ 
-║❏ ${prefix}ᴡɪᴋɪ 
-║❏ ${prefix}ʙʀᴀɪɴʟʏ 
 ║❏ ${prefix}ʀᴇꜱᴇᴘᴍᴀꜱᴀᴋᴀɴ 
 ║❏ ${prefix}ʙᴇʀɪᴛᴀʜᴏᴀx
 ║❏ ${prefix}ᴍᴀᴘ 
@@ -518,6 +514,7 @@ case 'groupmenu':
 			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═━──━▒ *_GROUP MENU_*
 ╠≽️ *_${prefix}grupo_* 
+╠≽️ *_${prefix}linkdogrupo_*
 ╠≽️ *_${prefix}setfoto_*
 ╠≽️ *_${prefix}infogrupo_*
 ╠≽️ *_${prefix}add_*
@@ -1256,22 +1253,6 @@ quoted: mek, caption: `Wah ganteng kek gua`
                         member.push(numerocinco.jid)
                         mentions(teks, member, true)
                                         break
-				case 'brainly':
-					if (!isUser) return reply(mess.only.userB)
-									
-					if (isBanned) return reply(mess.only.benned)
-					if (isLimit(sender)) return reply(limitend(pushname2))
-                    brien = body.slice(9)
-					brainly(`${brien}`).then(res => {
-					teks = '───────────────────────\n'
-					for (let Y of res.data) {
-						teks += `\n*「 _ʙʀᴀɪɴʟʏ_ 」*\n\n*➸ ᴘᴇʀᴛᴀɴʏᴀᴀɴ*\n ${Y.pertanyaan}\n\n*➸ ᴊᴀᴡᴀʙᴀɴ*\n ${Y.jawaban[0].text}\n────────────────────\n`
-					}
-					denz.sendMessage(from, teks, text, {quoted: mek, detectLinks: false})
-                        console.log(res)
-                    })
-                await limitAdd(sender)
-				break 
 				case 'registrar':
 					denz.updatePresence(from, Presence.composing)
 					if (isUser) return reply('*✘ *_Você já está registrado!_*')
@@ -2107,18 +2088,6 @@ reply(mess.wait)
 					denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
 					await limitAdd(sender) 
 					break 
-				case 'chord':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				reply(mess.wait)
-					if (args.length < 1) return reply('Mau Nyari Chord Lagu Apa??')
-					tels = body.slice(7)
-					anu = await fetchJson(`https://alfians-api.herokuapp.com/api/chord?q=${tels}`, {method: 'get'})
-					denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
-					await limitAdd(sender) 
-					break 
                case 'infogempa':
                if (isBanned) return reply(mess.only.benned)    
                if (!isUser) return reply(mess.only.userB)
@@ -2200,28 +2169,7 @@ reply(mess.wait)
                     }
                     reply(teks.trim())
 			     	await limitAdd(sender) 
-			     	break 
-
-				case 'fb':
-				  denz.updatePresence(from, Presence.composing)
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				reply(mess.wait)
-					if (args.length < 1) return reply('Urlnya mana gan?')
-					if (!isUrl(args[0]) && !args[0].includes('www.facebook.com')) return reply(mess.error.Iv)
-					reply(mess.wait)
-					anu = await fetchJson(`https://mhankbarbar.tech/api/epbe?url=${args[0]}&apiKey=${BarBarApi}`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					denz.sendMessage(from, '[ WAIT ] Sedang Diproses\n\nLinknya Only Google Gan Biar Bisa Didownload', text, {quoted: mek})
-					efbe = `Title: *${anu.title}*\nSize: *${anu.filesize}\nDipublikasikan Pada: *${anu.published}*`
-					tefbe = await getBuffer(anu.thumb)
-					denz.sendMessage(from, tefbe, image, {quoted: mek, caption: efbe})
-					buffer = await getBuffer(anu.result)
-					denz.sendMessage(from, buffer, video, {mimetype: 'video/mp4', quoted: mek, caption: 'Nih Gan'})
-					await limitAdd(sender) 
-					break 
+			     	break
 			case 'instaimg':
 				if (isBanned) return reply(mess.only.benned)
 				if (!isUser) return reply(mess.only.userB)
@@ -2309,42 +2257,34 @@ reply(mess.wait)
 				}
 				reply(hasil.trim())
 				await limitAdd(sender) 
-					break 
+					break
+//media menu
 					case 'tiktok':
-					case 'tiktoknowm': 
                  if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-				if (args.length < 1) return reply('Urlnya mana kak?')
-				if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(mess.error.lv)
-					 ige = body.slice(12)
-                     anu = await fetchJson(`http://lolhuman.herokuapp.com/api/tiktok?apikey=WEMPYGANSS&url=${args[0]}`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
+				if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
+                     anu = await fetchJson(`http://lolhuman.herokuapp.com/api/tiktok?apikey=AnjayB&url=${args[0]}`, {method: 'get'})
 					buffer = await getBuffer(anu.result.link)
                     denz.sendMessage(from, buffer, video, )
 				    break
-				case 'tiktokstalk':
-					try {
-					if (isBanned) return reply(mess.only.benned)    
-					if (!isUser) return reply(mess.only.userB)
-									
-					if (isLimit(sender)) return reply(limitend(pushname2))
-					if (args.length < 1) return denz.sendMessage(from, 'Usernamenya mana gan?', text, {quoted: mek})
-					let { user, stats } = await tiktod.getUserProfileInfo(args[0])
+				case 'facebook':
+				  denz.updatePresence(from, Presence.composing)
+				if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+				if (isLimit(sender)) return reply(limitend(pushname2))
+				reply(mess.wait)
+					if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
 					reply(mess.wait)
-					teks = `*ID* : ${user.id}\n*Username* : ${user.uniqueId}\n*Nickname* : ${user.nickname}\n*Followers* : ${stats.followerCount}\n*Followings* : ${stats.followingCount}\n*Posts* : ${stats.videoCount}\n*Menyukai* : ${stats.heart}\n`
-					buffer = await getBuffer(user.avatarLarger)
-					denz.sendMessage(from, buffer, image, {quoted: mek, caption: teks})
-					} catch (e) {
-					console.log(`Error :`, color(e,'red'))
-					reply('Kemungkinan username tidak valid')
-					}
+					anu = await fetchJson(`http://lolhuman.herokuapp.com/api/facebook?apikey=AnjayB&url=${args[0]}`, {method: 'get'})
+					buffer = await getBuffer(anu.result.link[1])
+					denz.sendMessage(from, buffer, video, {mimetype: 'video/mp4', quoted: mek})
 					await limitAdd(sender) 
-					break  
+					break 
 //creator  
 					case 'caderno':
 					if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-					if (args.length < 1) return reply(`${name} Harus Nulis Apa Kak??`)
+					if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto_*`)
 				ct = body.slice(8)
 				reply(mess.wait)
 				ct = await getBuffer(`http://lolhuman.herokuapp.com/api/nulis?apikey=RiuApikey&text=${ct}`)
@@ -3063,24 +3003,6 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					reply(`Limit Member berhasil di ubah menjadi : ${memberLimit}`)
 					break
 ////////////
-				case 'wait':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-						reply(mess.wait)
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						media = await denz.downloadMediaMessage(encmedia)
-						await wait(media).then(res => {
-							denz.sendMessage(from, res.video, video, {quoted: mek, caption: res.teks.trim()})
-						}).catch(err => {
-							reply(err)
-						})
-					} else {
-						reply('Foto aja mas')
-					}
-					break 
 	case 'infocuaca':
 	 if (isBanned) return reply(mess.only.benned)    
      if (!isUser) return reply(mess.only.userB)
@@ -3206,21 +3128,6 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
 
 // Akhir Fitur Premium 
 
-case 'wiki':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-                    if (args.length < 1) return reply('teks nya mana om?')
-                    reply(mess.wait)
-                   wiki = `${body.slice(6)}`
-                    anu = await fetchJson(`https://tobz-api.herokuapp.com/api/wiki?q=${wiki}&apikey=AKyAJwYdUGbO8jO3CGsK`, {method: 'get'})
-                    if (anu.error) return reply(anu.error)
-                    wikii = `${anu.result}`
-                    denz.sendMessage(from, wikii, text, {quoted: mek})
-                   await limitAdd(sender) 
-                   break  
-                   
                    case 'checkip':
          if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
