@@ -1815,9 +1815,8 @@ break
 					} catch {
 					ppUrl = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 					}
-                reply(mess.wait) // leave empty to get your own
 			    buffer = await getBuffer(ppUrl)
-		        denz.sendMessage(from, buffer, image, {quoted: mek, caption: `╔═══≽️ *_Group Info_*\n╠≽️ *Nome* : ${groupName}\n╠≽️ *Membros Totais* : ${groupMembers.length}\n╠≽️ *Admin Totais* : ${groupAdmins.length}\n╚═≽️ *_Developer ©_* : *ɴʏx*`})
+		        denz.sendMessage(from, buffer, image, {quoted: mek, caption: `╔═━──━▒ *_GROUP INFO_*\n╠≽️ *_Nome:_* ${groupName}\n╠≽️ *_Membros Totais:_* ${groupMembers.length}\n╠≽️ *_Admin Totais:_* ${groupAdmins.length}\n╚═━──━▒ *_GROUP INFO_*`})
                 break
 				case 'trendtwit':
 					denz.updatePresence(from, Presence.composing) 
@@ -1868,17 +1867,18 @@ break
 					await limitAdd(sender) 
 					break 
 				case 'linkgroup':
-				case 'linkgrup':
+				case 'linkgrupo':
 				case 'linkgc':
 				case 'linkdogrupo':
 				case 'grouplink':
+				case 'grupolink':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 								
 				    if (!isGroup) return reply(mess.only.group)
 				    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 				    linkgc = await denz.groupInviteCode (from)
-				    yeh = `https://chat.whatsapp.com/${linkgc}\n\n╔═══≽️ *_Link Request_*\n╠≽️ *Nome do Grupo :*\n╠≽️ *${groupName}*\n╠≽️ *Pedido feito por :*\n╠≽️ *${sender.split("@")[0]}*\n╚═≽️ *_Developer ©_* : *ɴʏx*`
+				    yeh = `https://chat.whatsapp.com/${linkgc}\n\n╔═━──━▒ *_LINK REQUEST_*\n╠≽️ *_Nome do Grupo:_*\n╠≽️ *${groupName}*\n╠≽️ *_Pedido feito por:_*\n╠≽️ *${sender.split("@")[0]}*\n╚═━──━▒ *_LINK REQUEST_*
 				    denz.sendMessage(from, yeh, text, {quoted: mek})
 			        break
 				case 'notificar':
@@ -2940,10 +2940,10 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (args[0] === 'abrir') {
-					    reply(`✘ *_ɢʀᴜᴘᴏ ᴀʙᴇʀᴛᴏ ᴘᴇʟᴏ ᴀᴅᴍɪɴ_*\n✘ *_ᴛᴏᴅᴏs ᴏs ᴘᴀʀᴛɪᴄɪᴘᴀɴᴛᴇs ᴘᴏᴅᴇᴍ ᴇɴᴠɪᴀʀ ᴍᴇɴsᴀɢᴇɴs ᴀɢᴏʀᴀ_*`)
+					    reply(`✘ *_O grupo, ${groupMetadata.subject}, foi aberto agora todos poderão enviar mensagens!_*`)
 						denz.groupSettingChange(from, GroupSettingChange.messageSend, false)
 					} else if (args[0] === 'fechar') {
-						reply(`✘ *_ᴏ ɢʀᴜᴘᴏ ғᴏɪ ғᴇᴄʜᴀᴅᴏ ᴘᴇʟᴏ ᴀᴅᴍɪɴ_*\n✘ *_ᴀᴘᴀʀᴛɪʀ ᴅᴇ ᴀɢᴏʀᴀ ᴀᴘᴇɴᴀs ᴀᴅᴍɪɴɪsᴛʀᴀᴅᴏʀᴇs ᴘᴏᴅᴇʀᴀᴏ ᴇɴᴠɪᴀʀ ᴍᴇɴsᴀɢᴇɴs_*`)
+						reply(`✘ *_O grupo, ${groupMetadata.subject}, foi fechado agora apenas administradores poderão enviar mensagens!_*`)
 						denz.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					}
 					break
