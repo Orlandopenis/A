@@ -107,7 +107,7 @@ async function starts() {
         fs.writeFileSync('./Fxc7.json', JSON.stringify(denz.base64EncodedAuthInfo(), null, '\t'))
 
 	denz.on('group-participants-update', async (anu) => {
-		if (!isWelkom.includes(anu.jid)) return
+		if (!welkom.includes(anu.jid)) return
 		try {
 			const mdata = await denz.groupMetadata(anu.jid)
 			console.log(anu)
@@ -185,8 +185,8 @@ async function starts() {
 			const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
 
 			const date = new Date().toLocaleDateString()
-			const time = moment.tz('America/Brasília').format('HH:mm:ss')
-			const jam = moment.tz('America/Brasília').format('HH:mm')
+			const time = moment.tz('America/Toronto').format('HH:mm:ss')
+			const jam = moment.tz('America/Toronto').format('HH:mm')
             body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : ''
 			budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : '' 
 			var Link = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''
