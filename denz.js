@@ -1438,7 +1438,7 @@ break
 					if (!isOwner) return reply(mess.only.ownerB)
 					if (args.length < 1) return reply(`✘ *_Mencione alguém que deseja desbanir_*`)
 					bnnd = body.slice(8)
-					ban.splice(`${bnnd}@s.whatsapp.net`, 1)
+					ban.splice(`${bnnd}@s.whatsapp.net`)
 					fs.writeFileSync('./database/json/banned.json', JSON.stringify(ban))
 					reply(`╔═━──━▒ *_DESBANIMENTO_*\n╠≽️ *_User:_*\n╠≽️ ${bnnd}\n╚═━──━▒ *_DESBANIMENTO_*`)
 					break
