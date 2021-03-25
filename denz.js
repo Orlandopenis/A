@@ -3446,9 +3446,8 @@ case 'wiki':
 				if (budy.includes("://chat.whatsapp.com/")){
 					if (!isGroup) return
 					if (!isAntiLink) return
-					if (isGroupAdmins) return reply(`*${pushname2}* ᴀᴅᴀʟᴀʜ ᴀᴅᴍɪɴ ɢʀᴏᴜᴘ ᴋᴀᴍᴜ ᴛɪᴅᴀᴋ ᴀᴋᴀɴ ᴅɪ ᴋɪᴄᴋ`)
+					if (isGroupAdmins) return reply(`✘ *_Aqui é proíbido links de grupos, você como admin deveria saber!_*`)
 					denz.updatePresence(from, Presence.composing)
-					if (messagesLink.includes("#izinadmin")) return reply("#izinadmin *_「 ᴅɪᴛᴇʀɪᴍᴀ 」_*")
 					var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 						reply(`✓ *_Um link de grupo foi detectado, você será removido em instantes!_*`)
 						setTimeout( () => {
@@ -3470,7 +3469,7 @@ denz.sendMessage(from, comd, text, {quoted: { key: { fromMe: false, participant:
 						console.log(muehe)
 						reply(muehe)
 					} else {
-						console.log(color('[AB]','aqua'), 'Comando solicitado do usuário registrado', color(sender.split('@')[0]))
+						console.log(color('[AB]','aqua'), 'Comando solicitado do usuário', color(sender.split('@')[0]))
 					}
                            }
 		} catch (e) {
