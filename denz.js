@@ -1878,7 +1878,7 @@ break
 				    if (!isGroup) return reply(mess.only.group)
 				    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 				    linkgc = await denz.groupInviteCode (from)
-				    yeh = `https://chat.whatsapp.com/${linkgc}\n\n╔═━──━▒ *_LINK REQUEST_*\n╠≽️ *_Nome do Grupo:_*\n╠≽️ *${groupName}*\n╠≽️ *_Pedido feito por:_*\n╠≽️ *${sender.split("@")[0]}*\n╚═━──━▒ *_LINK REQUEST_*
+				    yeh = `https://chat.whatsapp.com/${linkgc}\n\n╔═━──━▒ *_LINK REQUEST_*\n╠≽️ *_Nome do Grupo:_*\n╠≽️ *${groupName}*\n╠≽️ *_Pedido feito por:_*\n╠≽️ *${sender.split("@")[0]}*\n╚═━──━▒ *_LINK REQUEST_*`
 				    denz.sendMessage(from, yeh, text, {quoted: mek})
 			        break
 				case 'notificar':
@@ -1936,7 +1936,6 @@ break
 				case 'setname':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-								
                 if (!isGroup) return reply(mess.only.group)
 			    if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
