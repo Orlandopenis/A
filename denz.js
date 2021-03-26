@@ -2940,18 +2940,21 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
                   if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 				if (args.length < 1) return reply(`✘ *_Cade o texto filhote de cruz credo? brincadeirinha hehehe, mas forneça um texto..._*`)
-				try {
-                data = await fetchJson(`http://api.lolhuman.xyz/api/ytplay?apikey=RiuApikey&query=${body.slice(6)}`, {method: 'get'})
-                 reply(mess.wait)
-                 infomp3 = `*_「 PLAY 」_*\n\n*_「 Título 」_* : ${data.result.info.title}\n*_「 Duração 」_* : ${data.result.info.duration}\n*_「 Uploader 」_* : ${data.result.info.uploader}\n*_「 Views 」_* : ${data.result.info.view}\n*_「 Likes 」_* : ${data.result.info.like}\n*_「 Dislikes 」_* : ${data.result.info.dislike}\n*_「 Link 」_* : youtube.com/watch?v=${data.result.info.id}`
-                bufferddd = await getBuffer(data.result.info.thumbnail)
-                videofdp = await getBuffer(data.result.audio[3].link)
-                denz.sendMessage(from, bufferddd, image, {quoted: mek, caption: infomp3})
-                denz.sendMessage(from, videofdp, audio, {mimetype: 'audio/mp4', filename: `${data.result.info.title}.mp3`, quoted: mek })
-                await limitAdd(sender)
-                } catch {
-                	reply(mess.ferr)
-                }
+				query = args.join(" ")
+                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/ytplay?apikey=AnjayB&query=${query}`)
+                    get_result = get_result.result
+                    get_info = get_result.info
+                    txt = `Title : ${get_info.title}\n`
+                    txt += `Uploader : ${get_info.uploader}\n`
+                    txt += `Duração : ${get_info.duration}\n`
+                    txt += `View : ${get_info.view}\n`
+                    txt += `Like : ${get_info.like}\n`
+                    txt += `Dislike : ${get_info.dislike}\n`
+                    txt += `Descrição :\n ${get_info.description}\n`
+                    buffer = await getBuffer(get_info.thumbnail)
+                    denz.sendMessage(from, buffer, image, { quoted: mek, caption: txt })
+                    get_audio = await getBuffer(get_result.audio[3].link)
+                    denz.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_info.title}.mp3`, quoted: mek})
                 break
                 
                 case 'mimetypedeaudiooooo':
