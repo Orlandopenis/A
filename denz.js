@@ -391,7 +391,6 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠≽️ *_${prefix}ping_*
 ╠≽️ *_${prefix}limite_*
 ╠≽️ *_${prefix}users_*
-╠≽️ *_${prefix}banlist_*
 ╚═━──━▒ *_ALBEDO BOT INFO_*
 ╔═━──━▒ *_MENU's_*
 ╠≽️ *_#STICKERMENU_*
@@ -597,6 +596,7 @@ case 'ownermenu':
 ║❏ ${prefix}ʀᴇᴍᴏᴠᴇᴘʀᴇᴍ
 ╠≽️${prefix}ᴀᴅᴅʙᴡ *(OFF)*
 ╠≽️${prefix}ᴅᴇʟᴇᴛᴇʙᴡ *(OFF)*
+╠≽️ *_${prefix}banlist_*
 ║❏ ${prefix}ᴀᴅᴅʙᴜᴄɪɴ
 ║❏ ${prefix}ᴀᴅᴅᴀᴜᴅɪᴏ
 ║❏ ${prefix}ᴀᴅᴅꜱᴛɪᴄᴋᴇʀ
@@ -604,22 +604,23 @@ case 'ownermenu':
 ║❏ ${prefix}ʀᴇꜱᴇᴛʟɪᴍɪᴛ
 ║❏ ${prefix}ꜱᴇᴛʟɪᴍɪᴛ
 ║❏ ${prefix}ꜱᴇᴛᴘʀᴇғɪx
-╠≽️${prefix}ғᴏᴛᴏʙᴏᴛ
+╠≽️ *_${prefix}fotobot_*
 ║❏ ${prefix}ʙᴄ
 ║❏ ${prefix}ʙᴄɢᴄ
 ║❏ ${prefix}ʙᴀɴ
 ║❏ ${prefix}ᴜɴʙᴀɴ
-╠≽️${prefix}ʟɪᴍᴘᴀʀ
-╠≽️${prefix}ᴅᴇʟᴇᴛᴇ
-╠≽️${prefix}ᴄʟᴏɴᴀʀ
-╠≽️${prefix}sᴀɪʀ
+╠≽️ *_${prefix}limpar_*
+╠≽️ *_${prefix}delete_*
+╠≽️ *_${prefix}clonar_*
+╠≽️ *_${prefix}sair_*
 ╙───々`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
-            case 'help':
-brando = await getBuffer(`https://pencarikode.xyz/api/cita-cita?apikey=pais`, {method: 'get'})                
-denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "「 ᴀʟʙᴇᴅᴏ ʙᴏᴛ 」                       ⊱ ᴄʀᴇᴀᴛᴏʀ : ɴʏx", 'jpegThumbnail': fs.readFileSync('./sticker/dnsnew.webp')}}}})
-    	    break
+            
+            
+           //STICKER MENU
+           //STICKER MENU
+           //STICKER MENU
             case 'gifstiker':
 				case 'stiker':
 				case 'sticker':
@@ -706,15 +707,88 @@ denz.sendMessage(from, help(name), text, {quoted: mek, quoted: { key: { fromMe: 
 					}
 					await limitAdd(sender) 
 					break 
-					case 'shopee':
-                      if (isBanned) return reply(mess.only.benned)
-			        if (!isUser) return reply(mess.only.userB)
-			    hmml3 = await fetchJson(`https://pencarikode.xyz/api/shopee?search=${body.slice(8)}&apikey=pais`)
-                     buffer = await getBuffer(`https://e.top4top.io/p_1886uvsdz0.jpg`)
-                     hasilbg3 = `*Nama* : *_${hmml3.result[0].nama}_*\n*Harga* : *_${hmml3.result[0].harga}_*\n*Terjual* : *_${hmml3.result[0].terjual}_*\n*Tempat* : *_${hmml3.result[0].lokasi}_*\n*Link* : *_${hmml3.result[0].link_produk}_*\n*Deskripsi* : *_${hmml3.result[0].deskripsi}_**Nama* : *_${hmml3.result[1].nama}_*\n*Harga* : *_${hmml3.result[1].harga}_*\n*Terjual* : *_${hmml3.result[1].terjual}_*\n*Tempat* : *_${hmml3.result[1].lokasi}_*\n*Link* : *_${hmml3.result[1].link_produk}_*\n*Deskripsi* : *_${hmml3.result[1].deskripsi}_*`
-                    denz.sendMessage(from, buffer, image, {quoted: mek, caption: hasilbg3})
-                    await limitAdd(sender)
+					case 'semoji':
+                    if (args.length == 0) return reply(`✘ *_Este comando necessita de um emoji._*`)
+                    emoji = args[0]
+                    try {
+                        emoji = encodeURI(emoji[0])
+                    } catch {
+                        emoji = encodeURI(emoji)
+                    }
+                    buffer = await getBuffer(`http://api.lolhuman.xyz/api/smoji/${emoji}?apikey=AnjayB`)
+                    reply(mess.wait)
+                    denz.sendMessage(from, buffer, sticker, { quoted: mek})
                     break
+                    case 'animecry':
+				if (!isUser) return reply(mess.only.userB)
+				ranp = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson('https://tobz-api.herokuapp.com/api/cry?apikey=AKyAJwYdUGbO8jO3CGsK', {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(ranp)
+						if (err) return reply(mess.error.stick)
+						buffer = fs.readFileSync(rano)
+						denz.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSnc(rano)
+					})
+					await limitAdd(sender)
+					break
+					case 'animekiss':
+				if (!isUser) return reply(mess.only.userB)
+				ranp = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson('https://tobz-api.herokuapp.com/api/kiss?apikey=AKyAJwYdUGbO8jO3CGsK', {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(ranp)
+						if (err) return reply(mess.error.stick)
+						buffer = fs.readFileSync(rano)
+						denz.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender)
+					break
+					case 'animehug':
+				if (!isUser) return reply(mess.only.userB)
+				ranp = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson('https://tobz-api.herokuapp.com/api/hug?apikey=AKyAJwYdUGbO8jO3CGsK', {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(ranp)
+						if (err) return reply(mess.error.stick)
+						buffer = fs.readFileSync(rano)
+						denz.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender)
+					break
+					case 'ttp2':
+				if (isBanned) return reply(mess.only.benned)
+				if (!isUser) return reply(mess.only.userB)
+				                    if (args.length == 0) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
+                    txt = args.join(" ")
+                    buffer = await getBuffer(`http://api.lolhuman.xyz/api/ttp3?apikey=AnjayB&text=${txt}`)
+                    denz.sendMessage(from, buffer, sticker, { quoted: mek })
+                    break
+                    case 'ttp':
+                    if (isBanned) return reply(mess.only.benned)    
+                    if (!isUser) return reply(mess.only.userB)
+				if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
+				emoji = body.slice(5)
+                    try {
+                        emoji = encodeURI(emoji)
+                    } catch {
+                        emoji = encodeURI(emoji)
+                    }
+                    buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${emoji}`)
+                    denz.sendMessage(from, buffer, sticker, { quoted: mek })
+                    break
+                    //STICKER MENU
+                    //STICKER MENU
+                    //STICKER MENU
+                    
 // newmenu
 		case 'ocean': 				
 				case 'water':
@@ -743,58 +817,7 @@ break
 					})
 					await limitAdd(sender) 
 					break 
-					case 'antidelete':
-				const dataRevoke = JSON.parse(fs.readFileSync('./src/gc-revoked.json'))
-				const dataCtRevoke = JSON.parse(fs.readFileSync('./src/ct-revoked.json'))
-				const dataBanCtRevoke = JSON.parse(fs.readFileSync('./src/ct-revoked-banlist.json'))
-				const isRevoke = dataRevoke.includes(from)
-				const isCtRevoke = dataCtRevoke.data
-				const isBanCtRevoke = dataBanCtRevoke.includes(sender) ? true : false
-				const argz = body.split(' ')
-				if (argz.length === 1) return denz.sendMessage(from, `Penggunaan fitur antidelete :\n\n*${prefix}antidelete [aktif/mati]* (Untuk grup)\n*${prefix}antidelete [ctaktif/ctmati]* (untuk semua kontak)\n*${prefix}antidelete banct 628558xxxxxxx* (banlist kontak)`, MessageType.text)
-				if (argz[1] == 'aktif') {
-					if (isGroup) {
-						if (isRevoke) return denz.sendMessage(from, `Antidelete telah diaktifkan di grup ini sebelumnya!`, MessageType.text)
-						dataRevoke.push(from)
-						fs.writeFileSync('./lib/gc-revoked.json', JSON.stringify(dataRevoke, null, 2))
-						denz.sendMessage(from, `*Succes Enable Antidelete Grup!*`, MessageType.text)
-					} else if (!isGroup) {
-						denz.sendMessage(from, `Untuk kontak penggunaan *${prefix}antidelete ctaktif*`, MessageType.text)
-					}
-				} else if (argz[1] == 'ctaktif') {
-					if (!isGroup) {
-						if (isCtRevoke) return denz.sendMessage(from, `Antidelete telah diaktifkan di semua kontak sebelumnya!`, MessageType.text)
-						dataCtRevoke.data = true
-						fs.writeFileSync('./lib/ct-revoked.json', JSON.stringify(dataCtRevoke, null, 2))
-						denz.sendMessage(from, `Antidelete diaktifkan disemua kontak!`, MessageType.text)
-					} else if (isGroup) {
-						denz.sendMessage(from, `Untuk grup penggunaan *${prefix}antidelete aktif*`, MessageType.text)
-					}
-				} else if (argz[1] == 'banct') {
-					if (isBanCtRevoke) return denz.sendMessage(from, `kontak ini telah ada di database banlist!`, MessageType.text)
-					if (argz.length === 2 || argz[2].startsWith('0')) return denz.sendMessage(from, `Masukan nomer diawali dengan 62! contoh 6285928xxxxx`, MessageType.text)
-					dataBanCtRevoke.push(argz[2] + '@s.whatsapp.net')
-					fs.writeFileSync('./lib/ct-revoked-banlist.json', JSON.stringify(dataBanCtRevoke, null, 2))
-					denz.sendMessage(from, `Kontak ${argz[2]} telah dimasukan ke banlist antidelete secara permanen!`, MessageType.text)
-				} else if (argz[1] == 'mati') {
-					if (isGroup) {
-						const index = dataRevoke.indexOf(from)
-						dataRevoke.splice(index, 1)
-						fs.writeFileSync('./lib/gc-revoked.json', JSON.stringify(dataRevoke, null, 2))
-						denz.sendMessage(from, `*Succes disable Antidelete Grup!*`, MessageType.text)
-					} else if (!isGroup) {
-						denz.sendMessage(from, `Untuk kontak penggunaan *${prefix}antidelete ctmati*`, MessageType.text)
-					}
-				} else if (argz[1] == 'ctmati') {
-					if (!isGroup) {
-						dataCtRevoke.data = false
-						fs.writeFileSync('./lib/ct-revoked.json', JSON.stringify(dataCtRevoke, null, 2))
-						denz.sendMessage(from, `Antidelete dimatikan disemua kontak!`, MessageType.text)
-					} else if (isGroup) {
-						denz.sendMessage(from, `Untuk grup penggunaan *${prefix}antidelete mati*`, MessageType.text)
-					}
-				}
-				break
+					
 				case 'apkpure':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -828,13 +851,6 @@ quoted: mek
     reply(mess.wait)
   }
   break
-  case 'katadilan': 	
-                 if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-					anu = await fetchJson(`https://api.shizukaa.xyz/api/bacotandilan?apikey=itsmeiky633`, {method: 'get'})
-					reply(anu.result)
-					await limitAdd(sender)
-					break
 					case 'wasted':
 if (!isUser) return reply(mess.only.userB)
 var imgbb = require('imgbb-uploader')
@@ -1035,161 +1051,11 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
   reply('reply imagenya kak!')
 }
 break
-case 'cecan':
-if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-  tels = body.slice(5)
-  denz.updatePresence(from, Presence.composing)
-  ty = ["ulzhang girl",
-"cewek cantik",
-"cewe hijab",
-"cute girl",
-"cewe rusia cantik",
-"cewe jepang cantik",
-"cecan indo"]
-  nk = ty[Math.floor(Math.random() * ty.length)]
-  try {
-  data = await fetchJson(`https://api.fdci.se/sosmed/rep.php?gambar=${nk}`, {
-method: 'get'
-  })
-  reply(mess.wait)
-  n = JSON.parse(JSON.stringify(data));
-  nimek = n[Math.floor(Math.random() * n.length)];
-  pok = await getBuffer(nimek)
-  denz.sendMessage(from, pok, image, {
-quoted: mek, caption: `Gimana ?`
-  })
-  await limitAdd(sender)
-  } catch {
-    reply(mess.wait)
-  }
-  break
-  case 'cogan':
-  if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-  denz.updatePresence(from, Presence.composing)
-  uk = ["ulzhang boy","cowok keren","cowo ganteng","cogan","cogan jawa"]
-  nk = uk[Math.floor(Math.random() * uk.length)]
-  try {
-  data = await fetchJson(`https://api.fdci.se/sosmed/rep.php?gambar=${nk}`, {
-method: 'get'
-  })
-  reply(mess.wait)
-  n = JSON.parse(JSON.stringify(data));
-  nimek = n[Math.floor(Math.random() * n.length)];
-  pok = await getBuffer(nimek)
-  denz.sendMessage(from, pok, image, {
-quoted: mek, caption: `Wah ganteng kek gua`
-  })
-  await limitAdd(sender)
-  } catch {
-    reply(mess.wait)
-  }
-  break
-			case 'casal':
-					limitAdd(sender) 
-				    isLimit(sender)
-					if (isBanned) return reply(mess.only.benned)   
-					if (!isUser) return reply(mess.only.userB)
-					jds = []
-					const jdii = groupMembers
-					const koss = groupMembers
-					const akuu = jdii[Math.floor(Math.random() * jdii.length)]
-					const diaa = koss[Math.floor(Math.random() * koss.length)]
-					teks = `@${akuu.jid.split('@')[0]} ❤️ @${diaa.jid.split('@')[0]} `
-					jds.push(akuu.jid)
-					jds.push(diaa.jid)
-					mentions(teks, jds, true)
-					break
-					case 'slow':
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await denz.downloadAndSaveMediaMessage(encmedia)
-					ran = getRandom('.mp3')
-					exec(`ffmpeg -i ${media} -filter:a "atempo=0.7,asetrate=44100" ${ran}`, (err, stderr, stdout) => {
-						fs.unlinkSync(media)
-						if (err) return reply('Error!')
-						hah = fs.readFileSync(ran)
-						denz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
-						fs.unlinkSync(ran)
-					})
-				break
-				case 'engrossar':
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await denz.downloadAndSaveMediaMessage(encmedia)
-					ran = getRandom('.mp3')
-					exec(`ffmpeg -i ${media} -filter:a "atempo=1.6,asetrate=22100" ${ran}`, (err, stderr, stdout) => {
-						fs.unlinkSync(media)
-						if (err) return reply('Error!')
-						hah = fs.readFileSync(ran)
-						denz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
-						fs.unlinkSync(ran)
-					})
-				break
-              case 'tupai':
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await denz.downloadAndSaveMediaMessage(encmedia)
-					ran = getRandom('.mp3')
-					exec(`ffmpeg -i ${media} -filter:a "atempo=3/4,asetrate=44100" ${ran}`, (err, stderr, stdout) => {
-						fs.unlinkSync(media)
-						if (err) return reply('Error!')
-						hah = fs.readFileSync(ran)
-						denz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
-						fs.unlinkSync(ran)
-					})
-				break
-				case 'fast':
-                  if (isBanned) return reply(mess.only.benned)
-			if (!isUser) return reply(mess.only.userB)
-				encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-				media = await denz.downloadAndSaveMediaMessage(encmedia)
-				ran = getRandom('.mp3')
-				exec(`ffmpeg -i ${media} -filter:a "atempo=1.63,asetrate=44100" ${ran}`, (err, stderr, stdout) => {
-				fs.unlinkSync(media)
-				if (err) return reply('Error!')
-				uhh = fs.readFileSync(ran)
-				denz.sendMessage(from, uhh, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
-				fs.unlinkSync(ran)
-				})
-				break
-					case 'maistop':
-					limitAdd(sender) 
-				    isLimit(sender)
-					if (isBanned) return reply(mess.only.benned)   
-					if (!isUser) return reply(mess.only.userB)
-					if (!isGroup) return reply(mess.only.group)
-					membr = []
-					const nus = groupMembers
-					const msl = groupMembers
-					const siapss = nus[Math.floor(Math.random() * nus.length)]
-					const sipss = pushname2[Math.floor(Math.random() * msl.length)]
-					teks = `✓ *_O Cara mais top do grupo é o:_* @${siapss.jid.split('@')[0]}`
-					membr.push(siapss.jid)
-					mentions(teks, membr, true)
-					break
-					case 'tierlist':
-					if (isBanned) return reply(mess.only.benned)   
-					if (!isUser) return reply(mess.only.userB)
-					if (!isGroup) return reply(mess.only.group)
-                        member = []
-                        const exea = groupMembers
-                        const exeb = groupMembers
-                        const exec = groupMembers
-                        const exed = groupMembers
-                        const exee = groupMembers
-                        const numeroum = exea[Math.floor(Math.random() * exea.length)]
-                        const numerodois = exeb[Math.floor(Math.random() * exeb.length)]
-                        const numerotres = exec[Math.floor(Math.random() * exec.length)]
-                        const numeroquatro = exed[Math.floor(Math.random() * exed.length)]
-                        const numerocinco = exee[Math.floor(Math.random() * exee.length)]
-                        teks = `╔═━──━▒ *_TIERLIST_*\n╠≽️ *_SSS:_*\n╠≽️ @${numeroum.jid.split('@')[0]}\n╠≽️ *_SS:_*\n╠≽️ @${numerodois.jid.split('@')[0]}\n╠≽️ *_S:_*\n╠≽️ @${numerotres.jid.split('@')[0]}\n╠≽️ *_A:_*\n╠≽️ @${numeroquatro.jid.split('@')[0]}\n╠≽️ *_B:_*\n╠≽️ @${numerocinco.jid.split('@')[0]}\n╚═━──━▒ *_TIERLIST_*`
-                        member.push(numeroum.jid)
-                        member.push(numerodois.jid)
-                        member.push(numerotres.jid)
-                        member.push(numeroquatro.jid)
-                        member.push(numerocinco.jid)
-                        mentions(teks, member, true)
-                                        break
+					
 				case 'registrar':
+				case 'registro':
+				case 'register':
+				case 'registra':
 					denz.updatePresence(from, Presence.composing)
 					if (isUser) return reply('✘ *_Você já está registrado!_*')
 					if (isBanned) return reply(mess.only.benned)
@@ -1211,15 +1077,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 				denz.sendMessage(from, bahasa(prefix), text, {quoted: mek})
 				brando = await getBuffer(`https://pencarikode.xyz/api/cita-cita?apikey=pais`, {method: 'get'})                
                 denz.sendMessage(from, brando, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-				break 
-				case 'ttp2':
-				if (isBanned) return reply(mess.only.benned)
-				if (!isUser) return reply(mess.only.userB)
-				                    if (args.length == 0) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
-                    txt = args.join(" ")
-                    buffer = await getBuffer(`http://api.lolhuman.xyz/api/ttp3?apikey=AnjayB&text=${txt}`)
-                    denz.sendMessage(from, buffer, sticker, { quoted: mek })
-                    break
+				break
                     case 'phcomment':
                     if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
@@ -1232,19 +1090,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     denz.sendMessage(from, litsh, image, {quoted: mek})
                     await limitAdd(sender)
                     break
-                    case 'ttp':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-				if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
-				emoji = body.slice(5)
-                    try {
-                        emoji = encodeURI(emoji)
-                    } catch {
-                        emoji = encodeURI(emoji)
-                    }
-                    buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${emoji}`)
-                    denz.sendMessage(from, buffer, sticker, { quoted: mek })
-                    break
+                    
                     case 'emoji2img': 
                                   if (isBanned) return reply(mess.only.benned)    
                     if (!isUser) return reply(mess.only.userB)
@@ -1299,46 +1145,7 @@ litsh = await getBuffer(`http://api.lolhuman.xyz/api/textprome2/space?apikey=Anj
 denz.sendMessage(from, litsh, image, {quoted: mek})
 await limitAdd(sender)
 break
-				case 'info':
-					me = denz.user
-					user.push(sender)
-					uptime = process.uptime()
-					teks = `╔═━──━▒ *_BOT INFO's_*\n╠≽️ *_Bot Name:_* ${me.name}\n╠≽️ *_Owner:_*  NYX\n╠≽️ *_Prefix:_* ${prefix} \n╠≽️ *_Totais de Banidos:_* ${ban.length}\n╚═━──━▒ *_BOT INFO's_*`
-					const daca = fs.readFileSync('dnsnew.jpg');
-				    denz.sendMessage(from, daca, image, {quoted: mek, caption: teks})
-				    brando = await getBuffer(`https://pencarikode.xyz/api/cita-cita?apikey=pais`, {method: 'get'})               
-					break 
-				case 'users':
-					denz.updatePresence(from, Presence.composing) 
-									
-					if (!isUser) return reply(mess.only.userB)
-					if (!isOwner) return reply(mess.only.ownerB)    
-					teks = `╔═━──━▒ *_USER's_*\n`
-					teks += `╠≽️ *_Usuários Totais:_* ${user.length}\n╚═━──━▒ *_USER's_*`
-					denz.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": user}})
-					break
-				case 'banlist':
-				ben = '╔═━──━▒ *_BAN LIST_*\n'
-				ben += `╠≽️ *_Banidos Totais:_* ${ban.length}\n`
-				ben += `╚═━──━▒ *_BAN LIST_*`
-					denz.sendMessage(from, ben.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": ban}})
-					break
-				case 'ban':
-					if (!isOwner) return reply(mess.only.ownerB)
-					if (args.length < 1) return reply(`✘ *_Mencione alguém que deseja banir_*`)
-					bnnd = body.slice(6)
-					ban.push(`${bnnd}@s.whatsapp.net`)
-					fs.writeFileSync('./database/json/banned.json', JSON.stringify(ban))
-					reply(`╔═━──━▒ *_BANIMENTO_*\n╠≽️ *_User:_*\n╠≽️ ${bnnd}\n╚═━──━▒ *_BANIMENTO_*`)
-					break
-				case 'unban':
-					if (!isOwner) return reply(mess.only.ownerB)
-					if (args.length < 1) return reply(`✘ *_Mencione alguém que deseja desbanir_*`)
-					bnnd = body.slice(8)
-					ban.splice(`${bnnd}@s.whatsapp.net`)
-					fs.writeFileSync('./database/json/banned.json', JSON.stringify(ban))
-					reply(`╔═━──━▒ *_DESBANIMENTO_*\n╠≽️ *_User:_*\n╠≽️ ${bnnd}\n╚═━──━▒ *_DESBANIMENTO_*`)
-					break
+				
 case 'burnpaper':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
@@ -1556,30 +1363,7 @@ pink = await getBuffer(`http://lolhuman.herokuapp.com/api/textprome/blackpink?ap
 denz.sendMessage(from, pink, image, {quoted: mek})
 await limitAdd(sender)
 break
-				case 'addprem':
-					denz.updatePresence(from, Presence.composing)
-					if (args.length < 1) return
-					if (!isOwner) return reply(mess.only.ownerB)
-					addpremium = mek.message.extendedTextMessage.contextInfo.mentionedJid
-					premium = addpremium
-					reply(`*Berhasil Menambahkan ${premium} Ke database User Premium*`)
-					break
-				case 'removeprem':
-					if (!isOwner) return reply(mess.only.ownerB)
-					rprem = body.slice(13)
-					premium.splice(`${rprem}@s.whatsapp.net`, 1)
-					reply(`Berhasil Remove wa.me/${rprem} Dari User Premium`)
-					break
-				case 'readmore':
-					if (isBanned) return reply(mess.only.benned)    
-					if (!isUser) return reply(mess.only.userB)
-					if (args.length < 1) return reply('teks nya mana om?')
-					var kls = body.slice(9)
-					var has = kls.split("/")[0];
-					var kas = kls.split("/")[1];
-					if (args.length < 1) return reply(mess.blank)
-					denz.sendMessage(from, `${has}‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎${kas}` , text, { quoted: mek })
-					break
+				
 				case 'resetlimit':
 				if (!isOwner) return reply(mess.only.ownerB)
 				  var obj = []
@@ -1684,155 +1468,9 @@ break
                  denz.sendMessage(from, {displayname: "jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
                  denz.sendMessage(from, '✘ *_Esté é o contato do meu dono! Não faça nada desnecessário no pv._*',text, { quoted: mek} )
                  break
-                case 'mensfake':
-                 if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-           				
-				if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} @pessoa/mensagemfake/resposta_*`)
-				var gh = body.slice(8)
-				mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-					var replace = gh.split("/")[0];
-					var target = gh.split("/")[1];
-					var bot = gh.split("/")[2];
-					denz.sendMessage(from, `${bot}`, text, {quoted: { key: { fromMe: false, participant: `${mentioned}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target}` }}})
-					break
+                
 
-				case 'infogroup':
-				case 'groupinfo':
-				case 'infogrupo':
-				case 'grupoinfo':
-				case 'infogc':
-				if (isBanned) return reply(mess.only.benned)  
-				 				
-				if (!isUser) return reply(mess.only.userB)
-                denz.updatePresence(from, Presence.composing)
-                if (!isGroup) return reply(mess.only.group)
-                try {
-					ppUrl = await denz.getProfilePicture(from)
-					} catch {
-					ppUrl = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-					}
-			    buffer = await getBuffer(ppUrl)
-		        denz.sendMessage(from, buffer, image, {quoted: mek, caption: `╔═━──━▒ *_GROUP INFO_*\n╠≽️ *_Nome:_* ${groupName}\n╠≽️ *_Membros Totais:_* ${groupMembers.length}\n╠≽️ *_Admin Totais:_* ${groupAdmins.length}\n╚═━──━▒ *_GROUP INFO_*`})
-                break
-				case 'trendtwit':
-					denz.updatePresence(from, Presence.composing) 
-                     if (!isUser) return reply(mess.only.userB)
-               				
-                     if (isLimit(sender)) return reply(limitend(pushname2))
-					data = await fetchJson(`https://docs-jojo.herokuapp.com/api/trendingtwitter`, {method: 'get'})
-					reply(mess.wait)
-					teks = '=================\n'
-					for (let i of data.result) {
-						teks += `*Hastag* : ${i.hastag}\n*link* : ${i.link}\n*rank* : ${i.rank}\n*Tweet* : ${i.tweet}\n=================\n`
-					}
-					reply(teks.trim())
-					await limitAdd(sender) 
-					break 
-				case 'animehug':
-					ranp = getRandom('.gif')
-					rano = getRandom('.webp')
-					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/hug?apikey=AKyAJwYdUGbO8jO3CGsK`, {method: 'get'})
-                   if (!isUser) return reply(mess.only.userB)
-             				
-                   if (isLimit(sender)) return reply(limitend(pushname2))
-                   if (isBanned) return reply(mess.only.benned)
-                   if (!isGroup) return reply(mess.only.group)
-					reply(mess.wait)
-					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-						fs.unlinkSync(ranp)
-						buffer = fs.readFileSync(rano)
-						denz.sendMessage(from, buffer, sticker, {quoted: mek})
-						fs.unlinkSync(rano)
-					})
-					await limitAdd(sender) 
-					break 
-				case 'linkgroup':
-				case 'linkgrupo':
-				case 'linkgc':
-				case 'linkdogrupo':
-				case 'grouplink':
-				case 'grupolink':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				    if (!isGroup) return reply(mess.only.group)
-				    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-				    linkgc = await denz.groupInviteCode (from)
-				    yeh = `https://chat.whatsapp.com/${linkgc}\n\n╔═━──━▒ *_LINK REQUEST_*\n╠≽️ *_Nome do Grupo:_*\n╠≽️ *${groupName}*\n╠≽️ *_Pedido feito por:_*\n╠≽️ *${sender.split("@")[0]}*\n╚═━──━▒ *_LINK REQUEST_*`
-				    denz.sendMessage(from, yeh, text, {quoted: mek})
-			        break
-				case 'notificar':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isGroup) return reply(mess.only.group)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					var value = body.slice(11)
-					var group = await denz.groupMetadata(from)
-					var member = group['participants']
-					var mem = []
-					member.map( async adm => {
-					mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
-					})
-					var options = {
-					text: value,
-					contextInfo: { mentionedJid: mem },
-					quoted: mek
-					}
-					denz.sendMessage(from, options, text)
-					break
-					case 'gantengcek':
-				case 'cekganteng':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-					ganteng = body.slice(12)
-					const gan =['10%','30%','20%','40%','50%','60%','70%','62%','74%','83%','97%','100%','29%','94%','75%','82%','41%','39%']
-					const teng = gan[Math.floor(Math.random() * gan.length)]
-					denz.sendMessage(from, 'Pertanyaan : Cek Ganteng Bang *'+ganteng+'*\n\nJawaban : '+ teng +'', text, { quoted: mek })
-					break
-				case 'cantikcek':
-				case 'cekcantik':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-					cantik = body.slice(11)
-					if (args.length < 1) return reply('Yg Mau dicek Siapa Kak??')
-					const can =['10% banyak" perawatan ya kak:v\nCanda Perawatan:v','30% Semangat Kaka Merawat Dirinya><','20% Semangat Ya KakaðŸ‘','40% Wahh Kaka><','50% kaka cantik deh><','60% Hai CantikðŸŠ','70% Hai UkhtyðŸŠ','62% Kakak Cantik><','74% Kakak ni cantik deh><','83% Love You Kakak><','97% Assalamualaikum UkhtyðŸŠ','100% Kakak Pake Susuk ya??:v','29% Semangat Kakak:)','94% Hai Cantik><','75% Hai Kakak Cantik','82% wihh Kakak Pasti Sering Perawatan kan??','41% Semangat:)','39% Lebih SemangatðŸŠ']
-					const tik = can[Math.floor(Math.random() * can.length)]
-					denz.sendMessage(from, 'Pertanyaan : Cantik Cek Kakak *'+cantik+'*\n\nPersen Kecantikan : '+ tik +'', text, { quoted: mek })
-					break
-				case 'sair': 
-				    if (!isGroup) return reply(mess.only.group)
-					if (!isOwner) return reply(mess.only.ownerB)
-					setTimeout( () => {
-					denz.groupLeave (from) 
-					}, 2000)
-					setTimeout( () => {
-					denz.updatePresence(from, Presence.composing) 
-					denz.sendMessage(from, '✘ *_Estarei me retirando do grupo, Adeus a todos!_*', text) // ur cods
-					}, 0)
-					break
-				case 'setname':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-                if (!isGroup) return reply(mess.only.group)
-			    if (!isGroupAdmins) return reply(mess.only.admin)
-				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-                denz.groupUpdateSubject(from, `${body.slice(9)}`)
-                denz.sendMessage(from, `✓ *_O nome do grupo foi alterado com sucesso para:_* ${body.slice(9)}`, text, {quoted: mek})
-                break
-                case 'setdesc':
-                if (isBanned) return reply(mess.only.benned)    
-                if (!isUser) return reply(mess.only.userB)
-          				
-                if (!isGroup) return reply(mess.only.group)
-			    if (!isGroupAdmins) return reply(mess.only.admin)
-				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-                denz.groupUpdateDescription(from, `${body.slice(9)}`)
-                denz.sendMessage(from, `✓ *_A descrição do grupo foi alterada com sucesso para:_* ${body.slice(9)}`, text, {quoted: mek})
-                break
+				
 				case 'tts':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -1891,24 +1529,97 @@ break
 				    denz.sendMessage(from, ts, text, {quoted: mek})
 				   await limitAdd(sender)
 				   break 
-				case 'setfoto':
-	            if (isBanned) return reply(mess.only.benned)    
-	            if (!isUser) return reply(mess.only.userB)
-	      				
-                    if (!isGroup) return reply(mess.only.group)
-                    if (!isGroupAdmins) return reply(mess.only.admin)
-                    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-                    media = await denz.downloadAndSaveMediaMessage(mek)
-                    await denz.updateProfilePicture (from, media)
-                    reply(`✓ *_A foto do grupo foi alterada com sucesso._*`)
-                    break
-                case 'ping':
-                const timestamp = speed();
-                const latensi = speed() - timestamp 
-                hasil = `╔═━──━▒ *_VELOCIDADE_*\n╠≽️ *_Speed:_* ${latensi.toFixed(4)} segundos\n╚═━──━▒ *_VELOCIDADE_*`
-                denz.sendMessage(from, hasil, text, { quoted: mek})
-                    break
+				
+                
 //FUN MENU
+//FUN MENU
+//FUN MENU
+case 'mensfake':
+                 if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+           				
+				if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} @pessoa/mensagemfake/resposta_*`)
+				var gh = body.slice(8)
+				mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+					var replace = gh.split("/")[0];
+					var target = gh.split("/")[1];
+					var bot = gh.split("/")[2];
+					denz.sendMessage(from, `${bot}`, text, {quoted: { key: { fromMe: false, participant: `${mentioned}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target}` }}})
+					break
+					case 'maistop':
+					limitAdd(sender) 
+				    isLimit(sender)
+					if (isBanned) return reply(mess.only.benned)   
+					if (!isUser) return reply(mess.only.userB)
+					if (!isGroup) return reply(mess.only.group)
+					membr = []
+					const nus = groupMembers
+					const msl = groupMembers
+					const siapss = nus[Math.floor(Math.random() * nus.length)]
+					const sipss = pushname2[Math.floor(Math.random() * msl.length)]
+					teks = `✓ *_O Cara mais top do grupo é o:_* @${siapss.jid.split('@')[0]}`
+					membr.push(siapss.jid)
+					mentions(teks, membr, true)
+					break
+					case 'tierlist':
+					if (isBanned) return reply(mess.only.benned)   
+					if (!isUser) return reply(mess.only.userB)
+					if (!isGroup) return reply(mess.only.group)
+                        member = []
+                        const exea = groupMembers
+                        const exeb = groupMembers
+                        const exec = groupMembers
+                        const exed = groupMembers
+                        const exee = groupMembers
+                        const numeroum = exea[Math.floor(Math.random() * exea.length)]
+                        const numerodois = exeb[Math.floor(Math.random() * exeb.length)]
+                        const numerotres = exec[Math.floor(Math.random() * exec.length)]
+                        const numeroquatro = exed[Math.floor(Math.random() * exed.length)]
+                        const numerocinco = exee[Math.floor(Math.random() * exee.length)]
+                        teks = `╔═━──━▒ *_TIERLIST_*\n╠≽️ *_SSS:_*\n╠≽️ @${numeroum.jid.split('@')[0]}\n╠≽️ *_SS:_*\n╠≽️ @${numerodois.jid.split('@')[0]}\n╠≽️ *_S:_*\n╠≽️ @${numerotres.jid.split('@')[0]}\n╠≽️ *_A:_*\n╠≽️ @${numeroquatro.jid.split('@')[0]}\n╠≽️ *_B:_*\n╠≽️ @${numerocinco.jid.split('@')[0]}\n╚═━──━▒ *_TIERLIST_*`
+                        member.push(numeroum.jid)
+                        member.push(numerodois.jid)
+                        member.push(numerotres.jid)
+                        member.push(numeroquatro.jid)
+                        member.push(numerocinco.jid)
+                        mentions(teks, member, true)
+                                        break
+case 'casal':
+					limitAdd(sender) 
+				    isLimit(sender)
+					if (isBanned) return reply(mess.only.benned)   
+					if (!isUser) return reply(mess.only.userB)
+					jds = []
+					const jdii = groupMembers
+					const koss = groupMembers
+					const akuu = jdii[Math.floor(Math.random() * jdii.length)]
+					const diaa = koss[Math.floor(Math.random() * koss.length)]
+					teks = `@${akuu.jid.split('@')[0]} ❤️ @${diaa.jid.split('@')[0]} `
+					jds.push(akuu.jid)
+					jds.push(diaa.jid)
+					mentions(teks, jds, true)
+					break
+					case 'caderno':
+					if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+					if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto_*`)
+				ct = body.slice(8)
+				reply(mess.wait)
+				ct = await getBuffer(`http://lolhuman.herokuapp.com/api/nulis?apikey=AnjayB&text=${ct}`)
+				denz.sendMessage(from, ct, image, {caption: '✓ *_ᴀǫᴜɪ ᴇsᴛᴀ ᴏ sᴇᴜ ᴘᴇᴅɪᴅᴏ ت._*', quoted: mek})
+				await limitAdd(sender)
+				break
+case 'memeindo':
+				if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+								
+				if (isLimit(sender)) return reply(limitend(pushname2))
+				reply(mess.wait)
+					memein = await fetchJson(`https://api.zeks.xyz/api/memeindo?apikey=${ZeksApi}`)
+					buffer = await getBuffer(memein.result)
+					denz.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
+					await limitAdd(sender)
+					break 
          case 'letra':
          if (isBanned) return reply(mess.only.benned)   				
                 if (!isUser) return reply(mess.only.userB)
@@ -1927,6 +1638,37 @@ reply(mess.wait)
 					const te = ratee[Math.floor(Math.random() * ratee.length)]
 					denz.sendMessage(from, '✓ *_As chances '+rate+' são de '+ te+'_*', text, { quoted: mek })
 					break 
+					case 'checkip':
+         if (isBanned) return reply(mess.only.benned)
+			if (!isUser) return reply(mess.only.userB)
+				denz.updatePresence(from, Presence.composing) 
+				data = await fetchJson(`http://api.lolhuman.xyz/api/ipaddress/${args[0]}?apikey=AnjayB`)
+				reply(mess.wait)
+				hasil = `╔═══≽️ *_Check IP_*\n╠≽️ *_País:_* ${data.result.country}\n╠≽️ *_Sigla do País:_* ${data.result.countryCode}\n╠≽️ *_Estado:_* ${data.result.regionName}\n╠≽️ *_City:_* ${data.result.city}\n╠≽️ *_Lat.:_* ${data.result.lat}\n╠≽️ *_Long.:_* ${data.result.lon}\n╠≽️ *_Timezone:_* ${data.result.timezone}\n╠≽️ *_IP:_* ${data.result.query}\n╚═≽️ *_Developer ©_* : *ɴʏx*`
+				reply(hasil)
+				await limitAdd(sender)
+				break
+				case 'radargay':
+				limitAdd(sender) 
+				    isLimit(sender)
+					if (isBanned) return reply(mess.only.benned)   
+					if (!isUser) return reply(mess.only.userB)
+					if (!isGroup) return reply(mess.only.group)
+					membr = []
+					const rag = groupMembers
+					const sipsss = rag[Math.floor(Math.random() * rag.length)]
+					radargay = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
+					const ab = radargay[Math.floor(Math.random() * radargay.length)]
+					teks = `✓ *_O radar detectou um gay nas proximidades,_* @${sipsss.jid.split('@')[0]}, *_a sua gayzisse é de ${ab}_*`
+					membr.push(sipsss.jid)
+					mentions(teks, membr, true)
+					break
+				//FUN MENU
+				//FUN MENU
+				//FUN MENU
+				
+//BUILDS GENSHIN MENU
+//BUILDS GENSHIN MENU
 //BUILDS GENSHIN MENU
 case 'hutao':
 if (isBanned) return reply(mess.only.benned)    
@@ -1935,7 +1677,30 @@ reply(mess.wait)
 buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
-//MENU
+//BUILDS GENSHIN MENU
+//BUILDS GENSHIN MENU
+//BUILDS GENSHIN MENU
+
+//MENU MENU
+//MENU MENU
+//MENU MENU
+case 'info':
+					me = denz.user
+					user.push(sender)
+					uptime = process.uptime()
+					teks = `╔═━──━▒ *_BOT INFO's_*\n╠≽️ *_Bot Name:_* ${me.name}\n╠≽️ *_Owner:_*  NYX\n╠≽️ *_Prefix:_* ${prefix} \n╠≽️ *_Totais de Banidos:_* ${ban.length}\n╚═━──━▒ *_BOT INFO's_*`
+					const daca = fs.readFileSync('dnsnew.jpg');
+				    denz.sendMessage(from, daca, image, {quoted: mek, caption: teks})
+				    brando = await getBuffer(`https://pencarikode.xyz/api/cita-cita?apikey=pais`, {method: 'get'})               
+					break 
+				case 'users':
+					denz.updatePresence(from, Presence.composing)
+					if (!isUser) return reply(mess.only.userB)
+					if (!isOwner) return reply(mess.only.ownerB)    
+					teks = `╔═━──━▒ *_USER's_*\n`
+					teks += `╠≽️ *_Usuários Totais:_* ${user.length}\n╚═━──━▒ *_USER's_*`
+					denz.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": user}})
+					break
                 case 'report':
                 if (isBanned) return reply(mess.only.benned)    
                 if (!isUser) return reply(mess.only.userB)
@@ -1953,30 +1718,16 @@ break
                     denz.sendMessage('5519998707564@s.whatsapp.net', options, text, {quoted: mek})
                     reply('✓ *_Seu relatório foi enviado ao proprietário, relatórios falsos não serão respondidos e ocasionará no seu ban!_*')
                     break
-				case 'memeindo':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				reply(mess.wait)
-					memein = await fetchJson(`https://api.zeks.xyz/api/memeindo?apikey=${ZeksApi}`)
-					buffer = await getBuffer(memein.result)
-					denz.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
-					await limitAdd(sender)
-					break 
-				case 'ssweb':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					if (args.length < 1) return reply('Urlnya mana gan?')
-					teks = `${body.slice(7)}`
-					reply(mess.wait)
-					anu = await fetchJson(`https://mhankbarbar.tech/api/url2image?tipe=tablet&url=${teks}&apiKey=${BarBarApi}`)
-					ssweb = await getBuffer(anu.result)
-					denz.sendMessage(from, ssweb, image, {quoted: mek})
-					await limitAdd(sender)
-					break 
+                    case 'ping':
+                const timestamp = speed();
+                const latensi = speed() - timestamp 
+                hasil = `╔═━──━▒ *_VELOCIDADE_*\n╠≽️ *_Speed:_* ${latensi.toFixed(4)} segundos\n╚═━──━▒ *_VELOCIDADE_*`
+                denz.sendMessage(from, hasil, text, { quoted: mek})
+                    break
+                    //MENU MENU
+//MENU MENU
+//MENU MENU
+             
 					//NSFW MENU
 					
 					case 'nhentai':
@@ -2020,49 +1771,59 @@ break
                     denz.sendMessage(from, buffer, image, { quoted: mek})
                     break
                     
-                    //NÃO SEI
-                    
-				case 'hilih':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				reply(mess.wait)
-					if (args.length < 1) return reply('Teksnya mana gan?')
-					anu = await fetchJson(`https://api.i-tech.id/tools/hilih?key=${TechApi}&kata=${body.slice(7)}`, {method: 'get'})
-					denz.sendMessage(from, `${anu.result}`, text, {quoted: mek})
-					await limitAdd(sender) 
-					break 
-               case 'infogempa':
-               if (isBanned) return reply(mess.only.benned)    
-               if (!isUser) return reply(mess.only.userB)
-         				
-               if (isLimit(sender)) return reply(limitend(pushname2))
-                   anu = await fetchJson(`https://tobz-api.herokuapp.com/api/infogempa?apikey=AKyAJwYdUGbO8jO3CGsK`, {method: 'get'})
-                   if (anu.error) return reply(anu.error)
-                   buff = await getBuffer(anu.map)
-                   reply(mess.wait)
-                   gempa = `•Lokasi *${anu.lokasi}*\n• Waktu: *${anu.waktu}* \n• Potensi: *${anu.potensi}*\n• Magnitude: *${anu.magnitude}*\n• Kedalaman: *${anu.kedalaman}*\n• Koordinat: *${anu.koordinat}*`
-                   denz.sendMessage(from, buff, image, {quoted: mek, caption: gempa})
-                   await limitAdd(sender) 
-                   break 
-
-// akhir fitur anime
-                case 'resepmasakan':
-                if (isBanned) return reply(mess.only.benned)    
-                if (!isUser) return reply(mess.only.userB)
-          				
-                if (isLimit(sender)) return reply(limitend(pushname2))
-                reply(mess.wait)
-                   anu = await fetchJson(`https://masak-apa.tomorisakura.vercel.app/api/search?q=${body.slice(14)}`, {method: 'get'})
-                   masak = '==============================\n'
-                   for (let msk of anu.results){
-                   masak += `• *Title:* ${msk.title}\n• *• *Durasi Masak Sekitar:* ${msk.times}\n• *Porsi:* ${msk.serving}\n• *Tingkat Kesulitan:* ${msk.difficulty}\n• *Link:* https://www.masakapahariini.com/?s=${msk.key}\n==============================\n`
-                    }
-                   reply(masak.trim())
-                   await limitAdd(sender) 
-                   break 
-              
+                    //AUDIO MENU
+                    //AUDIO MENU
+                    //AUDIO MENU
+                    case 'slow':
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await denz.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${media} -filter:a "atempo=0.7,asetrate=44100" ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error!')
+						hah = fs.readFileSync(ran)
+						denz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
+						fs.unlinkSync(ran)
+					})
+				break
+				case 'engrossar':
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await denz.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${media} -filter:a "atempo=1.6,asetrate=22100" ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error!')
+						hah = fs.readFileSync(ran)
+						denz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
+						fs.unlinkSync(ran)
+					})
+				break
+              case 'tupai':
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await denz.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${media} -filter:a "atempo=3/4,asetrate=44100" ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error!')
+						hah = fs.readFileSync(ran)
+						denz.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
+						fs.unlinkSync(ran)
+					})
+				break
+				case 'fast':
+                  if (isBanned) return reply(mess.only.benned)
+			if (!isUser) return reply(mess.only.userB)
+				encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+				media = await denz.downloadAndSaveMediaMessage(encmedia)
+				ran = getRandom('.mp3')
+				exec(`ffmpeg -i ${media} -filter:a "atempo=1.63,asetrate=44100" ${ran}`, (err, stderr, stdout) => {
+				fs.unlinkSync(media)
+				if (err) return reply('Error!')
+				uhh = fs.readFileSync(ran)
+				denz.sendMessage(from, uhh, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
+				fs.unlinkSync(ran)
+				})
+				break
 				case 'bass':                 
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await denz.downloadAndSaveMediaMessage(encmedia)
@@ -2075,148 +1836,13 @@ break
 						fs.unlinkSync(ran)
 					})
 				break
-				  
-			case 'instastory':
-				if (isBanned) return reply(mess.only.benned)
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (args.length < 1) return reply('username??')
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				instor = `${body.slice(12)}`
-				anu = await fetchJson(`https://api.vhtear.com/igstory?query=${instor}&apikey=${VthearApi}`, {method: 'get'})
-				insta = '=========================\n'
-				for (let i of anu.result.story.itemlist) {
-				insta += `• *User:* ${anu.result.owner_username}\n• *Type:* ${i.type}\n• *Link:* ${i.urlDownload}\n=========================\n`
-				}
-				reply(insta.trim())
-				await limitAdd(sender)
-				break
-			case 'hekerbucin':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				hasil = hekerbucin[Math.floor(Math.random() * (hekerbucin.length))]
-				denz.sendMessage(from, '*'+hasil+'*', text, {quoted: mek})
-				await limitAdd(sender)
-				break 
+			//AUDIO MENU
+                    //AUDIO MENU
+                    //AUDIO MENU
 
-				case 'ytsearch':
-					if (isBanned) return reply(mess.only.benned)
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					if (args.length < 1) return reply('Yang mau di cari apaan? titit?')
-					anu = await fetchJson(`https://mhankbarbar.tech/api/ytsearch?q=${body.slice(10)}&apiKey=${BarBarApi}`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					teks = '=================\n'
-					for (let i of anu.result) {
-						teks += `*Title* : ${i.title}\n*Id* : https://youtu.be/${i.id}\n*Published* : ${i.publishTime}\n*Duration* : ${i.duration}\n*Views* : ${h2k(i.views)}\n=================\n`
-					}
-					reply(teks.trim())
-					break
-					
-				case 'film':
-				if (isBanned) return reply(mess.only.benned)
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				if (args.length < 1) return reply('Mau Cari Film Apa?')
-				reply(mess.wait)
-				anu = await fetchJson(`http://www.omdbapi.com/?s=${body.slice(6)}&plot=full&apikey=56b1b6f0&r=json`, {method: 'get'})
-				hasil = '=========================\n'
-				for(let film of anu.Search) {
-				hasil += `• *Title:* ${film.Title}\n• *Rilis Tahun:* ${film.Year}\n• *Type:* ${film.Type}\n• *Link:* https://m.imdb.com/title/${film.imdbID}\n=========================\n`
-				}
-				reply(hasil.trim())
-				await limitAdd(sender) 
-					break
-//media menu
-					case 'tiktok':
-                 if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-				if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
-                     anu = await fetchJson(`http://lolhuman.herokuapp.com/api/tiktok?apikey=AnjayB&url=${args[0]}`, {method: 'get'})
-                     reply(mess.wait)
-					buffer = await getBuffer(anu.result.link)
-                    denz.sendMessage(from, buffer, video, )
-				    break
-				case 'facebook':
-				  denz.updatePresence(from, Presence.composing)
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
-					reply(mess.wait)
-					ini_url = args[0]
-                    ini_url = await fetchJson(`http://api.lolhuman.xyz/api/facebook?apikey=AnjayB&url=${ini_url}`)
-                    ini_url = ini_url.result[0].link
-                    buffer = await getBuffer(ini_url)
-                    denz.sendMessage(from, buffer, video, { quoted: mek })
-                    break
-					case 'instagram':
-				if (isBanned) return reply(mess.only.benned)
-				if (!isUser) return reply(mess.only.userB)
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
-					reply(mess.wait)
-				    ini_url = args[0]
-                    ini_url = await fetchJson(`http://api.lolhuman.xyz/api/instagram?apikey=AnjayB&url=${ini_url}`)
-                    ini_url = ini_url.result
-                    ini_type = image
-                    if (ini_url.includes(".mp4")) ini_type = video
-                    buffer = await getBuffer(ini_url)
-                    denz.sendMessage(from, buffer, ini_type, { quoted: mek })
-                    break
-                    case 'pintereeeeeeeest':
-         if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					if (args.length < 1) return reply('✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} albedo._*')
-					pinte = body.slice(11)
-					anu = await fetchJson(`http://lolhuman.herokuapp.com/api/pinterest?apikey=AnjayB&query=${body.slice(11)}`, {method: 'get'})
-					reply(mess.wait)
-					pinehg = await getBuffer(anu.result)
-					denz.sendMessage(from, pinehg, image, {quoted: mek })
-					await limitAdd(sender) 
-					break 
-//creator  
-					case 'caderno':
-					if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-					if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto_*`)
-				ct = body.slice(8)
-				reply(mess.wait)
-				ct = await getBuffer(`http://lolhuman.herokuapp.com/api/nulis?apikey=AnjayB&text=${ct}`)
-				denz.sendMessage(from, ct, image, {caption: '✓ *_ᴀǫᴜɪ ᴇsᴛᴀ ᴏ sᴇᴜ ᴘᴇᴅɪᴅᴏ ت._*', quoted: mek})
-				await limitAdd(sender)
-				break
-//akhir kreator
-			    case 'jarak':
-			    if (isBanned) return reply(mess.only.benned)    
-			    if (!isUser) return reply(mess.only.userB)
-			    				
-			    if (isLimit(sender)) return reply(limitend(pushname2))
-			    jarak = `${body.slice(7)}`
-			    ja = jarak.split("/")[0];
-			    rak = jarak.split("/")[1];
-			    anu = await fetchJson(`https://api.vhtear.com/distance?from=${ja}&to=${rak}&apikey=${VthearApi}`, {method: 'get'})
-			    denz.sendMessage(from, `${anu.result.data}`, text, {quoted: mek})
-			    await limitAdd(sender) 
-			    break  
-			    case 'infoalamat':
-			    if (isBanned) return reply(mess.only.benned)    
-			    if (!isUser) return reply(mess.only.userB)
-			    				
-			    if (isLimit(sender)) return reply(limitend(pushname2))
-			    reply(mess.wait)
-                    anu = await fetchJson(`https://api.vhtear.com/infoalamat?query=${body.slice(12)}&apikey=${VthearApi}`, {method: 'get'})
-			        denz.sendMessage(from, `${anu.result.data}`, text, {quoted: mek})
-			        await limitAdd(sender) 
-			        break 
-			
+					//ENCURTADOR MENU
 			//ENCURTADOR MENU
-			
+			//ENCURTADOR MENU
 			case 'shrtco':
 			    if (isBanned) return reply(mess.only.benned)    
 			    if (!isUser) return reply(mess.only.userB)
@@ -2249,90 +1875,43 @@ break
 				reply(hasil)
 				await limitAdd(sender)
 				break
+				//ENCURTADOR MENU
+				//ENCURTADOR MENU
+				//ENCURTADOR MENU
 				
-				//NÃO SEI
-				
-			    case 'infonomor':
-			    if (isBanned) return reply(mess.only.benned)    
-			    if (!isUser) return reply(mess.only.userB)
-			    				
-			    if (isLimit(sender)) return reply(limitend(pushname2))
-			    reply(mess.wait)
-                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/infonomor?no=${body.slice(10)}`)
-			        infonomor = `*nomor* \n${anu.nomor} *international* \n${anu.international}`
-			        reply(infonomor)
-			        await limitAdd(sender) 
-			        break 
-			    case 'mimpi':
-			    if (isBanned) return reply(mess.only.benned)
-			        if (isLimit(sender)) return reply(limitend(pushname2))
-			    if (!isUser) return reply(mess.only.userB)
-			    				
-			    reply(mess.wait)
-			        anu = await fetchJson(`https://api.arugaz.my.id/api/primbon/tafsirmimpi?mimpi=${body.slice(7)}`, {method: 'get'})
-			        mimpi = `Arti Mimpi *${body.slice(7)}* Adalah:\n${anu.result.hasil}`
-			        denz.sendMessage(from, mimpi, text, {quoted: mek})
-			        await limitAdd(sender) 
-			       	break 
-				case 'quotes':
-				denz.updatePresence(from, Presence.composing) 
-				 if (isBanned) return reply(mess.only.benned)    
-				 if (isLimit(sender)) return reply(limitend(pushname2))
-				if (!isUser) return reply(mess.only.userB)
-								
-				 data = fs.readFileSync('./Fxc7/quotes.js');
-                 jsonData = JSON.parse(data);
-                 randIndex = Math.floor(Math.random() * jsonData.length);
-                 randKey = jsonData[randIndex];
-                 randQuote = 'Author: *'+randKey.author+'*\n\n*'+randKey.quotes+'*'
-                 denz.sendMessage(from, randQuote, text, {quoted: mek})
-				await limitAdd(sender) 
-					break 
-				case 'katabijak':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					anu = await fetchJson(`https://api.arugaz.my.id/api/random/text/katabijak`, {method: 'get'})
-					katabijak = `Kata Bijak: *${anu.result}*`
-					denz.sendMessage(from, katabijak, text, {quoted: mek})
-					await limitAdd(sender) 
-					break 
-
-			case 'profiltiktok':
-			    if (isBanned) return reply(mess.only.benned)    
-			    if (!isUser) return reply(mess.only.userB)
-			    				
-			    if (isLimit(sender)) return reply(limitend(pushname2))
-			    reply(mess.wait)
-                    anu = await fetchJson(`https://api.vhtear.com/tiktokprofile?query=${body.slice(14)}&apikey=${VthearApi}`, {method: 'get'})
-			        tiktok = await getBuffer(anu.result.picture)
-              denz.sendMessage(from, tiktok, image, {quoted: mek})
-			        await limitAdd(sender) 
-			        break 
-				case 'darkjokes':
-				denz.updatePresence(from, Presence.composing) 
-				 if (isBanned) return reply(mess.only.benned)    
-				 if (isLimit(sender)) return reply(limitend(pushname2))
-				if (!isUser) return reply(mess.only.userB)
-								
-				reply(mess.wait)
-				 data = fs.readFileSync('./Fxc7/drak.js');
-                 jsonData = JSON.parse(data);
-                 randIndex = Math.floor(Math.random() * jsonData.length);
-                 randKey = jsonData[randIndex];
-                 darkjokes = await getBuffer(randKey.result)
-                 denz.sendMessage(from, darkjokes, image, {quoted: mek, caption: '\`\`\`DARK JOKES\`\`\`'})
-				await limitAdd(sender) 
-				break  
-			case 'katailham':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				hasil = katailham[Math.floor(Math.random() * (katailham.length))]
-				denz.sendMessage(from, '*'+hasil+'*', text, {quoted: mek})
-				await limitAdd(sender)
-				break 
+            //OWNER MENU
+		    //OWNER MENU
+			//OWNER MENU
+			case 'banlist':
+			if(!isOwner) return reply(mess.only.ownerB)
+				ben = '╔═━──━▒ *_BAN LIST_*\n'
+				ben += `╠≽️ *_Banidos Totais:_* ${ban.length}\n`
+				ben += `╚═━──━▒ *_BAN LIST_*`
+					denz.sendMessage(from, ben.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": ban}})
+					break
+				case 'ban':
+					if (!isOwner) return reply(mess.only.ownerB)
+					if (args.length < 1) return reply(`✘ *_Mencione alguém que deseja banir_*`)
+					bnnd = body.slice(6)
+					ban.push(`${bnnd}@s.whatsapp.net`)
+					fs.writeFileSync('./database/json/banned.json', JSON.stringify(ban))
+					reply(`╔═━──━▒ *_BANIMENTO_*\n╠≽️ *_User:_*\n╠≽️ ${bnnd}\n╚═━──━▒ *_BANIMENTO_*`)
+					break
+				case 'unban':
+					if (!isOwner) return reply(mess.only.ownerB)
+					if (args.length < 1) return reply(`✘ *_Mencione alguém que deseja desbanir_*`)
+					bnnd = body.slice(8)
+					ban.splice(`${bnnd}@s.whatsapp.net`)
+					fs.writeFileSync('./database/json/banned.json', JSON.stringify(ban))
+					reply(`╔═━──━▒ *_DESBANIMENTO_*\n╠≽️ *_User:_*\n╠≽️ ${bnnd}\n╚═━──━▒ *_DESBANIMENTO_*`)
+					break
+			case 'addbucin':
+                    if (!isOwner) return reply(mess.only.owner)
+				    huu = body.slice(10)
+						bucinrandom.push(huu)
+						fs.writeFileSync('./database/json/bucin.json', JSON.stringify(bucinrandom))
+						reply(`Sukses, Kata \n*${huu}*\n Telah Ditambahkan ke database`)
+						break
 				case 'addsticker':
 				if (!isOwner) return reply(mess.only.ownerB)
 			    if (!isQuotedSticker) return reply('Reply stiker nya')
@@ -2353,135 +1932,7 @@ break
                    fs.writeFileSync(`./mp3/${gsh}.mp3`, gx)
                     reply('Berhasil menyimpan audio!')
                      break
-                     case 'katacinta':	
-                 if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-					gatauda = body.slice(8)
-					anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/katacinta`, {method: 'get'})
-					reply(anu.result)
-					await limitAdd(sender)
-					break
-				
-			case 'pasangan':
-			if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				pa = `${body.slice(10)}`
-				sa = pa.split("/")[0];
-				ngan = pa.split("/")[1];
-				anu = await fetchJson(`https://api.vhtear.com/primbonjodoh?nama=${sa}&pasangan=${ngan}&apikey=${VthearApi}`, {method: 'get'})
-				denz.sendMessage(from, `${anu.result.hasil}`, {quoted: mek})
-			await limitAdd(sender) 
-			break 
-
-			case 'radargay':
-				limitAdd(sender) 
-				    isLimit(sender)
-					if (isBanned) return reply(mess.only.benned)   
-					if (!isUser) return reply(mess.only.userB)
-					if (!isGroup) return reply(mess.only.group)
-					membr = []
-					const rag = groupMembers
-					const sipsss = rag[Math.floor(Math.random() * rag.length)]
-					radargay = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
-					const ab = radargay[Math.floor(Math.random() * radargay.length)]
-					teks = `✓ *_O radar detectou um gay nas proximidades,_* @${sipsss.jid.split('@')[0]}, *_a sua gayzisse é de ${ab}_*`
-					membr.push(sipsss.jid)
-					mentions(teks, membr, true)
-					break
-			case 'pbucin':
-			case 'persenbucin':
-			case 'bucinpersen':
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-				if (args.length < 1) return reply('Mana Nama?')
-				rate = body.slice(8)
-				persenbucin = ["4%\n\nHadehhðŸ¤¦","9%\n\nMasih Kecil Dah Bucin Ae","17%\n\nNakk Masih Kecil","28%\n\nYoalahh hmm","34%\n\nMayan Lah","48%\n\nGatau","59%\n\nBiasa Kang Bucin","62%\n\n HadehhhðŸƒ","74%\n\n bucen Teroosss","83%\n\n SekaliÂ² kek Ga bucin Gitu","97%\n\nHadehh PakboiÂ²","100%\n\nHadehhh Ini Bukan Bucin Tapi Pakboi","29%\n\nKasian Mana Masih Muda","94%\n\n Dasar Pakboi","75%\n\n Ya Ampun"]
-				const pbucin = persenbucin[Math.floor(Math.random() * persenbucin.length)]
-				denz.sendMessage(from, 'Persen Bucin Kak: *'+rate+'*\n\nJawaban : '+ pbucin +'', text, { quoted: mek })
-				await limitAdd(sender) 
-				break 
-		    case 'map':
-		if (!isUser) return reply(mess.only.userB)
-				if (isLimit(sender)) return reply(limitend(pushname2))
-anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slice(5)}`, {method: 'get'})
-					buffer = await getBuffer(anu.gambar)
-					denz.sendMessage(from, buffer, image, {quoted: mek, caption: `${body.slice(5)}`})
-					await limitAdd(sender)
-					break
-				case 'url2img':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					tipelist = ['desktop','tablet','mobile']
-					if (args.length < 1) return reply('Tipenya apa gan?')
-					if (!tipelist.includes(args[0])) return reply('Tipe desktop|tablet|mobile')
-					if (args.length < 2) return reply('Urlnya mana gan?')
-					if (!isUrl(args[1])) return reply(mess.error.Iv)
-					reply(mess.wait)
-					anu = await fetchJson(`https://mhankbarbar.tech/api/url2image?tipe=${args[0]}&url=${args[1]}&apiKey=${BarBarApi}`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					url2img = await getBuffer(anu.result)
-					denz.sendMessage(from, url2img, image, {quoted: mek})
-					await limitAdd(sender)
-					break
-			    case 'everyone':
-			    if (isBanned) return reply(mess.only.benned)    
-			    if (!isUser) return reply(mess.only.userB)
-			    				
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					members_id = []
-					teks = '\n'
-					for (let mem of groupMembers) {
-						teks += `╠≽️ @${mem.jid.split('@')[0]}\n`
-						members_id.push(mem.jid)
-					}
-					mentions(`╔═━──━▒ *_EVERYONE_*`+teks+'╚═━──━▒ *_EVERYONE_*', members_id, true)
-					break
-			    case 'kbbi':
-			    if (isBanned) return reply(mess.only.benned)    
-			    if (!isUser) return reply(mess.only.userB)
-			    				
-			    if (isLimit(sender)) return reply(limitend(pushname2))
-			    reply(mess.wait)
-					if (args.length < 1) return reply('Apa yang mau dicari gan?')
-					anu = await fetchJson(`https://mnazria.herokuapp.com/api/kbbi?search=${body.slice(6)}`, {method: 'get'})
-					reply('Menurut Kbbi:\n\n'+anu.result)
-					await limitAdd(sender)
-					break 
-					case 'grup':
-					case 'gc':
-					case 'group':
-					case 'grupo':
-					if (isBanned) return reply(mess.only.benned)    
-					if (!isUser) return reply(mess.only.userB)
-									
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (args[0] === 'abrir') {
-					    reply(`✘ *_O grupo, ${groupMetadata.subject}, foi aberto agora todos poderão enviar mensagens!_*`)
-						denz.groupSettingChange(from, GroupSettingChange.messageSend, false)
-					} else if (args[0] === 'fechar') {
-						reply(`✘ *_O grupo, ${groupMetadata.subject}, foi fechado agora apenas administradores poderão enviar mensagens!_*`)
-						denz.groupSettingChange(from, GroupSettingChange.messageSend, true)
-					}
-					break
-				case 'artinama':
-				if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					if (args.length < 1) return reply('Apa yang mau dicari gan?')
-					anu = await fetchJson(`https://mnazria.herokuapp.com/api/arti?nama=${body.slice(6)}`, {method: 'get'})
-					denz.sendMessage(from, anu.result, text, {quoted: mek})
-					await limitAdd(sender) 
-					break 
-				case 'limpar':
+                     case 'limpar':
 					if (!isOwner) return reply('✘ *_ᴇsᴛᴇ ᴄᴏᴍᴀɴᴅᴏ ᴇ ᴇsᴘᴇᴄɪғɪᴄᴏ ᴘᴀʀᴀ ᴏ ᴅᴏɴᴏ ᴅᴏ ʙᴏᴛ, ɴʏx_*')
 					anu = await denz.chats.all()
 					denz.setMaxListeners(25)
@@ -2525,6 +1976,214 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
 							sendMess(_.jid, `「 *_ʙʀᴏᴀᴅᴄᴀꜱᴛ_* 」\n\n${body.slice(4)}`)
 						}
 						reply('Suksess broadcast')
+					}
+					break
+					case 'do':
+                    if (!isOwner) return reply(mess.only.ownerB)
+					denz.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+					break
+                    case 'addbw':
+                    if (!isOwner) return reply(mess.only.ownerB)
+                    if (args.length < 1) return reply( `Kirim perintah ${prefix}addbadword [kata kasar]. contoh ${prefix}addbadword bego`)
+                    const bw = args.join(" ")
+                    bad.push(bw)
+                    fs.writeFileSync('./database/json/bad.json', JSON.stringify(bad))
+                    reply('✓ *_ᴀ ᴘᴀʟᴀᴠʀᴀ ᴅᴇsᴇᴊᴀᴅᴀ ғᴏɪ ᴄᴏʟᴏᴄᴀᴅᴀ ɴᴀ ʟɪsᴛᴀ ᴅᴇ ᴘᴀʟᴀᴠʀᴀs ᴘʀᴏʙɪᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ_*')
+                    break
+                    case 'fotobot':
+					if (!isOwner) return reply(mess.only.owner)
+				    denz.updatePresence(from, Presence.composing) 
+					if (!isQuotedImage) return reply(`✘ *_Mencione a imagem que você deseja colocar como foto de perfil do bot_*`)
+					enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await denz.downloadAndSaveMediaMessage(enmedia)
+					await denz.updateProfilePicture(botNumber, media)
+					reply('✓ *_A foto do bot foi atualizada com sucesso._*')
+					break
+                case 'deletebw':
+                    if (!isOwner) return reply(mess.only.ownerB)
+                    if (args.length < 1) return reply( `Kirim perintah ${prefix}delbadword [kata kasar]. contoh ${prefix}delbadword bego`)
+                    let dbw = args.join(" ")
+                    bad.splice(dbw)
+                    fs.writeFileSync('./database/json/bad.json', JSON.stringify(bad))
+                    reply('✓ *_ᴀ ᴘᴀʟᴀᴠʀᴀ ᴅᴇsᴇᴊᴀᴅᴀ ғᴏɪ ʀᴇᴛɪʀᴀᴅᴀ ᴅᴀ ʟɪsᴛᴀ ᴅᴇ ᴘᴀʟᴀᴠʀᴀs ᴘʀᴏʙɪᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ_*')
+                    break 
+                    case 'clonar':
+				if (!isOwner) return reply(mess.only.ownerB)
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (args.length < 1) return reply('✘ *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ʀᴏᴜʙᴀʀ ᴏ ᴘᴇʀғɪʟ_*')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag gan')
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
+					try {
+						pp = await denz.getProfilePicture(id)
+						buffer = await getBuffer(pp)
+						denz.updateProfilePicture(botNumber, buffer)
+						mentions(`✓ *_ᴀ ғᴏᴛᴏ ᴅᴀ ᴘᴇssᴏᴀ > @${id.split('@')[0]} ғᴏɪ ʀᴏᴜʙᴀᴅᴀ ᴇ sᴇᴛᴀᴅᴀ ᴅᴇ ᴘᴇʀғɪʟ ɴᴏ ʙᴏᴛ_*`, [jid], true)
+					} catch (e) {
+						reply('✘ *_ᴀʟɢᴏ ᴅᴇᴜ ᴇʀʀᴀᴅᴏ !_*')
+					}
+					break
+				case 'setprefix':
+				case 'setpref':
+					if (args.length < 1) return
+					if (!isOwner) return reply(mess.only.ownerB)
+					prefix = args[0]
+					reply(`Prefix berhasil di ubah menjadi : ${prefix}`)
+					break 
+					case 'setlimit':
+					if (args.length < 1) return
+					if (!isOwner) return reply(mess.only.ownerB)
+					limitt = args[0]
+					reply(`Limit berhasil di ubah menjadi : ${limitt}`)
+					break 
+				case 'setmemlimit':
+					if (args.length < 1) return
+					if (!isOwner) return reply(mess.only.ownerB)
+					memberLimit = args[0]
+					reply(`Limit Member berhasil di ubah menjadi : ${memberLimit}`)
+					break
+                    //OWNER MENU
+                    //OWNER MENU
+                    //OWNER MENU
+                    
+                     //FUN MENU
+                     //FUN MENU
+                     //FUN MENU
+			
+					//FUN MENU
+			        //FUN MENU
+			        //FUN MENU
+			
+			//GRUPO MENU
+			//GRUPO MENU
+			//GRUPO MENU
+			case 'infogroup':
+				case 'groupinfo':
+				case 'infogrupo':
+				case 'grupoinfo':
+				case 'infogc':
+				if (isBanned) return reply(mess.only.benned)  
+				 				
+				if (!isUser) return reply(mess.only.userB)
+                denz.updatePresence(from, Presence.composing)
+                if (!isGroup) return reply(mess.only.group)
+                try {
+					ppUrl = await denz.getProfilePicture(from)
+					} catch {
+					ppUrl = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+					}
+			    buffer = await getBuffer(ppUrl)
+		        denz.sendMessage(from, buffer, image, {quoted: mek, caption: `╔═━──━▒ *_GROUP INFO_*\n╠≽️ *_Nome:_* ${groupName}\n╠≽️ *_Membros Totais:_* ${groupMembers.length}\n╠≽️ *_Admin Totais:_* ${groupAdmins.length}\n╚═━──━▒ *_GROUP INFO_*`})
+                break
+				
+				case 'linkgroup':
+				case 'linkgrupo':
+				case 'linkgc':
+				case 'linkdogrupo':
+				case 'grouplink':
+				case 'grupolink':
+				if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+								
+				    if (!isGroup) return reply(mess.only.group)
+				    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+				    linkgc = await denz.groupInviteCode (from)
+				    yeh = `https://chat.whatsapp.com/${linkgc}\n\n╔═━──━▒ *_LINK REQUEST_*\n╠≽️ *_Nome do Grupo:_*\n╠≽️ *${groupName}*\n╠≽️ *_Pedido feito por:_*\n╠≽️ *${sender.split("@")[0]}*\n╚═━──━▒ *_LINK REQUEST_*`
+				    denz.sendMessage(from, yeh, text, {quoted: mek})
+			        break
+				case 'notificar':
+				if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+								if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isGroup) return reply(mess.only.group)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					var value = body.slice(11)
+					var group = await denz.groupMetadata(from)
+					var member = group['participants']
+					var mem = []
+					member.map( async adm => {
+					mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+					})
+					var options = {
+					text: value,
+					contextInfo: { mentionedJid: mem },
+					quoted: mek
+					}
+					denz.sendMessage(from, options, text)
+					break
+					
+				case 'sair': 
+				    if (!isGroup) return reply(mess.only.group)
+					if (!isOwner) return reply(mess.only.ownerB)
+					setTimeout( () => {
+					denz.groupLeave (from) 
+					}, 2000)
+					setTimeout( () => {
+					denz.updatePresence(from, Presence.composing) 
+					denz.sendMessage(from, '✘ *_Estarei me retirando do grupo, Adeus a todos!_*', text) // ur cods
+					}, 0)
+					break
+				case 'setname':
+				if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+                if (!isGroup) return reply(mess.only.group)
+			    if (!isGroupAdmins) return reply(mess.only.admin)
+				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+                denz.groupUpdateSubject(from, `${body.slice(9)}`)
+                denz.sendMessage(from, `✓ *_O nome do grupo foi alterado com sucesso para:_* ${body.slice(9)}`, text, {quoted: mek})
+                break
+                case 'setdesc':
+                if (isBanned) return reply(mess.only.benned)    
+                if (!isUser) return reply(mess.only.userB)
+          				
+                if (!isGroup) return reply(mess.only.group)
+			    if (!isGroupAdmins) return reply(mess.only.admin)
+				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+                denz.groupUpdateDescription(from, `${body.slice(9)}`)
+                denz.sendMessage(from, `✓ *_A descrição do grupo foi alterada com sucesso para:_* ${body.slice(9)}`, text, {quoted: mek})
+                break
+			case 'setfoto':
+	            if (isBanned) return reply(mess.only.benned)    
+	            if (!isUser) return reply(mess.only.userB)
+	      				
+                    if (!isGroup) return reply(mess.only.group)
+                    if (!isGroupAdmins) return reply(mess.only.admin)
+                    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+                    media = await denz.downloadAndSaveMediaMessage(mek)
+                    await denz.updateProfilePicture (from, media)
+                    reply(`✓ *_A foto do grupo foi alterada com sucesso._*`)
+                    break
+			    case 'everyone':
+			    if (isBanned) return reply(mess.only.benned)    
+			    if (!isUser) return reply(mess.only.userB)
+			    				
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					members_id = []
+					teks = '\n'
+					for (let mem of groupMembers) {
+						teks += `╠≽️ @${mem.jid.split('@')[0]}\n`
+						members_id.push(mem.jid)
+					}
+					mentions(`╔═━──━▒ *_EVERYONE_*`+teks+'╚═━──━▒ *_EVERYONE_*', members_id, true)
+					break
+					case 'grup':
+					case 'gc':
+					case 'group':
+					case 'grupo':
+					if (isBanned) return reply(mess.only.benned)    
+					if (!isUser) return reply(mess.only.userB)
+									
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					if (args[0] === 'abrir') {
+					    reply(`✘ *_O grupo, ${groupMetadata.subject}, foi aberto agora todos poderão enviar mensagens!_*`)
+						denz.groupSettingChange(from, GroupSettingChange.messageSend, false)
+					} else if (args[0] === 'fechar') {
+						reply(`✘ *_O grupo, ${groupMetadata.subject}, foi fechado agora apenas administradores poderão enviar mensagens!_*`)
+						denz.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					}
 					break
 				case 'add':
@@ -2756,26 +2415,6 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
                  	   reply(ind.satukos())
                 	}
                     break
-                    case 'do':
-                    if (!isOwner) return reply(mess.only.ownerB)
-					denz.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
-					break
-                    case 'addbw':
-                    if (!isOwner) return reply(mess.only.ownerB)
-                    if (args.length < 1) return reply( `Kirim perintah ${prefix}addbadword [kata kasar]. contoh ${prefix}addbadword bego`)
-                    const bw = args.join(" ")
-                    bad.push(bw)
-                    fs.writeFileSync('./database/json/bad.json', JSON.stringify(bad))
-                    reply('✓ *_ᴀ ᴘᴀʟᴀᴠʀᴀ ᴅᴇsᴇᴊᴀᴅᴀ ғᴏɪ ᴄᴏʟᴏᴄᴀᴅᴀ ɴᴀ ʟɪsᴛᴀ ᴅᴇ ᴘᴀʟᴀᴠʀᴀs ᴘʀᴏʙɪᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ_*')
-                    break
-                case 'deletebw':
-                    if (!isOwner) return reply(mess.only.ownerB)
-                    if (args.length < 1) return reply( `Kirim perintah ${prefix}delbadword [kata kasar]. contoh ${prefix}delbadword bego`)
-                    let dbw = args.join(" ")
-                    bad.splice(dbw)
-                    fs.writeFileSync('./database/json/bad.json', JSON.stringify(bad))
-                    reply('✓ *_ᴀ ᴘᴀʟᴀᴠʀᴀ ᴅᴇsᴇᴊᴀᴅᴀ ғᴏɪ ʀᴇᴛɪʀᴀᴅᴀ ᴅᴀ ʟɪsᴛᴀ ᴅᴇ ᴘᴀʟᴀᴠʀᴀs ᴘʀᴏʙɪᴅᴀs ᴄᴏᴍ sᴜᴄᴇssᴏ_*')
-                    break 
                 case 'bwlist':
                     let lbw = `Ini adalah list BAD WORD\nTotal : ${bad.length}\n`
                     for (let i of bad) {
@@ -2783,168 +2422,83 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
                     }
                     await reply(lbw)
                     break 
-				case 'caklontong':
-                if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					anu = await fetchJson(`https://api.vhtear.com/funkuis&apikey=${VthearApi}`, {method: 'get'})
-					caklontong = `*${anu.result.soal}*`
-					setTimeout( () => {
-					denz.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban+ '\n\n• Penjelasan: *'+ anu.result.desk+'*', text, {quoted: mek}) // ur cods
-					}, 30000) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, '_10 Detik lagi…_', text) // ur cods
-					}, 20000) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, '_20 Detik lagi_…', text) // ur cods
-					}, 10000) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, '_30 Detik lagi_…', text) // ur cods
-					}, 2500) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, caklontong, text, {quoted: mek}) // ur cods
-					}, 0) // 1000 = 1s,
-					await limitAdd(sender) 
-					break 
-				case 'tebakgambar':
-                if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					anu = await fetchJson(`https://videfikri.com/api/tebakgambar`, {method: 'get'})
-					bufferkkk = await getBuffer(anu.result.soal_gbr)
-					setTimeout( () => {
-					denz.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban, text, {quoted: mek}) // ur cods
-					}, 30000) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, '_10 Detik lagi…_', text) // ur cods
-					}, 20000) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, '_20 Detik lagi_…', text) // ur cods
-					}, 10000) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, '_30 Detik lagi_…', text) // ur cods
-					}, 2500) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, bufferkkk, image, { caption: '_Jelaskan Apa Maksud Gambar Ini_', quoted: mek }) // ur cods
-					}, 0) // 1000 = 1s,
-					await limitAdd(sender) 
-					break  
-				case 'family100':
-                if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-								
-				if (isLimit(sender)) return reply(limitend(pushname2))
-					anu = await fetchJson(`https://api.vhtear.com/family100&apikey=${VthearApi}`, {method: 'get'})
-					family = `*${anu.result.soal}*`
-					setTimeout( () => {
-					denz.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban, text, {quoted: mek}) // ur cods
-					}, 30000) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, '_10 Detik lagi…_', text) // ur cods
-					}, 20000) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, '_20 Detik lagi_…', text) // ur cods
-					}, 10000) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, '_30 Detik lagi_…', text) // ur cods
-					}, 2500) // 1000 = 1s,
-					setTimeout( () => {
-					denz.sendMessage(from, family, text, {quoted: mek }) // ur cods
-					}, 0) // 1000 = 1s,
-					await limitAdd(sender) 
-					break 
-				case 'clonar':
-				if (!isOwner) return reply(mess.only.ownerB)
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('✘ *_ᴍᴇɴᴄɪᴏɴᴇ ᴀ ᴘᴇssᴏᴀ ǫᴜᴇ ᴠᴏᴄᴇ ᴅᴇsᴇᴊᴀ ʀᴏᴜʙᴀʀ ᴏ ᴘᴇʀғɪʟ_*')
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag gan')
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
-					try {
-						pp = await denz.getProfilePicture(id)
-						buffer = await getBuffer(pp)
-						denz.updateProfilePicture(botNumber, buffer)
-						mentions(`✓ *_ᴀ ғᴏᴛᴏ ᴅᴀ ᴘᴇssᴏᴀ > @${id.split('@')[0]} ғᴏɪ ʀᴏᴜʙᴀᴅᴀ ᴇ sᴇᴛᴀᴅᴀ ᴅᴇ ᴘᴇʀғɪʟ ɴᴏ ʙᴏᴛ_*`, [jid], true)
-					} catch (e) {
-						reply('✘ *_ᴀʟɢᴏ ᴅᴇᴜ ᴇʀʀᴀᴅᴏ !_*')
+                    case 'antidelete':
+				const dataRevoke = JSON.parse(fs.readFileSync('./src/gc-revoked.json'))
+				const dataCtRevoke = JSON.parse(fs.readFileSync('./src/ct-revoked.json'))
+				const dataBanCtRevoke = JSON.parse(fs.readFileSync('./src/ct-revoked-banlist.json'))
+				const isRevoke = dataRevoke.includes(from)
+				const isCtRevoke = dataCtRevoke.data
+				const isBanCtRevoke = dataBanCtRevoke.includes(sender) ? true : false
+				const argz = body.split(' ')
+				if (argz.length === 1) return denz.sendMessage(from, `Penggunaan fitur antidelete :\n\n*${prefix}antidelete [aktif/mati]* (Untuk grup)\n*${prefix}antidelete [ctaktif/ctmati]* (untuk semua kontak)\n*${prefix}antidelete banct 628558xxxxxxx* (banlist kontak)`, MessageType.text)
+				if (argz[1] == 'aktif') {
+					if (isGroup) {
+						if (isRevoke) return denz.sendMessage(from, `Antidelete telah diaktifkan di grup ini sebelumnya!`, MessageType.text)
+						dataRevoke.push(from)
+						fs.writeFileSync('./lib/gc-revoked.json', JSON.stringify(dataRevoke, null, 2))
+						denz.sendMessage(from, `*Succes Enable Antidelete Grup!*`, MessageType.text)
+					} else if (!isGroup) {
+						denz.sendMessage(from, `Untuk kontak penggunaan *${prefix}antidelete ctaktif*`, MessageType.text)
 					}
-					break
-//setting bot
-				case 'setprefix':
-				case 'setpref':
-					if (args.length < 1) return
-					if (!isOwner) return reply(mess.only.ownerB)
-					prefix = args[0]
-					reply(`Prefix berhasil di ubah menjadi : ${prefix}`)
-					break 
-					case 'setlimit':
-					if (args.length < 1) return
-					if (!isOwner) return reply(mess.only.ownerB)
-					limitt = args[0]
-					reply(`Limit berhasil di ubah menjadi : ${limitt}`)
-					break 
-				case 'setmemlimit':
-					if (args.length < 1) return
-					if (!isOwner) return reply(mess.only.ownerB)
-					memberLimit = args[0]
-					reply(`Limit Member berhasil di ubah menjadi : ${memberLimit}`)
-					break
-////////////
-	case 'infocuaca':
-	 if (isBanned) return reply(mess.only.benned)    
-     if (!isUser) return reply(mess.only.userB)
-     				
-     if (isLimit(sender)) return reply(limitend(pushname2))
-     if (args.length < 1) return reply(from, 'Kirim perintah *!cuaca [tempat]*\nContoh : *!cuaca Banyuwangi', text)
-     reply(mess.wait)
-            tempat = `${body.slice(11)}`
-            weather = await fetchJson('https://videfikri.com/api/cuaca/?daerah='+ tempat, {method: 'get'})
-            if (weather.error) {
-             reply(from, weather.error, text)
-            } else {
-             denz.sendMessage(from, `➸ Tempat : ${weather.result.tempat}\n\n➸ Angin : ${weather.result.angin}\n➸ Cuaca : ${weather.result.cuaca}\n➸ Deskripsi : ${weather.result.desc}\n➸ Kelembapan : ${weather.result.kelembapan}\n➸ Suhu : ${weather.result.suhu}\n➸ Udara : ${weather.result.udara}`, text, {quoted: mek})
-            }
-            await limitAdd(sender)
-            break 
-
-         
-					
-// premium user
-         case 'joox':
-			if (isBanned) return reply(mess.only.benned)    
+				} else if (argz[1] == 'ctaktif') {
+					if (!isGroup) {
+						if (isCtRevoke) return denz.sendMessage(from, `Antidelete telah diaktifkan di semua kontak sebelumnya!`, MessageType.text)
+						dataCtRevoke.data = true
+						fs.writeFileSync('./lib/ct-revoked.json', JSON.stringify(dataCtRevoke, null, 2))
+						denz.sendMessage(from, `Antidelete diaktifkan disemua kontak!`, MessageType.text)
+					} else if (isGroup) {
+						denz.sendMessage(from, `Untuk grup penggunaan *${prefix}antidelete aktif*`, MessageType.text)
+					}
+				} else if (argz[1] == 'banct') {
+					if (isBanCtRevoke) return denz.sendMessage(from, `kontak ini telah ada di database banlist!`, MessageType.text)
+					if (argz.length === 2 || argz[2].startsWith('0')) return denz.sendMessage(from, `Masukan nomer diawali dengan 62! contoh 6285928xxxxx`, MessageType.text)
+					dataBanCtRevoke.push(argz[2] + '@s.whatsapp.net')
+					fs.writeFileSync('./lib/ct-revoked-banlist.json', JSON.stringify(dataBanCtRevoke, null, 2))
+					denz.sendMessage(from, `Kontak ${argz[2]} telah dimasukan ke banlist antidelete secara permanen!`, MessageType.text)
+				} else if (argz[1] == 'mati') {
+					if (isGroup) {
+						const index = dataRevoke.indexOf(from)
+						dataRevoke.splice(index, 1)
+						fs.writeFileSync('./lib/gc-revoked.json', JSON.stringify(dataRevoke, null, 2))
+						denz.sendMessage(from, `*Succes disable Antidelete Grup!*`, MessageType.text)
+					} else if (!isGroup) {
+						denz.sendMessage(from, `Untuk kontak penggunaan *${prefix}antidelete ctmati*`, MessageType.text)
+					}
+				} else if (argz[1] == 'ctmati') {
+					if (!isGroup) {
+						dataCtRevoke.data = false
+						fs.writeFileSync('./lib/ct-revoked.json', JSON.stringify(dataCtRevoke, null, 2))
+						denz.sendMessage(from, `Antidelete dimatikan disemua kontak!`, MessageType.text)
+					} else if (isGroup) {
+						denz.sendMessage(from, `Untuk grup penggunaan *${prefix}antidelete mati*`, MessageType.text)
+					}
+				}
+				break
+                    //GRUPO MENU
+                    //GRUPO MENU
+                    //GRUPO MENU
+                    
+       //MEDIA MENU
+       //MEDIA MENU
+       //MEDIA MENU
+       case 'google':
+                const googleQuery = body.slice(8)
+               if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-				
-                anu = await fetchJson(`https://tobz-api.herokuapp.com/api/joox?q=${body.slice(6)}&apikey=AKyAJwYdUGbO8jO3CGsK`, {method: 'get'})
-               if (anu.error) return reply(anu.error)
-                 infomp3 = `╭─「 *JOOX DOWNLOADER* 」\n│\n│ *• Judul* : ${anu.result.title}\n│ *• Album* : ${anu.result.album}\n│ *• Dipublikasi* : ${anu.result.dipublikasi}\n│\n│ *TUNGGU SEBENTAR LAGI DIKIRIM*\n│ *MOHON JANGAN SPAM*\n╰─────────────────────`
-                bufferddd = await getBuffer(anu.result.thumb)
-                 reply(mess.wait)
-                buff = await getBuffer(anu.result.mp3)
-                denz.sendMessage(from, bufferddd, image, {quoted: mek, caption: infomp3})
-                denz.sendMessage(from, buff, audio, {mimetype: 'audio/mp4', filename: `${anu.result.judul}.mp3`, quoted: mek})
+				if (isLimit(sender)) return reply(limitend(pushname2))
+                if(googleQuery == undefined || googleQuery == ' ') return reply(`*Hasil Pencarian : ${googleQuery}* tidak ditemukan`)
+                google({ 'query': googleQuery }).then(results => {
+                let vars = `_*Hasil Pencarian : ${googleQuery}*_\n`
+                for (let i = 0; i < results.length; i++) {
+                    vars +=  `\n═════════════════\n\n*Judul* : ${results[i].title}\n\n*Deskripsi* : ${results[i].snippet}\n\n*Link* : ${results[i].link}\n\n`
+                }
+                    reply(vars)
+                }).catch(e => {
+                    console.log(e)
+                    denz.sendMessage(from, 'Google Error : ' + e);
+                })
                 await limitAdd(sender) 
-                break  
-                
-          case 'snack':
-			if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-				
-				if (args.length < 1) return reply('Urlnya mana gan?')
-					if (!isUrl(args[0]) && !args[0].includes('sck')) return reply(mess.error.Iv)
-                anu = await fetchJson(`https://api-anoncybfakeplayer.herokuapp.com/sckdown?url=${args[0]}`, {method: 'get'})
-               if (anu.error) return reply(anu.error)
-                 sck = `「 *SNACK VIDEO DOWNLOADER* 」\n\n*• Format:* ${anu.format}\n*• Size:* ${anu.size}\n\n*TUNGGU SEBENTAR LAGI DIKIRIM MOHON JANGAN SPAM*`
-                bufferddd = await getBuffer('https://raw.githubusercontent.com/FarhanXCode7/termux-bot-wa/main/src/glitchtext.png')
-                 reply(mess.wait)
-                buff = await getBuffer(anu.result)
-                denz.sendMessage(from, bufferddd, image, {quoted: mek, caption: sck})
-                denz.sendMessage(from, buff, video, {mimetype: 'video/mp4', filename: `${anu.format}.mp4`, quoted: mek})
-                await limitAdd(sender) 
-                break  
-                
+                break
        case 'play':
                   if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -2965,113 +2519,59 @@ anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slic
                     get_audio = await getBuffer(get_result.audio[3].link)
                     denz.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_info.title}.mp3`, quoted: mek})
                 break
-                
-                case 'mimetypedeaudiooooo':
-  if (isBanned) return reply(mess.only.benned)    
+case 'tiktok':
+                 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-				if (args.length < 1) return reply(`Urlnya mana kak?`)
-  reply(mess.wait)
-  play = body.slice(7)
-  if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Format link salah, gunakan link youtube')
-  try {
-  anu = await fetchJson(`https://api.zeks.xyz/api/ytmp3/2?url=${play}&apikey=apivinz`)
-  infomp3 = `*Audio Ditemukan*\n‣ Judul : ${anu.result.title}\n‣ Source : ${anu.result.source}\n‣ Ukuran : ${anu.result.size}\n\n_Mengirim file silahkan tunggu_\n\n_Jika audio tidak muncul download sendiri menggunakan link dibawah_\n‣ *link* : ${anu.result.link}`
-  buffer = await getBuffer(anu.result.thumb)
-  lagu = await getBuffer(anu.result.link)
-  denz.sendMessage(from, buffer, image, {
-quoted: mek, caption: infomp3
-  })
-  denz.sendMessage(from, lagu, audio, {
-mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
-  })
-  await limitAdd(sender)
-  } catch {
-    reply(mess.ferr)
-  }
-  break
-
-            case 'smule':
-	       if (isBanned) return reply(mess.only.benned)
-	       
+				if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
+                     anu = await fetchJson(`http://lolhuman.herokuapp.com/api/tiktok?apikey=AnjayB&url=${args[0]}`, {method: 'get'})
+                     reply(mess.wait)
+					buffer = await getBuffer(anu.result.link)
+                    denz.sendMessage(from, buffer, video, )
+				    break
+				case 'facebook':
+				  denz.updatePresence(from, Presence.composing)
+				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-					if (args.length < 1) return reply('Urlnya mana gan?')
-					if (!isUrl(args[0]) && !args[0].includes('c-ash.smule')) return reply(mess.error.Iv)
+				if (isLimit(sender)) return reply(limitend(pushname2))
+					if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
 					reply(mess.wait)
-					anu = await fetchJson(`https://mnazria.herokuapp.com/api/smule?link=${args[0]}`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					teks = `*Title* : ${anu.title}\n\n Tunggu Sebentar 1 menit Mungkun Agak Lama Karna Mendownload Video`
-					thumb = await getBuffer(anu.thumb)
-					denz.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
-					buffer = await getBuffer(anu.result)
-					denz.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek, caption: 'Nih Gan'})
-					await limitAdd(sender) 	
-					break 
-
-// Akhir Fitur Premium 
-
-                   case 'checkip':
-         if (isBanned) return reply(mess.only.benned)
-			if (!isUser) return reply(mess.only.userB)
-				denz.updatePresence(from, Presence.composing) 
-				data = await fetchJson(`http://api.lolhuman.xyz/api/ipaddress/${args[0]}?apikey=AnjayB`)
-				reply(mess.wait)
-				hasil = `╔═══≽️ *_Check IP_*\n╠≽️ *_País:_* ${data.result.country}\n╠≽️ *_Sigla do País:_* ${data.result.countryCode}\n╠≽️ *_Estado:_* ${data.result.regionName}\n╠≽️ *_City:_* ${data.result.city}\n╠≽️ *_Lat.:_* ${data.result.lat}\n╠≽️ *_Long.:_* ${data.result.lon}\n╠≽️ *_Timezone:_* ${data.result.timezone}\n╠≽️ *_IP:_* ${data.result.query}\n╚═≽️ *_Developer ©_* : *ɴʏx*`
-				reply(hasil)
-				await limitAdd(sender)
-				break
-		case 'bpfont':
-			if (isBanned) return reply(mess.only.benned)
-			if (isLimit(sender)) return reply(limitend(pushname2))
-			if (!isUser) return reply(mess.only.userB)
-							
-			bp = `${body.slice(8)}`
-			anu = await fetchJson(`https://api.terhambar.com/bpk?kata=${bp}`, {method: 'get'})
-			reply (anu.text)
-			await limitAdd(sender) 
-			break  
-			case 'textstyle':
-			if (isBanned) return reply(mess.only.benned)
-			if (!isUser) return reply(mess.only.userB)
-							
-			if (isLimit(sender)) return reply(limitend(pushname2))
-			reply(mess.wait)
-			style = `${body.slice(11)}`
-			anu = await fetchJson(`https://api.arugaz.my.id/api/random/text/fancytext?text=${style}`, {method: 'get'})
-			reply (anu.result)
-			await limitAdd(sender) 
-			break  
-			case 'pantun':
-			if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-			gatauda = body.slice(8)					
-					anu = await fetchJson(`https://api.zeks.xyz/api/pantun?apikey=apivinz`, {method: 'get'})
-					reply(anu.result.pantun)
-					await limitAdd(sender)
-					break
-			case 'semoji':
-                    if (args.length == 0) return reply(`✘ *_Este comando necessita de um emoji._*`)
-                    emoji = args[0]
-                    try {
-                        emoji = encodeURI(emoji[0])
-                    } catch {
-                        emoji = encodeURI(emoji)
-                    }
-                    buffer = await getBuffer(`http://api.lolhuman.xyz/api/smoji/${emoji}?apikey=AnjayB`)
-                    reply(mess.wait)
-                    denz.sendMessage(from, buffer, sticker, { quoted: mek})
+					ini_url = args[0]
+                    ini_url = await fetchJson(`http://api.lolhuman.xyz/api/facebook?apikey=AnjayB&url=${ini_url}`)
+                    ini_url = ini_url.result[0].link
+                    buffer = await getBuffer(ini_url)
+                    denz.sendMessage(from, buffer, video, { quoted: mek })
                     break
-		case 'jamdunia':
-		if (isLimit(sender)) return reply(limitend(pushname2))
-			if (isBanned) return reply(mess.only.benned)
-			if (!isUser) return reply(mess.only.userB)
-							
-			reply(mess.wait)
-		 jamdunia = `${body.slice(10)}`
-			anu = await fetchJson(`https://api.i-tech.id/tools/jam?key=${TechApi}&kota=${jamdunia}`, {method: 'get'})
-			wtime = `*${anu.timezone}*\n*${anu.date}*\n*${anu.time}*`
-			denz.sendMessage(from, wtime, text, {quoted: mek})
-			await limitAdd(sender) 
-			break  
+					case 'instagram':
+				if (isBanned) return reply(mess.only.benned)
+				if (!isUser) return reply(mess.only.userB)
+				if (isLimit(sender)) return reply(limitend(pushname2))
+					if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
+					reply(mess.wait)
+				    ini_url = args[0]
+                    ini_url = await fetchJson(`http://api.lolhuman.xyz/api/instagram?apikey=AnjayB&url=${ini_url}`)
+                    ini_url = ini_url.result
+                    ini_type = image
+                    if (ini_url.includes(".mp4")) ini_type = video
+                    buffer = await getBuffer(ini_url)
+                    denz.sendMessage(from, buffer, ini_type, { quoted: mek })
+                    break
+                    case 'pintereeeeeeeest':
+         if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+								
+				if (isLimit(sender)) return reply(limitend(pushname2))
+					if (args.length < 1) return reply('✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} albedo._*')
+					pinte = body.slice(11)
+					anu = await fetchJson(`http://lolhuman.herokuapp.com/api/pinterest?apikey=AnjayB&query=${body.slice(11)}`, {method: 'get'})
+					reply(mess.wait)
+					pinehg = await getBuffer(anu.result)
+					denz.sendMessage(from, pinehg, image, {quoted: mek })
+					await limitAdd(sender) 
+					break 
+					       //MEDIA MENU
+       //MEDIA MENU
+       //MEDIA MENU
+               
 			
 		 case 'tomp3':
                 if (isBanned) return reply(mess.only.benned)    
@@ -3093,126 +2593,10 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
 					})
 					await limitAdd(sender) 
 					break 
-					
-				case 'fotobot':
-					if (!isOwner) return reply(mess.only.owner)
-				    denz.updatePresence(from, Presence.composing) 
-					if (!isQuotedImage) return reply(`✘ *_Mencione a imagem que você deseja colocar como foto de perfil do bot_*`)
-					enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await denz.downloadAndSaveMediaMessage(enmedia)
-					await denz.updateProfilePicture(botNumber, media)
-					reply('✓ *_A foto do bot foi atualizada com sucesso._*')
-					break
 // akhir encrypt & decrypt Fitur
 
-			case 'google':
-                const googleQuery = body.slice(8)
-               if (isBanned) return reply(mess.only.benned)    
-				if (!isUser) return reply(mess.only.userB)
-				if (isLimit(sender)) return reply(limitend(pushname2))
-                if(googleQuery == undefined || googleQuery == ' ') return reply(`*Hasil Pencarian : ${googleQuery}* tidak ditemukan`)
-                google({ 'query': googleQuery }).then(results => {
-                let vars = `_*Hasil Pencarian : ${googleQuery}*_\n`
-                for (let i = 0; i < results.length; i++) {
-                    vars +=  `\n═════════════════\n\n*Judul* : ${results[i].title}\n\n*Deskripsi* : ${results[i].snippet}\n\n*Link* : ${results[i].link}\n\n`
-                }
-                    reply(vars)
-                }).catch(e => {
-                    console.log(e)
-                    denz.sendMessage(from, 'Google Error : ' + e);
-                })
-                await limitAdd(sender) 
-                break 
-                
-                case 'addbucin':
-                    if (!isOwner) return reply(mess.only.owner)
-				    huu = body.slice(10)
-						bucinrandom.push(huu)
-						fs.writeFileSync('./database/json/bucin.json', JSON.stringify(bucinrandom))
-						reply(`Sukses, Kata \n*${huu}*\n Telah Ditambahkan ke database`)
-						break
-                    case 'bucin':
-                    case 'quotebucin':
-                    if (isBanned) return reply(mess.only.benned)    
-                    if (!isUser) return reply(mess.only.userB)
-                    hasil = bucinrandom[Math.floor(Math.random() * (bucinrandom.length))]
-                    denz.sendMessage(from, '*'+hasil+'*', text, {quoted: mek})
-                    await limitAdd(sender)
-            break
-            case 'beritahoax':
-                     if (!isUser) return reply(mess.only.userB)
-                    denz.updatePresence(from, Presence.composing) 
-					data = await fetchJson(`https://docs-jojo.herokuapp.com/api/infohoax`, {method: 'get'})
-					teks = '=================\n'
-					for (let i of data.result) {
-						teks += `*Gambar* : ${i.image}\n*Title* : ${i.title}\n*link* : ${i.link}\n*tag* : ${i.tag}\n=================\n`
-					}
-					reply(teks.trim())
-					await limitAdd(sender)
-					break
-            case 'animecry':
-				if (!isUser) return reply(mess.only.userB)
-				ranp = getRandom('.gif')
-					rano = getRandom('.webp')
-					anu = await fetchJson('https://tobz-api.herokuapp.com/api/cry?apikey=AKyAJwYdUGbO8jO3CGsK', {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-						fs.unlinkSync(ranp)
-						if (err) return reply(mess.error.stick)
-						buffer = fs.readFileSync(rano)
-						denz.sendMessage(from, buffer, sticker, {quoted: mek})
-						fs.unlinkSync(rano)
-					})
-					await limitAdd(sender)
-					break
-					case 'animekiss':
-				if (!isUser) return reply(mess.only.userB)
-				ranp = getRandom('.gif')
-					rano = getRandom('.webp')
-					anu = await fetchJson('https://tobz-api.herokuapp.com/api/kiss?apikey=AKyAJwYdUGbO8jO3CGsK', {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-						fs.unlinkSync(ranp)
-						if (err) return reply(mess.error.stick)
-						buffer = fs.readFileSync(rano)
-						denz.sendMessage(from, buffer, sticker, {quoted: mek})
-						fs.unlinkSync(rano)
-					})
-					await limitAdd(sender)
-					break
-					case 'animehug':
-				if (!isUser) return reply(mess.only.userB)
-				ranp = getRandom('.gif')
-					rano = getRandom('.webp')
-					anu = await fetchJson('https://tobz-api.herokuapp.com/api/hug?apikey=AKyAJwYdUGbO8jO3CGsK', {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-						fs.unlinkSync(ranp)
-						if (err) return reply(mess.error.stick)
-						buffer = fs.readFileSync(rano)
-						denz.sendMessage(from, buffer, sticker, {quoted: mek})
-						fs.unlinkSync(rano)
-					})
-					await limitAdd(sender)
-					break		
-					case 'moddroid':
-				if (!isUser) return reply(mess.only.userB)
-				data = await fetchJson(`https://tobz-api.herokuapp.com/api/moddroid?q=${body.slice(10)}&apikey=AKyAJwYdUGbO8jO3CGsK`)
-			hepi = data.result[0] 
-			teks = `*Nama*: ${data.result[0].title}\n*publisher*: ${hepi.publisher}\n*mod info:* ${hepi.mod_info}\n*size*: ${hepi.size}\n*latest version*: ${hepi.latest_version}\n*genre*: ${hepi.genre}\n*link:* ${hepi.link}\n*download*: ${hepi.download}`
-			buffer = await getBuffer(hepi.image)
-			denz.sendMessage(from, buffer, image, {quoted: mek, caption: `${teks}`})
-			await limitAdd(sender)
-			break
-			case 'happymod':
-				if (!isUser) return reply(mess.only.userB)
-				data = await fetchJson(`https://tobz-api.herokuapp.com/api/happymod?q=${body.slice(10)}&apikey=AKyAJwYdUGbO8jO3CGsK`)
-			hupo = data.result[0] 
-			teks = `*Nama*: ${data.result[0].title}\n*version*: ${hupo.version}\n*size:* ${hupo.size}\n*root*: ${hupo.root}\n*purchase*: ${hupo.price}\n*link*: ${hupo.link}\n*download*: ${hupo.download}`
-			buffer = await getBuffer(hupo.image)
-			denz.sendMessage(from, buffer, image, {quoted: mek, caption: `${teks}`})
-			await limitAdd(sender)
-			break
+
+
 				default:
 				if (budy.includes("://chat.whatsapp.com/")){
 					if (!isGroup) return
