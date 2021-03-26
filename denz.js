@@ -1927,6 +1927,15 @@ reply(mess.wait)
 					const te = ratee[Math.floor(Math.random() * ratee.length)]
 					denz.sendMessage(from, '✓ *_As chances '+rate+' são de '+ te+'_*', text, { quoted: mek })
 					break 
+//BUILDS GENSHIN MENU
+case 'hutao':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+//MENU
                 case 'report':
                 if (isBanned) return reply(mess.only.benned)    
                 if (!isUser) return reply(mess.only.userB)
