@@ -397,6 +397,7 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠≽️ *_#FUNMENU_*  
 ╠≽️ *_#IMAGEMENU_* 
 ╠≽️ *_#MAKERMENU_* 
+╠≽️ *_#GENSHINMENU_*
 ╠≽️ *_#MEDIAMENU_*
 ╠≽️ *_#ENCMENU_* 
 ╠≽️ *_#SOUNDMENU_* 
@@ -455,6 +456,44 @@ case 'mediamenu':
 ╠≽️ *_${prefix}tiktok_*
 ╠≽️ *_${prefix}instagram_*
 ╚═━──━▒ *_MEDIA MENU_*`
+denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
+break
+case 'genshinmenu':
+			if (isBanned) return reply(mess.only.benned)
+			if (!isUser) return reply(mess.only.userB)
+			wew = fs.readFileSync('dnsnew.jpg')
+			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═━──━▒ *_GENSHIN MENU_*
+╠≽️ *_${prefix}bAlbedo_*
+╠≽️ *_${prefix}bAmber_*
+╠≽️ *_${prefix}bBarbara_*
+╠≽️ *_${prefix}bBeidou_*
+╠≽️ *_${prefix}bBennett_*
+╠≽️ *_${prefix}bChilde_*
+╠≽️ *_${prefix}bChongyun_*
+╠≽️ *_${prefix}bDiluc_*
+╠≽️ *_${prefix}bDiona_*
+╠≽️ *_${prefix}bFischl_*
+╠≽️ *_${prefix}bGanyu_*
+╠≽️ *_${prefix}bHuTao_*
+╠≽️ *_${prefix}bJean_*
+╠≽️ *_${prefix}bKaeya_*
+╠≽️ *_${prefix}bKeqing_*
+╠≽️ *_${prefix}bKlee_*
+╠≽️ *_${prefix}bLisa_*
+╠≽️ *_${prefix}bMona_*
+╠≽️ *_${prefix}bNingguang_*
+╠≽️ *_${prefix}bNoelle_*
+╠≽️ *_${prefix}bQiqi_*
+╠≽️ *_${prefix}bRazor_*
+╠≽️ *_${prefix}bSucrose_*
+╠≽️ *_${prefix}bVenti_*
+╠≽️ *_${prefix}bViajante_*
+╠≽️ *_${prefix}bXiangling_*
+╠≽️ *_${prefix}bXiao_*
+╠≽️ *_${prefix}bXingqiu_*
+╠≽️ *_${prefix}bXinyan_*
+╠≽️ *_${prefix}bZhongli_*
+╚═━──━▒ *_GENSHIN MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'soundmenu':
@@ -1670,7 +1709,242 @@ reply(mess.wait)
 //BUILDS GENSHIN MENU
 //BUILDS GENSHIN MENU
 //BUILDS GENSHIN MENU
-case 'hutao':
+case 'balbedo':
+case 'Balbedo':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/onGgyCs.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bamber':
+case 'Bamber':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/nHqBlo5.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bbarbara':
+case 'Bbarbara':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/vLXi0K1.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bbeidou':
+case 'Bbeidou':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/xfwN0wt.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bbennett':
+case 'Bbennett':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bchilde':
+case 'Bchilde':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bchongyun':
+case 'Bchongyun':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bdiluc':
+case 'Bdiluc':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bdiona':
+case 'Bdiona':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bfischl':
+case 'Bfischl':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bganyu':
+case 'Bganyu':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bhutao':
+case 'Bhutao':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bjean':
+case 'Bjean':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bkaeya':
+case 'Bkaeya':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bkeqing':
+case 'Bkeqing':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bklee':
+case 'Bklee':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'blisa':
+case 'Blisa':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bmona':
+case 'Bmona':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bningguang':
+case 'Bningguang':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bnoelle':
+case 'Bnoelle':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bqiqi':
+case 'Bqiqi':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'brazor':
+case 'Brazor':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bsucrose':
+case 'Bsucrose':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'Bventi':
+case 'bventi':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bviajante':
+case 'Bviajante':
+case 'Btraveller':
+case 'btraveller':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bxiangling':
+case 'Bxiangling':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bxiao':
+case 'Bxiao':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bxingqiu':
+case 'Bxingqiu':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'Bxinyan':
+case 'bxinyan':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
+case 'bzhongli':
+case 'Bzhongli':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
