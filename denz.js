@@ -1930,8 +1930,8 @@ reply(mess.wait)
 			case 'gayp':
 				if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-					ratee = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
-					const te = ratee[Math.floor(Math.random() * ratee.length)]
+					persseen = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
+					const zw = persseen[Math.floor(Math.random() * persseen.length)]
 					denz.sendMessage(from, '✓ *_A gayzisse do @${num.split('@')[0]} é de '+rate+'_*', text, { quoted: mek })
 					break 
                 case 'report':
