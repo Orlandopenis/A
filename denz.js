@@ -1217,7 +1217,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
 				if (!isUser) return reply(mess.only.userB)
 				                    if (args.length == 0) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
                     txt = args.join(" ")
-                    buffer = await getBuffer(`http://api.lolhuman.xyz/api/ttp3?apikey=RiuApikey&text=${txt}`)
+                    buffer = await getBuffer(`http://api.lolhuman.xyz/api/ttp3?apikey=AnjayB&text=${txt}`)
                     denz.sendMessage(from, buffer, sticker, { quoted: mek })
                     break
                     case 'phcomment':
@@ -1228,7 +1228,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     tex1 = ds.split("/")[0];
                     tex2 = ds.split("/")[1];
                     reply(mess.wait)
-                    litsh = await getBuffer(`http://api.lolhuman.xyz/api/phcomment?apikey=RiuApikey&img=https://i.ibb.co/JdfQ73m/photo-2021-02-05-10-13-39.jpg&text=${tex1}&username=${tex2}`, {method: 'get'})
+                    litsh = await getBuffer(`http://api.lolhuman.xyz/api/phcomment?apikey=AnjayB&img=https://i.ibb.co/JdfQ73m/photo-2021-02-05-10-13-39.jpg&text=${tex1}&username=${tex2}`, {method: 'get'})
                     denz.sendMessage(from, litsh, image, {quoted: mek})
                     await limitAdd(sender)
                     break
@@ -1263,7 +1263,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     tex1 = ds.split("/")[0];
                     tex2 = ds.split("/")[1];
                     reply(mess.wait)
-                    litsh = await getBuffer(`http://api.lolhuman.xyz/api/textprome2/pornhub?apikey=RiuApikey&text1=${tex1}&text2=${tex2}`, {method: 'get'})
+                    litsh = await getBuffer(`http://api.lolhuman.xyz/api/textprome2/pornhub?apikey=AnjayB&text1=${tex1}&text2=${tex2}`, {method: 'get'})
                     denz.sendMessage(from, litsh, image, {quoted: mek})
                     await limitAdd(sender)
                     break
@@ -1273,7 +1273,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
                     todi = body.slice(4)
                     reply(mess.wait)
-                    litsh = await getBuffer(`http://api.lolhuman.xyz/api/textprome/box3d?apikey=RiuApikey&text=${todi}`, {method: 'get'})
+                    litsh = await getBuffer(`http://api.lolhuman.xyz/api/textprome/box3d?apikey=AnjayB&text=${todi}`, {method: 'get'})
                     denz.sendMessage(from, litsh, image, {quoted: mek})
                     await limitAdd(sender)
                     break
@@ -1283,7 +1283,7 @@ quoted: mek, caption: `Wah ganteng kek gua`
                     if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
                     todi = body.slice(5)
                     reply(mess.wait)
-                    litsh = await getBuffer(`http://api.lolhuman.xyz/api/textprome/icecold?apikey=RiuApikey&text=${todi}`, {method: 'get'})
+                    litsh = await getBuffer(`http://api.lolhuman.xyz/api/textprome/icecold?apikey=AnjayB&text=${todi}`, {method: 'get'})
                     denz.sendMessage(from, litsh, image, {quoted: mek})
                     await limitAdd(sender)
                     break
@@ -1295,7 +1295,7 @@ gl = `${body.slice(7)}`
 gel1 = gl.split("/")[0];
 gel2 = gl.split("/")[1];
 reply(mess.wait)
-litsh = await getBuffer(`http://api.lolhuman.xyz/api/textprome2/space?apikey=RiuApikey&text1=${gel1}&text2=${gel2}`, {method: 'get'})
+litsh = await getBuffer(`http://api.lolhuman.xyz/api/textprome2/space?apikey=AnjayB&text1=${gel1}&text2=${gel2}`, {method: 'get'})
 denz.sendMessage(from, litsh, image, {quoted: mek})
 await limitAdd(sender)
 break
@@ -1502,7 +1502,7 @@ if (!isUser) return reply(mess.only.userB)
 if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 glaktx = body.slice(11)
 reply(mess.wait)
-galax = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/galaxywallpaper?apikey=RiuApikey&text=${glaktx}`)
+galax = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/galaxywallpaper?apikey=AnjayB&text=${glaktx}`)
 denz.sendMessage(from, galax, image, {quoted: mek})
 await limitAdd(sender)
 break
@@ -1512,7 +1512,7 @@ if (!isUser) return reply(mess.only.userB)
 if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 puki = body.slice(10)
 reply(mess.wait)
-cute = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/puppycute?apikey=RiuApikey&text=${puki}`)
+cute = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/puppycute?apikey=AnjayB&text=${puki}`)
 denz.sendMessage(from, cute, image, {quoted: mek})
 await limitAdd(sender)
 break
@@ -1522,7 +1522,7 @@ if (!isUser) return reply(mess.only.userB)
 if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 gelay = body.slice(12)
 reply(mess.wait)
-style = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/galaxystyle?apikey=RiuApikey&text=${gelay}`)
+style = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/galaxystyle?apikey=AnjayB&text=${gelay}`)
 denz.sendMessage(from, style, image, {quoted: mek})
 await limitAdd(sender)
 break
@@ -1532,7 +1532,7 @@ if (!isUser) return reply(mess.only.userB)
 if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 gram = body.slice(10)
 reply(mess.wait)
-holo = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/hologram3d?apikey=RiuApikey&text=${gram}`)
+holo = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/hologram3d?apikey=AnjayB&text=${gram}`)
 denz.sendMessage(from, holo, image, {quoted: mek})
 await limitAdd(sender)
 break
@@ -1542,7 +1542,7 @@ if (!isUser) return reply(mess.only.userB)
 if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 metal = body.slice(11)
 reply(mess.wait)
-metlog = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/metallogo?apikey=RiuApikey&text=${metal}`)
+metlog = await getBuffer(`http://lolhuman.herokuapp.com/api/ephoto1/metallogo?apikey=AnjayB&text=${metal}`)
 denz.sendMessage(from, metlog, image, {quoted: mek})
 await limitAdd(sender)
 break
@@ -1552,7 +1552,7 @@ if (!isUser) return reply(mess.only.userB)
 if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto, exemplo: ${prefix + command} nyx._*`)
 black = body.slice(7)
 reply(mess.wait)
-pink = await getBuffer(`http://lolhuman.herokuapp.com/api/textprome/blackpink?apikey=RiuApikey&text=${black}`)
+pink = await getBuffer(`http://lolhuman.herokuapp.com/api/textprome/blackpink?apikey=AnjayB&text=${black}`)
 denz.sendMessage(from, pink, image, {quoted: mek})
 await limitAdd(sender)
 break
@@ -1977,7 +1977,7 @@ reply(mess.wait)
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
 					henid = args[0]
-                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=RiuApikey`)
+                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=AnjayB`)
                     get_result = get_result.result
                     buffer = await getBuffer(get_result)
                     denz.sendMessage(from, buffer, document, { quoted: mek, mimetype: Mimetype.pdf, filename: `${henid}.pdf` })
@@ -2007,7 +2007,7 @@ reply(mess.wait)
 				    if (isLimit(sender)) return reply(limitend(pushname2))
 						if (!isNsfw) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
 						reply(mess.wait)
-                    buffer = await getBuffer(`http://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=RiuApikey`)
+                    buffer = await getBuffer(`http://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=AnjayB`)
                     denz.sendMessage(from, buffer, image, { quoted: mek})
                     break
                     
@@ -2178,7 +2178,7 @@ reply(mess.wait)
 					if (args.length < 1) return reply(`✘ *_Este comando necessita de um texto_*`)
 				ct = body.slice(8)
 				reply(mess.wait)
-				ct = await getBuffer(`http://lolhuman.herokuapp.com/api/nulis?apikey=RiuApikey&text=${ct}`)
+				ct = await getBuffer(`http://lolhuman.herokuapp.com/api/nulis?apikey=AnjayB&text=${ct}`)
 				denz.sendMessage(from, ct, image, {caption: '✓ *_ᴀǫᴜɪ ᴇsᴛᴀ ᴏ sᴇᴜ ᴘᴇᴅɪᴅᴏ ت._*', quoted: mek})
 				await limitAdd(sender)
 				break
@@ -2214,7 +2214,7 @@ reply(mess.wait)
 			    				
 			    if (isLimit(sender)) return reply(limitend(pushname2))
 			    reply(mess.wait)
-                    anu = await fetchJson(`http://api.lolhuman.xyz/api/shortlink2?apikey=RiuApikey&url=${args[0]}`)
+                    anu = await fetchJson(`http://api.lolhuman.xyz/api/shortlink2?apikey=AnjayB&url=${args[0]}`)
 			        tinyurl = `╔═━──━▒ *_ENCURTADOR_*\n╠≽️ *_Link Encurtado:_*\n╠≽️ ${anu.result}\n╠≽️ *_Link Original:_*\n╠≽️ ${args[0]}\n╚═━──━▒ *_ENCURTADOR_*`
 			        reply(tinyurl)
 			        await limitAdd(sender) 
@@ -2225,7 +2225,7 @@ reply(mess.wait)
 			    				
 			    if (isLimit(sender)) return reply(limitend(pushname2))
 			    reply(mess.wait)
-                    anu = await fetchJson(`http://api.lolhuman.xyz/api/shortlink?apikey=RiuApikey&url=${body.slice(9)}`)
+                    anu = await fetchJson(`http://api.lolhuman.xyz/api/shortlink?apikey=AnjayB&url=${body.slice(9)}`)
 			        tinyurl = `╔═━──━▒ *_ENCURTADOR_*\n╠≽️ *_Link Encurtado:_*\n╠≽️ ${anu.result}\n╠≽️ *_Link Original:_*\n╠≽️ ${args[0]}\n╚═━──━▒ *_ENCURTADOR_*`
 			        reply(tinyurl)
 			        await limitAdd(sender) 
@@ -3004,7 +3004,7 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
          if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 				denz.updatePresence(from, Presence.composing) 
-				data = await fetchJson(`http://api.lolhuman.xyz/api/ipaddress/${args[0]}?apikey=RiuApikey`)
+				data = await fetchJson(`http://api.lolhuman.xyz/api/ipaddress/${args[0]}?apikey=AnjayB`)
 				reply(mess.wait)
 				hasil = `╔═══≽️ *_Check IP_*\n╠≽️ *_País:_* ${data.result.country}\n╠≽️ *_Sigla do País:_* ${data.result.countryCode}\n╠≽️ *_Estado:_* ${data.result.regionName}\n╠≽️ *_City:_* ${data.result.city}\n╠≽️ *_Lat.:_* ${data.result.lat}\n╠≽️ *_Long.:_* ${data.result.lon}\n╠≽️ *_Timezone:_* ${data.result.timezone}\n╠≽️ *_IP:_* ${data.result.query}\n╚═≽️ *_Developer ©_* : *ɴʏx*`
 				reply(hasil)
