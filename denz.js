@@ -462,7 +462,7 @@ case 'genshinmenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
-			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═━──━▒ *_GENSHIN MENU_*
+			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═━──━▒ *_GENSHIN BUILD's_*
 ╠≽️ *_${prefix}bAlbedo_*
 ╠≽️ *_${prefix}bAmber_*
 ╠≽️ *_${prefix}bBarbara_*
@@ -493,7 +493,7 @@ case 'genshinmenu':
 ╠≽️ *_${prefix}bXingqiu_*
 ╠≽️ *_${prefix}bXinyan_*
 ╠≽️ *_${prefix}bZhongli_*
-╚═━──━▒ *_GENSHIN MENU_*`
+╚═━──━▒ *_GENSHIN BUILD's_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
 case 'soundmenu':
@@ -1746,7 +1746,7 @@ case 'Bbennett':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/FJQS0xt.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bchilde':
@@ -1754,7 +1754,7 @@ case 'Bchilde':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/P3Y6vhb.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bchongyun':
@@ -1762,7 +1762,7 @@ case 'Bchongyun':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/v1LLmNa.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bdiluc':
@@ -1770,7 +1770,7 @@ case 'Bdiluc':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/QVY0htg.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bdiona':
@@ -1778,7 +1778,7 @@ case 'Bdiona':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/RcZbP9W.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bfischl':
@@ -1786,7 +1786,7 @@ case 'Bfischl':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/pZ0D9fg.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bganyu':
@@ -1794,7 +1794,7 @@ case 'Bganyu':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/PEs8Nku.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bhutao':
@@ -1810,7 +1810,7 @@ case 'Bjean':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/9ZMIgDL.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bkaeya':
@@ -1818,7 +1818,7 @@ case 'Bkaeya':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/euUIYC8.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bkeqing':
@@ -1826,7 +1826,7 @@ case 'Bkeqing':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/nRg6Ae9.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bklee':
@@ -1834,7 +1834,7 @@ case 'Bklee':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/x1h9t7h.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'blisa':
@@ -1842,7 +1842,7 @@ case 'Blisa':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/vusQVrK.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bmona':
@@ -1850,7 +1850,7 @@ case 'Bmona':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/rWpHJWz.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bningguang':
@@ -1858,7 +1858,7 @@ case 'Bningguang':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/qsVUWNd.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bnoelle':
@@ -1866,7 +1866,7 @@ case 'Bnoelle':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/7Eldog3.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bqiqi':
@@ -1874,7 +1874,7 @@ case 'Bqiqi':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/FvdZ7TN.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'brazor':
@@ -1882,7 +1882,7 @@ case 'Brazor':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/8yU4GeO.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bsucrose':
@@ -1890,7 +1890,7 @@ case 'Bsucrose':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/VhRIa0U.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'Bventi':
@@ -1898,7 +1898,7 @@ case 'bventi':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/uvrByxc.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bviajante':
@@ -1908,7 +1908,7 @@ case 'btraveller':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/JLA0vHk.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bxiangling':
@@ -1916,7 +1916,7 @@ case 'Bxiangling':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/p5qQ1H0.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bxiao':
@@ -1924,7 +1924,7 @@ case 'Bxiao':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/cfKNgb2.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bxingqiu':
@@ -1932,7 +1932,7 @@ case 'Bxingqiu':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/lOlayRj.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'Bxinyan':
@@ -1940,7 +1940,7 @@ case 'bxinyan':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/Glu8RPY.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 case 'bzhongli':
@@ -1948,7 +1948,7 @@ case 'Bzhongli':
 if (isBanned) return reply(mess.only.benned)    
 if (!isUser) return reply(mess.only.userB)
 reply(mess.wait)
-buffer = await getBuffer(`https://i.imgur.com/VX7x9gK.png`)
+buffer = await getBuffer(`https://i.imgur.com/RfdOMf9.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
 //BUILDS GENSHIN MENU
@@ -2241,15 +2241,15 @@ case 'info':
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						bc = await denz.downloadMediaMessage(encmedia)
 						for (let _ of anu) {
-							denz.sendMessage(_.jid, bc, image, {caption: `「 *_ʙʀᴏᴀᴅᴄᴀꜱᴛ_* 」\n\n${body.slice(4)}`})
+							denz.sendMessage(_.jid, bc, image, {caption: `「 *_TM DE AVISO_* 」\n\n${body.slice(4)}`})
 						}
-						denz.sendMessage(_.jid, bc, image, {caption: `「 *_ʙʀᴏᴀᴅᴄᴀꜱᴛ_* 」\n\n${body.slice(4)}`})
-						reply('Suksess broadcast')
+						denz.sendMessage(_.jid, bc, image, {caption: `「 *_TM DE AVISO_* 」\n\n${body.slice(4)}`})
+						reply('✓ *_transmissão enviada com sucesso_*')
 						} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `「 *_ʙʀᴏᴀᴅᴄᴀꜱᴛ_* 」\n\n${body.slice(4)}`)
+							sendMess(_.jid, `「 *_TM DE AVISO_* 」\n\n${body.slice(4)}`)
 						}
-						reply('Suksess broadcast')
+						reply('✓ *_transmissão enviada com sucesso_*')
 					}
 					break
 					case 'do':
