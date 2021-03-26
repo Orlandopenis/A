@@ -213,7 +213,7 @@ async function starts() {
 					premium: '*ᴍᴀᴀꜰ ꜰɪᴛᴜʀ ɪɴɪ ᴋʜᴜꜱᴜꜱ ᴜꜱᴇʀ ᴩʀᴇᴍɪᴜᴍ!*',
 					userB: `✘ *_Olá! Aqui é a Albedo, estou passando para avisar que você não está registrado no meu banco de dados, utilize #registrar seunome para poder utilizar meus comandos!_*`,
 					admin: '✘ *_Opa! este comando é apenas para os administradores do grupo portanto você não poderá usar!_*',
-					Badmin: '✘ *_Este comando só poderá ser realizado caso eu tenha admin!',
+					Badmin: '✘ *_Este comando só poderá ser realizado caso eu tenha admin!_*',
 					publikG: `ᴍᴀᴀꜰ ʙᴏᴛ ꜱᴇᴋᴀʀᴀɴɢ ꜱᴜᴅᴀʜ ᴅɪᴩʀɪᴠᴀᴛᴇ ᴏʟᴇʜ ᴏᴡɴᴇʀ\nᴜɴᴛᴜᴋ ʟᴇʙɪʜ ᴊᴇʟᴀꜱɴʏᴀ ᴋᴇᴛɪᴋ \n*${prefix}infobot*`
 				}
 			}
@@ -1926,6 +1926,13 @@ reply(mess.wait)
 					ratee = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
 					const te = ratee[Math.floor(Math.random() * ratee.length)]
 					denz.sendMessage(from, '✓ *_As chances '+rate+' são de '+ te+'_*', text, { quoted: mek })
+					break 
+			case 'gayp':
+				if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+					ratee = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
+					const te = ratee[Math.floor(Math.random() * ratee.length)]
+					denz.sendMessage(from, '✓ *_A gayzisse do @${num.split('@')[0]} é de '+rate+'_*', text, { quoted: mek })
 					break 
                 case 'report':
                 if (isBanned) return reply(mess.only.benned)    
