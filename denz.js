@@ -396,13 +396,13 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╔═━──━▒ *_MENU's_*
 ╠≽️ *_#STICKERMENU_*
 ╠≽️ *_#FUNMENU_*  
-╠≽️ *_#IMAGEMENU_*
-╠≽️ *_#MAKERMENU_*
+╠≽️ *_#IMAGEMENU_* 
+╠≽️ *_#MAKERMENU_* 
 ╠≽️ *_#MEDIAMENU_*
-╠≽️ *_#ENCMENU_*
+╠≽️ *_#ENCMENU_* 
 ╠≽️ *_#SOUNDMENU_* 
-╠≽️ *_#GROUPMENU_*
-╠≽️ *_#NSFWMENU_*
+╠≽️ *_#GROUPMENU_* 
+╠≽️ *_#NSFWMENU_* 
 ╠≽️ *_#OWNERMENU_* 
 ╚═━──━▒ *_MENU's_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
@@ -2158,7 +2158,7 @@ reply(mess.wait)
                     buffer = await getBuffer(ini_url)
                     denz.sendMessage(from, buffer, ini_type, { quoted: mek })
                     break
-                    case 'pinterest':
+                    case 'pintereeeeeeeest':
          if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 								
