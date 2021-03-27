@@ -185,8 +185,8 @@ async function starts() {
 			const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
 
 			const date = new Date().toLocaleDateString()
-			const time = moment.tz('America/Toronto').format('HH:mm:ss')
-			const jam = moment.tz('America/Toronto').format('HH:mm')
+			const time = moment.tz('America/Sao_Paulo').format('HH:mm:ss')
+			const jam = moment.tz('America/Sao_Paulo').format('HH:mm')
             body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : ''
 			budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : '' 
 			var Link = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''
@@ -628,7 +628,8 @@ case 'funmenu':
 ╠≽️ *_${prefix}mensfake_*
 ╠≽️ *_${prefix}tierlist_*
 ╠≽️ *_${prefix}radargay_*
-╠≽️ *_${prefix}idadem_*
+╠≽️ *_${prefix}morte_*
+╠≽️ *_${prefix}cassino_*
 ╚═━──━▒ *_FUN MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
@@ -1618,7 +1619,20 @@ break
 //FUN MENU
 //FUN MENU
 //FUN MENU
-case 'idadem':
+case 'cassino':
+if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+var cassin = ['🍒', '🎃', '🍐']
+				const cassin1 = cassin[Math.floor(Math.random() * cassin.length)]
+				const cassin2 = cassin[Math.floor(Math.random() * cassin.length)]
+				const cassin3 = cassin[Math.floor(Math.random() * cassin.length)]
+				var cassinend = cassin1 + cassin2 + cassin3
+				if (cassinend == '🍒🍒🍒' || cassinend == '🎃🎃🎃' || cassinend == '🍐🍐🍐') {
+			    denz.sendMessage(from, `✓ *_Parabéns! você tem uma sorte grande ein, o resultado é...\n\n[ ${cassin1} - ${cassin2} - ${cassin3} ]`, text, {quoted: mek})
+			} else {
+		        reply(✘ *_Que pena! Não foi dessa vez, o resultado foi..._*\n\n[ ${cassin1} - ${cassin2} - ${cassin3} ])
+case 'death':
+case 'morte':
 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 				if (args.length < 1) return reply(`✘ *_Este comando necessita de um nome, exemplo ${prefix + command} Nyx_*`)
