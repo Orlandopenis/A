@@ -1631,6 +1631,8 @@ var cassin = ['🍒', '🎃', '🍐']
 			    denz.sendMessage(from, `✓ *_Parabéns! você tem uma sorte grande ein, o resultado é...\n\n[ ${cassin1} - ${cassin2} - ${cassin3} ]`, text, {quoted: mek})
 			} else {
 		        reply(✘ *_Que pena! Não foi dessa vez, o resultado foi..._*\n\n[ ${cassin1} - ${cassin2} - ${cassin3} ])
+		}
+		break
 case 'death':
 case 'morte':
 if (isBanned) return reply(mess.only.benned)    
