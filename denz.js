@@ -630,6 +630,7 @@ case 'funmenu':
 ╠≽️ *_${prefix}radargay_*
 ╠≽️ *_${prefix}morte_*
 ╠≽️ *_${prefix}cassino_*
+╠≽️ *_${prefix}genero_*
 ╚═━──━▒ *_FUN MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
