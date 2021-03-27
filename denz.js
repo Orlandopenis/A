@@ -1636,15 +1636,13 @@ var cassin = ['💵', '💰', '💴']
 case 'genero':
 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-				const mdataaa = await denz.groupMetadata
-				num = mdataaa.participants
 gaak = body.trim().split(' ')
     	    var lgbt = ["lésbica", "gay", "bissexual", "transgenero", "queer", "intersexual", "pedro-sexual", "negrosexual", "helicoptero sexual", "ageneros", "androgino", "assexual", "macaco-sexual", "dedo-sexual", "Sexo-Inexplicavel", "predio-sexual", "sexual-não-sexual", "pansexual", "kink", "incestuoso", "comedor-de-casadas", "unicornio-sexual", "maniaco-sexual"]
     	    var guei = lgbt[Math.floor(Math.random() * lgbt.length)]
     genr = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
 					const ps = genr[Math.floor(Math.random() * genr.length)]
 			if (args.length == 1) {
-				await denz.sendMessage(from, `✓ *_Analisando... @${num.split('@')[0]} é ${ps} ${guei}._*`, text)
+				await denz.sendMessage(from, `✓ *_Analisando... ${gaak.split('@')[1]} é ${ps} ${guei}._*`, text)
             } else {
 				await denz.sendMessage(from, `✓ *_Analisando... você é ${ps} ${guei}._*`, text)
             }
