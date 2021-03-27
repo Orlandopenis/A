@@ -1628,7 +1628,9 @@ var cassin = ['🍒', '🎃', '🍐']
 				const cassin3 = cassin[Math.floor(Math.random() * cassin.length)]
 				var cassinend = cassin1 + cassin2 + cassin3
 				if (cassinend == '🍒🍒🍒' || cassinend == '🎃🎃🎃' || cassinend == '🍐🍐🍐') {
-			    denz.sendMessage(from, `✓ *_Parabéns! você tem uma sorte grande ein, o resultado é...\n\n[ ${cassin1} - ${cassin2} - ${cassin3} ]`, text, {quoted: mek})
+			    denz.sendMessage(from, `✓ *_Parabéns! você tem uma sorte grande ein, o resultado é..._*\n\n[ ${cassin1} - ${cassin2} - ${cassin3} ]`, text, {quoted: mek})
+			} else { 
+                 denz.sendMessage(from, `✘ *_Se eu fosse você não apostaria na loteria_*`, text, {quoted: mek})
 			}
 		break
 case 'death':
