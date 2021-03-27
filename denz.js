@@ -1642,7 +1642,7 @@ gaak = body.trim().split(' ')
     genr = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
 					const ps = genr[Math.floor(Math.random() * genr.length)]
 			if (args.length == 1) {
-				await denz.sendMessage(from, `✓ *_Analisando... gaak[1] + ' é %${ps} ${guei}._*`, text)
+				await denz.sendMessage(from, `✓ *_Analisando... ${gaak[1]} é %${ps} ${guei}._*`, text)
             } else {
 				await denz.sendMessage(from, `✓ *_Analisando... você é ${ps} ${guei}._*`, text)
             }
