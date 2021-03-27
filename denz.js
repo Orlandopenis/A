@@ -458,43 +458,87 @@ case 'mediamenu':
 ╚═━──━▒ *_MEDIA MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
-case 'genshinmenu':
+case 'soundmenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
+			dmenu = `╔═━──━▒ *_GENSHIN MENU_*
+╠≽️ *_${prefix}gbuilds_*
+╠≽️ *_${prefix}gstats_*
+╚═━──━▒ *_GENSHIN MENU_*`
+case 'gbuilds':
+			if (isBanned) return reply(mess.only.benned)
+			if (!isUser) return reply(mess.only.userB)
 			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═━──━▒ *_GENSHIN BUILD's_*
-╠≽️ *_${prefix}bAlbedo_*
-╠≽️ *_${prefix}bAmber_*
-╠≽️ *_${prefix}bBarbara_*
-╠≽️ *_${prefix}bBeidou_*
-╠≽️ *_${prefix}bBennett_*
-╠≽️ *_${prefix}bChilde_*
-╠≽️ *_${prefix}bChongyun_*
-╠≽️ *_${prefix}bDiluc_*
-╠≽️ *_${prefix}bDiona_*
-╠≽️ *_${prefix}bFischl_*
-╠≽️ *_${prefix}bGanyu_*
-╠≽️ *_${prefix}bHuTao_*
-╠≽️ *_${prefix}bJean_*
-╠≽️ *_${prefix}bKaeya_*
-╠≽️ *_${prefix}bKeqing_*
-╠≽️ *_${prefix}bKlee_*
-╠≽️ *_${prefix}bLisa_*
-╠≽️ *_${prefix}bMona_*
-╠≽️ *_${prefix}bNingguang_*
-╠≽️ *_${prefix}bNoelle_*
-╠≽️ *_${prefix}bQiqi_*
-╠≽️ *_${prefix}bRazor_*
-╠≽️ *_${prefix}bSucrose_*
-╠≽️ *_${prefix}bVenti_*
-╠≽️ *_${prefix}bViajante_*
-╠≽️ *_${prefix}bXiangling_*
-╠≽️ *_${prefix}bXiao_*
-╠≽️ *_${prefix}bXingqiu_*
-╠≽️ *_${prefix}bXinyan_*
-╠≽️ *_${prefix}bZhongli_*
+╠≽️ *_${prefix}balbedo_*
+╠≽️ *_${prefix}bamber_*
+╠≽️ *_${prefix}bbarbara_*
+╠≽️ *_${prefix}bbeidou_*
+╠≽️ *_${prefix}bbennett_*
+╠≽️ *_${prefix}bchilde_*
+╠≽️ *_${prefix}bchongyun_*
+╠≽️ *_${prefix}bdiluc_*
+╠≽️ *_${prefix}bdiona_*
+╠≽️ *_${prefix}bfischl_*
+╠≽️ *_${prefix}bganyu_*
+╠≽️ *_${prefix}bhutao_*
+╠≽️ *_${prefix}bjean_*
+╠≽️ *_${prefix}bkaeya_*
+╠≽️ *_${prefix}bkeqing_*
+╠≽️ *_${prefix}bklee_*
+╠≽️ *_${prefix}blisa_*
+╠≽️ *_${prefix}bmona_*
+╠≽️ *_${prefix}bningguang_*
+╠≽️ *_${prefix}bnoelle_*
+╠≽️ *_${prefix}bqiqi_*
+╠≽️ *_${prefix}brazor_*
+╠≽️ *_${prefix}bsucrose_*
+╠≽️ *_${prefix}bventi_*
+╠≽️ *_${prefix}bviajante_*
+╠≽️ *_${prefix}bxiangling_*
+╠≽️ *_${prefix}bxiao_*
+╠≽️ *_${prefix}bxingqiu_*
+╠≽️ *_${prefix}bxinyan_*
+╠≽️ *_${prefix}bzhongli_*
 ╚═━──━▒ *_GENSHIN BUILD's_*`
-denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
+denz.sendMessage(from, dmenu, text, {quoted: mek})
+break
+case 'gstats':
+			if (isBanned) return reply(mess.only.benned)
+			if (!isUser) return reply(mess.only.userB)
+			dmenu = `͏͏͏͏͏͏͏͏͏͏͏͏͏͏╔═━──━▒ *_GENSHIN STATS's_*
+╠≽️ *_${prefix}salbedo_*
+╠≽️ *_${prefix}samber_*
+╠≽️ *_${prefix}sbarbara_*
+╠≽️ *_${prefix}sbeidou_*
+╠≽️ *_${prefix}sbennett_*
+╠≽️ *_${prefix}schilde_*
+╠≽️ *_${prefix}schongyun_*
+╠≽️ *_${prefix}sdiluc_*
+╠≽️ *_${prefix}sdiona_*
+╠≽️ *_${prefix}sfischl_*
+╠≽️ *_${prefix}sganyu_*
+╠≽️ *_${prefix}shutao_*
+╠≽️ *_${prefix}sjean_*
+╠≽️ *_${prefix}skaeya_*
+╠≽️ *_${prefix}skeqing_*
+╠≽️ *_${prefix}sklee_*
+╠≽️ *_${prefix}slisa_*
+╠≽️ *_${prefix}smona_*
+╠≽️ *_${prefix}sningguang_*
+╠≽️ *_${prefix}snoelle_*
+╠≽️ *_${prefix}sqiqi_*
+╠≽️ *_${prefix}srazor_*
+╠≽️ *_${prefix}ssucrose_*
+╠≽️ *_${prefix}sventi_*
+╠≽️ *_${prefix}sviajante_*
+╠≽️ *_${prefix}sxiangling_*
+╠≽️ *_${prefix}sxiao_*
+╠≽️ *_${prefix}sxingqiu_*
+╠≽️ *_${prefix}sxinyan_*
+╠≽️ *_${prefix}szhongli_*
+╚═━──━▒ *_GENSHIN STATS's_*`
+denz.sendMessage(from, dmenu, text, {quoted: mek})
 break
 case 'soundmenu':
 			if (isBanned) return reply(mess.only.benned)
@@ -584,6 +628,7 @@ case 'funmenu':
 ╠≽️ *_${prefix}mensfake_*
 ╠≽️ *_${prefix}tierlist_*
 ╠≽️ *_${prefix}radargay_*
+╠≽️ *_${prefix}idadem_*
 ╚═━──━▒ *_FUN MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
@@ -1573,6 +1618,12 @@ break
 //FUN MENU
 //FUN MENU
 //FUN MENU
+case 'idadem':
+if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+				if (args.length < 1) return reply(`✘ *_Este comando necessita de um nome, exemplo ${prefix + command} Nyx_*`)
+				ab = await fetchJson(`https://api.agify.io/?name=${args[0]}`)
+				denz.sendMessage(from, `✓ *_Pessoas com esse nome, ${ab.name}, tendem a morrer aos ${ab.age} anos..._*`, text, {quoted: mek})
 case 'mensfake':
                  if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -1951,6 +2002,46 @@ reply(mess.wait)
 buffer = await getBuffer(`https://i.imgur.com/RfdOMf9.png`)
 denz.sendMessage(from, buffer, image, { quoted: mek})
 break
+
+
+
+
+case 'salbedo':
+case 'samber':
+case 'sbarbara':
+case 'sbeidou':
+case 'sbennett':
+case 'schilde':
+case 'schongyun':
+case 'sdiluc':
+case 'sdiona':
+case 'sfischl':
+case 'sganyu':
+case 'shu tao':
+case 'sjean':
+case 'skaeya':
+case 'skeqing':
+case 'sklee':
+case 'slisa':
+case 'smona':
+case 'sningguang':
+case 'snoelle':
+case 'sqiqi':
+case 'srazor':
+case 'ssucrose':
+case 'sventi':
+case 'sviajante':
+case 'sxiangling':
+case 'sxiao':
+case 'sxingqiu':
+case 'sxinyan':
+case 'szhongli':
+if (isBanned) return reply(mess.only.benned)    
+if (!isUser) return reply(mess.only.userB)
+reply(mess.wait)
+buffer = await getBuffer(`https://bit.ly/${command}`)
+denz.sendMessage(from, buffer, image, { quoted: mek})
+break
 //BUILDS GENSHIN MENU
 //BUILDS GENSHIN MENU
 //BUILDS GENSHIN MENU
@@ -2230,7 +2321,7 @@ case 'info':
 						for (let _ of groupMembers) {
 							sendMess(_.jid, `「 *_ʙʀᴏᴀᴅᴄᴀꜱᴛ ɢʀᴏᴜᴘ_* 」\n*ɢʀᴏᴜᴘ* : ${groupName}\n\n${body.slice(6)}`)
 						}
-						reply('Suksess broadcast group')
+						reply('✓ *_transmissão enviada com sucesso_*')
 					}
 					break
 				case 'bc':
