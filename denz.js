@@ -458,13 +458,14 @@ case 'mediamenu':
 ╚═━──━▒ *_MEDIA MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
-case 'soundmenu':
+case 'genshinmenu':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
 			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `╔═━──━▒ *_GENSHIN MENU_*
 ╠≽️ *_${prefix}gbuilds_*
 ╠≽️ *_${prefix}gstats_*
+╠≽️ *_${prefix}gtalents_* (WIP)
 ╚═━──━▒ *_GENSHIN MENU_*`
 case 'gbuilds':
 			if (isBanned) return reply(mess.only.benned)
