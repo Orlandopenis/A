@@ -1637,7 +1637,7 @@ case 'genero':
 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 				const mdataaa = await denz.groupMetadata
-				num = mdataaa.participants[1]
+				num = mdataaa.participants
 gaak = body.trim().split(' ')
     	    var lgbt = ["lésbica", "gay", "bissexual", "transgenero", "queer", "intersexual", "pedro-sexual", "negrosexual", "helicoptero sexual", "ageneros", "androgino", "assexual", "macaco-sexual", "dedo-sexual", "Sexo-Inexplicavel", "predio-sexual", "sexual-não-sexual", "pansexual", "kink", "incestuoso", "comedor-de-casadas", "unicornio-sexual", "maniaco-sexual"]
     	    var guei = lgbt[Math.floor(Math.random() * lgbt.length)]
