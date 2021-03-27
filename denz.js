@@ -1622,8 +1622,8 @@ case 'idadem':
 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 				if (args.length < 1) return reply(`✘ *_Este comando necessita de um nome, exemplo ${prefix + command} Nyx_*`)
-				const ab = await fetchJson(`https://api.agify.io/?name=${args[0]}`)
-				denz.sendMessage(from, `✓ *_Pessoas com esse nome, ${ab.name}, tendem a morrer aos ${ab.age} anos..._*`, text, {quoted: mek})
+				const azb = await fetchJson(`https://api.agify.io/?name=${args[0]}`)
+				denz.sendMessage(from, `✓ *_Pessoas com esse nome, ${azb.name}, tendem a morrer aos ${azb.age} anos..._*`, text, {quoted: mek})
 case 'mensfake':
                  if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
