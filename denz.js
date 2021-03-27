@@ -1639,10 +1639,12 @@ if (isBanned) return reply(mess.only.benned)
 gaak = body.trim().split(' ')
     	    var lgbt = ["lésbica", "gay", "bissexual", "transgenero", "queer", "intersexual", "pedro-sexual", "negrosexual", "helicoptero sexual", "ageneros", "androgino", "assexual", "macaco-sexual", "dedo-sexual", "Sexo-Inexplicavel", "predio-sexual", "sexual-não-sexual", "pansexual", "kink", "incestuoso", "comedor-de-casadas", "unicornio-sexual", "maniaco-sexual"]
     	    var guei = lgbt[Math.floor(Math.random() * lgbt.length)]
+    genr = ["100%","95%","90%","85%","80%","75%","70%","65%","60%","55%","50%","45%","40%","35%","30%","25%","20%","15%","10%","5%"]
+					const ps = genr[Math.floor(Math.random() * genr.length)]
 			if (args.length == 1) {
-				await denz.sendTextWithMentions(from, `✓ *_Analisando... gaak[1] + ' é %${guei} ${lgbt}._*`, text)
+				await denz.sendTextWithMentions(from, `✓ *_Analisando... gaak[1] + ' é %${ps} ${guei}._*`, text)
             } else {
-				await denz.sendMessage(from, `✓ *_Analisando... você é %${guei} ${lgbt}._*`, text)
+				await denz.sendMessage(from, `✓ *_Analisando... você é ${ps} ${guei}._*`, text)
             }
 			break
 case 'death':
