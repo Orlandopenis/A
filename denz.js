@@ -1629,9 +1629,8 @@ var cassin = ['🍒', '🎃', '🍐']
 				var cassinend = cassin1 + cassin2 + cassin3
 				if (cassinend == '🍒🍒🍒' || cassinend == '🎃🎃🎃' || cassinend == '🍐🍐🍐') {
 			    denz.sendMessage(from, `✓ *_Parabéns! você tem uma sorte grande ein, o resultado é...\n\n[ ${cassin1} - ${cassin2} - ${cassin3} ]`, text, {quoted: mek})
-			} else if {
+			} else if 
 		        reply(✘ *_Que pena! Não foi dessa vez, o resultado foi..._*)
-		}
 		break
 case 'death':
 case 'morte':
