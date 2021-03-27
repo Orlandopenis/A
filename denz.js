@@ -1633,6 +1633,18 @@ var cassin = ['💵', '💰', '💴']
                  denz.sendMessage(from, `✘ *_Se eu fosse você não apostaria na loteria, o resultado é..._*\n\n*_[ ${cassin1} - ${cassin2} - ${cassin3} ]_*`, text, {quoted: mek})
 			}
 		break
+case 'genero':
+if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+gaak = body.trim().split(' ')
+    	    var lgbt = ["lésbica", "gay", "bissexual", "transgenero", "queer", "intersexual", "pedro-sexual", "negrosexual", "helicoptero sexual", "ageneros", "androgino", "assexual", "macaco-sexual", "dedo-sexual", "Sexo-Inexplicavel", "predio-sexual", "sexual-não-sexual", "pansexual", "kink", "incestuoso", "comedor-de-casadas", "unicornio-sexual", "maniaco-sexual"]
+    	    var guei = lgbt[Math.floor(Math.random() * lgbt.length)]
+			if (args.length == 1) {
+				await denz.sendTextWithMentions(from, `✓ *_Analisando... gaak[1] + ' é %${guei} ${lgbt}._*`, text)
+            } else {
+				await denz.sendMessage(from, `✓ *_Analisando... você é %${guei} ${lgbt}._*`, text)
+            }
+			break
 case 'death':
 case 'morte':
 if (isBanned) return reply(mess.only.benned)    
