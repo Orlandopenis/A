@@ -1622,15 +1622,15 @@ break
 case 'cassino':
 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
-var cassin = ['🍒', '🎃', '🍐']
+var cassin = ['💵', '💰', '💴']
 				const cassin1 = cassin[Math.floor(Math.random() * cassin.length)]
 				const cassin2 = cassin[Math.floor(Math.random() * cassin.length)]
 				const cassin3 = cassin[Math.floor(Math.random() * cassin.length)]
 				var cassinend = cassin1 + cassin2 + cassin3
-				if (cassinend == '🍒🍒🍒' || cassinend == '🎃🎃🎃' || cassinend == '🍐🍐🍐') {
-			    denz.sendMessage(from, `✓ *_Parabéns! você tem uma sorte grande ein, o resultado é..._*\n\n[ ${cassin1} - ${cassin2} - ${cassin3} ]`, text, {quoted: mek})
+				if (cassinend == '💵💵💵' || cassinend == '💰💰💰' || cassinend == '💴💴💴') {
+			    denz.sendMessage(from, `✓ *_Parabéns! você tem uma sorte grande ein, o resultado é..._*\n\n*_[ ${cassin1} - ${cassin2} - ${cassin3} ]_*`, text, {quoted: mek})
 			} else { 
-                 denz.sendMessage(from, `✘ *_Se eu fosse você não apostaria na loteria_*`, text, {quoted: mek})
+                 denz.sendMessage(from, `✘ *_Se eu fosse você não apostaria na loteria, o resultado é..._*\n\n*_[ ${cassin1} - ${cassin2} - ${cassin3} ]_*`, text, {quoted: mek})
 			}
 		break
 case 'death':
