@@ -464,9 +464,11 @@ case 'genshinmenu':
 			wew = fs.readFileSync('dnsnew.jpg')
 			dmenu = `╔═━──━▒ *_GENSHIN MENU_*
 ╠≽️ *_${prefix}gbuilds_*
-╠≽️ *_${prefix}gstats_*
+╠≽️ *_${prefix}gstats_* (WIP)
 ╠≽️ *_${prefix}gtalents_* (WIP)
 ╚═━──━▒ *_GENSHIN MENU_*`
+denz.sendMessage(from, dmenu, text, {quoted: mek})
+break
 case 'gbuilds':
 			if (isBanned) return reply(mess.only.benned)
 			if (!isUser) return reply(mess.only.userB)
