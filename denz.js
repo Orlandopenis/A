@@ -148,7 +148,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `╔═━──━▒ *_SAÍDA_*\n╠≽️ *_Adeus_* @${num.split('@')[0]}\n╠≽️ *_Espero vê-lo logo!_*\n╚═━──━▒ *_SAÍDA_*`
+				teks = `╔═━──━▒ *_SAÍDA_*\n╠≽️ *_Adeus_* @${num.split('@')[0]}\n╠≽️ *_Espero vê-lo em breve!_*\n╚═━──━▒ *_SAÍDA_*`
 				let buff = await getBuffer(ppimg)
 				denz.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -211,7 +211,7 @@ async function starts() {
 					ownerG: '✘ *_Opa! este comando é apenas para o dono do grupo portanto você não poderá usar!_*',
 					ownerB: '✘ *_Opa! este comando é apenas para o dono do bot, nyx, portanto você não poderá usar!_*',
 					premium: '*ᴍᴀᴀꜰ ꜰɪᴛᴜʀ ɪɴɪ ᴋʜᴜꜱᴜꜱ ᴜꜱᴇʀ ᴩʀᴇᴍɪᴜᴍ!*',
-					userB: `✘ *_Olá! Aqui é a Albedo, estou passando para avisar que você não está registrado no meu banco de dados, utilize #registrar seunome para poder utilizar meus comandos!_*`,
+					userB: `✘ *_Olá! Aqui é a Albedo, estou passando para avisar que você não está registrado no meu banco de dados, utilize #registrar para poder utilizar meus comandos!_*`,
 					admin: '✘ *_Opa! este comando é apenas para os administradores do grupo portanto você não poderá usar!_*',
 					Badmin: '✘ *_Este comando só poderá ser realizado caso eu tenha admin!_*',
 					publikG: `ᴍᴀᴀꜰ ʙᴏᴛ ꜱᴇᴋᴀʀᴀɴɢ ꜱᴜᴅᴀʜ ᴅɪᴩʀɪᴠᴀᴛᴇ ᴏʟᴇʜ ᴏᴡɴᴇʀ\nᴜɴᴛᴜᴋ ʟᴇʙɪʜ ᴊᴇʟᴀꜱɴʏᴀ ᴋᴇᴛɪᴋ \n*${prefix}infobot*`
@@ -2133,7 +2133,9 @@ case 'info':
 					if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
 				    if (!isAnime) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
-				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isAnime) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 						if (!isNsfw) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
 					henid = args[0]
                     get_result = await fetchJson(`http://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=AnjayB`)
@@ -2163,7 +2165,9 @@ case 'info':
                 if (isBanned) return reply(mess.only.benned)    
 				    if (!isUser) return reply(mess.only.userB)
 				    if (!isAnime) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
-				    if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isNsfw) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
+						if (isLimit(sender)) return reply(limitend(pushname2))
+						if (!isAnime) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ᴀɴɪᴍᴇ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ!_*')				
 						if (!isNsfw) return reply('✘ *_ᴏ ᴍᴏᴅᴏ ɴsғᴡ ᴇsᴛᴀ ᴅᴇsᴀᴛɪᴠᴀᴅᴏ !_*')
 						reply(mess.wait)
                     buffer = await getBuffer(`http://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=AnjayB`)
