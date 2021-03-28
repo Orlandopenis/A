@@ -1623,6 +1623,13 @@ break
 //FUN MENU
 //FUN MENU
 //FUN MENU
+case 'curiosidade':
+			const rcurio = fs.readFileSync('./lib/curiosidades.txt').toString().split('\n')
+			const rsidd = rcurio[Math.floor(Math.random() * rcurio.length)]
+			console.log(rsidd)
+			denz.sendMessage(from, rsidd, text)
+			await limitAdd(sender)
+			break
 case 'cassino':
 if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
@@ -2450,14 +2457,6 @@ case 'info':
                     //OWNER MENU
                     //OWNER MENU
                     
-                     //FUN MENU
-                     //FUN MENU
-                     //FUN MENU
-			
-					//FUN MENU
-			        //FUN MENU
-			        //FUN MENU
-			
 			//GRUPO MENU
 			//GRUPO MENU
 			//GRUPO MENU
