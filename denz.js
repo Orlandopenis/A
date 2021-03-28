@@ -2956,7 +2956,7 @@ case 'tiktok':
                     buffer = await getBuffer(ini_url)
                     denz.sendMessage(from, buffer, ini_type, { quoted: mek })
                     break
-                    case 'pintereeeeeeeest':
+                    case 'pinterest':
          if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 								
