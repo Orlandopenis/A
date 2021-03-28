@@ -402,7 +402,6 @@ denz.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant
 ╠≽️ *_#ENCMENU_* 
 ╠≽️ *_#SOUNDMENU_* 
 ╠≽️ *_#GROUPMENU_* 
-╠≽️ *_#NSFWMENU_* 
 ╠≽️ *_#OWNERMENU_* 
 ╚═━──━▒ *_MENU's_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
@@ -633,6 +632,7 @@ case 'funmenu':
 ╠≽️ *_${prefix}radargay_*
 ╠≽️ *_${prefix}morte_*
 ╠≽️ *_${prefix}cassino_*
+╠≽️ *_${prefix}genero_*
 ╠≽️ *_${prefix}genero_*
 ╚═━──━▒ *_FUN MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
@@ -2155,7 +2155,6 @@ case 'info':
                 case 'blowjob':
                 case 'yaoi':
                 case 'ecchi':
-                case 'hentai':
                 case 'ahegao':
                 case 'hololewd':
                 case 'sideoppai':
