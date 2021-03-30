@@ -2950,7 +2950,7 @@ case 'tiktok':
 					if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
 					reply(mess.wait)
                     inst = await fetchJson(`https://api.zeks.xyz/api/ig?url=${args[0]}&apikey=apivinz`)
-                    buffer = await getBuffer(inst.result.url[1])
+                    buffer = await getBuffer(inst.result)
                     denz.sendMessage(from, buffer, video, { quoted: mek })
                     break
                     case 'pintereeeeeeeest':
