@@ -633,7 +633,7 @@ case 'funmenu':
 ╠≽️ *_${prefix}morte_*
 ╠≽️ *_${prefix}cassino_*
 ╠≽️ *_${prefix}genero_*
-╠≽️ *_${prefix}genero_*
+╠≽️ *_${prefix}curiosidades_*
 ╚═━──━▒ *_FUN MENU_*`
 denz.sendMessage(from, wew, image, {quoted: mek, caption: dmenu})
 break
@@ -2155,6 +2155,7 @@ case 'info':
                 case 'blowjob':
                 case 'yaoi':
                 case 'ecchi':
+                case 'hentai':
                 case 'ahegao':
                 case 'hololewd':
                 case 'sideoppai':
@@ -2951,12 +2952,11 @@ case 'tiktok':
 				    ini_url = args[0]
                     ini_url = await fetchJson(`http://api.lolhuman.xyz/api/instagram?apikey=AnjayB&url=${ini_url}`)
                     ini_url = ini_url.result
-                    ini_type = image
-                    if (ini_url.includes(".mp4")) ini_type = video
+                    ini_type = video
                     buffer = await getBuffer(ini_url)
                     denz.sendMessage(from, buffer, ini_type, { quoted: mek })
                     break
-                    case 'pinterest':
+                    case 'pintereeeeeeeest':
          if (isBanned) return reply(mess.only.benned)    
 				if (!isUser) return reply(mess.only.userB)
 								
