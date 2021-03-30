@@ -2949,12 +2949,9 @@ case 'tiktok':
 				if (isLimit(sender)) return reply(limitend(pushname2))
 					if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
 					reply(mess.wait)
-				    ini_url = args[0]
-                    ini_url = await fetchJson(`https://api.zeks.xyz/api/ig?url=${ini_url}&apikey=apivinz`)
-                    ini_url = ini_url.result.url
-                    ini_type = video
-                    buffer = await getBuffer(ini_url)
-                    denz.sendMessage(from, buffer, ini_type, { quoted: mek })
+                    inst = await fetchJson(`https://api.zeks.xyz/api/ig?url=${args[0]}&apikey=apivinz`)
+                    buffer = await getBuffer(inst.result.url)
+                    denz.sendMessage(from, buffer, video, { quoted: mek })
                     break
                     case 'pintereeeeeeeest':
          if (isBanned) return reply(mess.only.benned)    
