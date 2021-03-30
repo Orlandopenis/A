@@ -2950,8 +2950,8 @@ case 'tiktok':
 					if (args.length < 1) return reply('✘ *_Este comando necessita de um link._*')
 					reply(mess.wait)
 				    ini_url = args[0]
-                    ini_url = await fetchJson(`http://api.lolhuman.xyz/api/instagram?apikey=AnjayB&url=${ini_url}`)
-                    ini_url = ini_url.result
+                    ini_url = await fetchJson(`https://api.zeks.xyz/api/ig?url=${ini_url}&apikey=apivinz`)
+                    ini_url = ini_url.result.url
                     ini_type = video
                     buffer = await getBuffer(ini_url)
                     denz.sendMessage(from, buffer, ini_type, { quoted: mek })
